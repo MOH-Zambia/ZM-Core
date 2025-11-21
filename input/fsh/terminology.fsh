@@ -1,5 +1,5 @@
 // ZM-Core Terminology
-// Value Sets and Code Systems for Zambian health systems
+// Value Sets and Code Systems for Zambia health systems
 
 // ============================================================================
 // Value Sets
