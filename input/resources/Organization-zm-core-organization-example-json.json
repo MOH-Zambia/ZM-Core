@@ -1,0 +1,40 @@
+{
+  "resourceType": "Organization",
+  "id": "zm-core-organization-example-json",
+  "meta": {
+    "profile": [
+      "http://moh-zambia.github.io/zm-core/StructureDefinition/zm-core-organization"
+    ]
+  },
+  "identifier": [
+    {
+      "system": "http://moh-zambia.github.io/zm-core/sid/facility-id",
+      "value": "HF002"
+    }
+  ],
+  "name": "Chilenje Level One Hospital",
+  "type": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+          "code": "prov",
+          "display": "Healthcare Provider"
+        }
+      ]
+    }
+  ],
+  "address": [
+    {
+      "city": "Lusaka",
+      "district": "Lusaka",
+      "country": "Zambia"
+    }
+  ],
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "+260 211 555 888"
+    }
+  ]
+}

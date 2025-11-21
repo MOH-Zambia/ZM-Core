@@ -7,21 +7,21 @@
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 
 
-id: my-ig
-canonical: http://example.com/fhir/example
-url: http://example.com/fhir/example
-name: ExampleIG
-title: "HL7 FHIR Implementation Guide: Example IG Release 1 - US Realm | STU1"
-description: Example IG exercises many of the fields in a SUSHI configuration.
+id: zm-core
+canonical: http://moh-zambia.github.io/zm-core
+url: http://moh-zambia.github.io/zm-core
+name: ZMCore
+title: "HL7 FHIR Implementation Guide: ZM-Core Release 1 - Zambia"
+description: ZM-Core is an Implementation Guide for HL7 FHIR R5 resources commonly used in Zambia's health systems, providing standardized profiles and guidance for interoperability.
 status: active
 license: CC0-1.0
-date: 2020-02-26
-version: 1.0.0
+date: 2025-11-21
+version: 0.1.0
 
 # Although fhirVersions is 0..* in the ImplementationGuide resource
 # it can be a single item OR and array here, but the current tooling 
 # only supports one FHIR version per Implementation Guide
-fhirVersion: 4.0.1
+fhirVersion: 5.0.0
 
 # The following two lines correspond to items that used to be in
 # ig.ini but were moved to IG.definition.parameter. For
@@ -29,7 +29,7 @@ fhirVersion: 4.0.1
 # camelcase, but if authors use the formal parameter names, SUSHI
 # will recognize them as well. In either case, they'll be copied
 # to the IG JSON using the formal names.
-copyrightYear: 2021+
+copyrightYear: 2025+
 releaseLabel: STU1
 
 # The publisher can be a single item or a list, each with a name and
@@ -37,23 +37,23 @@ releaseLabel: STU1
 # as IG.publisher.  The contact details and/or additional publishers
 # will be translated into IG.contact values.
 publisher:
-  name: My Organization 
-  url: http://example.com/committees
-  email: my-group@example.com
+  name: Ministry of Health - Zambia
+  url: https://www.moh.gov.zm/
+  email: digital.health@moh.gov.zm
 
 # ContactDetail is required by the template.
 contact:
-  - name: Bob Smith
+  - name: ZM-Core Team
     telecom:
       - system: email
-        value: bobsmith@example.com
+        value: zm-core@moh.gov.zm
         use: work
 
 # The jurisdiction can be a single item or a list. The FHIR Shorthand
 # code syntax can be used here.
 
 #jurisdiction: urn:iso:std:iso:3166#US "United States of America"
-jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001 "World"
+jurisdiction: urn:iso:std:iso:3166#ZM "Zambia"
 
 
 # The dependencies property corresponds to IG.dependsOn. The key is the

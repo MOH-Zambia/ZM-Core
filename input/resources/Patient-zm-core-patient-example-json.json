@@ -1,0 +1,37 @@
+{
+  "resourceType": "Patient",
+  "id": "zm-core-patient-example-json",
+  "meta": {
+    "profile": [
+      "http://moh-zambia.github.io/zm-core/StructureDefinition/zm-core-patient"
+    ]
+  },
+  "identifier": [
+    {
+      "system": "http://moh-zambia.github.io/zm-core/sid/nrc",
+      "value": "234567/12/2"
+    }
+  ],
+  "name": [
+    {
+      "family": "Kapela",
+      "given": [
+        "Grace"
+      ]
+    }
+  ],
+  "gender": "female",
+  "birthDate": "1990-03-22",
+  "address": [
+    {
+      "city": "Kitwe",
+      "country": "Zambia"
+    }
+  ],
+  "contact": [
+    {
+      "system": "phone",
+      "value": "+260 97 123 4567"
+    }
+  ]
+}
