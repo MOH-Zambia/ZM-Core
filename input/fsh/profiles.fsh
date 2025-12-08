@@ -1,6 +1,12 @@
 // ZM-Core Profiles
-// Core FHIR resource profiles for Zambia health systems
-
-// ============================================================================
-// Individual Profiles and Definitions are in separate files in the 'profiles' folder
-// ============================================================================
+// Consolidated profile definitions were moved to individual files
+// in this directory to avoid duplication. See the following files
+// for profile definitions:
+// - ZMCorePatient.fsh
+// - ZMCorePractitioner.fsh
+// - ZMCoreOrganization.fsh
+// - ZMCoreEncounter.fsh
+// - ZMCoreCondition.fsh
+// - ZMCoreObservation.fsh
+// - ZMCoreMedication.fsh
+// - ZMCoreMedicationRequest.fsh

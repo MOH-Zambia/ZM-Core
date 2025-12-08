@@ -11,5 +11,6 @@ Description: "Zambia healthcare organization profile"
 * identifier.value 1..1 MS
 * name 1..1 MS
 * type 1..* MS
-* address MS
-* telecom MS
+* contact 0..* MS
+* contact.address MS
+* contact.telecom MS

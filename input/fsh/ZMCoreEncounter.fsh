@@ -10,5 +10,7 @@ Description: "Zambia health encounter profile"
 * class MS
 * type MS
 * subject 1..1 MS
-* serviceProvider MS
-* period MS
+* serviceProvider 0..1 MS
+* serviceProvider only Reference(Organization)
+* actualPeriod.start MS
+* actualPeriod.end MS
