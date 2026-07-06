@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="480" viewBox="0 0 640 480" role="img" aria-labelledby="title desc">
+  <title id="title">Zambia flag</title>
+  <desc id="desc">Green field with three vertical stripes and an orange eagle.</desc>
+  <rect width="640" height="480" fill="#198a00"/>
+  <rect x="520" y="288" width="40" height="192" fill="#ef3340"/>
+  <rect x="560" y="288" width="40" height="192" fill="#111111"/>
+  <rect x="600" y="288" width="40" height="192" fill="#ff8200"/>
+  <path d="M520 210 l22 10 l12 -12 l12 12 l22 -10 l-8 16 l18 10 l-20 2 l2 18 l-16 -10 l-16 10 l2 -18 l-20 -2 l18 -10 z" fill="#ff8200"/>
+</svg>

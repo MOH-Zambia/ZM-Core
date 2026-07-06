@@ -3,12 +3,12 @@
   "id": "zm-core-patient-example-json",
   "meta": {
     "profile": [
-      "http://moh-zambia.github.io/zm-core/StructureDefinition/zm-core-patient"
+      "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-patient"
     ]
   },
   "identifier": [
     {
-      "system": "http://moh-zambia.github.io/zm-core/sid/nrc",
+      "system": "http://hapi.moh.gov.zm/fhir/sid/nrc",
       "value": "234567/12/2"
     }
   ],
@@ -30,8 +30,15 @@
   ],
   "contact": [
     {
-      "system": "phone",
-      "value": "+260 97 123 4567"
+      "name": {
+        "text": "Emergency Contact"
+      },
+      "telecom": [
+        {
+          "system": "phone",
+          "value": "+260 97 123 4567"
+        }
+      ]
     }
   ]
 }

@@ -3,12 +3,12 @@
   "id": "zm-core-organization-example-json",
   "meta": {
     "profile": [
-      "http://moh-zambia.github.io/zm-core/StructureDefinition/zm-core-organization"
+      "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-organization"
     ]
   },
   "identifier": [
     {
-      "system": "http://moh-zambia.github.io/zm-core/sid/facility-id",
+      "system": "http://hapi.moh.gov.zm/fhir/sid/facility-id",
       "value": "HF002"
     }
   ],
@@ -24,17 +24,19 @@
       ]
     }
   ],
-  "address": [
+  "contact": [
     {
-      "city": "Lusaka",
-      "district": "Lusaka",
-      "country": "Zambia"
-    }
-  ],
-  "telecom": [
-    {
-      "system": "phone",
-      "value": "+260 211 555 888"
+      "telecom": [
+        {
+          "system": "phone",
+          "value": "+260 211 555 888"
+        }
+      ],
+      "address": {
+        "city": "Lusaka",
+        "district": "Lusaka",
+        "country": "Zambia"
+      }
     }
   ]
 }

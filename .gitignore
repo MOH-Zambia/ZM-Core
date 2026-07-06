@@ -1,23 +1,19 @@
-# Temporary folders #
-#####################
-temp
-template
-output
-fsh-generated
+# Log files
+*.log
 
-# Don't commit this because it's so large #
-###########################################
-/input-cache
-
-# Windows generated files #
-###########################
+# OS-generated files
+.DS_Store
 Thumbs.db
 
-# OS generated files #
-######################
-.DS_Store
-.DS_Store?
+# Editor/IDE folders
+.vscode/
+.idea/
 
-# backup files #
-################
-*.bak
+# FHIR IG Publisher generated folders and files
+output/
+temp/
+input-cache/
+publisher.jar
+
+# SUSHI generated files
+fsh-generated/

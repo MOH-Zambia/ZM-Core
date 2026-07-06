@@ -8,8 +8,8 @@
 
 
 id: zm-core
-canonical: http://moh-zambia.github.io/zm-core
-url: http://moh-zambia.github.io/zm-core
+canonical: http://hapi.moh.gov.zm/fhir
+url: http://hapi.moh.gov.zm/fhir/ImplementationGuide/zm-core
 name: ZMCore
 title: "HL7 FHIR Implementation Guide: ZM-Core Release 1 - Zambia"
 description: ZM-Core is an Implementation Guide for HL7 FHIR R5 resources commonly used in Zambia's health systems, providing standardized profiles and guidance for interoperability.
@@ -97,6 +97,20 @@ jurisdiction: urn:iso:std:iso:3166#ZM "Zambia"
 #    description: An example Patient
 #    exampleBoolean: true
 #  Patient/bad-example: omit
+
+resources:
+  Encounter/zm-core-encounter-example-json:
+    name: Example ZM-Core Encounter (JSON)
+    description: Hand-crafted JSON example of a Zambia Core Encounter.
+    exampleCanonical: http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-encounter
+  Organization/zm-core-organization-example-json:
+    name: Example ZM-Core Organization (JSON)
+    description: Hand-crafted JSON example of a Zambia Core Organization.
+    exampleCanonical: http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-organization
+  Patient/zm-core-patient-example-json:
+    name: Example ZM-Core Patient (JSON)
+    description: Hand-crafted JSON example of a Zambia Core Patient.
+    exampleCanonical: http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-patient
 
 # Groups can control certain aspects of the IG generation.  The IG
 # documentation recommends that authors use the default groups that

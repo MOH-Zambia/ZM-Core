@@ -19,6 +19,15 @@
 <a name="navigation"> </a>
 <p>The top menu allows quick navigation to the different sections, and a <a href="toc.html">Table of Contents</a> is provided with the entire content of this Implementation Guide. (Be aware that some pages have multiple tabs).</p>
 <p></p>
+
+	<a name="dependencies"> </a>
+	<h3>Dependencies</h3>
+	{% include dependency-table-short.xhtml %}
+
+	<a name="globals"> </a>
+	<h3>Global Profiles</h3>
+	{% include globals-table.xhtml %}
+
 	<a name="ip"> </a>
 	<h3>Intellectual Property Considerations</h3>
 	<p>
@@ -27,6 +36,8 @@
     any other constraints of terminologies, questionnaires, and other components used as part of their implementation process. In some cases, 
     licensing requirements may limit the systems that data captured using certain questionnaires may be shared with.
   </p>
+
+	{% include ip-statements.xhtml %}
 
 	<a name="disclaimer"> </a>
 	<h3>Disclaimer</h3>
