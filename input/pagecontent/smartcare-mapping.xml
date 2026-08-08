@@ -1,0 +1,74 @@
+<div xmlns="http://www.w3.org/1999/xhtml">
+  <h2>SmartCare Pro interoperability mapping</h2>
+  <p>
+    This page records the mapping derived from a source review of the SmartCare Pro API repository. The review covered
+    entity models, controller contracts, local enumerations, laboratory and logistics integration models, authentication,
+    and audit/synchronization fields. It did not include a production database, live API traffic, or a terminology
+    validation exercise. The profiles below define exchange boundaries; they are not a one-for-one publication of
+    SmartCare database tables.
+  </p>
+
+  <h3>Resource mapping</h3>
+  <table class="grid">
+    <thead>
+      <tr><th>SmartCare Pro feature or data</th><th>ZM-Core exchange target</th><th>Key mapping rule</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Client</td><td>ZMCorePatient</td><td>Use NRC, NUPN, NAPSA, under-five card, and ART numbers as typed identifiers; do not use them interchangeably.</td></tr>
+      <tr><td>UserAccount and facility access</td><td>ZMCorePractitioner and ZMCorePractitionerRole</td><td>Exchange the person separately from each role, organization, service, and location assignment.</td></tr>
+      <tr><td>Facility, Department, ServicePoint, Ward, and Bed</td><td>ZMCoreOrganization, ZMCoreHealthcareService, and ZMCoreLocation</td><td>Resolve Facility Master, HMIS, and DISA codes through governed identifier namespaces and the national facility registry.</td></tr>
+      <tr><td>Encounter, Interaction, VisitDetail, admission, and discharge</td><td>ZMCoreEncounter</td><td>Preserve encounter type, time, participants, service provider, and location as coded/reference data rather than display strings.</td></tr>
+      <tr><td>Appointment</td><td>ZMCoreAppointment</td><td>Translate completed and cancelled booleans into one FHIR appointment status and reference the patient and responsible actors.</td></tr>
+      <tr><td>IdentifiedAllergy and AllergicDrug</td><td>ZMCoreAllergyIntolerance</td><td>Map severity to reaction severity; map the substance or product to a governed clinical terminology.</td></tr>
+      <tr><td>ImmunizationRecord and VaccineDose</td><td>ZMCoreImmunization</td><td>Retain vaccine, dose number, administration time, lot, route, location, and performer.</td></tr>
+      <tr><td>AdverseEvent following immunization</td><td>ZMCoreAdverseEvent</td><td>Represent each event with coded manifestations and a reference to the suspect Immunization; do not exchange symptom booleans as the clinical model.</td></tr>
+      <tr><td>Investigation</td><td>ZMCoreServiceRequest</td><td>Use the order number as an identifier, standard request priority, a coded test, requester, performer, encounter, and linked specimen.</td></tr>
+      <tr><td>IdentifiedSampleCollection</td><td>ZMCoreSpecimen</td><td>Retain specimen identity, type, collection time and quantity, receipt time, collector, and request linkage.</td></tr>
+      <tr><td>Result and Test</td><td>ZMCoreObservation</td><td>Use LOINC where verified, UCUM for units, structured values, interpretation, reference ranges, and specimen linkage.</td></tr>
+      <tr><td>Result set and report conclusion</td><td>ZMCoreDiagnosticReport</td><td>Link the report to its ServiceRequest, Specimen, Observations, encounter, performers, and interpreter.</td></tr>
+      <tr><td>Prescription and Medication</td><td>ZMCoreMedicationRequest and ZMCoreMedication</td><td>Keep product identity distinct from the order; express route, timing, dose, duration, and quantity structurally.</td></tr>
+      <tr><td>Dispense and DispensedItem</td><td>ZMCoreMedicationDispense</td><td>Reference the authorizing prescription and actual product, quantity, date, dispenser, destination, and receiver.</td></tr>
+      <tr><td>Surgery and other performed interventions</td><td>ZMCoreProcedure</td><td>Represent procedure code, occurrence, performers, location, reason, outcome, and complications as structured data.</td></tr>
+      <tr><td>ReferralModule</td><td>ZMCoreServiceRequest</td><td>Use a referral category, reason, requester, requested service, receiving organization or service, and a standard workflow status.</td></tr>
+      <tr><td>TreatmentPlan, NursingPlan, and programme plans</td><td>ZMCoreCarePlan</td><td>Preserve plan status, intent, period, custodian, problems, goals, activities, and contributors.</td></tr>
+      <tr><td>NextOfKin, Caregiver, and PatientBinding</td><td>ZMCoreRelatedPerson</td><td>Use a patient reference and coded relationship; use another Patient resource only when the related person is also a registered patient.</td></tr>
+      <tr><td>Created/modified facility and user fields</td><td>ZMCoreProvenance and ZMCoreAuditEvent</td><td>Exchange authorship and system activity as provenance/audit data, not as duplicate clinical extensions on every resource.</td></tr>
+      <tr><td>OrderAck, ResultACK, DISALog, and ElmisLog</td><td>Task, Provenance, and AuditEvent alongside the clinical resources</td><td>Acknowledgement and transport state must not replace the clinical resource status.</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Required normalization</h3>
+  <ul>
+    <li>SmartCare GUID and integer primary keys may be retained as source identifiers, but national business identifiers SHALL use stable, explicit identifier systems.</li>
+    <li>SmartCare numeric enum values SHALL NOT be sent without a canonical code system. A ConceptMap or another governed mapping artifact is required for each source enum.</li>
+    <li>Clinical codes SHOULD use maintained national value sets backed by internationally recognized systems such as LOINC, SNOMED CT, ICD, and UCUM where appropriate and licensed.</li>
+    <li>Names such as <code>ClinicianName</code>, <code>FacilityName</code>, <code>RequestedBy</code>, and <code>TestLocation</code> are display fallbacks only. Exchange SHALL include resolvable references whenever the actor or place is known.</li>
+    <li>SmartCare <code>IsDeleted</code> is a local soft-delete flag and <code>IsSynced</code> or ELMIS synchronization flags are transport state. They SHALL NOT be interpreted as FHIR clinical status.</li>
+  </ul>
+
+  <h3>Known interoperability limitations</h3>
+  <ol>
+    <li><strong>Terminology identity and versioning:</strong> many clinical concepts use local lookup-table integers or numeric enums without a canonical system or version. Several domains overlap, including separate diagnosis hierarchies, allergy/drug tables, test/result options, and medication catalogues.</li>
+    <li><strong>LOINC inconsistency:</strong> the Test entity and DISA integration use the field name <code>LONIC</code>, while some DTOs use <code>LOINC</code>. A stored value must be validated as a real LOINC code before it is published with <code>http://loinc.org</code>.</li>
+    <li><strong>Priority mismatch:</strong> SmartCare's investigation priority enum contains overlapping values such as Regular, Routine, Urgent, Emergency, ASAP, Stat, Timed, and Unspecified. These do not map one-to-one to the FHIR request-priority value set.</li>
+    <li><strong>Specimen fragmentation:</strong> HIV-oriented sample types and TB-oriented specimen types are separate enums with limited lists. A unified, extensible specimen terminology and explicit ConceptMaps are needed.</li>
+    <li><strong>Identifier collisions:</strong> NRC, NUPN, ART number, HMIS code, Facility Master Code, DISA code, ZAMMSA code, and MSL drug ID have different issuers and scopes. Missing issuer governance or facility-local number generation can cause false matches.</li>
+    <li><strong>Denormalized clinical data:</strong> some integration logs store measurements such as blood pressure as strings, AEFI manifestations as independent booleans, and surgery teams or indications as free text. This loses units, coding, components, performers, and uncertainty.</li>
+    <li><strong>Status loss:</strong> completion, cancellation, result receipt, acknowledgement, deletion, and synchronization are often represented as independent booleans or strings. Conflicting combinations are possible and require deterministic mapping to one FHIR workflow status plus separate transport state.</li>
+    <li><strong>FHIR REST behavior:</strong> the reviewed API exposes many proprietary CRUD endpoints rather than FHIR resource endpoints. No reviewed contract established CapabilityStatement discovery, FHIR search semantics, Bundles, conditional operations, version-aware updates, or OperationOutcome error responses.</li>
+    <li><strong>External workflow coupling:</strong> DISA and eLMIS payload/log models combine patient, facility, order, result, medication, and acknowledgement data. Consumers should exchange referenced resources and explicit workflow events rather than depend on those flattened payloads.</li>
+    <li><strong>Authentication and authorization:</strong> the API uses a custom encrypted bearer token under a scheme named BasicAuthentication. It does not provide the standard SMART-on-FHIR/OAuth discovery, scopes, audience, or authorization context expected by many interoperable clients.</li>
+    <li><strong>Privacy and credential exposure:</strong> repository-held request/response logs serialize personal and account fields, including credential-related fields. Production logging must exclude secrets and sensitive payloads, apply retention controls, and use consent, security labels, Provenance, and AuditEvent where required.</li>
+    <li><strong>Biometrics:</strong> raw fingerprint templates are stored as client fields. ZM-Core does not define raw biometric exchange. Implementations should exchange only a governed match/reference outcome when legally authorized and protect biometric data as highly sensitive.</li>
+    <li><strong>Schema and naming drift:</strong> misspellings and duplicate concepts occur across entity, controller, DTO, and route names. Generated integrations should bind to versioned contracts, not infer semantics from names alone.</li>
+    <li><strong>Programme breadth:</strong> ART, HTS, TB, PrEP/PEP, PMTCT, maternal/newborn, GBV, VMMC, NCD, and dialysis modules contain programme-specific fields beyond this core mapping. Those should be developed as governed programme profiles and value sets, not added wholesale as core extensions.</li>
+  </ol>
+
+  <h3>Implementation sequence</h3>
+  <p>
+    A conforming adapter should first establish identifier and terminology governance, then implement Patient, PractitionerRole,
+    Organization/Location, and Encounter references. Clinical workflows should be exchanged as connected resource graphs—for
+    example ServiceRequest to Specimen to Observation to DiagnosticReport—before DISA/eLMIS acknowledgement state is added as
+    Task, Provenance, and AuditEvent data.
+  </p>
+</div>

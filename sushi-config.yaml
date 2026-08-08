@@ -106,7 +106,7 @@ resources:
   Organization/zm-core-organization-example-json:
     name: Example ZM-Core Organization (JSON)
     description: Hand-crafted JSON example of a Zambia Core Organization.
-    exampleCanonical: http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-organization
+    exampleCanonical: http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-facility-organization
   Patient/zm-core-patient-example-json:
     name: Example ZM-Core Patient (JSON)
     description: Hand-crafted JSON example of a Zambia Core Patient.

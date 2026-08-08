@@ -6,6 +6,15 @@
 	<li>
 		<a href="toc.html">Table of Contents</a>
 	</li>
+	<li>
+		<a href="communication-hub.html">Communication Hub</a>
+	</li>
+	<li>
+		<a href="smartcare-mapping.html">SmartCare Mapping</a>
+	</li>
+	<li>
+		<a href="mfl-organization.html">MFL Organization</a>
+	</li>
 <!--
 	<li class="dropdown">
 		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Background<b class="caret"></b>
@@ -27,4 +36,4 @@
 			</li>
 		</ul>
 	</li>
-</ul>      
+</ul>

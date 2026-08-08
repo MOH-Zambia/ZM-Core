@@ -1,0 +1,51 @@
+<div xmlns="http://www.w3.org/1999/xhtml">
+  <h2>Unified Health Communication Hub</h2>
+  <p>
+    The Unified Health Communication Hub is a governed shared service behind the HIE. Source systems create
+    <code>ZMCoreCommunicationRequest</code> resources; subscriptions activate routing workflows; and the hub records
+    delivery, acknowledgement, escalation, provenance, and audit results in FHIR. The FHIR server and originating
+    systems remain authoritative. Workflow engines such as n8n orchestrate processing but are not clinical repositories.
+  </p>
+
+  <h3>Workflow resources</h3>
+  <table class="grid">
+    <thead>
+      <tr><th>Resource</th><th>Purpose</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><code>CommunicationRequest</code></td><td>Governed request containing the purpose, recipient, schedule, approved template, language, classification, and channel policy.</td></tr>
+      <tr><td><code>SubscriptionTopic</code> and <code>Subscription</code></td><td>R5 event trigger and secure delivery configuration. ZM-Core requires ID-only notification payloads.</td></tr>
+      <tr><td><code>Communication</code></td><td>Record of what was sent or received, by which channel, and with what FHIR delivery status.</td></tr>
+      <tr><td><code>Task</code></td><td>Acknowledgement, completion, recipient-resolution, or escalation work item with a required response period.</td></tr>
+      <tr><td><code>Consent</code></td><td>Permission and channel preferences governing contact with a patient.</td></tr>
+      <tr><td><code>AuditEvent</code> and <code>Provenance</code></td><td>Security access trail and authorship/change history.</td></tr>
+      <tr><td><code>PractitionerRole</code>, <code>Organization</code>, <code>HealthcareService</code>, <code>Group</code>, and <code>Location</code></td><td>Authoritative directory entries used for role- and hierarchy-based recipient resolution.</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Lifecycle and outcome</h3>
+  <p>
+    Implementers SHALL use the required base FHIR status value sets. A request is normally <code>active</code> while the
+    hub is processing it and <code>completed</code> when the workflow has ended. “Delivered” or “failed” is represented by
+    the linked <code>Communication.status</code> and <code>Communication.statusReason</code>. “Escalated” is represented by
+    a linked <code>Task</code> whose code is <code>escalate</code>. This avoids introducing non-conformant status values on
+    <code>CommunicationRequest</code>.
+  </p>
+
+  <h3>Security and disclosure</h3>
+  <p>
+    The data-classification extension drives channel and disclosure rules. Restricted health information SHALL NOT be
+    placed directly in ordinary SMS, email, Teams, WhatsApp, push, or IVR messages. Those channels carry a minimal
+    notification and direct the recipient to an authenticated portal or application. Subscription notifications contain
+    resource identifiers only; an authorized hub service retrieves the resource through the HIE. Systems SHALL apply
+    consent, purpose limitation, encryption, access control, audit logging, idempotency, retry, expiry, and escalation
+    policy before delivery.
+  </p>
+
+  <h3>Pilot</h3>
+  <p>
+    The included example chain implements the recommended low-risk DHIS2 reporting-reminder pilot: an operational
+    request is detected, the current reporting officer is resolved through <code>PractitionerRole</code>, an email with an
+    SMS fallback is sent, an acknowledgement <code>Task</code> is created, and delivery and provenance are recorded.
+  </p>
+</div>

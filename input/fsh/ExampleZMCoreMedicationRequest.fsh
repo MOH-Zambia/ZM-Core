@@ -6,6 +6,9 @@ Description: "Example medication prescription"
 * intent = #order
 * subject = Reference(ExampleZMCorePatient)
 * medication.reference = Reference(ExampleZMCoreMedication)
+* encounter = Reference(ExampleZMCoreEncounter)
+* authoredOn = "2025-11-15T09:45:00+02:00"
+* requester = Reference(ExampleZMCorePractitioner)
 * dosageInstruction[0].text = "Take 500mg twice daily for 5 days"
 * dosageInstruction[0].timing.repeat.frequency = 2
 * dosageInstruction[0].timing.repeat.period = 1

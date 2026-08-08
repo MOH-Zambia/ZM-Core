@@ -11,6 +11,12 @@ Description: "Zambia diagnosis/condition profile"
 * verificationStatus 0..1 MS
 * verificationStatus only CodeableConcept
 * subject 1..1 MS
+* subject only Reference(ZMCorePatient or ZMCoreGroup)
+* encounter MS
+* encounter only Reference(ZMCoreEncounter)
 * code 1..1 MS
 * onsetDateTime MS
 * recordedDate MS
+* participant MS
+* evidence MS
+* note MS

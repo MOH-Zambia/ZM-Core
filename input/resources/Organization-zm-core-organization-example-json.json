@@ -3,29 +3,68 @@
   "id": "zm-core-organization-example-json",
   "meta": {
     "profile": [
-      "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-organization"
+      "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-facility-organization"
     ]
   },
   "identifier": [
     {
-      "system": "http://hapi.moh.gov.zm/fhir/sid/facility-id",
-      "value": "HF002"
+      "system": "http://hapi.moh.gov.zm/fhir/sid/hmis-facility-code",
+      "value": "50060042"
+    },
+    {
+      "system": "http://hapi.moh.gov.zm/fhir/sid/dhis2-organisation-unit-uid",
+      "value": "HvCdWhbVEvI"
+    },
+    {
+      "system": "http://hapi.moh.gov.zm/fhir/sid/smartcare-facility-id",
+      "value": "5b00f2acd13f48b783ef90cb1f32e068"
+    },
+    {
+      "system": "http://hapi.moh.gov.zm/fhir/sid/ihris-facility-id",
+      "value": "facility|1022"
     }
   ],
-  "name": "Chilenje Level One Hospital",
+  "active": true,
+  "name": "Chilenje First Level Hospital",
   "type": [
     {
       "coding": [
         {
-          "system": "http://terminology.hl7.org/CodeSystem/organization-type",
-          "code": "prov",
-          "display": "Healthcare Provider"
+          "system": "http://hapi.moh.gov.zm/fhir/CodeSystem/facility-type",
+          "code": "hospital-level-1",
+          "display": "Hospital - Level 1"
+        }
+      ]
+    },
+    {
+      "coding": [
+        {
+          "system": "http://hapi.moh.gov.zm/fhir/CodeSystem/facility-ownership",
+          "code": "grz",
+          "display": "Government of the Republic of Zambia"
         }
       ]
     }
   ],
+  "extension": [
+    {
+      "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-facility-registry-status",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://hapi.moh.gov.zm/fhir/CodeSystem/facility-registry-status",
+            "code": "operational",
+            "display": "Operational"
+          }
+        ]
+      }
+    }
+  ],
   "contact": [
     {
+      "purpose": {
+        "text": "General enquiries"
+      },
       "telecom": [
         {
           "system": "phone",
@@ -35,7 +74,8 @@
       "address": {
         "city": "Lusaka",
         "district": "Lusaka",
-        "country": "Zambia"
+        "state": "Lusaka Province",
+        "country": "ZM"
       }
     }
   ]

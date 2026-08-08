@@ -1,0 +1,66 @@
+<div xmlns="http://www.w3.org/1999/xhtml">
+  <h2>Master Facility List organization mapping</h2>
+  <p>
+    This guidance is based on a source review of the Zambia MFL Django application and the MFL REST API. The
+    <code>ZMCoreOrganization</code> profile carries organization identity and classification shared across health systems.
+    <code>ZMCoreFacilityOrganization</code> adds the mandatory facility type, ownership, and registry status needed for a
+    facility registered in the national Master Facility List.
+  </p>
+
+  <h3>Facility mapping</h3>
+  <table class="grid">
+    <thead><tr><th>MFL field</th><th>ZM-Core element</th><th>Rule</th></tr></thead>
+    <tbody>
+      <tr><td>id</td><td>identifier[mflRegistryId]</td><td>Use only when the REST database identifier is stable across MFL deployments.</td></tr>
+      <tr><td>HMIS_code</td><td>identifier[hmisCode]</td><td>Preserve leading zeroes and do not substitute a DHIS2 UID or database key.</td></tr>
+      <tr><td>DHIS2_UID</td><td>identifier[dhis2Uid]</td><td>Identifies the corresponding DHIS2 organisation unit.</td></tr>
+      <tr><td>smartcare_GUID</td><td>identifier[smartcareGuid]</td><td>Use the SmartCare identifier namespace; do not assume all historical values satisfy UUID syntax.</td></tr>
+      <tr><td>eLMIS_ID</td><td>identifier[elmisId]</td><td>Identifies the corresponding eLMIS facility.</td></tr>
+      <tr><td>iHRIS_ID</td><td>identifier[ihrisId]</td><td>Identifies the corresponding iHRIS facility or organisation unit.</td></tr>
+      <tr><td>name</td><td>name</td><td>The current official registry name; prior or alternate names belong in alias.</td></tr>
+      <tr><td>facility_type</td><td>type[facilityType]</td><td>Use the ZM-Core facility-type code system, not an unscoped lookup-table integer or display string.</td></tr>
+      <tr><td>ownership</td><td>type[ownership]</td><td>Represent ownership independently from facility service level.</td></tr>
+      <tr><td>operation_status</td><td>extension[registryStatus]</td><td>Keep the MFL registry state separate from Organization.active.</td></tr>
+      <tr><td>web_address, email, phone, mobile, fax</td><td>contact.telecom</td><td>Assign the appropriate ContactPoint system and use.</td></tr>
+      <tr><td>postal and general contact address</td><td>contact.address</td><td>Use a separate contact repetition when postal and physical addresses differ.</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Data that does not belong on Organization</h3>
+  <table class="grid">
+    <thead><tr><th>MFL data</th><th>FHIR representation</th></tr></thead>
+    <tbody>
+      <tr><td>longitude, latitude, geom, location type, physical address</td><td>ZMCoreLocation.position, form/type, and address</td></tr>
+      <tr><td>province, district, constituency, and ward hierarchy</td><td>Referenced administrative Locations and Location.partOf; display text alone is not a stable identifier</td></tr>
+      <tr><td>services and service categories</td><td>ZMCoreHealthcareService.type, category, and offeredIn</td></tr>
+      <tr><td>operating hours and laboratory level</td><td>HealthcareService availability/characteristics or Location hoursOfOperation</td></tr>
+      <tr><td>equipment</td><td>Device resources associated with the facility or service where item-level exchange is required</td></tr>
+      <tr><td>infrastructure, beds, and cots</td><td>Location characteristics or governed capacity observations; these are time-varying measurements</td></tr>
+      <tr><td>numbers of doctors, nurses, midwives, and paramedics</td><td>PractitionerRole data or a dated MeasureReport/Observation, not a static Organization extension</td></tr>
+      <tr><td>catchment population estimates</td><td>A dated measure with source and method, because head-count and CSO estimates are distinct and change over time</td></tr>
+      <tr><td>ratings, comments, and display stars</td><td>Do not exchange as core facility identity; define a governed assessment profile if nationally required</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Interoperability limitations found in the reviewed repositories</h3>
+  <ul>
+    <li>The Django model uses <code>HMIS_code</code>, while serializers, views, and GeoJSON field lists refer to <code>HMIS_Code</code>. They also request a non-existent singular <code>catchment_population</code> field instead of the two source-specific population fields.</li>
+    <li>The REST model exposes the misspelled property <code>ownersip</code>. Consumer-generated schemas can therefore perpetuate a contract typo.</li>
+    <li>The <code>smartcare_GUID</code> column contains historical values of different shapes, including 32-character hexadecimal and other non-UUID strings. UUID validation would reject valid legacy links.</li>
+    <li>Facility type contains legacy values such as Private, NGO, Police, and Military that overlap with the separate ownership table. Senders should prefer a specific service-level type plus ownership.</li>
+    <li>The operation-status list combines operational state, licensing, registration, construction, and record-quality states such as Duplicate and Invalid. It cannot be safely collapsed into a boolean active flag.</li>
+    <li>Several identifier columns are optional and are not declared unique in the reviewed model. Matching on one identifier alone can therefore create false merges.</li>
+    <li>The MFL REST projection flattens foreign keys to display strings, omits services, laboratory level, operating hours, infrastructure, equipment, and update timestamps, and returns coordinates as strings alongside GeoJSON.</li>
+    <li>Facility-name search is not a stable identity operation and is limited by the REST query. Names are not unique and change over time.</li>
+    <li>The nearest-facility endpoint applies a fixed radius and result limit rather than standard FHIR geospatial search semantics.</li>
+    <li>The REST API uses proprietary response envelopes and endpoints rather than FHIR Bundles, CapabilityStatement discovery, standard search parameters, paging links, version identifiers, or Provenance.</li>
+    <li>The REST endpoints are publicly readable with wildcard CORS. If non-public operational or contact data is added later, access policy, rate limiting, and data classification will need review.</li>
+    <li>The bundled Python FHIR Organization class was generated from FHIR STU3 and is not wired to the facility API. Its shape and search helper must not be treated as evidence of R5 conformance.</li>
+  </ul>
+
+  <p>
+    A producer should publish the Organization, its physical Location, and its HealthcareService records together in a
+    transaction Bundle so identifiers, coordinates, administrative hierarchy, services, and availability remain linked
+    without flattening them into a single facility payload.
+  </p>
+</div>
