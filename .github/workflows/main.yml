@@ -1,23 +1,171 @@
-# This workflow reuses the openHIE GitHub action for building IGs
-# Initial idea by Carl Leitner, developed by Elliot Silver, available from: https://www.argentixinfo.com/archives/156
-# Change log:
-# v0.1.0
-# 2021-06-18: publish default branches to / , other branches branches/<branch>
-# 2021-11-26: reusable workflow
+name: CI and GitHub Pages
 
-name: CI
-
-# Controls when the action will run. 
 on:
-  # Triggers the workflow on push or pull request events for any main branch
   push:
-    branches-ignore:    
-      - 'gh-pages'
+    branches-ignore:
+      - gh-pages
   pull_request:
-
   workflow_dispatch:
+  workflow_call:
+    inputs:
+      ref:
+        description: Git ref to build. Defaults to the triggering commit.
+        required: false
+        type: string
+        default: ""
+      deploy:
+        description: Deploy the generated site to gh-pages.
+        required: false
+        type: boolean
+        default: false
+      target_folder:
+        description: Optional folder within gh-pages, such as releases/v1.0.0.
+        required: false
+        type: string
+        default: ""
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ inputs.ref || github.ref }}
+  cancel-in-progress: true
+
+env:
+  SUSHI_VERSION: 3.16.5
+  PUBLISHER_VERSION: 2.2.10
+  PUBLISHER_SHA256: 62ff40bfc270241c402b4c03b7f00c28fe34a563e9ce7354f885a9339dae323e
 
 jobs:
-  # This workflow contains a single job called "build"
-  call_build: 
-    uses: openhie/empty-fhir-ig/.github/workflows/main.yml@master
+  build:
+    name: Build implementation guide
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          ref: ${{ inputs.ref || github.sha }}
+
+      - name: Set up Java
+        uses: actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961 # v5
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: Set up Node.js
+        uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5
+        with:
+          node-version: "20"
+
+      - name: Install pinned SUSHI
+        run: npm install --global "fsh-sushi@${SUSHI_VERSION}"
+
+      - name: Download pinned FHIR IG Publisher
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p input-cache
+          curl --fail --location --retry 3 --retry-all-errors \
+            "https://github.com/HL7/fhir-ig-publisher/releases/download/${PUBLISHER_VERSION}/publisher.jar" \
+            --output input-cache/publisher.jar
+          echo "${PUBLISHER_SHA256}  input-cache/publisher.jar" | sha256sum --check --strict
+
+      - name: Compile FHIR Shorthand
+        run: sushi .
+
+      - name: Build implementation guide
+        shell: bash
+        run: |
+          set -euo pipefail
+          java -Xmx4g -jar input-cache/publisher.jar \
+            -ig . \
+            -auto-ig-build \
+            -repo "https://github.com/${GITHUB_REPOSITORY}"
+
+      - name: Upload generated site
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: ig-output-${{ github.run_id }}-${{ github.run_attempt }}
+          path: output
+          if-no-files-found: error
+          retention-days: 14
+
+  deploy:
+    name: Deploy GitHub Pages
+    needs: build
+    if: >-
+      github.event_name != 'pull_request' &&
+      (github.event_name != 'workflow_call' || inputs.deploy)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    concurrency:
+      group: gh-pages-deployment
+      cancel-in-progress: false
+    steps:
+      - name: Checkout deployment branch context
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          fetch-depth: 0
+
+      - name: Download generated site
+        uses: actions/download-artifact@018cc2cf5baa6db3ef3c5f8a56943fffe632ef53 # v6
+        with:
+          name: ig-output-${{ github.run_id }}-${{ github.run_attempt }}
+          path: output
+
+      - name: Resolve deployment target
+        id: target
+        shell: bash
+        env:
+          REQUESTED_TARGET: ${{ inputs.target_folder }}
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+          REF_NAME: ${{ github.ref_name }}
+          REF_TYPE: ${{ github.ref_type }}
+        run: |
+          set -euo pipefail
+          if [[ -n "${REQUESTED_TARGET}" ]]; then
+            target="${REQUESTED_TARGET}"
+          elif [[ "${REF_TYPE}" == "branch" && "${REF_NAME}" == "${DEFAULT_BRANCH}" ]]; then
+            target=""
+          else
+            safe_ref="$(printf '%s' "${REF_NAME}" | sed -E 's/[^A-Za-z0-9._-]+/-/g; s/^-+//; s/-+$//')"
+            if [[ -z "${safe_ref}" ]]; then
+              echo "Unable to derive a safe deployment folder from ${REF_NAME}" >&2
+              exit 1
+            fi
+            target="branches/${safe_ref}"
+          fi
+
+          if [[ "${target}" == /* || "${target}" == *".."* ]]; then
+            echo "Unsafe deployment target: ${target}" >&2
+            exit 1
+          fi
+
+          echo "folder=${target}" >> "${GITHUB_OUTPUT}"
+
+      - name: Deploy default branch
+        if: steps.target.outputs.folder == ''
+        uses: JamesIves/github-pages-deploy-action@4a3abc783e1a24aeb44c16e869ad83caf6b4cc23 # v4.7.4
+        with:
+          branch: gh-pages
+          folder: output
+          clean-exclude: |
+            branches
+            releases
+          commit-message: Deploy ${{ github.sha }}
+          single-commit: true
+
+      - name: Deploy branch or release preview
+        if: steps.target.outputs.folder != ''
+        uses: JamesIves/github-pages-deploy-action@4a3abc783e1a24aeb44c16e869ad83caf6b4cc23 # v4.7.4
+        with:
+          branch: gh-pages
+          folder: output
+          target-folder: ${{ steps.target.outputs.folder }}
+          clean: false
+          commit-message: Deploy ${{ github.sha }} to ${{ steps.target.outputs.folder }}

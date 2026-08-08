@@ -1,0 +1,51 @@
+name: FHIR Autobuild Trigger
+
+on:
+  push:
+    branches-ignore:
+      - gh-pages
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: fhir-autobuild-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  trigger:
+    name: Notify FHIR autobuild service
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+    steps:
+      - name: Show trigger context
+        shell: bash
+        env:
+          ACTOR: ${{ github.actor }}
+          REF: ${{ github.ref }}
+          REPOSITORY: ${{ github.repository }}
+        run: printf '%s triggered a FHIR autobuild for %s at %s\n' "${ACTOR}" "${REPOSITORY}" "${REF}"
+
+      - name: Request FHIR autobuild
+        shell: bash
+        env:
+          FHIR_AUTOBUILD_URL: https://us-central1-fhir-org-starter-project.cloudfunctions.net/ig-commit-trigger
+          REF: ${{ github.ref }}
+          REPOSITORY: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          payload="$(jq --null-input \
+            --arg ref "${REF}" \
+            --arg repository "${REPOSITORY}" \
+            '{ref: $ref, repository: {full_name: $repository}}')"
+
+          curl --fail-with-body --silent --show-error \
+            --retry 3 --retry-all-errors \
+            --request POST \
+            --header 'content-type: application/json' \
+            --data "${payload}" \
+            "${FHIR_AUTOBUILD_URL}"
