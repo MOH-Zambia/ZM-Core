@@ -82,7 +82,7 @@ jobs:
           set -euo pipefail
           java -Xmx4g -jar input-cache/publisher.jar \
             -ig . \
-            -auto-ig-build \
+            -no-sushi \
             -repo "https://github.com/${GITHUB_REPOSITORY}"
 
       - name: Upload generated site
