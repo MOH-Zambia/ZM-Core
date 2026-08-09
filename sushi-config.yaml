@@ -68,8 +68,11 @@ jurisdiction: urn:iso:std:iso:3166#ZM "Zambia"
 
 dependencies:
   hl7.fhir.uv.tools.r5: 1.1.2
-  hl7.terminology.r5: 7.3.0
-  hl7.fhir.uv.extensions.r5: 5.3.0
+  # Keep the terminology and extension packages aligned with the tooling
+  # package. Newer versions create a circular dependency that causes the
+  # IG Publisher to fail during dependency prescan.
+  hl7.terminology.r5: 7.1.0
+  hl7.fhir.uv.extensions.r5: 5.2.0
 
 # The global property corresponds to the IG.global property, but it
 # uses the type as the YAML key and the profile as its value. Since
