@@ -1,5 +1,5 @@
 <div xmlns="http://www.w3.org/1999/xhtml">
-  <h2>Master Facility List organization mapping</h2>
+  <h3>Master Facility List organization mapping</h3>
   <p>
     This guidance is based on a source review of the Zambia MFL Django application and the MFL REST API. The
     <code>ZMCoreOrganization</code> profile carries organization identity and classification shared across health systems.
@@ -7,7 +7,7 @@
     facility registered in the national Master Facility List.
   </p>
 
-  <h3>Facility mapping</h3>
+  <h4>Facility mapping</h4>
   <table class="grid">
     <thead><tr><th>MFL field</th><th>ZM-Core element</th><th>Rule</th></tr></thead>
     <tbody>
@@ -26,7 +26,7 @@
     </tbody>
   </table>
 
-  <h3>Data that does not belong on Organization</h3>
+  <h4>Data that does not belong on Organization</h4>
   <table class="grid">
     <thead><tr><th>MFL data</th><th>FHIR representation</th></tr></thead>
     <tbody>
@@ -42,7 +42,7 @@
     </tbody>
   </table>
 
-  <h3>Interoperability limitations found in the reviewed repositories</h3>
+  <h4>Interoperability limitations found in the reviewed repositories</h4>
   <ul>
     <li>The Django model uses <code>HMIS_code</code>, while serializers, views, and GeoJSON field lists refer to <code>HMIS_Code</code>. They also request a non-existent singular <code>catchment_population</code> field instead of the two source-specific population fields.</li>
     <li>The REST model exposes the misspelled property <code>ownersip</code>. Consumer-generated schemas can therefore perpetuate a contract typo.</li>

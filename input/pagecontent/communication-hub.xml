@@ -1,5 +1,5 @@
 <div xmlns="http://www.w3.org/1999/xhtml">
-  <h2>Unified Health Communication Hub</h2>
+  <h3>Unified Health Communication Hub</h3>
   <p>
     The Unified Health Communication Hub is a governed shared service behind the HIE. Source systems create
     <code>ZMCoreCommunicationRequest</code> resources; subscriptions activate routing workflows; and the hub records
@@ -7,7 +7,7 @@
     systems remain authoritative. Workflow engines such as n8n orchestrate processing but are not clinical repositories.
   </p>
 
-  <h3>Workflow resources</h3>
+  <h4>Workflow resources</h4>
   <table class="grid">
     <thead>
       <tr><th>Resource</th><th>Purpose</th></tr>
@@ -23,7 +23,7 @@
     </tbody>
   </table>
 
-  <h3>Lifecycle and outcome</h3>
+  <h4>Lifecycle and outcome</h4>
   <p>
     Implementers SHALL use the required base FHIR status value sets. A request is normally <code>active</code> while the
     hub is processing it and <code>completed</code> when the workflow has ended. “Delivered” or “failed” is represented by
@@ -32,7 +32,7 @@
     <code>CommunicationRequest</code>.
   </p>
 
-  <h3>Security and disclosure</h3>
+  <h4>Security and disclosure</h4>
   <p>
     The data-classification extension drives channel and disclosure rules. Restricted health information SHALL NOT be
     placed directly in ordinary SMS, email, Teams, WhatsApp, push, or IVR messages. Those channels carry a minimal
@@ -42,7 +42,7 @@
     policy before delivery.
   </p>
 
-  <h3>Pilot</h3>
+  <h4>Pilot</h4>
   <p>
     The included example chain implements the recommended low-risk DHIS2 reporting-reminder pilot: an operational
     request is detected, the current reporting officer is resolved through <code>PractitionerRole</code>, an email with an

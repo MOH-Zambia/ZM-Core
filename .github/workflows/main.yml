@@ -35,6 +35,7 @@ env:
   SUSHI_VERSION: 3.16.5
   PUBLISHER_VERSION: 2.2.10
   PUBLISHER_SHA256: 62ff40bfc270241c402b4c03b7f00c28fe34a563e9ce7354f885a9339dae323e
+  JEKYLL_VERSION: 4.3.4
 
 jobs:
   build:
@@ -59,6 +60,14 @@ jobs:
         uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5
         with:
           node-version: "20"
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@95ef2b042f9d7a56d8268cba8559e2842e2ad01b # v1
+        with:
+          ruby-version: "3.3"
+
+      - name: Install pinned Jekyll
+        run: gem install jekyll --version "${JEKYLL_VERSION}" --no-document
 
       - name: Install pinned SUSHI
         run: npm install --global "fsh-sushi@${SUSHI_VERSION}"
