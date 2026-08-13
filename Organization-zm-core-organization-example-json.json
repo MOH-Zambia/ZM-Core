@@ -1,0 +1,68 @@
+{
+  "resourceType" : "Organization",
+  "id" : "zm-core-organization-example-json",
+  "meta" : {
+    "profile" : ["http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-facility-organization"]
+  },
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Organization zm-core-organization-example-json</b></p><a name=\"zm-core-organization-example-json\"> </a><a name=\"hczm-core-organization-example-json\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-zm-core-facility-organization.html\">ZM-Core Facility Organization Profile</a></p></div><p><b>ZM-Core Facility Registry Status</b>: <span title=\"Codes:{http://hapi.moh.gov.zm/fhir/CodeSystem/facility-registry-status operational}\">Operational</span></p><p><b>identifier</b>: <code>http://hapi.moh.gov.zm/fhir/sid/hmis-facility-code</code>/50060042, <code>http://hapi.moh.gov.zm/fhir/sid/dhis2-organisation-unit-uid</code>/HvCdWhbVEvI, <code>http://hapi.moh.gov.zm/fhir/sid/smartcare-facility-id</code>/5b00f2acd13f48b783ef90cb1f32e068, <code>http://hapi.moh.gov.zm/fhir/sid/ihris-facility-id</code>/facility|1022</p><p><b>active</b>: true</p><p><b>type</b>: <span title=\"Codes:{http://hapi.moh.gov.zm/fhir/CodeSystem/facility-type hospital-level-1}\">Hospital - Level 1</span>, <span title=\"Codes:{http://hapi.moh.gov.zm/fhir/CodeSystem/facility-ownership grz}\">Government of the Republic of Zambia</span></p><p><b>name</b>: Chilenje First Level Hospital</p><h3>Contacts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Purpose</b></td><td><b>Telecom</b></td><td><b>Address</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:\">General enquiries</span></td><td><a href=\"tel:+260211555888\">+260 211 555 888</a></td><td>Lusaka Lusaka Province ZM </td></tr></table></div>"
+  },
+  "extension" : [{
+    "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-facility-registry-status",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://hapi.moh.gov.zm/fhir/CodeSystem/facility-registry-status",
+        "code" : "operational",
+        "display" : "Operational"
+      }]
+    }
+  }],
+  "identifier" : [{
+    "system" : "http://hapi.moh.gov.zm/fhir/sid/hmis-facility-code",
+    "value" : "50060042"
+  },
+  {
+    "system" : "http://hapi.moh.gov.zm/fhir/sid/dhis2-organisation-unit-uid",
+    "value" : "HvCdWhbVEvI"
+  },
+  {
+    "system" : "http://hapi.moh.gov.zm/fhir/sid/smartcare-facility-id",
+    "value" : "5b00f2acd13f48b783ef90cb1f32e068"
+  },
+  {
+    "system" : "http://hapi.moh.gov.zm/fhir/sid/ihris-facility-id",
+    "value" : "facility|1022"
+  }],
+  "active" : true,
+  "type" : [{
+    "coding" : [{
+      "system" : "http://hapi.moh.gov.zm/fhir/CodeSystem/facility-type",
+      "code" : "hospital-level-1",
+      "display" : "Hospital - Level 1"
+    }]
+  },
+  {
+    "coding" : [{
+      "system" : "http://hapi.moh.gov.zm/fhir/CodeSystem/facility-ownership",
+      "code" : "grz",
+      "display" : "Government of the Republic of Zambia"
+    }]
+  }],
+  "name" : "Chilenje First Level Hospital",
+  "contact" : [{
+    "purpose" : {
+      "text" : "General enquiries"
+    },
+    "telecom" : [{
+      "system" : "phone",
+      "value" : "+260 211 555 888"
+    }],
+    "address" : {
+      "city" : "Lusaka",
+      "district" : "Lusaka",
+      "state" : "Lusaka Province",
+      "country" : "ZM"
+    }
+  }]
+}

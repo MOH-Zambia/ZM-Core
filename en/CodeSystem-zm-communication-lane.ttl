@@ -1,0 +1,80 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hapi.moh.gov.zm/fhir/CodeSystem/zm-communication-lane> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "zm-communication-lane"] ; # 
+  fhir:language [ fhir:v "en"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem zm-communication-lane</b></p><a name=\"zm-communication-lane\"> </a><a name=\"hczm-communication-lane\"> </a><p>This case-sensitive code system <code>http://hapi.moh.gov.zm/fhir/CodeSystem/zm-communication-lane</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">clinical<a name=\"zm-communication-lane-clinical\"> </a></td><td>Clinical</td><td>Patient care communications such as appointment, referral, result-availability, and follow-up notifications.</td></tr><tr><td style=\"white-space:nowrap\">public-health<a name=\"zm-communication-lane-public-health\"> </a></td><td>Public health</td><td>Surveillance alerts, outbreak notifications, and incident escalation.</td></tr><tr><td style=\"white-space:nowrap\">operational<a name=\"zm-communication-lane-operational\"> </a></td><td>Operational</td><td>Reporting deadlines, data-quality issues, and service interruptions.</td></tr><tr><td style=\"white-space:nowrap\">supply-chain<a name=\"zm-communication-lane-supply-chain\"> </a></td><td>Supply chain</td><td>Stock alerts, requisition approvals, and delivery notifications.</td></tr><tr><td style=\"white-space:nowrap\">workforce<a name=\"zm-communication-lane-workforce\"> </a></td><td>Workforce</td><td>Workforce approvals, deployments, training, and licence-expiry reminders.</td></tr><tr><td style=\"white-space:nowrap\">public-information<a name=\"zm-communication-lane-public-information\"> </a></td><td>Public information</td><td>Approved campaigns, service availability, and health advisories.</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:url [ fhir:v "http://hapi.moh.gov.zm/fhir/CodeSystem/zm-communication-lane"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "ZMCommunicationLaneCS"] ; # 
+  fhir:title [ fhir:v "Zambia Communication Lane"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2026-08-13T13:25:03+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "Ministry of Health - Zambia"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "Ministry of Health - Zambia" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.moh.gov.zm/" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "digital.health@moh.gov.zm" ]
+     ] )
+  ] [
+     fhir:name [ fhir:v "ZM-Core Team" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "zm-core@moh.gov.zm" ] ;
+       fhir:use [ fhir:v "work" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Governance lanes used to separate communication purposes, access rules, and disclosure controls in the Zambia Unified Health Communication Hub."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "ZM" ] ;
+       fhir:display [ fhir:v "Zambia" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "6"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "clinical" ] ;
+     fhir:display [ fhir:v "Clinical" ] ;
+     fhir:definition [ fhir:v "Patient care communications such as appointment, referral, result-availability, and follow-up notifications." ]
+  ] [
+     fhir:code [ fhir:v "public-health" ] ;
+     fhir:display [ fhir:v "Public health" ] ;
+     fhir:definition [ fhir:v "Surveillance alerts, outbreak notifications, and incident escalation." ]
+  ] [
+     fhir:code [ fhir:v "operational" ] ;
+     fhir:display [ fhir:v "Operational" ] ;
+     fhir:definition [ fhir:v "Reporting deadlines, data-quality issues, and service interruptions." ]
+  ] [
+     fhir:code [ fhir:v "supply-chain" ] ;
+     fhir:display [ fhir:v "Supply chain" ] ;
+     fhir:definition [ fhir:v "Stock alerts, requisition approvals, and delivery notifications." ]
+  ] [
+     fhir:code [ fhir:v "workforce" ] ;
+     fhir:display [ fhir:v "Workforce" ] ;
+     fhir:definition [ fhir:v "Workforce approvals, deployments, training, and licence-expiry reminders." ]
+  ] [
+     fhir:code [ fhir:v "public-information" ] ;
+     fhir:display [ fhir:v "Public information" ] ;
+     fhir:definition [ fhir:v "Approved campaigns, service availability, and health advisories." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

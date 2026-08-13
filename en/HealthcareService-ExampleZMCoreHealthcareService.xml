@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<HealthcareService xmlns="http://hl7.org/fhir">
+  <id value="ExampleZMCoreHealthcareService"/>
+  <meta>
+    <profile value="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-healthcare-service"/>
+  </meta>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: HealthcareService ExampleZMCoreHealthcareService</b></p><a name="ExampleZMCoreHealthcareService"> </a><a name="hcExampleZMCoreHealthcareService"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-zm-core-healthcare-service.html">ZM-Core Healthcare Service Profile</a></p></div><p><b>identifier</b>: <code>http://hapi.moh.gov.zm/fhir/sid/healthcare-service-id</code>/HF001-DHIS2</p><p><b>active</b>: true</p><p><b>providedBy</b>: <a href="Organization-ExampleZMCoreOrganization.html">Organization Chilenje First Level Hospital</a></p><p><b>type</b>: <span title="Codes:">Routine health information reporting</span></p><p><b>location</b>: <a href="Location-ExampleZMCoreLocation.html">Location University Teaching Hospital</a></p><p><b>name</b>: DHIS2 Reporting Service</p><h3>Contacts</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Telecom</b></td></tr><tr><td style="display: none">*</td><td><a href="mailto:dhis2.reporting@example.org">dhis2.reporting@example.org</a></td></tr></table></div>
+  </text>
+  <identifier>
+    <system value="http://hapi.moh.gov.zm/fhir/sid/healthcare-service-id"/>
+    <value value="HF001-DHIS2"/>
+  </identifier>
+  <active value="true"/>
+  <providedBy>
+    <reference value="Organization/ExampleZMCoreOrganization"/>
+  </providedBy>
+  <type>
+    <text value="Routine health information reporting"/>
+  </type>
+  <location>
+    <reference value="Location/ExampleZMCoreLocation"/>
+  </location>
+  <name value="DHIS2 Reporting Service"/>
+  <contact>
+    <telecom>
+      <system value="email"/>
+      <value value="dhis2.reporting@example.org"/>
+    </telecom>
+  </contact>
+</HealthcareService>

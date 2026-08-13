@@ -1,0 +1,47 @@
+{
+  "resourceType" : "MedicationRequest",
+  "id" : "ExampleZMCoreMedicationRequest",
+  "meta" : {
+    "profile" : ["http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-request"]
+  },
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: MedicationRequest ExampleZMCoreMedicationRequest</b></p><a name=\"ExampleZMCoreMedicationRequest\"> </a><a name=\"hcExampleZMCoreMedicationRequest\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-zm-core-medication-request.html\">ZM-Core MedicationRequest Profile</a></p></div><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><h3>Medications</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Reference</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Medication-ExampleZMCoreMedication.html\">Medication Betamethasone 0.1% w/w cream /ointment tube</a></td></tr></table><p><b>subject</b>: <a href=\"Patient-ExampleZMCorePatient.html\">John Mwale  Male, DoB: 1985-05-15 ( http://hapi.moh.gov.zm/fhir/sid/nrc#123456/12/1)</a></p><p><b>encounter</b>: <a href=\"Encounter-ExampleZMCoreEncounter.html\">Encounter: status = completed; class = ambulatory; type = ; actualPeriod = 2025-11-15 09:00:00+0200 --&gt; 2025-11-15 10:30:00+0200</a></p><p><b>authoredOn</b>: 2025-11-15 09:45:00+0200</p><p><b>requester</b>: <a href=\"Practitioner-ExampleZMCorePractitioner.html\">Practitioner Mary Chipo Phiri (official)</a></p><blockquote><p><b>dosageInstruction</b></p><p><b>text</b>: Take 500mg twice daily for 5 days</p><p><b>timing</b>: 2 per 1 day</p><h3>DoseAndRates</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Dose[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>500 mg<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemg = 'mg')</span></td></tr></table></blockquote></div>"
+  },
+  "status" : "active",
+  "intent" : "order",
+  "medication" : {
+    "reference" : {
+      "reference" : "Medication/ExampleZMCoreMedication"
+    }
+  },
+  "subject" : {
+    "reference" : "Patient/ExampleZMCorePatient"
+  },
+  "encounter" : {
+    "reference" : "Encounter/ExampleZMCoreEncounter"
+  },
+  "authoredOn" : "2025-11-15T09:45:00+02:00",
+  "requester" : {
+    "reference" : "Practitioner/ExampleZMCorePractitioner"
+  },
+  "dosageInstruction" : [{
+    "text" : "Take 500mg twice daily for 5 days",
+    "timing" : {
+      "repeat" : {
+        "frequency" : 2,
+        "period" : 1,
+        "periodUnit" : "d"
+      }
+    },
+    "doseAndRate" : [{
+      "doseQuantity" : {
+        "value" : 500,
+        "unit" : "mg",
+        "system" : "http://unitsofmeasure.org",
+        "code" : "mg"
+      }
+    }]
+  }]
+}

@@ -1,0 +1,1852 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title>Artifacts Summary - HL7 FHIR Implementation Guide: ZM-Core Release 1 - Zambia v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link rel="stylesheet" href="fhir.css"/>
+
+      <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap-fhir.css"/>
+
+      <!-- Project extras -->
+    <link rel="stylesheet" href="assets/css/pygments-manni.css"/>
+    <link rel="stylesheet" href="assets/css/jquery-ui.css"/>
+  	<link rel="stylesheet" href="assets/css/prism.css"/>
+    <link rel="stylesheet" href="assets/css/project.css"/>
+  	<link rel="stylesheet" href="assets/css/cqf.css"/>
+      <!-- Placeholder for child template CSS declarations -->
+
+    <script src="fhir-table-scripts.js" type="text/javascript"> </script>
+    <script src="assets/js/direction-management.js" type="text/javascript"> </script>
+
+      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- [if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif] -->
+
+      <!-- Favicons -->
+    <link sizes="144x144" rel="fhir-logo" href="assets/ico/icon-fhir-144.png"/>
+    <link sizes="114x114" rel="fhir-logo" href="assets/ico/icon-fhir-114.png"/>
+    <link sizes="72x72" rel="fhir-logo" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script src="assets/js/mermaid.js" type="text/javascript"></script>
+    <script src="assets/js/mermaid-init.js" type="text/javascript"></script>
+    <style type="text/css">h2{--heading-prefix:"6"}
+    h3,h4,h5,h6{--heading-prefix:"6.0"}</style>
+    <div id="segment-header" class="segment">    <!-- segment-header -->
+      <div class="container">    <!-- container -->
+
+          <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">HL7 FHIR Implementation Guide: ZM-Core Release 1 - Zambia</span>
+            <br/>
+            <span style="display:inline-block;"><a name="l89">​</a>0.1.0 - 
+
+
+
+  <img src="assets/images/zmb.svg" alt="Zambia flag" title="Zambia" height="16"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div>   <!-- /container -->
+    </div>    <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">    <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">    <!-- container -->
+          <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+            <!-- status-bar -->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a href="http://hl7.org/fhir/R5/index.html" class="navbar-brand hidden">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul class="nav navbar-nav">
+	<li>
+		<a href="index.html">IG Home</a>
+	</li>
+	<li>
+		<a href="toc.html">Table of Contents</a>
+	</li>
+	<li>
+		<a href="communication-hub.html">Communication Hub</a>
+	</li>
+	<li>
+		<a href="smartcare-mapping.html">SmartCare Mapping</a>
+	</li>
+	<li>
+		<a href="mfl-organization.html">MFL Organization</a>
+	</li>
+  <!-- <li class="dropdown">
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Background<b class="caret"></b>
+		</a>
+
+	</li>
+	<li class="dropdown">
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Functional Description<b class="caret"></b>
+		</a>
+
+	</li> -->
+	<li class="dropdown">
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Specifications<b class="caret"></b>
+		</a>
+		<ul class="dropdown-menu">
+			<li>
+				<a href="artifacts.html">Artifact Index</a>
+			</li>
+		</ul>
+	</li>
+</ul>
+
+            </div>    <!-- /.nav-collapse -->
+
+              
+
+          </div>    <!-- /.container -->
+        </nav>    <!-- /.navbar -->
+        <!-- /HEADER CONTENT -->
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-navbar -->
+      <!-- status-bar -->
+
+    <div id="segment-breadcrumb" class="segment">    <!-- segment-breadcrumb -->
+      <div class="container">    <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href="toc.html"><b>Table of Contents</b></a></li><li><b>Artifacts Summary</b></li>
+
+        </ul>
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">    <!-- segment-content -->
+      <div class="container">    <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+    <!-- ReleaseHeader --><p id="publish-box">HL7 FHIR Implementation Guide: ZM-Core Release 1 - Zambia - Local Development build (v0.1.0) built by the FHIR (HL7&reg; FHIR&reg; Standard) Build Tools. See the <a href="http://hapi.moh.gov.zm/fhir/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
+  <h2>Artifacts Summary</h2>
+  
+  
+  
+  
+    <!-- DO NOT EDIT THIS FILE - It is generated by https://github.com/HL7/ig-template-base/blob/master/scripts/createArtifactSummary.xslt and any changes made will be overwritten --><div xmlns:html="http://www.w3.org/1999/xhtml" xmlns:f="http://hl7.org/fhir" class="markdown-toc">
+   <p>Contents:</p>
+   <ul>
+      <li>
+         <a href="#1">Structures: Logical Models</a>
+      </li>
+      <li>
+         <a href="#2">Structures: Resource Profiles</a>
+      </li>
+      <li>
+         <a href="#3">Structures: Extension Definitions</a>
+      </li>
+      <li>
+         <a href="#4">Terminology: Value Sets</a>
+      </li>
+      <li>
+         <a href="#5">Terminology: Code Systems</a>
+      </li>
+      <li>
+         <a href="#6">Example: Example Instances</a>
+      </li>
+      <li>
+         <a href="#7">Other</a>
+      </li>
+   </ul>
+</div>
+<div xmlns:html="http://www.w3.org/1999/xhtml" xmlns:f="http://hl7.org/fhir">
+   <p>This page provides a list of the FHIR artifacts defined as part of this implementation guide.</p>
+   <a name="1"> </a>
+   <h3>Structures: Logical Models </h3>
+    <p>These define data models that represent the domain covered by this implementation guide in more business-friendly terms than the underlying FHIR resources.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ZMCoreClinicalEncounter.html" title="StructureDefinition/ZMCoreClinicalEncounter">
+                  <span title="StructureDefinition/ZMCoreClinicalEncounter">Clinical Encounter
+</span>
+               </a>
+            </td>
+            <td>
+<p>Clinical encounter structure for Zambian health systems</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ZMCoreHealthFacility.html" title="StructureDefinition/ZMCoreHealthFacility">
+                  <span title="StructureDefinition/ZMCoreHealthFacility">Health Facility
+</span>
+               </a>
+            </td>
+            <td>
+<p>Health facility structure for Zambian health systems</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ZMCoreImmunizationRecord.html" title="StructureDefinition/ZMCoreImmunizationRecord">
+                  <span title="StructureDefinition/ZMCoreImmunizationRecord">Immunization Record
+</span>
+               </a>
+            </td>
+            <td>
+<p>Immunization record for Zambian health systems</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ZMCorePatientDemographics.html" title="StructureDefinition/ZMCorePatientDemographics">
+                  <span title="StructureDefinition/ZMCorePatientDemographics">Patient Demographics
+</span>
+               </a>
+            </td>
+            <td>
+<p>Core patient demographic information for Zambian health systems</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="2"> </a>
+   <h3>Structures: Resource Profiles </h3>
+    <p>These define constraints on FHIR resources for systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-core-adverse-event.html" title="StructureDefinition/zm-core-adverse-event">
+                  <span title="StructureDefinition/zm-core-adverse-event">ZM-Core Adverse Event Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>Zambia adverse event profile, including adverse events following immunization.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-core-allergy-intolerance.html" title="StructureDefinition/zm-core-allergy-intolerance">
+                  <span title="StructureDefinition/zm-core-allergy-intolerance">ZM-Core Allergy Intolerance Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>Zambia allergy and intolerance profile for allergy substances, medicinal products, severity, and reactions.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-core-appointment.html" title="StructureDefinition/zm-core-appointment">
+                  <span title="StructureDefinition/zm-core-appointment">ZM-Core Appointment Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>Zambia appointment profile for scheduled clinical services, including SmartCare Pro appointments.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-core-care-plan.html" title="StructureDefinition/zm-core-care-plan">
+                  <span title="StructureDefinition/zm-core-care-plan">ZM-Core Care Plan Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>Zambia care plan profile for treatment, nursing, and multidisciplinary plans.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-core-communication-audit-event.html" title="StructureDefinition/zm-core-communication-audit-event">
+                  <span title="StructureDefinition/zm-core-communication-audit-event">ZM-Core Communication Audit Event Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>Security and access audit trail for creation, routing, access, delivery, acknowledgement, or escalation of a hub communication.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-core-communication-consent.html" title="StructureDefinition/zm-core-communication-consent">
+                  <span title="StructureDefinition/zm-core-communication-consent">ZM-Core Communication Consent Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>An individual's consent decision governing whether and through which channels the Unified Health Communication Hub may make contact.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-core-communication.html" title="StructureDefinition/zm-core-communication">
+                  <span title="StructureDefinition/zm-core-communication">ZM-Core Communication Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>The immutable delivery or receipt record produced for a communication request, including channel and delivery outcome.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-core-communication-provenance.html" title="StructureDefinition/zm-core-communication-provenance">
+                  <span title="StructureDefinition/zm-core-communication-provenance">ZM-Core Communication Provenance Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>Record of who initiated or changed a communication workflow resource, when, and on whose behalf.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-core-communication-request.html" title="StructureDefinition/zm-core-communication-request">
+                  <span title="StructureDefinition/zm-core-communication-request">ZM-Core Communication Request Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>A governed request from a Ministry health system to the Unified Health Communication Hub to route and deliver information.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-core-subscription.html" title="StructureDefinition/zm-core-subscription">
+                  <span title="StructureDefinition/zm-core-subscription">ZM-Core Communication Subscription Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>A secure R5 Subscription that activates a communication workflow when a governed communication topic matches.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-core-communication-subscription-topic.html" title="StructureDefinition/zm-core-communication-subscription-topic">
+                  <span title="StructureDefinition/zm-core-communication-subscription-topic">ZM-Core Communication Subscription Topic Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>A governed R5 subscription topic that describes which communication events may activate hub workflows and what may be filtered or returned.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-core-communication-task.html" title="StructureDefinition/zm-core-communication-task">
+                  <span title="StructureDefinition/zm-core-communication-task">ZM-Core Communication Task Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>An acknowledgement, required action, recipient-resolution, or escalation task linked to a hub communication workflow.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-core-condition.html" title="StructureDefinition/zm-core-condition">
+                  <span title="StructureDefinition/zm-core-condition">ZM-Core Condition Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>Zambia diagnosis/condition profile</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-core-diagnostic-report.html" title="StructureDefinition/zm-core-diagnostic-report">
+                  <span title="StructureDefinition/zm-core-diagnostic-report">ZM-Core Diagnostic Report Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>Zambia diagnostic report profile for laboratory, imaging, pathology, and other diagnostic services.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-core-encounter.html" title="StructureDefinition/zm-core-encounter">
+                  <span title="StructureDefinition/zm-core-encounter">ZM-Core Encounter Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>Zambia health encounter profile</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-core-facility-organization.html" title="StructureDefinition/zm-core-facility-organization">
+                  <span title="StructureDefinition/zm-core-facility-organization">ZM-Core Facility Organization Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>A health facility registered in the Zambia Master Facility List. Physical coordinates and site characteristics are represented by ZMCoreLocation, while offered services are represented by ZMCoreHealthcareService.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-core-healthcare-service.html" title="StructureDefinition/zm-core-healthcare-service">
+                  <span title="StructureDefinition/zm-core-healthcare-service">ZM-Core Healthcare Service Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>A service directory entry used to resolve facilities, responsible teams, service coverage, and communication contacts.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-core-immunization.html" title="StructureDefinition/zm-core-immunization">
+                  <span title="StructureDefinition/zm-core-immunization">ZM-Core Immunization Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>Zambia immunization profile for vaccines administered to a patient.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-core-location.html" title="StructureDefinition/zm-core-location">
+                  <span title="StructureDefinition/zm-core-location">ZM-Core Location Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>A physical or administrative place from the Zambia Health Facility Registry used in facility and reporting-hierarchy routing.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-core-medication-dispense.html" title="StructureDefinition/zm-core-medication-dispense">
+                  <span title="StructureDefinition/zm-core-medication-dispense">ZM-Core Medication Dispense Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>Zambia medication dispensing profile linking dispensed medicine to the prescription, patient, encounter, and dispensing facility.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-core-medication.html" title="StructureDefinition/zm-core-medication">
+                  <span title="StructureDefinition/zm-core-medication">ZM-Core Medication Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>Zambia Core Medication Profile aligned to the ZAMMSA national product catalogue and the eLMIS Master Product List.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-core-medication-request.html" title="StructureDefinition/zm-core-medication-request">
+                  <span title="StructureDefinition/zm-core-medication-request">ZM-Core MedicationRequest Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>Zambia medication request profile</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-core-observation.html" title="StructureDefinition/zm-core-observation">
+                  <span title="StructureDefinition/zm-core-observation">ZM-Core Observation Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>Zambia clinical observation profile</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-core-organization.html" title="StructureDefinition/zm-core-organization">
+                  <span title="StructureDefinition/zm-core-organization">ZM-Core Organization Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>Zambia healthcare organization profile, including identifiers and classifications used by the national Master Facility List.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-core-patient.html" title="StructureDefinition/zm-core-patient">
+                  <span title="StructureDefinition/zm-core-patient">ZM-Core Patient Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>Zambia patient profile for use in health systems</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-core-practitioner.html" title="StructureDefinition/zm-core-practitioner">
+                  <span title="StructureDefinition/zm-core-practitioner">ZM-Core Practitioner Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>Zambia health workforce practitioner profile</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-core-practitioner-role.html" title="StructureDefinition/zm-core-practitioner-role">
+                  <span title="StructureDefinition/zm-core-practitioner-role">ZM-Core Practitioner Role Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>A current health-worker role used to route communications by responsibility rather than by hard-coded contact details.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-core-procedure.html" title="StructureDefinition/zm-core-procedure">
+                  <span title="StructureDefinition/zm-core-procedure">ZM-Core Procedure Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>Zambia procedure profile for surgical, diagnostic, therapeutic, and programme procedures.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-core-group.html" title="StructureDefinition/zm-core-group">
+                  <span title="StructureDefinition/zm-core-group">ZM-Core Recipient Group Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>A governed national, provincial, district, facility, patient, or workforce distribution group used for recipient resolution.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-core-related-person.html" title="StructureDefinition/zm-core-related-person">
+                  <span title="StructureDefinition/zm-core-related-person">ZM-Core Related Person Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>Zambia related person profile for next of kin, caregivers, guardians, treatment supporters, and patient-linked contacts.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-core-service-request.html" title="StructureDefinition/zm-core-service-request">
+                  <span title="StructureDefinition/zm-core-service-request">ZM-Core Service Request Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>Zambia request profile for laboratory, imaging, procedure, and referral services.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-core-specimen.html" title="StructureDefinition/zm-core-specimen">
+                  <span title="StructureDefinition/zm-core-specimen">ZM-Core Specimen Profile
+</span>
+               </a>
+            </td>
+            <td>
+<p>Zambia specimen profile for diagnostic sample collection, transport, receipt, and processing.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="3"> </a>
+   <h3>Structures: Extension Definitions </h3>
+    <p>These define constraints on FHIR data types for systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-communication-template.html" title="StructureDefinition/zm-communication-template">
+                  <span title="StructureDefinition/zm-communication-template">Approved Communication Template
+</span>
+               </a>
+            </td>
+            <td>
+<p>Identifier of the approved message template used to render the communication.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-communication-acknowledgement-required.html" title="StructureDefinition/zm-communication-acknowledgement-required">
+                  <span title="StructureDefinition/zm-communication-acknowledgement-required">Communication Acknowledgement Required
+</span>
+               </a>
+            </td>
+            <td>
+<p>Whether the workflow must create and track an acknowledgement or completion Task.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-communication-data-classification.html" title="StructureDefinition/zm-communication-data-classification">
+                  <span title="StructureDefinition/zm-communication-data-classification">Communication Data Classification
+</span>
+               </a>
+            </td>
+            <td>
+<p>The governance classification used to determine permitted channels and payload disclosure.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-communication-expiry.html" title="StructureDefinition/zm-communication-expiry">
+                  <span title="StructureDefinition/zm-communication-expiry">Communication Expiry
+</span>
+               </a>
+            </td>
+            <td>
+<p>The instant after which the request must not be delivered and should be completed, revoked, or escalated according to policy.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-communication-fallback-channel.html" title="StructureDefinition/zm-communication-fallback-channel">
+                  <span title="StructureDefinition/zm-communication-fallback-channel">Communication Fallback Channel
+</span>
+               </a>
+            </td>
+            <td>
+<p>An approved alternative channel to try if the preferred channel cannot deliver the message. Repetition order expresses routing order.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-communication-message-language.html" title="StructureDefinition/zm-communication-message-language">
+                  <span title="StructureDefinition/zm-communication-message-language">Communication Message Language
+</span>
+               </a>
+            </td>
+            <td>
+<p>BCP-47 language code in which the recipient-facing message is rendered.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-communication-requesting-system.html" title="StructureDefinition/zm-communication-requesting-system">
+                  <span title="StructureDefinition/zm-communication-requesting-system">Communication Requesting System
+</span>
+               </a>
+            </td>
+            <td>
+<p>The authoritative source system that submitted the communication request to the HIE.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-consent-communication-channel.html" title="StructureDefinition/zm-consent-communication-channel">
+                  <span title="StructureDefinition/zm-consent-communication-channel">Consent Communication Channel
+</span>
+               </a>
+            </td>
+            <td>
+<p>A channel for which the individual's contact consent decision applies.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-core-medication-lsi-enabled.html" title="StructureDefinition/zm-core-medication-lsi-enabled">
+                  <span title="StructureDefinition/zm-core-medication-lsi-enabled">Medication LSI Enabled
+</span>
+               </a>
+            </td>
+            <td>
+<p>Indicates whether this medication is enabled for the Logistics Seasonality Index (LSI).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-core-facility-registry-status.html" title="StructureDefinition/zm-core-facility-registry-status">
+                  <span title="StructureDefinition/zm-core-facility-registry-status">ZM-Core Facility Registry Status
+</span>
+               </a>
+            </td>
+            <td>
+<p>The combined operational, licensing, registration, or record-quality status assigned to a facility by the Zambia Master Facility List. This is distinct from Organization.active, which indicates whether the FHIR record is in active use.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-core-medication-atc-classification.html" title="StructureDefinition/zm-core-medication-atc-classification">
+                  <span title="StructureDefinition/zm-core-medication-atc-classification">ZM-Core Medication ATC Classification
+</span>
+               </a>
+            </td>
+            <td>
+<p>WHO ATC classification for the product.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-core-medication-alternate-name.html" title="StructureDefinition/zm-core-medication-alternate-name">
+                  <span title="StructureDefinition/zm-core-medication-alternate-name">ZM-Core Medication Alternate Name
+</span>
+               </a>
+            </td>
+            <td>
+<p>Alternate or brand name of the medicine, if any.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-core-medication-alternate-pack-size.html" title="StructureDefinition/zm-core-medication-alternate-pack-size">
+                  <span title="StructureDefinition/zm-core-medication-alternate-pack-size">ZM-Core Medication Alternate Pack Size
+</span>
+               </a>
+            </td>
+            <td>
+<p>Alternate pack size description, if used in Master List.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-core-medication-archived.html" title="StructureDefinition/zm-core-medication-archived">
+                  <span title="StructureDefinition/zm-core-medication-archived">ZM-Core Medication Archived
+</span>
+               </a>
+            </td>
+            <td>
+<p>Indicates whether the product is archived or no longer active in the catalogue.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-core-medication-can-round-to-zero.html" title="StructureDefinition/zm-core-medication-can-round-to-zero">
+                  <span title="StructureDefinition/zm-core-medication-can-round-to-zero">ZM-Core Medication Can Round To Zero
+</span>
+               </a>
+            </td>
+            <td>
+<p>Indicates whether calculated order quantities can be rounded down to zero.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-core-medication-cartons-per-pallet.html" title="StructureDefinition/zm-core-medication-cartons-per-pallet">
+                  <span title="StructureDefinition/zm-core-medication-cartons-per-pallet">ZM-Core Medication Cartons Per Pallet
+</span>
+               </a>
+            </td>
+            <td>
+<p>Number of cartons per pallet.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-core-medication-controlled-substance.html" title="StructureDefinition/zm-core-medication-controlled-substance">
+                  <span title="StructureDefinition/zm-core-medication-controlled-substance">ZM-Core Medication Controlled Substance
+</span>
+               </a>
+            </td>
+            <td>
+<p>Indicates whether the product is a controlled substance.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-core-medication-description.html" title="StructureDefinition/zm-core-medication-description">
+                  <span title="StructureDefinition/zm-core-medication-description">ZM-Core Medication Description
+</span>
+               </a>
+            </td>
+            <td>
+<p>Long description of the product from the Master List.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-core-medication-dispensing-units.html" title="StructureDefinition/zm-core-medication-dispensing-units">
+                  <span title="StructureDefinition/zm-core-medication-dispensing-units">ZM-Core Medication Dispensing Units
+</span>
+               </a>
+            </td>
+            <td>
+<p>Unit in which the product is dispensed (e.g. tablet, vial, bottle).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-core-medication-dosage-unit.html" title="StructureDefinition/zm-core-medication-dosage-unit">
+                  <span title="StructureDefinition/zm-core-medication-dosage-unit">ZM-Core Medication Dosage Unit
+</span>
+               </a>
+            </td>
+            <td>
+<p>Unit of measure for the product strength (e.g. mg, ml, IU).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-core-medication-doses-per-dispensing-unit.html" title="StructureDefinition/zm-core-medication-doses-per-dispensing-unit">
+                  <span title="StructureDefinition/zm-core-medication-doses-per-dispensing-unit">ZM-Core Medication Doses Per Dispensing Unit
+</span>
+               </a>
+            </td>
+            <td>
+<p>Number of doses per dispensing unit.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-core-medication-flammable.html" title="StructureDefinition/zm-core-medication-flammable">
+                  <span title="StructureDefinition/zm-core-medication-flammable">ZM-Core Medication Flammable
+</span>
+               </a>
+            </td>
+            <td>
+<p>Indicates whether the product is flammable.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-core-medication-full-name.html" title="StructureDefinition/zm-core-medication-full-name">
+                  <span title="StructureDefinition/zm-core-medication-full-name">ZM-Core Medication Full Name
+</span>
+               </a>
+            </td>
+            <td>
+<p>Full trade name of the product as it appears in the Master List.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-core-medication-full-supply.html" title="StructureDefinition/zm-core-medication-full-supply">
+                  <span title="StructureDefinition/zm-core-medication-full-supply">ZM-Core Medication Full Supply
+</span>
+               </a>
+            </td>
+            <td>
+<p>Indicates if the product is part of the full-supply list.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-core-medication-generic-name.html" title="StructureDefinition/zm-core-medication-generic-name">
+                  <span title="StructureDefinition/zm-core-medication-generic-name">ZM-Core Medication Generic Name
+</span>
+               </a>
+            </td>
+            <td>
+<p>Generic name of the medicine.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-core-medication-hazardous.html" title="StructureDefinition/zm-core-medication-hazardous">
+                  <span title="StructureDefinition/zm-core-medication-hazardous">ZM-Core Medication Hazardous
+</span>
+               </a>
+            </td>
+            <td>
+<p>Indicates whether the product is hazardous.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-core-medication-level-of-access.html" title="StructureDefinition/zm-core-medication-level-of-access">
+                  <span title="StructureDefinition/zm-core-medication-level-of-access">ZM-Core Medication Level of Access
+</span>
+               </a>
+            </td>
+            <td>
+<p>Level of access / level of care at which this medicine is used (e.g. Health Post, Clinic, Hospital).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-core-medication-light-sensitive.html" title="StructureDefinition/zm-core-medication-light-sensitive">
+                  <span title="StructureDefinition/zm-core-medication-light-sensitive">ZM-Core Medication Light Sensitive
+</span>
+               </a>
+            </td>
+            <td>
+<p>Indicates whether the product is light sensitive.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-core-medication-msl-pack-size.html" title="StructureDefinition/zm-core-medication-msl-pack-size">
+                  <span title="StructureDefinition/zm-core-medication-msl-pack-size">ZM-Core Medication MSL Pack Size (numeric)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Numeric MSL pack size (e.g. 100, 10).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-core-medication-pack-rounding-threshold.html" title="StructureDefinition/zm-core-medication-pack-rounding-threshold">
+                  <span title="StructureDefinition/zm-core-medication-pack-rounding-threshold">ZM-Core Medication Pack Rounding Threshold
+</span>
+               </a>
+            </td>
+            <td>
+<p>Threshold at which pack quantities are rounded up or down.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-core-medication-pack-size-text.html" title="StructureDefinition/zm-core-medication-pack-size-text">
+                  <span title="StructureDefinition/zm-core-medication-pack-size-text">ZM-Core Medication Pack Size (text)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Pack size description (e.g. 'Pack of 100', 'Each').</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-core-medication-pack-weight.html" title="StructureDefinition/zm-core-medication-pack-weight">
+                  <span title="StructureDefinition/zm-core-medication-pack-weight">ZM-Core Medication Pack Weight
+</span>
+               </a>
+            </td>
+            <td>
+<p>Weight of a single pack, typically in kilograms.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-core-medication-packs-per-carton.html" title="StructureDefinition/zm-core-medication-packs-per-carton">
+                  <span title="StructureDefinition/zm-core-medication-packs-per-carton">ZM-Core Medication Packs Per Carton
+</span>
+               </a>
+            </td>
+            <td>
+<p>Number of packs per carton.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-core-medication-price.html" title="StructureDefinition/zm-core-medication-price">
+                  <span title="StructureDefinition/zm-core-medication-price">ZM-Core Medication Price
+</span>
+               </a>
+            </td>
+            <td>
+<p>Unit price of the product (e.g. pack price) as a Money value.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-core-medication-product-group.html" title="StructureDefinition/zm-core-medication-product-group">
+                  <span title="StructureDefinition/zm-core-medication-product-group">ZM-Core Medication Product Group
+</span>
+               </a>
+            </td>
+            <td>
+<p>Programmatic grouping (e.g. ARV, TB, Malaria, RMNCH).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-core-medication-product-type.html" title="StructureDefinition/zm-core-medication-product-type">
+                  <span title="StructureDefinition/zm-core-medication-product-type">ZM-Core Medication Product Type
+</span>
+               </a>
+            </td>
+            <td>
+<p>High-level product type (e.g. Medicine, Lab Reagent, Device).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-core-medication-route-of-administration.html" title="StructureDefinition/zm-core-medication-route-of-administration">
+                  <span title="StructureDefinition/zm-core-medication-route-of-administration">ZM-Core Medication Route of Administration
+</span>
+               </a>
+            </td>
+            <td>
+<p>Route of administration for this medicine (e.g. oral, IM, IV).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-core-medication-shelf-life.html" title="StructureDefinition/zm-core-medication-shelf-life">
+                  <span title="StructureDefinition/zm-core-medication-shelf-life">ZM-Core Medication Shelf Life
+</span>
+               </a>
+            </td>
+            <td>
+<p>Product shelf-life description (e.g. 24 months).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-core-medication-storage-classification.html" title="StructureDefinition/zm-core-medication-storage-classification">
+                  <span title="StructureDefinition/zm-core-medication-storage-classification">ZM-Core Medication Storage Classification
+</span>
+               </a>
+            </td>
+            <td>
+<p>Storage classification (e.g. Room temperature, Cold chain, Freezer).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-core-medication-storage-instructions.html" title="StructureDefinition/zm-core-medication-storage-instructions">
+                  <span title="StructureDefinition/zm-core-medication-storage-instructions">ZM-Core Medication Storage Instructions
+</span>
+               </a>
+            </td>
+            <td>
+<p>Free-text storage instructions.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-core-medication-store-refrigerated.html" title="StructureDefinition/zm-core-medication-store-refrigerated">
+                  <span title="StructureDefinition/zm-core-medication-store-refrigerated">ZM-Core Medication Store Refrigerated
+</span>
+               </a>
+            </td>
+            <td>
+<p>Indicates whether the product must be stored refrigerated.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-core-medication-store-room-temperature.html" title="StructureDefinition/zm-core-medication-store-room-temperature">
+                  <span title="StructureDefinition/zm-core-medication-store-room-temperature">ZM-Core Medication Store Room Temperature
+</span>
+               </a>
+            </td>
+            <td>
+<p>Storage temperature in degrees Celsius for room temperature storage.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-core-medication-strength.html" title="StructureDefinition/zm-core-medication-strength">
+                  <span title="StructureDefinition/zm-core-medication-strength">ZM-Core Medication Strength
+</span>
+               </a>
+            </td>
+            <td>
+<p>Product strength as free text (e.g. '500mg', '500mg/5ml').</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-core-medication-tracer.html" title="StructureDefinition/zm-core-medication-tracer">
+                  <span title="StructureDefinition/zm-core-medication-tracer">ZM-Core Medication Tracer
+</span>
+               </a>
+            </td>
+            <td>
+<p>Indicates whether the product is a tracer medicine.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-core-medication-transport-instructions.html" title="StructureDefinition/zm-core-medication-transport-instructions">
+                  <span title="StructureDefinition/zm-core-medication-transport-instructions">ZM-Core Medication Transport Instructions
+</span>
+               </a>
+            </td>
+            <td>
+<p>Free-text transport instructions.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-zm-core-medication-who-approved.html" title="StructureDefinition/zm-core-medication-who-approved">
+                  <span title="StructureDefinition/zm-core-medication-who-approved">ZM-Core Medication WHO Approved
+</span>
+               </a>
+            </td>
+            <td>
+<p>Indicates whether the product is WHO prequalified / approved.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="4"> </a>
+   <h3>Terminology: Value Sets </h3>
+    <p>These define sets of codes used by systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-medication-zammsa-sku.html" title="ValueSet/medication-zammsa-sku">
+                  <span title="ValueSet/medication-zammsa-sku">ZAMMSA Medication SKU ValueSet
+</span>
+               </a>
+            </td>
+            <td>
+<p>All ZAMMSA catalogue SKUs that are valid for use in the ZM-Core Medication profile.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-zm-core-condition-vs.html" title="ValueSet/zm-core-condition-vs">
+                  <span title="ValueSet/zm-core-condition-vs">ZM-Core Condition/Diagnosis
+</span>
+               </a>
+            </td>
+            <td>
+<p>Conditions and diagnoses relevant to Zambian health</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-zm-core-encounter-type-vs.html" title="ValueSet/zm-core-encounter-type-vs">
+                  <span title="ValueSet/zm-core-encounter-type-vs">ZM-Core Encounter Type
+</span>
+               </a>
+            </td>
+            <td>
+<p>Types of encounters in Zambian health systems</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-zm-core-marital-status-vs.html" title="ValueSet/zm-core-marital-status-vs">
+                  <span title="ValueSet/zm-core-marital-status-vs">ZM-Core Marital Status
+</span>
+               </a>
+            </td>
+            <td>
+<p>Marital status codes used in Zambian health systems</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-zm-core-observation-category-vs.html" title="ValueSet/zm-core-observation-category-vs">
+                  <span title="ValueSet/zm-core-observation-category-vs">ZM-Core Observation Category
+</span>
+               </a>
+            </td>
+            <td>
+<p>Observation categories used in Zambian health systems</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-zm-core-organization-type-vs.html" title="ValueSet/zm-core-organization-type-vs">
+                  <span title="ValueSet/zm-core-organization-type-vs">ZM-Core Organization Type
+</span>
+               </a>
+            </td>
+            <td>
+<p>Organization types used in Zambian health systems</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-zm-core-patient-gender-vs.html" title="ValueSet/zm-core-patient-gender-vs">
+                  <span title="ValueSet/zm-core-patient-gender-vs">ZM-Core Patient Gender
+</span>
+               </a>
+            </td>
+            <td>
+<p>Patient gender codes</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-zm-communication-channel-vs.html" title="ValueSet/zm-communication-channel-vs">
+                  <span title="ValueSet/zm-communication-channel-vs">Zambia Communication Channel Value Set
+</span>
+               </a>
+            </td>
+            <td>
+<p>Approved preferred and fallback delivery channels for hub communications.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-zm-communication-consent-action-vs.html" title="ValueSet/zm-communication-consent-action-vs">
+                  <span title="ValueSet/zm-communication-consent-action-vs">Zambia Communication Consent Action Value Set
+</span>
+               </a>
+            </td>
+            <td>
+<p>Permitted contact actions represented in a communication consent.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-zm-communication-data-classification-vs.html" title="ValueSet/zm-communication-data-classification-vs">
+                  <span title="ValueSet/zm-communication-data-classification-vs">Zambia Communication Data Classification Value Set
+</span>
+               </a>
+            </td>
+            <td>
+<p>Data classifications used to enforce communication disclosure rules.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-zm-communication-lane-vs.html" title="ValueSet/zm-communication-lane-vs">
+                  <span title="ValueSet/zm-communication-lane-vs">Zambia Communication Lane Value Set
+</span>
+               </a>
+            </td>
+            <td>
+<p>Communication governance lanes supported by the Zambia Unified Health Communication Hub.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-zm-communication-task-code-vs.html" title="ValueSet/zm-communication-task-code-vs">
+                  <span title="ValueSet/zm-communication-task-code-vs">Zambia Communication Task Code Value Set
+</span>
+               </a>
+            </td>
+            <td>
+<p>Task actions supported by a communication workflow.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-facility-ownership.html" title="ValueSet/facility-ownership">
+                  <span title="ValueSet/facility-ownership">Zambia Master Facility List Facility Ownership Value Set
+</span>
+               </a>
+            </td>
+            <td>
+<p>Facility ownership values permitted for a ZM-Core facility organization.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-facility-type.html" title="ValueSet/facility-type">
+                  <span title="ValueSet/facility-type">Zambia Master Facility List Facility Type Value Set
+</span>
+               </a>
+            </td>
+            <td>
+<p>Facility types permitted for a ZM-Core facility organization.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-facility-registry-status.html" title="ValueSet/facility-registry-status">
+                  <span title="ValueSet/facility-registry-status">Zambia Master Facility List Registry Status Value Set
+</span>
+               </a>
+            </td>
+            <td>
+<p>Registry status values permitted for a ZM-Core facility organization.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-medication-level-of-access.html" title="ValueSet/medication-level-of-access">
+                  <span title="ValueSet/medication-level-of-access">Zambia Medication Level of Access
+</span>
+               </a>
+            </td>
+            <td>
+<p>Permitted level(s) of care for use of a medicine (HP, HC, L1, L2, L3).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-product-type.html" title="ValueSet/product-type">
+                  <span title="ValueSet/product-type">Zambia Product Type ValueSet
+</span>
+               </a>
+            </td>
+            <td>
+<p>Allowed Product Type values for Medication.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-product-group.html" title="ValueSet/product-group">
+                  <span title="ValueSet/product-group">Zambia eLMIS Product Group ValueSet
+</span>
+               </a>
+            </td>
+            <td>
+<p>Allowed Product Group values from the eLMIS Master list.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="5"> </a>
+   <h3>Terminology: Code Systems </h3>
+    <p>These define new code systems used by systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-medication-zammsa-sku.html" title="CodeSystem/medication-zammsa-sku">
+                  <span title="CodeSystem/medication-zammsa-sku">ZAMMSA Medication SKU Code System
+</span>
+               </a>
+            </td>
+            <td>
+<p>CodeSystem representing the ZAMMSA national medicines catalogue SKUs.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-zm-communication-channel.html" title="CodeSystem/zm-communication-channel">
+                  <span title="CodeSystem/zm-communication-channel">Zambia Communication Channel
+</span>
+               </a>
+            </td>
+            <td>
+<p>Delivery channels supported by the Zambia Unified Health Communication Hub.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-zm-communication-consent-action.html" title="CodeSystem/zm-communication-consent-action">
+                  <span title="CodeSystem/zm-communication-consent-action">Zambia Communication Consent Action
+</span>
+               </a>
+            </td>
+            <td>
+<p>Consent actions governing contact by the Unified Health Communication Hub.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-zm-communication-data-classification.html" title="CodeSystem/zm-communication-data-classification">
+                  <span title="CodeSystem/zm-communication-data-classification">Zambia Communication Data Classification
+</span>
+               </a>
+            </td>
+            <td>
+<p>Data classifications that drive disclosure and channel controls for health communications.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-zm-communication-lane.html" title="CodeSystem/zm-communication-lane">
+                  <span title="CodeSystem/zm-communication-lane">Zambia Communication Lane
+</span>
+               </a>
+            </td>
+            <td>
+<p>Governance lanes used to separate communication purposes, access rules, and disclosure controls in the Zambia Unified Health Communication Hub.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-zm-communication-task-code.html" title="CodeSystem/zm-communication-task-code">
+                  <span title="CodeSystem/zm-communication-task-code">Zambia Communication Task Code
+</span>
+               </a>
+            </td>
+            <td>
+<p>Actions used to capture acknowledgement and escalation in communication workflows.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-medication-level-of-access.html" title="CodeSystem/medication-level-of-access">
+                  <span title="CodeSystem/medication-level-of-access">Zambia Level of Access for Medicines
+</span>
+               </a>
+            </td>
+            <td>
+<p>Levels of care at which a medicine is allowed to be used, based on the ZAMMSA catalogue.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-facility-ownership.html" title="CodeSystem/facility-ownership">
+                  <span title="CodeSystem/facility-ownership">Zambia Master Facility List Facility Ownership
+</span>
+               </a>
+            </td>
+            <td>
+<p>Facility ownership or controlling sector represented in the Zambia Master Facility List.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-facility-type.html" title="CodeSystem/facility-type">
+                  <span title="CodeSystem/facility-type">Zambia Master Facility List Facility Type
+</span>
+               </a>
+            </td>
+            <td>
+<p>Facility types represented in the Zambia Master Facility List. Police, military, private, and NGO values are retained for source compatibility but overlap with facility ownership and should not be used when a more specific service level is known.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-facility-registry-status.html" title="CodeSystem/facility-registry-status">
+                  <span title="CodeSystem/facility-registry-status">Zambia Master Facility List Registry Status
+</span>
+               </a>
+            </td>
+            <td>
+<p>Combined operational, licensing, registration, and record-quality states represented by the current Zambia Master Facility List operation-status field.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-product-type.html" title="CodeSystem/product-type">
+                  <span title="CodeSystem/product-type">Zambia Product Type (eLMIS)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Product types from the eLMIS Master Product List.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-product-group.html" title="CodeSystem/product-group">
+                  <span title="CodeSystem/product-group">Zambia eLMIS Product Group
+</span>
+               </a>
+            </td>
+            <td>
+<p>Short product group codes from the eLMIS Master list (e.g. ess, medsurge, equip…).</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="6"> </a>
+   <h3>Example: Example Instances </h3>
+    <p>These are example instances that show what data produced and consumed by systems conforming with this implementation guide might look like.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-ExampleZMCoreCommunicationTask.html" title="Task/ExampleZMCoreCommunicationTask">
+                  <span title="Task/ExampleZMCoreCommunicationTask">Example Communication Acknowledgement Task
+</span>
+               </a>
+            </td>
+            <td>
+<p>Task used to capture acknowledgement and trigger escalation if the report remains outstanding.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Consent-ExampleZMCoreCommunicationConsent.html" title="Consent/ExampleZMCoreCommunicationConsent">
+                  <span title="Consent/ExampleZMCoreCommunicationConsent">Example Communication Consent
+</span>
+               </a>
+            </td>
+            <td>
+<p>Example patient contact preference and permission for notifications.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="AuditEvent-ExampleZMCoreCommunicationAuditEvent.html" title="AuditEvent/ExampleZMCoreCommunicationAuditEvent">
+                  <span title="AuditEvent/ExampleZMCoreCommunicationAuditEvent">Example Communication Delivery Audit Event
+</span>
+               </a>
+            </td>
+            <td>
+<p>Example audit event showing successful delivery processing by the hub.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Subscription-ExampleZMCoreSubscription.html" title="Subscription/ExampleZMCoreSubscription">
+                  <span title="Subscription/ExampleZMCoreSubscription">Example Communication Hub Subscription
+</span>
+               </a>
+            </td>
+            <td>
+<p>Example secure REST-hook subscription for the DHIS2 reporting-reminder workflow.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Provenance-ExampleZMCoreCommunicationProvenance.html" title="Provenance/ExampleZMCoreCommunicationProvenance">
+                  <span title="Provenance/ExampleZMCoreCommunicationProvenance">Example Communication Request Provenance
+</span>
+               </a>
+            </td>
+            <td>
+<p>Example record of the authorized actor and source system that created a communication request.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CommunicationRequest-ExampleZMCoreCommunicationRequest.html" title="CommunicationRequest/ExampleZMCoreCommunicationRequest">
+                  <span title="CommunicationRequest/ExampleZMCoreCommunicationRequest">Example DHIS2 Reporting Reminder Request
+</span>
+               </a>
+            </td>
+            <td>
+<p>Low-risk operational pilot request for a facility reporting reminder.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Communication-ExampleZMCoreCommunication.html" title="Communication/ExampleZMCoreCommunication">
+                  <span title="Communication/ExampleZMCoreCommunication">Example Delivered DHIS2 Reporting Reminder
+</span>
+               </a>
+            </td>
+            <td>
+<p>Delivery record produced after the hub sends the reporting reminder.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Medication-ExampleZMCoreMedication.html" title="Medication/ExampleZMCoreMedication">
+                  <span title="Medication/ExampleZMCoreMedication">Example ZAMMSA Betamethasone 0.1% cream/ointment
+</span>
+               </a>
+            </td>
+            <td>
+<p>Example mapping of ZAMMSA catalogue row EM1389 into ZMCoreMedication.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="AdverseEvent-ExampleZMCoreAdverseEventFollowingImmunization.html" title="AdverseEvent/ExampleZMCoreAdverseEventFollowingImmunization">
+                  <span title="AdverseEvent/ExampleZMCoreAdverseEventFollowingImmunization">Example ZM-Core Adverse Event Following Immunization
+</span>
+               </a>
+            </td>
+            <td>
+<p>An AEFI corresponding to SmartCare Pro AdverseEvent data.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="AllergyIntolerance-ExampleZMCoreAllergyIntolerance.html" title="AllergyIntolerance/ExampleZMCoreAllergyIntolerance">
+                  <span title="AllergyIntolerance/ExampleZMCoreAllergyIntolerance">Example ZM-Core Allergy Intolerance
+</span>
+               </a>
+            </td>
+            <td>
+<p>An allergy corresponding to a SmartCare Pro IdentifiedAllergy.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Specimen-ExampleZMCoreSpecimenBlood.html" title="Specimen/ExampleZMCoreSpecimenBlood">
+                  <span title="Specimen/ExampleZMCoreSpecimenBlood">Example ZM-Core Blood Specimen
+</span>
+               </a>
+            </td>
+            <td>
+<p>A blood specimen corresponding to SmartCare Pro identified sample collection data.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Condition-ExampleZMCoreCondition.html" title="Condition/ExampleZMCoreCondition">
+                  <span title="Condition/ExampleZMCoreCondition">Example ZM-Core Condition
+</span>
+               </a>
+            </td>
+            <td>
+<p>Example diagnosis of hypertension</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="DiagnosticReport-ExampleZMCoreDiagnosticReport.html" title="DiagnosticReport/ExampleZMCoreDiagnosticReport">
+                  <span title="DiagnosticReport/ExampleZMCoreDiagnosticReport">Example ZM-Core Diagnostic Report
+</span>
+               </a>
+            </td>
+            <td>
+<p>Example final laboratory report with a linked hemoglobin result.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Encounter-ExampleZMCoreEncounter.html" title="Encounter/ExampleZMCoreEncounter">
+                  <span title="Encounter/ExampleZMCoreEncounter">Example ZM-Core Encounter
+</span>
+               </a>
+            </td>
+            <td>
+<p>Example outpatient encounter</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Encounter-zm-core-encounter-example-json.html" title="Encounter/zm-core-encounter-example-json">
+                  <span title="Encounter/zm-core-encounter-example-json">Example ZM-Core Encounter (JSON)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Hand-crafted JSON example of a Zambia Core Encounter.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="HealthcareService-ExampleZMCoreHealthcareService.html" title="HealthcareService/ExampleZMCoreHealthcareService">
+                  <span title="HealthcareService/ExampleZMCoreHealthcareService">Example ZM-Core Healthcare Service
+</span>
+               </a>
+            </td>
+            <td>
+<p>Example facility reporting service used by the DHIS2 reminder pilot.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-ExampleZMCoreObservationHemoglobin.html" title="Observation/ExampleZMCoreObservationHemoglobin">
+                  <span title="Observation/ExampleZMCoreObservationHemoglobin">Example ZM-Core Hemoglobin Observation
+</span>
+               </a>
+            </td>
+            <td>
+<p>Example laboratory result referenced by a ZM-Core DiagnosticReport.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Immunization-ExampleZMCoreImmunization.html" title="Immunization/ExampleZMCoreImmunization">
+                  <span title="Immunization/ExampleZMCoreImmunization">Example ZM-Core Immunization
+</span>
+               </a>
+            </td>
+            <td>
+<p>An administered vaccine corresponding to a SmartCare Pro ImmunizationRecord.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ServiceRequest-ExampleZMCoreLaboratoryServiceRequest.html" title="ServiceRequest/ExampleZMCoreLaboratoryServiceRequest">
+                  <span title="ServiceRequest/ExampleZMCoreLaboratoryServiceRequest">Example ZM-Core Laboratory Service Request
+</span>
+               </a>
+            </td>
+            <td>
+<p>A laboratory order corresponding to a SmartCare Pro Investigation.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Location-ExampleZMCoreLocation.html" title="Location/ExampleZMCoreLocation">
+                  <span title="Location/ExampleZMCoreLocation">Example ZM-Core Location
+</span>
+               </a>
+            </td>
+            <td>
+<p>Example physical facility location used by recipient resolution.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-ExampleZMCoreMedicationRequest.html" title="MedicationRequest/ExampleZMCoreMedicationRequest">
+                  <span title="MedicationRequest/ExampleZMCoreMedicationRequest">Example ZM-Core MedicationRequest
+</span>
+               </a>
+            </td>
+            <td>
+<p>Example medication prescription</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-ExampleZMCoreObservationBP.html" title="Observation/ExampleZMCoreObservationBP">
+                  <span title="Observation/ExampleZMCoreObservationBP">Example ZM-Core Observation - Blood Pressure
+</span>
+               </a>
+            </td>
+            <td>
+<p>Example blood pressure reading</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Organization-ExampleZMCoreOrganization.html" title="Organization/ExampleZMCoreOrganization">
+                  <span title="Organization/ExampleZMCoreOrganization">Example ZM-Core Organization
+</span>
+               </a>
+            </td>
+            <td>
+<p>Example Master Facility List health facility in Zambia</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Organization-zm-core-organization-example-json.html" title="Organization/zm-core-organization-example-json">
+                  <span title="Organization/zm-core-organization-example-json">Example ZM-Core Organization (JSON)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Hand-crafted JSON example of a Zambia Core Organization.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-ExampleZMCorePatient.html" title="Patient/ExampleZMCorePatient">
+                  <span title="Patient/ExampleZMCorePatient">Example ZM-Core Patient
+</span>
+               </a>
+            </td>
+            <td>
+<p>Example patient from Lusaka, Zambia</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-zm-core-patient-example-json.html" title="Patient/zm-core-patient-example-json">
+                  <span title="Patient/zm-core-patient-example-json">Example ZM-Core Patient (JSON)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Hand-crafted JSON example of a Zambia Core Patient.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Practitioner-ExampleZMCorePractitioner.html" title="Practitioner/ExampleZMCorePractitioner">
+                  <span title="Practitioner/ExampleZMCorePractitioner">Example ZM-Core Practitioner (from HRMS)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Example practitioner mapped from HRMS/Odoo hr.employee + qualifications.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="PractitionerRole-ExampleZMCorePractitionerRole.html" title="PractitionerRole/ExampleZMCorePractitionerRole">
+                  <span title="PractitionerRole/ExampleZMCorePractitionerRole">Example ZM-Core Practitioner Role
+</span>
+               </a>
+            </td>
+            <td>
+<p>Example current District Health Information Officer role resolved from the provider directory.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="7"> </a>
+   <h3>Other </h3>
+    <p>These are resources that are used within this implementation guide that do not fit into one of the other categories.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="SubscriptionTopic-ZMCommunicationRequestActiveTopic.html" title="SubscriptionTopic/ZMCommunicationRequestActiveTopic">
+                  <span title="SubscriptionTopic/ZMCommunicationRequestActiveTopic">Active Communication Request Topic
+</span>
+               </a>
+            </td>
+            <td>
+<p>R5 SubscriptionTopic for communication requests that are ready for processing by the hub.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+</div>
+
+</div>
+        </div>    <!-- /inner-wrapper -->
+      </div>    <!-- /row -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-content -->
+
+  <script src="assets/js/jquery.js" type="text/javascript"> </script>       <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script src="assets/js/jquery-ui.min.js" type="text/javascript"> </script>
+  <script src="assets/js/flags.js" type="text/javascript"> </script>
+
+  <script src="assets/js/window-hash.js" type="text/javascript"> </script>
+  <a name="bottom"> </a>
+  <div igtool="footer" id="segment-footer" class="segment">    <!-- segment-footer -->
+    <div class="container">    <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG &copy; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.moh.gov.zm/">Ministry of Health - Zambia</a>.  
+          Package zm-core#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>.
+          Generated <span title="Thu, Aug 13, 2026 13:25+0000">2026-08-13</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>    <!-- /inner-wrapper -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">    <!-- segment-post-footer -->
+    <div class="container">    <!-- container -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-post-footer -->
+
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+  ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  <script src="assets/js/bootstrap.min.js" type="text/javascript"> </script>
+  <script src="assets/js/respond.min.js" type="text/javascript"> </script>
+  <script src="assets/js/anchor.min.js" type="text/javascript"> </script>
+  <script src="assets/js/clipboard.min.js" type="text/javascript"> </script>
+  <script src="assets/js/clipboard-btn.js" type="text/javascript"> </script>
+  <script src="assets/js/anchor-hover.js" type="text/javascript"> </script>
+    <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>

@@ -1,0 +1,102 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hapi.moh.gov.zm/fhir/CodeSystem/facility-registry-status> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "facility-registry-status"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem facility-registry-status</b></p><a name=\"facility-registry-status\"> </a><a name=\"hcfacility-registry-status\"> </a><p>This case-sensitive code system <code>http://hapi.moh.gov.zm/fhir/CodeSystem/facility-registry-status</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">operational<a name=\"facility-registry-status-operational\"> </a></td><td>Operational</td><td>A facility that is open and serving patients.</td></tr><tr><td style=\"white-space:nowrap\">licensed<a name=\"facility-registry-status-licensed\"> </a></td><td>Licensed</td><td>Approved and licensed but not yet operational.</td></tr><tr><td style=\"white-space:nowrap\">pending-licensing<a name=\"facility-registry-status-pending-licensing\"> </a></td><td>Pending Licensing</td><td>Recommended by the district health management team and awaiting a licence.</td></tr><tr><td style=\"white-space:nowrap\">licence-suspended<a name=\"facility-registry-status-licence-suspended\"> </a></td><td>License Suspended</td><td>The facility licence has been temporarily suspended.</td></tr><tr><td style=\"white-space:nowrap\">licence-cancelled<a name=\"facility-registry-status-licence-cancelled\"> </a></td><td>License Cancelled</td><td>The facility licence has been permanently cancelled.</td></tr><tr><td style=\"white-space:nowrap\">pending-registration<a name=\"facility-registry-status-pending-registration\"> </a></td><td>Pending Registration</td><td>Approved locally and awaiting official registration.</td></tr><tr><td style=\"white-space:nowrap\">registered<a name=\"facility-registry-status-registered\"> </a></td><td>Registered</td><td>Approved as an institution and assigned a registration number.</td></tr><tr><td style=\"white-space:nowrap\">closed<a name=\"facility-registry-status-closed\"> </a></td><td>Closed</td><td>A licensed facility that has permanently closed.</td></tr><tr><td style=\"white-space:nowrap\">invalid<a name=\"facility-registry-status-invalid\"> </a></td><td>Invalid</td><td>Registry attributes differ from the attributes on the facility licence.</td></tr><tr><td style=\"white-space:nowrap\">does-not-exist<a name=\"facility-registry-status-does-not-exist\"> </a></td><td>Does not exist</td><td>A licensed record verified not to correspond to a physical facility.</td></tr><tr><td style=\"white-space:nowrap\">duplicate<a name=\"facility-registry-status-duplicate\"> </a></td><td>Duplicate</td><td>A registry record identified as a duplicate of another facility.</td></tr><tr><td style=\"white-space:nowrap\">under-construction<a name=\"facility-registry-status-under-construction\"> </a></td><td>Under Construction</td><td/></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:url [ fhir:v "http://hapi.moh.gov.zm/fhir/CodeSystem/facility-registry-status"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "ZMCoreFacilityRegistryStatusCS"] ; # 
+  fhir:title [ fhir:v "Zambia Master Facility List Registry Status"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2026-08-13T13:25:03+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "Ministry of Health - Zambia"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "Ministry of Health - Zambia" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.moh.gov.zm/" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "digital.health@moh.gov.zm" ]
+     ] )
+  ] [
+     fhir:name [ fhir:v "ZM-Core Team" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "zm-core@moh.gov.zm" ] ;
+       fhir:use [ fhir:v "work" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Combined operational, licensing, registration, and record-quality states represented by the current Zambia Master Facility List operation-status field."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "ZM" ] ;
+       fhir:display [ fhir:v "Zambia" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "12"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "operational" ] ;
+     fhir:display [ fhir:v "Operational" ] ;
+     fhir:definition [ fhir:v "A facility that is open and serving patients." ]
+  ] [
+     fhir:code [ fhir:v "licensed" ] ;
+     fhir:display [ fhir:v "Licensed" ] ;
+     fhir:definition [ fhir:v "Approved and licensed but not yet operational." ]
+  ] [
+     fhir:code [ fhir:v "pending-licensing" ] ;
+     fhir:display [ fhir:v "Pending Licensing" ] ;
+     fhir:definition [ fhir:v "Recommended by the district health management team and awaiting a licence." ]
+  ] [
+     fhir:code [ fhir:v "licence-suspended" ] ;
+     fhir:display [ fhir:v "License Suspended" ] ;
+     fhir:definition [ fhir:v "The facility licence has been temporarily suspended." ]
+  ] [
+     fhir:code [ fhir:v "licence-cancelled" ] ;
+     fhir:display [ fhir:v "License Cancelled" ] ;
+     fhir:definition [ fhir:v "The facility licence has been permanently cancelled." ]
+  ] [
+     fhir:code [ fhir:v "pending-registration" ] ;
+     fhir:display [ fhir:v "Pending Registration" ] ;
+     fhir:definition [ fhir:v "Approved locally and awaiting official registration." ]
+  ] [
+     fhir:code [ fhir:v "registered" ] ;
+     fhir:display [ fhir:v "Registered" ] ;
+     fhir:definition [ fhir:v "Approved as an institution and assigned a registration number." ]
+  ] [
+     fhir:code [ fhir:v "closed" ] ;
+     fhir:display [ fhir:v "Closed" ] ;
+     fhir:definition [ fhir:v "A licensed facility that has permanently closed." ]
+  ] [
+     fhir:code [ fhir:v "invalid" ] ;
+     fhir:display [ fhir:v "Invalid" ] ;
+     fhir:definition [ fhir:v "Registry attributes differ from the attributes on the facility licence." ]
+  ] [
+     fhir:code [ fhir:v "does-not-exist" ] ;
+     fhir:display [ fhir:v "Does not exist" ] ;
+     fhir:definition [ fhir:v "A licensed record verified not to correspond to a physical facility." ]
+  ] [
+     fhir:code [ fhir:v "duplicate" ] ;
+     fhir:display [ fhir:v "Duplicate" ] ;
+     fhir:definition [ fhir:v "A registry record identified as a duplicate of another facility." ]
+  ] [
+     fhir:code [ fhir:v "under-construction" ] ;
+     fhir:display [ fhir:v "Under Construction" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,49 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "zm-communication-task-code-vs",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet zm-communication-task-code-vs</b></p><a name=\"zm-communication-task-code-vs\"> </a><a name=\"hczm-communication-task-code-vs\"> </a><ul><li>Include all codes defined in <a href=\"CodeSystem-zm-communication-task-code.html\"><code>http://hapi.moh.gov.zm/fhir/CodeSystem/zm-communication-task-code</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version &#x1F4E6;0.1.0</span></li></ul></div>"
+  },
+  "url" : "http://hapi.moh.gov.zm/fhir/ValueSet/zm-communication-task-code-vs",
+  "version" : "0.1.0",
+  "name" : "ZMCommunicationTaskCodeVS",
+  "title" : "Zambia Communication Task Code Value Set",
+  "status" : "draft",
+  "experimental" : false,
+  "date" : "2026-08-13T13:25:03+00:00",
+  "publisher" : "Ministry of Health - Zambia",
+  "contact" : [{
+    "name" : "Ministry of Health - Zambia",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.moh.gov.zm/"
+    },
+    {
+      "system" : "email",
+      "value" : "digital.health@moh.gov.zm"
+    }]
+  },
+  {
+    "name" : "ZM-Core Team",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "zm-core@moh.gov.zm",
+      "use" : "work"
+    }]
+  }],
+  "description" : "Task actions supported by a communication workflow.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "ZM",
+      "display" : "Zambia"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://hapi.moh.gov.zm/fhir/CodeSystem/zm-communication-task-code"
+    }]
+  }
+}

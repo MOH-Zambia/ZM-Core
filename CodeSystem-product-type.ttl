@@ -1,0 +1,78 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hapi.moh.gov.zm/fhir/CodeSystem/product-type> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "product-type"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem product-type</b></p><a name=\"product-type\"> </a><a name=\"hcproduct-type\"> </a><p>This case-sensitive code system <code>http://hapi.moh.gov.zm/fhir/CodeSystem/product-type</code> provides <b>a fragment</b> that includes following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">essential-medicine<a name=\"product-type-essential-medicine\"> </a></td><td>Essential Medicine</td></tr><tr><td style=\"white-space:nowrap\">medical-surgicals<a name=\"product-type-medical-surgicals\"> </a></td><td>Medical Surgicals</td></tr><tr><td style=\"white-space:nowrap\">laboratory<a name=\"product-type-laboratory\"> </a></td><td>Laboratory</td></tr><tr><td style=\"white-space:nowrap\">equipment<a name=\"product-type-equipment\"> </a></td><td>Equipment</td></tr><tr><td style=\"white-space:nowrap\">orthopaedics-prosthetics-orthotics<a name=\"product-type-orthopaedics-prosthetics-orthotics\"> </a></td><td>Orthopaedics, Prosthetics and Orthotics</td></tr><tr><td style=\"white-space:nowrap\">tuberculosis<a name=\"product-type-tuberculosis\"> </a></td><td>Tuberculosis</td></tr><tr><td style=\"white-space:nowrap\">antiretroviral<a name=\"product-type-antiretroviral\"> </a></td><td>Antiretroviral Drugs</td></tr><tr><td style=\"white-space:nowrap\">hiv-program<a name=\"product-type-hiv-program\"> </a></td><td>HIV Program</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:url [ fhir:v "http://hapi.moh.gov.zm/fhir/CodeSystem/product-type"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "ZMProductTypeCS"] ; # 
+  fhir:title [ fhir:v "Zambia Product Type (eLMIS)"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2026-08-13T13:25:03+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "Ministry of Health - Zambia"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "Ministry of Health - Zambia" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.moh.gov.zm/" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "digital.health@moh.gov.zm" ]
+     ] )
+  ] [
+     fhir:name [ fhir:v "ZM-Core Team" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "zm-core@moh.gov.zm" ] ;
+       fhir:use [ fhir:v "work" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Product types from the eLMIS Master Product List."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "ZM" ] ;
+       fhir:display [ fhir:v "Zambia" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:content [ fhir:v "fragment"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "essential-medicine" ] ;
+     fhir:display [ fhir:v "Essential Medicine" ]
+  ] [
+     fhir:code [ fhir:v "medical-surgicals" ] ;
+     fhir:display [ fhir:v "Medical Surgicals" ]
+  ] [
+     fhir:code [ fhir:v "laboratory" ] ;
+     fhir:display [ fhir:v "Laboratory" ]
+  ] [
+     fhir:code [ fhir:v "equipment" ] ;
+     fhir:display [ fhir:v "Equipment" ]
+  ] [
+     fhir:code [ fhir:v "orthopaedics-prosthetics-orthotics" ] ;
+     fhir:display [ fhir:v "Orthopaedics, Prosthetics and Orthotics" ]
+  ] [
+     fhir:code [ fhir:v "tuberculosis" ] ;
+     fhir:display [ fhir:v "Tuberculosis" ]
+  ] [
+     fhir:code [ fhir:v "antiretroviral" ] ;
+     fhir:display [ fhir:v "Antiretroviral Drugs" ]
+  ] [
+     fhir:code [ fhir:v "hiv-program" ] ;
+     fhir:display [ fhir:v "HIV Program" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

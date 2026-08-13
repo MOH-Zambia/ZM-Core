@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="zm-communication-channel"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem zm-communication-channel</b></p><a name="zm-communication-channel"> </a><a name="hczm-communication-channel"> </a><p>This case-sensitive code system <code>http://hapi.moh.gov.zm/fhir/CodeSystem/zm-communication-channel</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">sms<a name="zm-communication-channel-sms"> </a></td><td>SMS</td></tr><tr><td style="white-space:nowrap">email<a name="zm-communication-channel-email"> </a></td><td>Email</td></tr><tr><td style="white-space:nowrap">teams<a name="zm-communication-channel-teams"> </a></td><td>Microsoft Teams</td></tr><tr><td style="white-space:nowrap">whatsapp<a name="zm-communication-channel-whatsapp"> </a></td><td>WhatsApp</td></tr><tr><td style="white-space:nowrap">portal<a name="zm-communication-channel-portal"> </a></td><td>Authenticated portal</td></tr><tr><td style="white-space:nowrap">push<a name="zm-communication-channel-push"> </a></td><td>Mobile push notification</td></tr><tr><td style="white-space:nowrap">ivr<a name="zm-communication-channel-ivr"> </a></td><td>Interactive voice response</td></tr></table></div>
+  </text>
+  <url value="http://hapi.moh.gov.zm/fhir/CodeSystem/zm-communication-channel"/>
+  <version value="0.1.0"/>
+  <name value="ZMCommunicationChannelCS"/>
+  <title value="Zambia Communication Channel"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2026-08-13T13:25:03+00:00"/>
+  <publisher value="Ministry of Health - Zambia"/>
+  <contact>
+    <name value="Ministry of Health - Zambia"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.moh.gov.zm/"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="digital.health@moh.gov.zm"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="ZM-Core Team"/>
+    <telecom>
+      <system value="email"/>
+      <value value="zm-core@moh.gov.zm"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="Delivery channels supported by the Zambia Unified Health Communication Hub."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="ZM"/>
+      <display value="Zambia"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="7"/>
+  <concept>
+    <code value="sms"/>
+    <display value="SMS"/>
+  </concept>
+  <concept>
+    <code value="email"/>
+    <display value="Email"/>
+  </concept>
+  <concept>
+    <code value="teams"/>
+    <display value="Microsoft Teams"/>
+  </concept>
+  <concept>
+    <code value="whatsapp"/>
+    <display value="WhatsApp"/>
+  </concept>
+  <concept>
+    <code value="portal"/>
+    <display value="Authenticated portal"/>
+  </concept>
+  <concept>
+    <code value="push"/>
+    <display value="Mobile push notification"/>
+  </concept>
+  <concept>
+    <code value="ivr"/>
+    <display value="Interactive voice response"/>
+  </concept>
+</CodeSystem>

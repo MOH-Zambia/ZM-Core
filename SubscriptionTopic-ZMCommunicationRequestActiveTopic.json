@@ -1,0 +1,70 @@
+{
+  "resourceType" : "SubscriptionTopic",
+  "id" : "ZMCommunicationRequestActiveTopic",
+  "meta" : {
+    "profile" : ["http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-communication-subscription-topic"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: SubscriptionTopic ZMCommunicationRequestActiveTopic</b></p><a name=\"ZMCommunicationRequestActiveTopic\"> </a><a name=\"hcZMCommunicationRequestActiveTopic\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-zm-core-communication-subscription-topic.html\">ZM-Core Communication Subscription Topic Profile</a></p></div><table class=\"grid\"><tr><td><b>SubscriptionTopic</b></td><td>Active Communication Request Topic</td></tr><tr><td><b>Description</b></td><td><div><p>Notifies the Unified Health Communication Hub when a CommunicationRequest enters the active state.</p>\n</div></td></tr><tr><td><b>Copyright Statement:</b></td><td> null</td></tr></table><table class=\"grid\"><tr><td colspan=\"4\"><b>Resource Triggers</b></td></tr><tr><th><b>Resource</b></th><th><b>Interactions</b></th><th><b>FHIR Path</b></th><th><b>Description</b></th></tr><tr><td><a href=\"http://hl7.org/fhir/R5/communicationrequest.html\">http://hl7.org/fhir/StructureDefinition/CommunicationRequest</a></td><td>create, update</td><td>%current.status = 'active' and (%previous.empty() or %previous.status != 'active')</td><td><div><p>A communication request is created or updated to active.</p>\n</div></td></tr></table><table class=\"grid\"><tr><td colspan=\"3\"><b>Can Filter By</b></td></tr><tr><th><b>Resource</b></th><th><b>Filter Parameter</b></th><th><b>Comparators</b></th></tr><tr><td><a href=\"http://hl7.org/fhir/R5/communicationrequest.html\">http://hl7.org/fhir/StructureDefinition/CommunicationRequest</a></td><td>category</td><td>Equals</td></tr><tr><td><a href=\"http://hl7.org/fhir/R5/communicationrequest.html\">http://hl7.org/fhir/StructureDefinition/CommunicationRequest</a></td><td>priority</td><td>Equals</td></tr></table><table class=\"grid\"><tr><td colspan=\"2\"><b>Notification Shapes</b></td></tr><tr><th><b>Resource</b></th><th><b>Includes</b></th></tr><tr><td><a href=\"http://hl7.org/fhir/R5/communicationrequest.html\">http://hl7.org/fhir/StructureDefinition/CommunicationRequest</a></td><td>CommunicationRequest:requester</td></tr></table></div>"
+  },
+  "url" : "http://hapi.moh.gov.zm/fhir/SubscriptionTopic/communication-request-active",
+  "version" : "0.1.0",
+  "name" : "ZMCommunicationRequestActiveTopic",
+  "title" : "Active Communication Request Topic",
+  "status" : "draft",
+  "experimental" : false,
+  "date" : "2026-08-08",
+  "publisher" : "Ministry of Health - Zambia",
+  "contact" : [{
+    "name" : "Ministry of Health - Zambia",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.moh.gov.zm/"
+    },
+    {
+      "system" : "email",
+      "value" : "digital.health@moh.gov.zm"
+    }]
+  },
+  {
+    "name" : "ZM-Core Team",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "zm-core@moh.gov.zm",
+      "use" : "work"
+    }]
+  }],
+  "description" : "Notifies the Unified Health Communication Hub when a CommunicationRequest enters the active state.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "ZM",
+      "display" : "Zambia"
+    }]
+  }],
+  "purpose" : "Activate governed recipient resolution, routing, delivery, acknowledgement, and escalation workflows.",
+  "resourceTrigger" : [{
+    "description" : "A communication request is created or updated to active.",
+    "resource" : "http://hl7.org/fhir/StructureDefinition/CommunicationRequest",
+    "supportedInteraction" : ["create",
+    "update"],
+    "fhirPathCriteria" : "%current.status = 'active' and (%previous.empty() or %previous.status != 'active')"
+  }],
+  "canFilterBy" : [{
+    "description" : "Filter workflows by communication governance lane.",
+    "resource" : "CommunicationRequest",
+    "filterParameter" : "category",
+    "comparator" : ["eq"]
+  },
+  {
+    "description" : "Filter workflows by request priority.",
+    "resource" : "CommunicationRequest",
+    "filterParameter" : "priority",
+    "comparator" : ["eq"]
+  }],
+  "notificationShape" : [{
+    "resource" : "CommunicationRequest",
+    "include" : ["CommunicationRequest:requester"]
+  }]
+}

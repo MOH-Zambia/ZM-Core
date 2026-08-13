@@ -1,0 +1,2610 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hapi.moh.gov.zm/fhir/ImplementationGuide/zm-core> a fhir:ImplementationGuide ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "zm-core"] ; # 
+  fhir:language [ fhir:v "en"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xml:lang=\"en\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide zm-core</b></p><a name=\"zm-core\"> </a><a name=\"hczm-core\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Language: en</p></div><h2>ZMCore</h2><p>The official URL for this implementation guide is: </p><pre>http://hapi.moh.gov.zm/fhir/ImplementationGuide/zm-core</pre><div><p>ZM-Core is an Implementation Guide for HL7 FHIR R5 resources commonly used in Zambia's health systems, providing standardized profiles and guidance for interoperability.</p>\n</div></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:url [ fhir:v "http://hapi.moh.gov.zm/fhir/ImplementationGuide/zm-core"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "ZMCore"] ; # 
+  fhir:title [ fhir:v "HL7 FHIR Implementation Guide: ZM-Core Release 1 - Zambia"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:date [ fhir:v "2025-11-21"^^xsd:date] ; # 
+  fhir:publisher [ fhir:v "Ministry of Health - Zambia"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "Ministry of Health - Zambia" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.moh.gov.zm/" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "digital.health@moh.gov.zm" ]
+     ] )
+  ] [
+     fhir:name [ fhir:v "ZM-Core Team" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "zm-core@moh.gov.zm" ] ;
+       fhir:use [ fhir:v "work" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "ZM-Core is an Implementation Guide for HL7 FHIR R5 resources commonly used in Zambia's health systems, providing standardized profiles and guidance for interoperability."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "ZM" ] ;
+       fhir:display [ fhir:v "Zambia" ]
+     ] )
+  ] ) ; # 
+  fhir:packageId [ fhir:v "zm-core"] ; # 
+  fhir:license [ fhir:v "CC0-1.0"] ; # 
+  fhir:fhirVersion ( [ fhir:v "5.0.0"] ) ; # 
+  fhir:dependsOn ( [
+     fhir:id [ fhir:v "hl7_fhir_uv_tools_r5" ] ;
+     fhir:uri [
+       fhir:v "http://hl7.org/fhir/tools"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/tools>
+     ] ;
+     fhir:packageId [ fhir:v "hl7.fhir.uv.tools.r5" ] ;
+     fhir:version [ fhir:v "1.1.2" ]
+  ] [
+     fhir:id [ fhir:v "hl7_terminology_r5" ] ;
+     fhir:uri [
+       fhir:v "http://terminology.hl7.org"^^xsd:anyURI ;
+       fhir:link <http://terminology.hl7.org>
+     ] ;
+     fhir:packageId [ fhir:v "hl7.terminology.r5" ] ;
+     fhir:version [ fhir:v "7.1.0" ]
+  ] [
+     fhir:id [ fhir:v "hl7_fhir_uv_extensions_r5" ] ;
+     fhir:uri [
+       fhir:v "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions>
+     ] ;
+     fhir:packageId [ fhir:v "hl7.fhir.uv.extensions.r5" ] ;
+     fhir:version [ fhir:v "5.2.0" ]
+  ] ) ; # 
+  fhir:definition [
+     fhir:resource ( [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "SubscriptionTopic"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/SubscriptionTopic/ZMCommunicationRequestActiveTopic> ;
+         fhir:reference [ fhir:v "SubscriptionTopic/ZMCommunicationRequestActiveTopic" ]
+       ] ;
+       fhir:name [ fhir:v "Active Communication Request Topic" ] ;
+       fhir:description [ fhir:v "R5 SubscriptionTopic for communication requests that are ready for processing by the hub." ] ;
+       fhir:isExample [ fhir:v false ] ;
+       fhir:profile ( [
+         fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-communication-subscription-topic"^^xsd:anyURI ;
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-communication-subscription-topic>
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-communication-template> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-communication-template" ]
+       ] ;
+       fhir:name [ fhir:v "Approved Communication Template" ] ;
+       fhir:description [ fhir:v "Identifier of the approved message template used to render the communication." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/ZMCoreClinicalEncounter> ;
+         fhir:reference [ fhir:v "StructureDefinition/ZMCoreClinicalEncounter" ]
+       ] ;
+       fhir:name [ fhir:v "Clinical Encounter" ] ;
+       fhir:description [ fhir:v "Clinical encounter structure for Zambian health systems" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-communication-acknowledgement-required> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-communication-acknowledgement-required" ]
+       ] ;
+       fhir:name [ fhir:v "Communication Acknowledgement Required" ] ;
+       fhir:description [ fhir:v "Whether the workflow must create and track an acknowledgement or completion Task." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-communication-data-classification> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-communication-data-classification" ]
+       ] ;
+       fhir:name [ fhir:v "Communication Data Classification" ] ;
+       fhir:description [ fhir:v "The governance classification used to determine permitted channels and payload disclosure." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-communication-expiry> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-communication-expiry" ]
+       ] ;
+       fhir:name [ fhir:v "Communication Expiry" ] ;
+       fhir:description [ fhir:v "The instant after which the request must not be delivered and should be completed, revoked, or escalated according to policy." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-communication-fallback-channel> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-communication-fallback-channel" ]
+       ] ;
+       fhir:name [ fhir:v "Communication Fallback Channel" ] ;
+       fhir:description [ fhir:v "An approved alternative channel to try if the preferred channel cannot deliver the message. Repetition order expresses routing order." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-communication-message-language> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-communication-message-language" ]
+       ] ;
+       fhir:name [ fhir:v "Communication Message Language" ] ;
+       fhir:description [ fhir:v "BCP-47 language code in which the recipient-facing message is rendered." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-communication-requesting-system> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-communication-requesting-system" ]
+       ] ;
+       fhir:name [ fhir:v "Communication Requesting System" ] ;
+       fhir:description [ fhir:v "The authoritative source system that submitted the communication request to the HIE." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-consent-communication-channel> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-consent-communication-channel" ]
+       ] ;
+       fhir:name [ fhir:v "Consent Communication Channel" ] ;
+       fhir:description [ fhir:v "A channel for which the individual's contact consent decision applies." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Task"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/Task/ExampleZMCoreCommunicationTask> ;
+         fhir:reference [ fhir:v "Task/ExampleZMCoreCommunicationTask" ]
+       ] ;
+       fhir:name [ fhir:v "Example Communication Acknowledgement Task" ] ;
+       fhir:description [ fhir:v "Task used to capture acknowledgement and trigger escalation if the report remains outstanding." ] ;
+       fhir:isExample [ fhir:v true ] ;
+       fhir:profile ( [
+         fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-communication-task"^^xsd:anyURI ;
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-communication-task>
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Consent"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/Consent/ExampleZMCoreCommunicationConsent> ;
+         fhir:reference [ fhir:v "Consent/ExampleZMCoreCommunicationConsent" ]
+       ] ;
+       fhir:name [ fhir:v "Example Communication Consent" ] ;
+       fhir:description [ fhir:v "Example patient contact preference and permission for notifications." ] ;
+       fhir:isExample [ fhir:v true ] ;
+       fhir:profile ( [
+         fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-communication-consent"^^xsd:anyURI ;
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-communication-consent>
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "AuditEvent"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/AuditEvent/ExampleZMCoreCommunicationAuditEvent> ;
+         fhir:reference [ fhir:v "AuditEvent/ExampleZMCoreCommunicationAuditEvent" ]
+       ] ;
+       fhir:name [ fhir:v "Example Communication Delivery Audit Event" ] ;
+       fhir:description [ fhir:v "Example audit event showing successful delivery processing by the hub." ] ;
+       fhir:isExample [ fhir:v true ] ;
+       fhir:profile ( [
+         fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-communication-audit-event"^^xsd:anyURI ;
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-communication-audit-event>
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Subscription"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/Subscription/ExampleZMCoreSubscription> ;
+         fhir:reference [ fhir:v "Subscription/ExampleZMCoreSubscription" ]
+       ] ;
+       fhir:name [ fhir:v "Example Communication Hub Subscription" ] ;
+       fhir:description [ fhir:v "Example secure REST-hook subscription for the DHIS2 reporting-reminder workflow." ] ;
+       fhir:isExample [ fhir:v true ] ;
+       fhir:profile ( [
+         fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-subscription"^^xsd:anyURI ;
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-subscription>
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Provenance"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/Provenance/ExampleZMCoreCommunicationProvenance> ;
+         fhir:reference [ fhir:v "Provenance/ExampleZMCoreCommunicationProvenance" ]
+       ] ;
+       fhir:name [ fhir:v "Example Communication Request Provenance" ] ;
+       fhir:description [ fhir:v "Example record of the authorized actor and source system that created a communication request." ] ;
+       fhir:isExample [ fhir:v true ] ;
+       fhir:profile ( [
+         fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-communication-provenance"^^xsd:anyURI ;
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-communication-provenance>
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Communication"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/Communication/ExampleZMCoreCommunication> ;
+         fhir:reference [ fhir:v "Communication/ExampleZMCoreCommunication" ]
+       ] ;
+       fhir:name [ fhir:v "Example Delivered DHIS2 Reporting Reminder" ] ;
+       fhir:description [ fhir:v "Delivery record produced after the hub sends the reporting reminder." ] ;
+       fhir:isExample [ fhir:v true ] ;
+       fhir:profile ( [
+         fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-communication"^^xsd:anyURI ;
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-communication>
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CommunicationRequest"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/CommunicationRequest/ExampleZMCoreCommunicationRequest> ;
+         fhir:reference [ fhir:v "CommunicationRequest/ExampleZMCoreCommunicationRequest" ]
+       ] ;
+       fhir:name [ fhir:v "Example DHIS2 Reporting Reminder Request" ] ;
+       fhir:description [ fhir:v "Low-risk operational pilot request for a facility reporting reminder." ] ;
+       fhir:isExample [ fhir:v true ] ;
+       fhir:profile ( [
+         fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-communication-request"^^xsd:anyURI ;
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-communication-request>
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Medication"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/Medication/ExampleZMCoreMedication> ;
+         fhir:reference [ fhir:v "Medication/ExampleZMCoreMedication" ]
+       ] ;
+       fhir:name [ fhir:v "Example ZAMMSA Betamethasone 0.1% cream/ointment" ] ;
+       fhir:description [ fhir:v "Example mapping of ZAMMSA catalogue row EM1389 into ZMCoreMedication." ] ;
+       fhir:isExample [ fhir:v true ] ;
+       fhir:profile ( [
+         fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication"^^xsd:anyURI ;
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication>
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "AdverseEvent"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/AdverseEvent/ExampleZMCoreAdverseEventFollowingImmunization> ;
+         fhir:reference [ fhir:v "AdverseEvent/ExampleZMCoreAdverseEventFollowingImmunization" ]
+       ] ;
+       fhir:name [ fhir:v "Example ZM-Core Adverse Event Following Immunization" ] ;
+       fhir:description [ fhir:v "An AEFI corresponding to SmartCare Pro AdverseEvent data." ] ;
+       fhir:isExample [ fhir:v true ] ;
+       fhir:profile ( [
+         fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-adverse-event"^^xsd:anyURI ;
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-adverse-event>
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "AllergyIntolerance"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/AllergyIntolerance/ExampleZMCoreAllergyIntolerance> ;
+         fhir:reference [ fhir:v "AllergyIntolerance/ExampleZMCoreAllergyIntolerance" ]
+       ] ;
+       fhir:name [ fhir:v "Example ZM-Core Allergy Intolerance" ] ;
+       fhir:description [ fhir:v "An allergy corresponding to a SmartCare Pro IdentifiedAllergy." ] ;
+       fhir:isExample [ fhir:v true ] ;
+       fhir:profile ( [
+         fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-allergy-intolerance"^^xsd:anyURI ;
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-allergy-intolerance>
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Specimen"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/Specimen/ExampleZMCoreSpecimenBlood> ;
+         fhir:reference [ fhir:v "Specimen/ExampleZMCoreSpecimenBlood" ]
+       ] ;
+       fhir:name [ fhir:v "Example ZM-Core Blood Specimen" ] ;
+       fhir:description [ fhir:v "A blood specimen corresponding to SmartCare Pro identified sample collection data." ] ;
+       fhir:isExample [ fhir:v true ] ;
+       fhir:profile ( [
+         fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-specimen"^^xsd:anyURI ;
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-specimen>
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Condition"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/Condition/ExampleZMCoreCondition> ;
+         fhir:reference [ fhir:v "Condition/ExampleZMCoreCondition" ]
+       ] ;
+       fhir:name [ fhir:v "Example ZM-Core Condition" ] ;
+       fhir:description [ fhir:v "Example diagnosis of hypertension" ] ;
+       fhir:isExample [ fhir:v true ] ;
+       fhir:profile ( [
+         fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-condition"^^xsd:anyURI ;
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-condition>
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "DiagnosticReport"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/DiagnosticReport/ExampleZMCoreDiagnosticReport> ;
+         fhir:reference [ fhir:v "DiagnosticReport/ExampleZMCoreDiagnosticReport" ]
+       ] ;
+       fhir:name [ fhir:v "Example ZM-Core Diagnostic Report" ] ;
+       fhir:description [ fhir:v "Example final laboratory report with a linked hemoglobin result." ] ;
+       fhir:isExample [ fhir:v true ] ;
+       fhir:profile ( [
+         fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-diagnostic-report"^^xsd:anyURI ;
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-diagnostic-report>
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Encounter"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/Encounter/ExampleZMCoreEncounter> ;
+         fhir:reference [ fhir:v "Encounter/ExampleZMCoreEncounter" ]
+       ] ;
+       fhir:name [ fhir:v "Example ZM-Core Encounter" ] ;
+       fhir:description [ fhir:v "Example outpatient encounter" ] ;
+       fhir:isExample [ fhir:v true ] ;
+       fhir:profile ( [
+         fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-encounter"^^xsd:anyURI ;
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-encounter>
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Encounter"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/Encounter/zm-core-encounter-example-json> ;
+         fhir:reference [ fhir:v "Encounter/zm-core-encounter-example-json" ]
+       ] ;
+       fhir:name [ fhir:v "Example ZM-Core Encounter (JSON)" ] ;
+       fhir:description [ fhir:v "Hand-crafted JSON example of a Zambia Core Encounter." ] ;
+       fhir:isExample [ fhir:v true ] ;
+       fhir:profile ( [
+         fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-encounter"^^xsd:anyURI ;
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-encounter>
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "HealthcareService"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/HealthcareService/ExampleZMCoreHealthcareService> ;
+         fhir:reference [ fhir:v "HealthcareService/ExampleZMCoreHealthcareService" ]
+       ] ;
+       fhir:name [ fhir:v "Example ZM-Core Healthcare Service" ] ;
+       fhir:description [ fhir:v "Example facility reporting service used by the DHIS2 reminder pilot." ] ;
+       fhir:isExample [ fhir:v true ] ;
+       fhir:profile ( [
+         fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-healthcare-service"^^xsd:anyURI ;
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-healthcare-service>
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/Observation/ExampleZMCoreObservationHemoglobin> ;
+         fhir:reference [ fhir:v "Observation/ExampleZMCoreObservationHemoglobin" ]
+       ] ;
+       fhir:name [ fhir:v "Example ZM-Core Hemoglobin Observation" ] ;
+       fhir:description [ fhir:v "Example laboratory result referenced by a ZM-Core DiagnosticReport." ] ;
+       fhir:isExample [ fhir:v true ] ;
+       fhir:profile ( [
+         fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-observation"^^xsd:anyURI ;
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-observation>
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Immunization"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/Immunization/ExampleZMCoreImmunization> ;
+         fhir:reference [ fhir:v "Immunization/ExampleZMCoreImmunization" ]
+       ] ;
+       fhir:name [ fhir:v "Example ZM-Core Immunization" ] ;
+       fhir:description [ fhir:v "An administered vaccine corresponding to a SmartCare Pro ImmunizationRecord." ] ;
+       fhir:isExample [ fhir:v true ] ;
+       fhir:profile ( [
+         fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-immunization"^^xsd:anyURI ;
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-immunization>
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ServiceRequest"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/ServiceRequest/ExampleZMCoreLaboratoryServiceRequest> ;
+         fhir:reference [ fhir:v "ServiceRequest/ExampleZMCoreLaboratoryServiceRequest" ]
+       ] ;
+       fhir:name [ fhir:v "Example ZM-Core Laboratory Service Request" ] ;
+       fhir:description [ fhir:v "A laboratory order corresponding to a SmartCare Pro Investigation." ] ;
+       fhir:isExample [ fhir:v true ] ;
+       fhir:profile ( [
+         fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-service-request"^^xsd:anyURI ;
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-service-request>
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Location"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/Location/ExampleZMCoreLocation> ;
+         fhir:reference [ fhir:v "Location/ExampleZMCoreLocation" ]
+       ] ;
+       fhir:name [ fhir:v "Example ZM-Core Location" ] ;
+       fhir:description [ fhir:v "Example physical facility location used by recipient resolution." ] ;
+       fhir:isExample [ fhir:v true ] ;
+       fhir:profile ( [
+         fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-location"^^xsd:anyURI ;
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-location>
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "MedicationRequest"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/MedicationRequest/ExampleZMCoreMedicationRequest> ;
+         fhir:reference [ fhir:v "MedicationRequest/ExampleZMCoreMedicationRequest" ]
+       ] ;
+       fhir:name [ fhir:v "Example ZM-Core MedicationRequest" ] ;
+       fhir:description [ fhir:v "Example medication prescription" ] ;
+       fhir:isExample [ fhir:v true ] ;
+       fhir:profile ( [
+         fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-request"^^xsd:anyURI ;
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-request>
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/Observation/ExampleZMCoreObservationBP> ;
+         fhir:reference [ fhir:v "Observation/ExampleZMCoreObservationBP" ]
+       ] ;
+       fhir:name [ fhir:v "Example ZM-Core Observation - Blood Pressure" ] ;
+       fhir:description [ fhir:v "Example blood pressure reading" ] ;
+       fhir:isExample [ fhir:v true ] ;
+       fhir:profile ( [
+         fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-observation"^^xsd:anyURI ;
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-observation>
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Organization"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/Organization/ExampleZMCoreOrganization> ;
+         fhir:reference [ fhir:v "Organization/ExampleZMCoreOrganization" ]
+       ] ;
+       fhir:name [ fhir:v "Example ZM-Core Organization" ] ;
+       fhir:description [ fhir:v "Example Master Facility List health facility in Zambia" ] ;
+       fhir:isExample [ fhir:v true ] ;
+       fhir:profile ( [
+         fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-facility-organization"^^xsd:anyURI ;
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-facility-organization>
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Organization"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/Organization/zm-core-organization-example-json> ;
+         fhir:reference [ fhir:v "Organization/zm-core-organization-example-json" ]
+       ] ;
+       fhir:name [ fhir:v "Example ZM-Core Organization (JSON)" ] ;
+       fhir:description [ fhir:v "Hand-crafted JSON example of a Zambia Core Organization." ] ;
+       fhir:isExample [ fhir:v true ] ;
+       fhir:profile ( [
+         fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-facility-organization"^^xsd:anyURI ;
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-facility-organization>
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Patient"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/Patient/ExampleZMCorePatient> ;
+         fhir:reference [ fhir:v "Patient/ExampleZMCorePatient" ]
+       ] ;
+       fhir:name [ fhir:v "Example ZM-Core Patient" ] ;
+       fhir:description [ fhir:v "Example patient from Lusaka, Zambia" ] ;
+       fhir:isExample [ fhir:v true ] ;
+       fhir:profile ( [
+         fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-patient"^^xsd:anyURI ;
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-patient>
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Patient"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/Patient/zm-core-patient-example-json> ;
+         fhir:reference [ fhir:v "Patient/zm-core-patient-example-json" ]
+       ] ;
+       fhir:name [ fhir:v "Example ZM-Core Patient (JSON)" ] ;
+       fhir:description [ fhir:v "Hand-crafted JSON example of a Zambia Core Patient." ] ;
+       fhir:isExample [ fhir:v true ] ;
+       fhir:profile ( [
+         fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-patient"^^xsd:anyURI ;
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-patient>
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Practitioner"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/Practitioner/ExampleZMCorePractitioner> ;
+         fhir:reference [ fhir:v "Practitioner/ExampleZMCorePractitioner" ]
+       ] ;
+       fhir:name [ fhir:v "Example ZM-Core Practitioner (from HRMS)" ] ;
+       fhir:description [ fhir:v "Example practitioner mapped from HRMS/Odoo hr.employee + qualifications." ] ;
+       fhir:isExample [ fhir:v true ] ;
+       fhir:profile ( [
+         fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-practitioner"^^xsd:anyURI ;
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-practitioner>
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "PractitionerRole"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/PractitionerRole/ExampleZMCorePractitionerRole> ;
+         fhir:reference [ fhir:v "PractitionerRole/ExampleZMCorePractitionerRole" ]
+       ] ;
+       fhir:name [ fhir:v "Example ZM-Core Practitioner Role" ] ;
+       fhir:description [ fhir:v "Example current District Health Information Officer role resolved from the provider directory." ] ;
+       fhir:isExample [ fhir:v true ] ;
+       fhir:profile ( [
+         fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-practitioner-role"^^xsd:anyURI ;
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-practitioner-role>
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/ZMCoreHealthFacility> ;
+         fhir:reference [ fhir:v "StructureDefinition/ZMCoreHealthFacility" ]
+       ] ;
+       fhir:name [ fhir:v "Health Facility" ] ;
+       fhir:description [ fhir:v "Health facility structure for Zambian health systems" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/ZMCoreImmunizationRecord> ;
+         fhir:reference [ fhir:v "StructureDefinition/ZMCoreImmunizationRecord" ]
+       ] ;
+       fhir:name [ fhir:v "Immunization Record" ] ;
+       fhir:description [ fhir:v "Immunization record for Zambian health systems" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-lsi-enabled> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-core-medication-lsi-enabled" ]
+       ] ;
+       fhir:name [ fhir:v "Medication LSI Enabled" ] ;
+       fhir:description [ fhir:v "Indicates whether this medication is enabled for the Logistics Seasonality Index (LSI)." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/ZMCorePatientDemographics> ;
+         fhir:reference [ fhir:v "StructureDefinition/ZMCorePatientDemographics" ]
+       ] ;
+       fhir:name [ fhir:v "Patient Demographics" ] ;
+       fhir:description [ fhir:v "Core patient demographic information for Zambian health systems" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/CodeSystem/zm-communication-channel> ;
+         fhir:reference [ fhir:v "CodeSystem/zm-communication-channel" ]
+       ] ;
+       fhir:name [ fhir:v "Zambia Communication Channel" ] ;
+       fhir:description [ fhir:v "Delivery channels supported by the Zambia Unified Health Communication Hub." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/ValueSet/zm-communication-channel-vs> ;
+         fhir:reference [ fhir:v "ValueSet/zm-communication-channel-vs" ]
+       ] ;
+       fhir:name [ fhir:v "Zambia Communication Channel Value Set" ] ;
+       fhir:description [ fhir:v "Approved preferred and fallback delivery channels for hub communications." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/CodeSystem/zm-communication-consent-action> ;
+         fhir:reference [ fhir:v "CodeSystem/zm-communication-consent-action" ]
+       ] ;
+       fhir:name [ fhir:v "Zambia Communication Consent Action" ] ;
+       fhir:description [ fhir:v "Consent actions governing contact by the Unified Health Communication Hub." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/ValueSet/zm-communication-consent-action-vs> ;
+         fhir:reference [ fhir:v "ValueSet/zm-communication-consent-action-vs" ]
+       ] ;
+       fhir:name [ fhir:v "Zambia Communication Consent Action Value Set" ] ;
+       fhir:description [ fhir:v "Permitted contact actions represented in a communication consent." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/CodeSystem/zm-communication-data-classification> ;
+         fhir:reference [ fhir:v "CodeSystem/zm-communication-data-classification" ]
+       ] ;
+       fhir:name [ fhir:v "Zambia Communication Data Classification" ] ;
+       fhir:description [ fhir:v "Data classifications that drive disclosure and channel controls for health communications." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/ValueSet/zm-communication-data-classification-vs> ;
+         fhir:reference [ fhir:v "ValueSet/zm-communication-data-classification-vs" ]
+       ] ;
+       fhir:name [ fhir:v "Zambia Communication Data Classification Value Set" ] ;
+       fhir:description [ fhir:v "Data classifications used to enforce communication disclosure rules." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/CodeSystem/zm-communication-lane> ;
+         fhir:reference [ fhir:v "CodeSystem/zm-communication-lane" ]
+       ] ;
+       fhir:name [ fhir:v "Zambia Communication Lane" ] ;
+       fhir:description [ fhir:v "Governance lanes used to separate communication purposes, access rules, and disclosure controls in the Zambia Unified Health Communication Hub." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/ValueSet/zm-communication-lane-vs> ;
+         fhir:reference [ fhir:v "ValueSet/zm-communication-lane-vs" ]
+       ] ;
+       fhir:name [ fhir:v "Zambia Communication Lane Value Set" ] ;
+       fhir:description [ fhir:v "Communication governance lanes supported by the Zambia Unified Health Communication Hub." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/CodeSystem/zm-communication-task-code> ;
+         fhir:reference [ fhir:v "CodeSystem/zm-communication-task-code" ]
+       ] ;
+       fhir:name [ fhir:v "Zambia Communication Task Code" ] ;
+       fhir:description [ fhir:v "Actions used to capture acknowledgement and escalation in communication workflows." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/ValueSet/zm-communication-task-code-vs> ;
+         fhir:reference [ fhir:v "ValueSet/zm-communication-task-code-vs" ]
+       ] ;
+       fhir:name [ fhir:v "Zambia Communication Task Code Value Set" ] ;
+       fhir:description [ fhir:v "Task actions supported by a communication workflow." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/CodeSystem/product-group> ;
+         fhir:reference [ fhir:v "CodeSystem/product-group" ]
+       ] ;
+       fhir:name [ fhir:v "Zambia eLMIS Product Group" ] ;
+       fhir:description [ fhir:v "Short product group codes from the eLMIS Master list (e.g. ess, medsurge, equip...)." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/ValueSet/product-group> ;
+         fhir:reference [ fhir:v "ValueSet/product-group" ]
+       ] ;
+       fhir:name [ fhir:v "Zambia eLMIS Product Group ValueSet" ] ;
+       fhir:description [ fhir:v "Allowed Product Group values from the eLMIS Master list." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/CodeSystem/medication-level-of-access> ;
+         fhir:reference [ fhir:v "CodeSystem/medication-level-of-access" ]
+       ] ;
+       fhir:name [ fhir:v "Zambia Level of Access for Medicines" ] ;
+       fhir:description [ fhir:v "Levels of care at which a medicine is allowed to be used, based on the ZAMMSA catalogue." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/CodeSystem/facility-ownership> ;
+         fhir:reference [ fhir:v "CodeSystem/facility-ownership" ]
+       ] ;
+       fhir:name [ fhir:v "Zambia Master Facility List Facility Ownership" ] ;
+       fhir:description [ fhir:v "Facility ownership or controlling sector represented in the Zambia Master Facility List." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/ValueSet/facility-ownership> ;
+         fhir:reference [ fhir:v "ValueSet/facility-ownership" ]
+       ] ;
+       fhir:name [ fhir:v "Zambia Master Facility List Facility Ownership Value Set" ] ;
+       fhir:description [ fhir:v "Facility ownership values permitted for a ZM-Core facility organization." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/CodeSystem/facility-type> ;
+         fhir:reference [ fhir:v "CodeSystem/facility-type" ]
+       ] ;
+       fhir:name [ fhir:v "Zambia Master Facility List Facility Type" ] ;
+       fhir:description [ fhir:v "Facility types represented in the Zambia Master Facility List. Police, military, private, and NGO values are retained for source compatibility but overlap with facility ownership and should not be used when a more specific service level is known." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/ValueSet/facility-type> ;
+         fhir:reference [ fhir:v "ValueSet/facility-type" ]
+       ] ;
+       fhir:name [ fhir:v "Zambia Master Facility List Facility Type Value Set" ] ;
+       fhir:description [ fhir:v "Facility types permitted for a ZM-Core facility organization." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/CodeSystem/facility-registry-status> ;
+         fhir:reference [ fhir:v "CodeSystem/facility-registry-status" ]
+       ] ;
+       fhir:name [ fhir:v "Zambia Master Facility List Registry Status" ] ;
+       fhir:description [ fhir:v "Combined operational, licensing, registration, and record-quality states represented by the current Zambia Master Facility List operation-status field." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/ValueSet/facility-registry-status> ;
+         fhir:reference [ fhir:v "ValueSet/facility-registry-status" ]
+       ] ;
+       fhir:name [ fhir:v "Zambia Master Facility List Registry Status Value Set" ] ;
+       fhir:description [ fhir:v "Registry status values permitted for a ZM-Core facility organization." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/ValueSet/medication-level-of-access> ;
+         fhir:reference [ fhir:v "ValueSet/medication-level-of-access" ]
+       ] ;
+       fhir:name [ fhir:v "Zambia Medication Level of Access" ] ;
+       fhir:description [ fhir:v "Permitted level(s) of care for use of a medicine (HP, HC, L1, L2, L3)." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/CodeSystem/product-type> ;
+         fhir:reference [ fhir:v "CodeSystem/product-type" ]
+       ] ;
+       fhir:name [ fhir:v "Zambia Product Type (eLMIS)" ] ;
+       fhir:description [ fhir:v "Product types from the eLMIS Master Product List." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/ValueSet/product-type> ;
+         fhir:reference [ fhir:v "ValueSet/product-type" ]
+       ] ;
+       fhir:name [ fhir:v "Zambia Product Type ValueSet" ] ;
+       fhir:description [ fhir:v "Allowed Product Type values for Medication." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/CodeSystem/medication-zammsa-sku> ;
+         fhir:reference [ fhir:v "CodeSystem/medication-zammsa-sku" ]
+       ] ;
+       fhir:name [ fhir:v "ZAMMSA Medication SKU Code System" ] ;
+       fhir:description [ fhir:v "CodeSystem representing the ZAMMSA national medicines catalogue SKUs." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/ValueSet/medication-zammsa-sku> ;
+         fhir:reference [ fhir:v "ValueSet/medication-zammsa-sku" ]
+       ] ;
+       fhir:name [ fhir:v "ZAMMSA Medication SKU ValueSet" ] ;
+       fhir:description [ fhir:v "All ZAMMSA catalogue SKUs that are valid for use in the ZM-Core Medication profile." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-adverse-event> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-core-adverse-event" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core Adverse Event Profile" ] ;
+       fhir:description [ fhir:v "Zambia adverse event profile, including adverse events following immunization." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-allergy-intolerance> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-core-allergy-intolerance" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core Allergy Intolerance Profile" ] ;
+       fhir:description [ fhir:v "Zambia allergy and intolerance profile for allergy substances, medicinal products, severity, and reactions." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-appointment> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-core-appointment" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core Appointment Profile" ] ;
+       fhir:description [ fhir:v "Zambia appointment profile for scheduled clinical services, including SmartCare Pro appointments." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-care-plan> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-core-care-plan" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core Care Plan Profile" ] ;
+       fhir:description [ fhir:v "Zambia care plan profile for treatment, nursing, and multidisciplinary plans." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-communication-audit-event> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-core-communication-audit-event" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core Communication Audit Event Profile" ] ;
+       fhir:description [ fhir:v "Security and access audit trail for creation, routing, access, delivery, acknowledgement, or escalation of a hub communication." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-communication-consent> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-core-communication-consent" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core Communication Consent Profile" ] ;
+       fhir:description [ fhir:v "An individual's consent decision governing whether and through which channels the Unified Health Communication Hub may make contact." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-communication> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-core-communication" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core Communication Profile" ] ;
+       fhir:description [ fhir:v "The immutable delivery or receipt record produced for a communication request, including channel and delivery outcome." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-communication-provenance> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-core-communication-provenance" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core Communication Provenance Profile" ] ;
+       fhir:description [ fhir:v "Record of who initiated or changed a communication workflow resource, when, and on whose behalf." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-communication-request> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-core-communication-request" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core Communication Request Profile" ] ;
+       fhir:description [ fhir:v "A governed request from a Ministry health system to the Unified Health Communication Hub to route and deliver information." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-subscription> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-core-subscription" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core Communication Subscription Profile" ] ;
+       fhir:description [ fhir:v "A secure R5 Subscription that activates a communication workflow when a governed communication topic matches." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-communication-subscription-topic> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-core-communication-subscription-topic" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core Communication Subscription Topic Profile" ] ;
+       fhir:description [ fhir:v "A governed R5 subscription topic that describes which communication events may activate hub workflows and what may be filtered or returned." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-communication-task> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-core-communication-task" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core Communication Task Profile" ] ;
+       fhir:description [ fhir:v "An acknowledgement, required action, recipient-resolution, or escalation task linked to a hub communication workflow." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-condition> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-core-condition" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core Condition Profile" ] ;
+       fhir:description [ fhir:v "Zambia diagnosis/condition profile" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/ValueSet/zm-core-condition-vs> ;
+         fhir:reference [ fhir:v "ValueSet/zm-core-condition-vs" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core Condition/Diagnosis" ] ;
+       fhir:description [ fhir:v "Conditions and diagnoses relevant to Zambian health" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-diagnostic-report> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-core-diagnostic-report" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core Diagnostic Report Profile" ] ;
+       fhir:description [ fhir:v "Zambia diagnostic report profile for laboratory, imaging, pathology, and other diagnostic services." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-encounter> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-core-encounter" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core Encounter Profile" ] ;
+       fhir:description [ fhir:v "Zambia health encounter profile" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/ValueSet/zm-core-encounter-type-vs> ;
+         fhir:reference [ fhir:v "ValueSet/zm-core-encounter-type-vs" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core Encounter Type" ] ;
+       fhir:description [ fhir:v "Types of encounters in Zambian health systems" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-facility-organization> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-core-facility-organization" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core Facility Organization Profile" ] ;
+       fhir:description [ fhir:v "A health facility registered in the Zambia Master Facility List. Physical coordinates and site characteristics are represented by ZMCoreLocation, while offered services are represented by ZMCoreHealthcareService." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-facility-registry-status> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-core-facility-registry-status" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core Facility Registry Status" ] ;
+       fhir:description [ fhir:v "The combined operational, licensing, registration, or record-quality status assigned to a facility by the Zambia Master Facility List. This is distinct from Organization.active, which indicates whether the FHIR record is in active use." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-healthcare-service> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-core-healthcare-service" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core Healthcare Service Profile" ] ;
+       fhir:description [ fhir:v "A service directory entry used to resolve facilities, responsible teams, service coverage, and communication contacts." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-immunization> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-core-immunization" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core Immunization Profile" ] ;
+       fhir:description [ fhir:v "Zambia immunization profile for vaccines administered to a patient." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-location> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-core-location" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core Location Profile" ] ;
+       fhir:description [ fhir:v "A physical or administrative place from the Zambia Health Facility Registry used in facility and reporting-hierarchy routing." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/ValueSet/zm-core-marital-status-vs> ;
+         fhir:reference [ fhir:v "ValueSet/zm-core-marital-status-vs" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core Marital Status" ] ;
+       fhir:description [ fhir:v "Marital status codes used in Zambian health systems" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-alternate-name> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-core-medication-alternate-name" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core Medication Alternate Name" ] ;
+       fhir:description [ fhir:v "Alternate or brand name of the medicine, if any." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-alternate-pack-size> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-core-medication-alternate-pack-size" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core Medication Alternate Pack Size" ] ;
+       fhir:description [ fhir:v "Alternate pack size description, if used in Master List." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-archived> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-core-medication-archived" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core Medication Archived" ] ;
+       fhir:description [ fhir:v "Indicates whether the product is archived or no longer active in the catalogue." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-atc-classification> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-core-medication-atc-classification" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core Medication ATC Classification" ] ;
+       fhir:description [ fhir:v "WHO ATC classification for the product." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-can-round-to-zero> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-core-medication-can-round-to-zero" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core Medication Can Round To Zero" ] ;
+       fhir:description [ fhir:v "Indicates whether calculated order quantities can be rounded down to zero." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-cartons-per-pallet> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-core-medication-cartons-per-pallet" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core Medication Cartons Per Pallet" ] ;
+       fhir:description [ fhir:v "Number of cartons per pallet." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-controlled-substance> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-core-medication-controlled-substance" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core Medication Controlled Substance" ] ;
+       fhir:description [ fhir:v "Indicates whether the product is a controlled substance." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-description> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-core-medication-description" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core Medication Description" ] ;
+       fhir:description [ fhir:v "Long description of the product from the Master List." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-dispense> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-core-medication-dispense" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core Medication Dispense Profile" ] ;
+       fhir:description [ fhir:v "Zambia medication dispensing profile linking dispensed medicine to the prescription, patient, encounter, and dispensing facility." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-dispensing-units> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-core-medication-dispensing-units" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core Medication Dispensing Units" ] ;
+       fhir:description [ fhir:v "Unit in which the product is dispensed (e.g. tablet, vial, bottle)." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-dosage-unit> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-core-medication-dosage-unit" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core Medication Dosage Unit" ] ;
+       fhir:description [ fhir:v "Unit of measure for the product strength (e.g. mg, ml, IU)." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-doses-per-dispensing-unit> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-core-medication-doses-per-dispensing-unit" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core Medication Doses Per Dispensing Unit" ] ;
+       fhir:description [ fhir:v "Number of doses per dispensing unit." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-flammable> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-core-medication-flammable" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core Medication Flammable" ] ;
+       fhir:description [ fhir:v "Indicates whether the product is flammable." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-full-name> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-core-medication-full-name" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core Medication Full Name" ] ;
+       fhir:description [ fhir:v "Full trade name of the product as it appears in the Master List." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-full-supply> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-core-medication-full-supply" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core Medication Full Supply" ] ;
+       fhir:description [ fhir:v "Indicates if the product is part of the full-supply list." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-generic-name> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-core-medication-generic-name" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core Medication Generic Name" ] ;
+       fhir:description [ fhir:v "Generic name of the medicine." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-hazardous> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-core-medication-hazardous" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core Medication Hazardous" ] ;
+       fhir:description [ fhir:v "Indicates whether the product is hazardous." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-level-of-access> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-core-medication-level-of-access" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core Medication Level of Access" ] ;
+       fhir:description [ fhir:v "Level of access / level of care at which this medicine is used (e.g. Health Post, Clinic, Hospital)." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-light-sensitive> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-core-medication-light-sensitive" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core Medication Light Sensitive" ] ;
+       fhir:description [ fhir:v "Indicates whether the product is light sensitive." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-msl-pack-size> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-core-medication-msl-pack-size" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core Medication MSL Pack Size (numeric)" ] ;
+       fhir:description [ fhir:v "Numeric MSL pack size (e.g. 100, 10)." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-pack-rounding-threshold> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-core-medication-pack-rounding-threshold" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core Medication Pack Rounding Threshold" ] ;
+       fhir:description [ fhir:v "Threshold at which pack quantities are rounded up or down." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-pack-size-text> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-core-medication-pack-size-text" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core Medication Pack Size (text)" ] ;
+       fhir:description [ fhir:v "Pack size description (e.g. 'Pack of 100', 'Each')." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-pack-weight> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-core-medication-pack-weight" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core Medication Pack Weight" ] ;
+       fhir:description [ fhir:v "Weight of a single pack, typically in kilograms." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-packs-per-carton> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-core-medication-packs-per-carton" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core Medication Packs Per Carton" ] ;
+       fhir:description [ fhir:v "Number of packs per carton." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-price> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-core-medication-price" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core Medication Price" ] ;
+       fhir:description [ fhir:v "Unit price of the product (e.g. pack price) as a Money value." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-product-group> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-core-medication-product-group" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core Medication Product Group" ] ;
+       fhir:description [ fhir:v "Programmatic grouping (e.g. ARV, TB, Malaria, RMNCH)." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-product-type> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-core-medication-product-type" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core Medication Product Type" ] ;
+       fhir:description [ fhir:v "High-level product type (e.g. Medicine, Lab Reagent, Device)." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-core-medication" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core Medication Profile" ] ;
+       fhir:description [ fhir:v "Zambia Core Medication Profile aligned to the ZAMMSA national product catalogue and the eLMIS Master Product List." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-route-of-administration> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-core-medication-route-of-administration" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core Medication Route of Administration" ] ;
+       fhir:description [ fhir:v "Route of administration for this medicine (e.g. oral, IM, IV)." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-shelf-life> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-core-medication-shelf-life" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core Medication Shelf Life" ] ;
+       fhir:description [ fhir:v "Product shelf-life description (e.g. 24 months)." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-storage-classification> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-core-medication-storage-classification" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core Medication Storage Classification" ] ;
+       fhir:description [ fhir:v "Storage classification (e.g. Room temperature, Cold chain, Freezer)." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-storage-instructions> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-core-medication-storage-instructions" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core Medication Storage Instructions" ] ;
+       fhir:description [ fhir:v "Free-text storage instructions." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-store-refrigerated> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-core-medication-store-refrigerated" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core Medication Store Refrigerated" ] ;
+       fhir:description [ fhir:v "Indicates whether the product must be stored refrigerated." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-store-room-temperature> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-core-medication-store-room-temperature" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core Medication Store Room Temperature" ] ;
+       fhir:description [ fhir:v "Storage temperature in degrees Celsius for room temperature storage." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-strength> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-core-medication-strength" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core Medication Strength" ] ;
+       fhir:description [ fhir:v "Product strength as free text (e.g. '500mg', '500mg/5ml')." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-tracer> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-core-medication-tracer" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core Medication Tracer" ] ;
+       fhir:description [ fhir:v "Indicates whether the product is a tracer medicine." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-transport-instructions> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-core-medication-transport-instructions" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core Medication Transport Instructions" ] ;
+       fhir:description [ fhir:v "Free-text transport instructions." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-who-approved> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-core-medication-who-approved" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core Medication WHO Approved" ] ;
+       fhir:description [ fhir:v "Indicates whether the product is WHO prequalified / approved." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-request> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-core-medication-request" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core MedicationRequest Profile" ] ;
+       fhir:description [ fhir:v "Zambia medication request profile" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/ValueSet/zm-core-observation-category-vs> ;
+         fhir:reference [ fhir:v "ValueSet/zm-core-observation-category-vs" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core Observation Category" ] ;
+       fhir:description [ fhir:v "Observation categories used in Zambian health systems" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-observation> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-core-observation" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core Observation Profile" ] ;
+       fhir:description [ fhir:v "Zambia clinical observation profile" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-organization> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-core-organization" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core Organization Profile" ] ;
+       fhir:description [ fhir:v "Zambia healthcare organization profile, including identifiers and classifications used by the national Master Facility List." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/ValueSet/zm-core-organization-type-vs> ;
+         fhir:reference [ fhir:v "ValueSet/zm-core-organization-type-vs" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core Organization Type" ] ;
+       fhir:description [ fhir:v "Organization types used in Zambian health systems" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/ValueSet/zm-core-patient-gender-vs> ;
+         fhir:reference [ fhir:v "ValueSet/zm-core-patient-gender-vs" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core Patient Gender" ] ;
+       fhir:description [ fhir:v "Patient gender codes" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-patient> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-core-patient" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core Patient Profile" ] ;
+       fhir:description [ fhir:v "Zambia patient profile for use in health systems" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-practitioner> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-core-practitioner" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core Practitioner Profile" ] ;
+       fhir:description [ fhir:v "Zambia health workforce practitioner profile" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-practitioner-role> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-core-practitioner-role" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core Practitioner Role Profile" ] ;
+       fhir:description [ fhir:v "A current health-worker role used to route communications by responsibility rather than by hard-coded contact details." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-procedure> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-core-procedure" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core Procedure Profile" ] ;
+       fhir:description [ fhir:v "Zambia procedure profile for surgical, diagnostic, therapeutic, and programme procedures." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-group> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-core-group" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core Recipient Group Profile" ] ;
+       fhir:description [ fhir:v "A governed national, provincial, district, facility, patient, or workforce distribution group used for recipient resolution." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-related-person> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-core-related-person" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core Related Person Profile" ] ;
+       fhir:description [ fhir:v "Zambia related person profile for next of kin, caregivers, guardians, treatment supporters, and patient-linked contacts." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-service-request> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-core-service-request" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core Service Request Profile" ] ;
+       fhir:description [ fhir:v "Zambia request profile for laboratory, imaging, procedure, and referral services." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-specimen> ;
+         fhir:reference [ fhir:v "StructureDefinition/zm-core-specimen" ]
+       ] ;
+       fhir:name [ fhir:v "ZM-Core Specimen Profile" ] ;
+       fhir:description [ fhir:v "Zambia specimen profile for diagnostic sample collection, transport, receipt, and processing." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] ) ;
+     fhir:page [
+       fhir:source [
+         a fhir:url ;
+         fhir:v "toc.html"^^xsd:anyURI
+       ] ;
+       fhir:name [ fhir:v "toc.html"^^xsd:anyURI ] ;
+       fhir:title [ fhir:v "Table of Contents" ] ;
+       fhir:generation [ fhir:v "html" ] ;
+       fhir:page ( [
+         fhir:source [
+           a fhir:url ;
+           fhir:v "index.html"^^xsd:anyURI
+         ] ;
+         fhir:name [ fhir:v "index.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Home" ] ;
+         fhir:generation [ fhir:v "html" ]
+       ] [
+         fhir:source [
+           a fhir:url ;
+           fhir:v "changes.html"^^xsd:anyURI
+         ] ;
+         fhir:name [ fhir:v "changes.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Changes" ] ;
+         fhir:generation [ fhir:v "html" ]
+       ] [
+         fhir:source [
+           a fhir:url ;
+           fhir:v "communication-hub.html"^^xsd:anyURI
+         ] ;
+         fhir:name [ fhir:v "communication-hub.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Communication Hub" ] ;
+         fhir:generation [ fhir:v "html" ]
+       ] [
+         fhir:source [
+           a fhir:url ;
+           fhir:v "mfl-organization.html"^^xsd:anyURI
+         ] ;
+         fhir:name [ fhir:v "mfl-organization.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Mfl Organization" ] ;
+         fhir:generation [ fhir:v "html" ]
+       ] [
+         fhir:source [
+           a fhir:url ;
+           fhir:v "smartcare-mapping.html"^^xsd:anyURI
+         ] ;
+         fhir:name [ fhir:v "smartcare-mapping.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Smartcare Mapping" ] ;
+         fhir:generation [ fhir:v "html" ]
+       ] )
+     ] ;
+     fhir:parameter ( [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "copyrightyear" ]
+       ] ;
+       fhir:value [ fhir:v "2025+" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "releaselabel" ]
+       ] ;
+       fhir:value [ fhir:v "STU1" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "autoload-resources" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-resource" ]
+       ] ;
+       fhir:value [ fhir:v "input/capabilities" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-resource" ]
+       ] ;
+       fhir:value [ fhir:v "input/examples" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-resource" ]
+       ] ;
+       fhir:value [ fhir:v "input/extensions" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-resource" ]
+       ] ;
+       fhir:value [ fhir:v "input/models" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-resource" ]
+       ] ;
+       fhir:value [ fhir:v "input/operations" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-resource" ]
+       ] ;
+       fhir:value [ fhir:v "input/profiles" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-resource" ]
+       ] ;
+       fhir:value [ fhir:v "input/resources" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-resource" ]
+       ] ;
+       fhir:value [ fhir:v "input/vocabulary" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-resource" ]
+       ] ;
+       fhir:value [ fhir:v "input/maps" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-resource" ]
+       ] ;
+       fhir:value [ fhir:v "input/testing" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-resource" ]
+       ] ;
+       fhir:value [ fhir:v "input/history" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-resource" ]
+       ] ;
+       fhir:value [ fhir:v "fsh-generated/resources" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-pages" ]
+       ] ;
+       fhir:value [ fhir:v "template/config" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-pages" ]
+       ] ;
+       fhir:value [ fhir:v "input/images" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-liquid" ]
+       ] ;
+       fhir:value [ fhir:v "template/liquid" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-liquid" ]
+       ] ;
+       fhir:value [ fhir:v "input/liquid" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-qa" ]
+       ] ;
+       fhir:value [ fhir:v "temp/qa" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-temp" ]
+       ] ;
+       fhir:value [ fhir:v "temp/pages" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-output" ]
+       ] ;
+       fhir:value [ fhir:v "output" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-tx-cache" ]
+       ] ;
+       fhir:value [ fhir:v "input-cache/txcache" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-suppressed-warnings" ]
+       ] ;
+       fhir:value [ fhir:v "input/ignoreWarnings.txt" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-history" ]
+       ] ;
+       fhir:value [ fhir:v "http://hapi.moh.gov.zm/fhir/history.html" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "template-html" ]
+       ] ;
+       fhir:value [ fhir:v "template-page.html" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "template-md" ]
+       ] ;
+       fhir:value [ fhir:v "template-page-md.html" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "apply-contact" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "apply-context" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "apply-copyright" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "apply-jurisdiction" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "apply-license" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "apply-publisher" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "apply-version" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "apply-wg" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "active-tables" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "fmm-definition" ]
+       ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir/versions.html#maturity" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "propagate-status" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "excludelogbinaryformat" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "tabbed-snapshots" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "i18n-default-lang" ]
+       ] ;
+       fhir:value [ fhir:v "en" ]
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

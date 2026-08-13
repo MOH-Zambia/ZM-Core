@@ -1,0 +1,125 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "medication-zammsa-sku",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem medication-zammsa-sku</b></p><a name=\"medication-zammsa-sku\"> </a><a name=\"hcmedication-zammsa-sku\"> </a><p>This case-sensitive code system <code>http://hapi.moh.gov.zm/fhir/CodeSystem/medication-zammsa-sku</code> provides <b>a fragment</b> that includes following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">EM1389<a name=\"medication-zammsa-sku-EM1389\"> </a></td><td>Betamethasone 0.1% w/w cream /ointment tube</td></tr><tr><td style=\"white-space:nowrap\">EM1531<a name=\"medication-zammsa-sku-EM1531\"> </a></td><td>Hydrocortisone 0.1% w/w cream/ointment tube</td></tr><tr><td style=\"white-space:nowrap\">EM1390<a name=\"medication-zammsa-sku-EM1390\"> </a></td><td>Triamcinolone 1% w/w cream/ointment tube</td></tr><tr><td style=\"white-space:nowrap\">EM2173<a name=\"medication-zammsa-sku-EM2173\"> </a></td><td>Benzyl benzoate 25% 500ML/Bottle lotion (topical)</td></tr><tr><td style=\"white-space:nowrap\">EM2174<a name=\"medication-zammsa-sku-EM2174\"> </a></td><td>Benzoyl peroxide 10%, 20g</td></tr><tr><td style=\"white-space:nowrap\">EM1879<a name=\"medication-zammsa-sku-EM1879\"> </a></td><td>Calamine lotion 100ml bottle</td></tr><tr><td style=\"white-space:nowrap\">EM1881<a name=\"medication-zammsa-sku-EM1881\"> </a></td><td>Sun screen protection lotion SPF 30 100ml tube</td></tr><tr><td style=\"white-space:nowrap\">EM1883<a name=\"medication-zammsa-sku-EM1883\"> </a></td><td>Sun screen protection lotion SPF 40 100ml tube</td></tr><tr><td style=\"white-space:nowrap\">EM1369<a name=\"medication-zammsa-sku-EM1369\"> </a></td><td>Nicotinamide (Vitamin B3) 100mg tablet</td></tr><tr><td style=\"white-space:nowrap\">EM1370<a name=\"medication-zammsa-sku-EM1370\"> </a></td><td>Nicotinamide (Vitamin B3) 200mg tablet</td></tr><tr><td style=\"white-space:nowrap\">EM1371<a name=\"medication-zammsa-sku-EM1371\"> </a></td><td>Riboflavine (Vitamin B2) 5mg tablet</td></tr><tr><td style=\"white-space:nowrap\">EM1372<a name=\"medication-zammsa-sku-EM1372\"> </a></td><td>Thiamine (Vitamin B1) 50mg tablet</td></tr><tr><td style=\"white-space:nowrap\">EM1373<a name=\"medication-zammsa-sku-EM1373\"> </a></td><td>Thiamine (Vitamin B1) 100mg/5ml injection</td></tr><tr><td style=\"white-space:nowrap\">EM1723<a name=\"medication-zammsa-sku-EM1723\"> </a></td><td>Ascorbic acid (Vitamin C) 500mg tablet</td></tr><tr><td style=\"white-space:nowrap\">EM2195<a name=\"medication-zammsa-sku-EM2195\"> </a></td><td>Multivitamin tablets (1000)</td></tr><tr><td style=\"white-space:nowrap\">EM2196<a name=\"medication-zammsa-sku-EM2196\"> </a></td><td>Multivitamin tablets 100 pack</td></tr><tr><td style=\"white-space:nowrap\">EM2197<a name=\"medication-zammsa-sku-EM2197\"> </a></td><td>Nicotinamide (Vitamin B3) 50mg tablet</td></tr><tr><td style=\"white-space:nowrap\">EM2201<a name=\"medication-zammsa-sku-EM2201\"> </a></td><td>Potassium iodide 250 mcg liquid supplement (100ml)</td></tr><tr><td style=\"white-space:nowrap\">EM2202<a name=\"medication-zammsa-sku-EM2202\"> </a></td><td>Pyridoxine (Vitamin B6) oral solution 20mg/5ml 200ml with magnesium and potassium</td></tr><tr><td style=\"white-space:nowrap\">EM2206<a name=\"medication-zammsa-sku-EM2206\"> </a></td><td>Recombinant follicle-stimulating hormone (150IU) prefilled syringe</td></tr></table></div>"
+  },
+  "url" : "http://hapi.moh.gov.zm/fhir/CodeSystem/medication-zammsa-sku",
+  "version" : "0.1.0",
+  "name" : "ZAMMSAMedicationCS",
+  "title" : "ZAMMSA Medication SKU Code System",
+  "status" : "draft",
+  "experimental" : false,
+  "date" : "2026-08-13T13:25:03+00:00",
+  "publisher" : "Ministry of Health - Zambia",
+  "contact" : [{
+    "name" : "Ministry of Health - Zambia",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.moh.gov.zm/"
+    },
+    {
+      "system" : "email",
+      "value" : "digital.health@moh.gov.zm"
+    }]
+  },
+  {
+    "name" : "ZM-Core Team",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "zm-core@moh.gov.zm",
+      "use" : "work"
+    }]
+  }],
+  "description" : "CodeSystem representing the ZAMMSA national medicines catalogue SKUs.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "ZM",
+      "display" : "Zambia"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "fragment",
+  "concept" : [{
+    "code" : "EM1389",
+    "display" : "Betamethasone 0.1% w/w cream /ointment tube"
+  },
+  {
+    "code" : "EM1531",
+    "display" : "Hydrocortisone 0.1% w/w cream/ointment tube"
+  },
+  {
+    "code" : "EM1390",
+    "display" : "Triamcinolone 1% w/w cream/ointment tube"
+  },
+  {
+    "code" : "EM2173",
+    "display" : "Benzyl benzoate 25% 500ML/Bottle lotion (topical)"
+  },
+  {
+    "code" : "EM2174",
+    "display" : "Benzoyl peroxide 10%, 20g"
+  },
+  {
+    "code" : "EM1879",
+    "display" : "Calamine lotion 100ml bottle"
+  },
+  {
+    "code" : "EM1881",
+    "display" : "Sun screen protection lotion SPF 30 100ml tube"
+  },
+  {
+    "code" : "EM1883",
+    "display" : "Sun screen protection lotion SPF 40 100ml tube"
+  },
+  {
+    "code" : "EM1369",
+    "display" : "Nicotinamide (Vitamin B3) 100mg tablet"
+  },
+  {
+    "code" : "EM1370",
+    "display" : "Nicotinamide (Vitamin B3) 200mg tablet"
+  },
+  {
+    "code" : "EM1371",
+    "display" : "Riboflavine (Vitamin B2) 5mg tablet"
+  },
+  {
+    "code" : "EM1372",
+    "display" : "Thiamine (Vitamin B1) 50mg tablet"
+  },
+  {
+    "code" : "EM1373",
+    "display" : "Thiamine (Vitamin B1) 100mg/5ml injection"
+  },
+  {
+    "code" : "EM1723",
+    "display" : "Ascorbic acid (Vitamin C) 500mg tablet"
+  },
+  {
+    "code" : "EM2195",
+    "display" : "Multivitamin tablets (1000)"
+  },
+  {
+    "code" : "EM2196",
+    "display" : "Multivitamin tablets 100 pack"
+  },
+  {
+    "code" : "EM2197",
+    "display" : "Nicotinamide (Vitamin B3) 50mg tablet"
+  },
+  {
+    "code" : "EM2201",
+    "display" : "Potassium iodide 250 mcg liquid supplement (100ml)"
+  },
+  {
+    "code" : "EM2202",
+    "display" : "Pyridoxine (Vitamin B6) oral solution 20mg/5ml 200ml with magnesium and potassium"
+  },
+  {
+    "code" : "EM2206",
+    "display" : "Recombinant follicle-stimulating hormone (150IU) prefilled syringe"
+  }]
+}

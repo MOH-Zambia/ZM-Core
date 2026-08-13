@@ -1,0 +1,40 @@
+{
+  "resourceType" : "Observation",
+  "id" : "ExampleZMCoreObservationHemoglobin",
+  "meta" : {
+    "profile" : ["http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-observation"]
+  },
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation ExampleZMCoreObservationHemoglobin</b></p><a name=\"ExampleZMCoreObservationHemoglobin\"> </a><a name=\"hcExampleZMCoreObservationHemoglobin\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-zm-core-observation.html\">ZM-Core Observation Profile</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 718-7}\">Hemoglobin [Mass/volume] in Blood</span></p><p><b>subject</b>: <a href=\"Patient-ExampleZMCorePatient.html\">John Mwale  Male, DoB: 1985-05-15 ( http://hapi.moh.gov.zm/fhir/sid/nrc#123456/12/1)</a></p><p><b>effective</b>: 2026-08-08 09:30:00+0200</p><p><b>performer</b>: <a href=\"Practitioner-ExampleZMCorePractitioner.html\">Practitioner Mary Chipo Phiri (official)</a></p><p><b>value</b>: 13.2 g/dL<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codeg/dL = 'g/dL')</span></p></div>"
+  },
+  "status" : "final",
+  "category" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+      "code" : "laboratory",
+      "display" : "Laboratory"
+    }]
+  }],
+  "code" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "718-7",
+      "display" : "Hemoglobin [Mass/volume] in Blood"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/ExampleZMCorePatient"
+  },
+  "effectiveDateTime" : "2026-08-08T09:30:00+02:00",
+  "performer" : [{
+    "reference" : "Practitioner/ExampleZMCorePractitioner"
+  }],
+  "valueQuantity" : {
+    "value" : 13.2,
+    "unit" : "g/dL",
+    "system" : "http://unitsofmeasure.org",
+    "code" : "g/dL"
+  }
+}

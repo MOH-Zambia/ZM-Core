@@ -1,0 +1,57 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hapi.moh.gov.zm/fhir/Subscription/ExampleZMCoreSubscription> a fhir:Subscription ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ExampleZMCoreSubscription"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-subscription"^^xsd:anyURI ;
+       fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-subscription>
+     ] )
+  ] ; # 
+  fhir:language [ fhir:v "en"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Subscription ExampleZMCoreSubscription</b></p><a name=\"ExampleZMCoreSubscription\"> </a><a name=\"hcExampleZMCoreSubscription\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-zm-core-subscription.html\">ZM-Core Communication Subscription Profile</a></p></div><p><b>identifier</b>: <code>http://hapi.moh.gov.zm/fhir/sid/subscription-id</code>/dhis2-reporting-reminders</p><p><b>name</b>: DHIS2 Reporting Reminder Workflow</p><p><b>status</b>: Active</p><p><b>topic</b>: <a href=\"SubscriptionTopic-ZMCommunicationRequestActiveTopic.html\">Active Communication Request Topic</a></p><p><b>managingEntity</b>: <a href=\"Organization-ExampleZMCoreOrganization.html\">Organization Chilenje First Level Hospital</a></p><p><b>reason</b>: Start the operational reporting-reminder workflow for active requests.</p><h3>FilterBies</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>ResourceType</b></td><td><b>FilterParameter</b></td><td><b>Comparator</b></td><td><b>Value</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"http://hl7.org/fhir/R5/communicationrequest.html\">http://hl7.org/fhir/StructureDefinition/CommunicationRequest</a></td><td>category</td><td>Equals</td><td>operational</td></tr></table><p><b>channelType</b>: <a href=\"http://terminology.hl7.org/7.1.0/CodeSystem-subscription-channel-type.html#subscription-channel-type-rest-hook\">SubscriptionChannel Type Codes: rest-hook</a> (Rest Hook)</p><p><b>endpoint</b>: <a href=\"https://communication-hub.moh.gov.zm/fhir-events\">https://communication-hub.moh.gov.zm/fhir-events</a></p><p><b>heartbeatPeriod</b>: 60</p><p><b>timeout</b>: 20</p><p><b>contentType</b>: application/fhir+json</p><p><b>content</b>: Id-only</p><p><b>maxCount</b>: 100</p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "http://hapi.moh.gov.zm/fhir/sid/subscription-id"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "dhis2-reporting-reminders" ]
+  ] ) ; # 
+  fhir:name [ fhir:v "DHIS2 Reporting Reminder Workflow"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:topic [
+     fhir:v "http://hapi.moh.gov.zm/fhir/SubscriptionTopic/communication-request-active"^^xsd:anyURI ;
+     fhir:link <http://hapi.moh.gov.zm/fhir/SubscriptionTopic/communication-request-active>
+  ] ; # 
+  fhir:managingEntity [
+     fhir:link <http://hapi.moh.gov.zm/fhir/Organization/ExampleZMCoreOrganization> ;
+     fhir:reference [ fhir:v "Organization/ExampleZMCoreOrganization" ]
+  ] ; # 
+  fhir:reason [ fhir:v "Start the operational reporting-reminder workflow for active requests."] ; # 
+  fhir:filterBy ( [
+     fhir:resourceType [ fhir:v "CommunicationRequest"^^xsd:anyURI ] ;
+     fhir:filterParameter [ fhir:v "category" ] ;
+     fhir:comparator [ fhir:v "eq" ] ;
+     fhir:value [ fhir:v "operational" ]
+  ] ) ; # 
+  fhir:channelType [
+     fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/subscription-channel-type"^^xsd:anyURI ] ;
+     fhir:code [ fhir:v "rest-hook" ] ;
+     fhir:display [ fhir:v "Rest Hook" ]
+  ] ; # 
+  fhir:endpoint [ fhir:v "https://communication-hub.moh.gov.zm/fhir-events"^^xsd:anyURI] ; # 
+  fhir:heartbeatPeriod [ fhir:v "60"^^xsd:nonNegativeInteger] ; # 
+  fhir:timeout [ fhir:v "20"^^xsd:nonNegativeInteger] ; # 
+  fhir:contentType [ fhir:v "application/fhir+json"] ; # 
+  fhir:content [ fhir:v "id-only"] ; # 
+  fhir:maxCount [ fhir:v "100"^^xsd:positiveInteger] . # 
+
+# -------------------------------------------------------------------------------------
+

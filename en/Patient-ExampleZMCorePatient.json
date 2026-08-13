@@ -1,0 +1,26 @@
+{
+  "resourceType" : "Patient",
+  "id" : "ExampleZMCorePatient",
+  "meta" : {
+    "profile" : ["http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-patient"]
+  },
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Patient ExampleZMCorePatient</b></p><a name=\"ExampleZMCorePatient\"> </a><a name=\"hcExampleZMCorePatient\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-zm-core-patient.html\">ZM-Core Patient Profile</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">John Mwale  Male, DoB: 1985-05-15 ( http://hapi.moh.gov.zm/fhir/sid/nrc#123456/12/1)</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\">Lusaka ZM </td></tr></table></div>"
+  },
+  "identifier" : [{
+    "system" : "http://hapi.moh.gov.zm/fhir/sid/nrc",
+    "value" : "123456/12/1"
+  }],
+  "name" : [{
+    "family" : "Mwale",
+    "given" : ["John"]
+  }],
+  "gender" : "male",
+  "birthDate" : "1985-05-15",
+  "address" : [{
+    "city" : "Lusaka",
+    "country" : "ZM"
+  }]
+}

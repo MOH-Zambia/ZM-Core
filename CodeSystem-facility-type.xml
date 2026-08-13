@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="facility-type"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem facility-type</b></p><a name="facility-type"> </a><a name="hcfacility-type"> </a><p>This case-sensitive code system <code>http://hapi.moh.gov.zm/fhir/CodeSystem/facility-type</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">health-post<a name="facility-type-health-post"> </a></td><td>Health Post</td></tr><tr><td style="white-space:nowrap">border-health-post<a name="facility-type-border-health-post"> </a></td><td>Border Health Post</td></tr><tr><td style="white-space:nowrap">rural-health-centre<a name="facility-type-rural-health-centre"> </a></td><td>Rural Health Centre</td></tr><tr><td style="white-space:nowrap">urban-health-centre<a name="facility-type-urban-health-centre"> </a></td><td>Urban Health Centre</td></tr><tr><td style="white-space:nowrap">zonal-health-centre<a name="facility-type-zonal-health-centre"> </a></td><td>Zonal Health Centre</td></tr><tr><td style="white-space:nowrap">hospital-affiliated-health-centre<a name="facility-type-hospital-affiliated-health-centre"> </a></td><td>Hospital Affiliated Health Centre</td></tr><tr><td style="white-space:nowrap">hospital-level-1<a name="facility-type-hospital-level-1"> </a></td><td>Hospital - Level 1</td></tr><tr><td style="white-space:nowrap">hospital-level-2<a name="facility-type-hospital-level-2"> </a></td><td>Hospital - Level 2</td></tr><tr><td style="white-space:nowrap">hospital-level-3<a name="facility-type-hospital-level-3"> </a></td><td>Hospital - Level 3</td></tr><tr><td style="white-space:nowrap">police-facility<a name="facility-type-police-facility"> </a></td><td>Police</td></tr><tr><td style="white-space:nowrap">military-facility<a name="facility-type-military-facility"> </a></td><td>Military</td></tr><tr><td style="white-space:nowrap">private-facility<a name="facility-type-private-facility"> </a></td><td>Private</td></tr><tr><td style="white-space:nowrap">ngo-facility<a name="facility-type-ngo-facility"> </a></td><td>NGO</td></tr></table></div>
+  </text>
+  <url value="http://hapi.moh.gov.zm/fhir/CodeSystem/facility-type"/>
+  <version value="0.1.0"/>
+  <name value="ZMCoreFacilityTypeCS"/>
+  <title value="Zambia Master Facility List Facility Type"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-08-13T13:25:03+00:00"/>
+  <publisher value="Ministry of Health - Zambia"/>
+  <contact>
+    <name value="Ministry of Health - Zambia"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.moh.gov.zm/"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="digital.health@moh.gov.zm"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="ZM-Core Team"/>
+    <telecom>
+      <system value="email"/>
+      <value value="zm-core@moh.gov.zm"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="Facility types represented in the Zambia Master Facility List. Police, military, private, and NGO values are retained for source compatibility but overlap with facility ownership and should not be used when a more specific service level is known."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="ZM"/>
+      <display value="Zambia"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="13"/>
+  <concept>
+    <code value="health-post"/>
+    <display value="Health Post"/>
+  </concept>
+  <concept>
+    <code value="border-health-post"/>
+    <display value="Border Health Post"/>
+  </concept>
+  <concept>
+    <code value="rural-health-centre"/>
+    <display value="Rural Health Centre"/>
+  </concept>
+  <concept>
+    <code value="urban-health-centre"/>
+    <display value="Urban Health Centre"/>
+  </concept>
+  <concept>
+    <code value="zonal-health-centre"/>
+    <display value="Zonal Health Centre"/>
+  </concept>
+  <concept>
+    <code value="hospital-affiliated-health-centre"/>
+    <display value="Hospital Affiliated Health Centre"/>
+  </concept>
+  <concept>
+    <code value="hospital-level-1"/>
+    <display value="Hospital - Level 1"/>
+  </concept>
+  <concept>
+    <code value="hospital-level-2"/>
+    <display value="Hospital - Level 2"/>
+  </concept>
+  <concept>
+    <code value="hospital-level-3"/>
+    <display value="Hospital - Level 3"/>
+  </concept>
+  <concept>
+    <code value="police-facility"/>
+    <display value="Police"/>
+  </concept>
+  <concept>
+    <code value="military-facility"/>
+    <display value="Military"/>
+  </concept>
+  <concept>
+    <code value="private-facility"/>
+    <display value="Private"/>
+  </concept>
+  <concept>
+    <code value="ngo-facility"/>
+    <display value="NGO"/>
+  </concept>
+</CodeSystem>

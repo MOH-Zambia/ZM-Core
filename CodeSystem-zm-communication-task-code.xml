@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="zm-communication-task-code"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem zm-communication-task-code</b></p><a name="zm-communication-task-code"> </a><a name="hczm-communication-task-code"> </a><p>This case-sensitive code system <code>http://hapi.moh.gov.zm/fhir/CodeSystem/zm-communication-task-code</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">acknowledge<a name="zm-communication-task-code-acknowledge"> </a></td><td>Acknowledge communication</td></tr><tr><td style="white-space:nowrap">complete-action<a name="zm-communication-task-code-complete-action"> </a></td><td>Complete requested action</td></tr><tr><td style="white-space:nowrap">escalate<a name="zm-communication-task-code-escalate"> </a></td><td>Escalate communication</td></tr><tr><td style="white-space:nowrap">resolve-recipient<a name="zm-communication-task-code-resolve-recipient"> </a></td><td>Resolve recipient</td></tr></table></div>
+  </text>
+  <url value="http://hapi.moh.gov.zm/fhir/CodeSystem/zm-communication-task-code"/>
+  <version value="0.1.0"/>
+  <name value="ZMCommunicationTaskCodeCS"/>
+  <title value="Zambia Communication Task Code"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2026-08-13T13:25:03+00:00"/>
+  <publisher value="Ministry of Health - Zambia"/>
+  <contact>
+    <name value="Ministry of Health - Zambia"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.moh.gov.zm/"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="digital.health@moh.gov.zm"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="ZM-Core Team"/>
+    <telecom>
+      <system value="email"/>
+      <value value="zm-core@moh.gov.zm"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="Actions used to capture acknowledgement and escalation in communication workflows."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="ZM"/>
+      <display value="Zambia"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="4"/>
+  <concept>
+    <code value="acknowledge"/>
+    <display value="Acknowledge communication"/>
+  </concept>
+  <concept>
+    <code value="complete-action"/>
+    <display value="Complete requested action"/>
+  </concept>
+  <concept>
+    <code value="escalate"/>
+    <display value="Escalate communication"/>
+  </concept>
+  <concept>
+    <code value="resolve-recipient"/>
+    <display value="Resolve recipient"/>
+  </concept>
+</CodeSystem>

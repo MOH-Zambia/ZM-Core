@@ -1,0 +1,94 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hapi.moh.gov.zm/fhir/CodeSystem/facility-type> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "facility-type"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem facility-type</b></p><a name=\"facility-type\"> </a><a name=\"hcfacility-type\"> </a><p>This case-sensitive code system <code>http://hapi.moh.gov.zm/fhir/CodeSystem/facility-type</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">health-post<a name=\"facility-type-health-post\"> </a></td><td>Health Post</td></tr><tr><td style=\"white-space:nowrap\">border-health-post<a name=\"facility-type-border-health-post\"> </a></td><td>Border Health Post</td></tr><tr><td style=\"white-space:nowrap\">rural-health-centre<a name=\"facility-type-rural-health-centre\"> </a></td><td>Rural Health Centre</td></tr><tr><td style=\"white-space:nowrap\">urban-health-centre<a name=\"facility-type-urban-health-centre\"> </a></td><td>Urban Health Centre</td></tr><tr><td style=\"white-space:nowrap\">zonal-health-centre<a name=\"facility-type-zonal-health-centre\"> </a></td><td>Zonal Health Centre</td></tr><tr><td style=\"white-space:nowrap\">hospital-affiliated-health-centre<a name=\"facility-type-hospital-affiliated-health-centre\"> </a></td><td>Hospital Affiliated Health Centre</td></tr><tr><td style=\"white-space:nowrap\">hospital-level-1<a name=\"facility-type-hospital-level-1\"> </a></td><td>Hospital - Level 1</td></tr><tr><td style=\"white-space:nowrap\">hospital-level-2<a name=\"facility-type-hospital-level-2\"> </a></td><td>Hospital - Level 2</td></tr><tr><td style=\"white-space:nowrap\">hospital-level-3<a name=\"facility-type-hospital-level-3\"> </a></td><td>Hospital - Level 3</td></tr><tr><td style=\"white-space:nowrap\">police-facility<a name=\"facility-type-police-facility\"> </a></td><td>Police</td></tr><tr><td style=\"white-space:nowrap\">military-facility<a name=\"facility-type-military-facility\"> </a></td><td>Military</td></tr><tr><td style=\"white-space:nowrap\">private-facility<a name=\"facility-type-private-facility\"> </a></td><td>Private</td></tr><tr><td style=\"white-space:nowrap\">ngo-facility<a name=\"facility-type-ngo-facility\"> </a></td><td>NGO</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:url [ fhir:v "http://hapi.moh.gov.zm/fhir/CodeSystem/facility-type"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "ZMCoreFacilityTypeCS"] ; # 
+  fhir:title [ fhir:v "Zambia Master Facility List Facility Type"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2026-08-13T13:25:03+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "Ministry of Health - Zambia"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "Ministry of Health - Zambia" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.moh.gov.zm/" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "digital.health@moh.gov.zm" ]
+     ] )
+  ] [
+     fhir:name [ fhir:v "ZM-Core Team" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "zm-core@moh.gov.zm" ] ;
+       fhir:use [ fhir:v "work" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Facility types represented in the Zambia Master Facility List. Police, military, private, and NGO values are retained for source compatibility but overlap with facility ownership and should not be used when a more specific service level is known."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "ZM" ] ;
+       fhir:display [ fhir:v "Zambia" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "13"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "health-post" ] ;
+     fhir:display [ fhir:v "Health Post" ]
+  ] [
+     fhir:code [ fhir:v "border-health-post" ] ;
+     fhir:display [ fhir:v "Border Health Post" ]
+  ] [
+     fhir:code [ fhir:v "rural-health-centre" ] ;
+     fhir:display [ fhir:v "Rural Health Centre" ]
+  ] [
+     fhir:code [ fhir:v "urban-health-centre" ] ;
+     fhir:display [ fhir:v "Urban Health Centre" ]
+  ] [
+     fhir:code [ fhir:v "zonal-health-centre" ] ;
+     fhir:display [ fhir:v "Zonal Health Centre" ]
+  ] [
+     fhir:code [ fhir:v "hospital-affiliated-health-centre" ] ;
+     fhir:display [ fhir:v "Hospital Affiliated Health Centre" ]
+  ] [
+     fhir:code [ fhir:v "hospital-level-1" ] ;
+     fhir:display [ fhir:v "Hospital - Level 1" ]
+  ] [
+     fhir:code [ fhir:v "hospital-level-2" ] ;
+     fhir:display [ fhir:v "Hospital - Level 2" ]
+  ] [
+     fhir:code [ fhir:v "hospital-level-3" ] ;
+     fhir:display [ fhir:v "Hospital - Level 3" ]
+  ] [
+     fhir:code [ fhir:v "police-facility" ] ;
+     fhir:display [ fhir:v "Police" ]
+  ] [
+     fhir:code [ fhir:v "military-facility" ] ;
+     fhir:display [ fhir:v "Military" ]
+  ] [
+     fhir:code [ fhir:v "private-facility" ] ;
+     fhir:display [ fhir:v "Private" ]
+  ] [
+     fhir:code [ fhir:v "ngo-facility" ] ;
+     fhir:display [ fhir:v "NGO" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

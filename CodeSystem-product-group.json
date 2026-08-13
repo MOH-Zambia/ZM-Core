@@ -1,0 +1,81 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "product-group",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem product-group</b></p><a name=\"product-group\"> </a><a name=\"hcproduct-group\"> </a><p>This case-sensitive code system <code>http://hapi.moh.gov.zm/fhir/CodeSystem/product-group</code> provides <b>a fragment</b> that includes following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">ess<a name=\"product-group-ess\"> </a></td><td>Essential Medicines (ess)</td></tr><tr><td style=\"white-space:nowrap\">medsurge<a name=\"product-group-medsurge\"> </a></td><td>Medical Surgicals (medsurge)</td></tr><tr><td style=\"white-space:nowrap\">equip<a name=\"product-group-equip\"> </a></td><td>Equipment (equip)</td></tr><tr><td style=\"white-space:nowrap\">Micr<a name=\"product-group-Micr\"> </a></td><td>Microbiology (Micr)</td></tr><tr><td style=\"white-space:nowrap\">Che<a name=\"product-group-Che\"> </a></td><td>Chemistry (Che)</td></tr><tr><td style=\"white-space:nowrap\">genreag<a name=\"product-group-genreag\"> </a></td><td>General Reagents (genreag)</td></tr><tr><td style=\"white-space:nowrap\">labeq<a name=\"product-group-labeq\"> </a></td><td>Laboratory Equipment (labeq)</td></tr><tr><td style=\"white-space:nowrap\">Haem<a name=\"product-group-Haem\"> </a></td><td>Haematology (Haem)</td></tr><tr><td style=\"white-space:nowrap\">Vir<a name=\"product-group-Vir\"> </a></td><td>Virology (Vir)</td></tr></table></div>"
+  },
+  "url" : "http://hapi.moh.gov.zm/fhir/CodeSystem/product-group",
+  "version" : "0.1.0",
+  "name" : "ZMProductGroupCS",
+  "title" : "Zambia eLMIS Product Group",
+  "status" : "draft",
+  "experimental" : false,
+  "date" : "2026-08-13T13:25:03+00:00",
+  "publisher" : "Ministry of Health - Zambia",
+  "contact" : [{
+    "name" : "Ministry of Health - Zambia",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.moh.gov.zm/"
+    },
+    {
+      "system" : "email",
+      "value" : "digital.health@moh.gov.zm"
+    }]
+  },
+  {
+    "name" : "ZM-Core Team",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "zm-core@moh.gov.zm",
+      "use" : "work"
+    }]
+  }],
+  "description" : "Short product group codes from the eLMIS Master list (e.g. ess, medsurge, equip...).",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "ZM",
+      "display" : "Zambia"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "fragment",
+  "concept" : [{
+    "code" : "ess",
+    "display" : "Essential Medicines (ess)"
+  },
+  {
+    "code" : "medsurge",
+    "display" : "Medical Surgicals (medsurge)"
+  },
+  {
+    "code" : "equip",
+    "display" : "Equipment (equip)"
+  },
+  {
+    "code" : "Micr",
+    "display" : "Microbiology (Micr)"
+  },
+  {
+    "code" : "Che",
+    "display" : "Chemistry (Che)"
+  },
+  {
+    "code" : "genreag",
+    "display" : "General Reagents (genreag)"
+  },
+  {
+    "code" : "labeq",
+    "display" : "Laboratory Equipment (labeq)"
+  },
+  {
+    "code" : "Haem",
+    "display" : "Haematology (Haem)"
+  },
+  {
+    "code" : "Vir",
+    "display" : "Virology (Vir)"
+  }]
+}

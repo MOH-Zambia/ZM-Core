@@ -1,0 +1,59 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hapi.moh.gov.zm/fhir/AdverseEvent/ExampleZMCoreAdverseEventFollowingImmunization> a fhir:AdverseEvent ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ExampleZMCoreAdverseEventFollowingImmunization"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-adverse-event"^^xsd:anyURI ;
+       fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-adverse-event>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: AdverseEvent ExampleZMCoreAdverseEventFollowingImmunization</b></p><a name=\"ExampleZMCoreAdverseEventFollowingImmunization\"> </a><a name=\"hcExampleZMCoreAdverseEventFollowingImmunization\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-zm-core-adverse-event.html\">ZM-Core Adverse Event Profile</a></p></div><p><b>status</b>: Completed</p><p><b>actuality</b>: Adverse Event</p><p><b>category</b>: <span title=\"Codes:\">Adverse event following immunization</span></p><p><b>code</b>: <span title=\"Codes:\">Fever following immunization</span></p><p><b>subject</b>: <a href=\"Patient-ExampleZMCorePatient.html\">John Mwale  Male, DoB: 1985-05-15 ( http://hapi.moh.gov.zm/fhir/sid/nrc#123456/12/1)</a></p><p><b>encounter</b>: <a href=\"Encounter-ExampleZMCoreEncounter.html\">Encounter: status = completed; class = ambulatory; type = ; actualPeriod = 2025-11-15 09:00:00+0200 --&gt; 2025-11-15 10:30:00+0200</a></p><p><b>occurrence</b>: 2026-08-08 18:00:00+0200</p><p><b>recordedDate</b>: 2026-08-09 08:00:00+0200</p><p><b>recorder</b>: <a href=\"Practitioner-ExampleZMCorePractitioner.html\">Practitioner Mary Chipo Phiri (official)</a></p><h3>SuspectEntities</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Instance[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Immunization-ExampleZMCoreImmunization.html\">Immunization: status = completed; vaccineCode = ; lotNumber = BCG-LOT-001; occurrence[x] = 2026-08-08 10:00:00+0200; primarySource = true; route = ; doseQuantity = 0.05 mL</a></td></tr></table><p><b>note</b>: </p><blockquote><div><p>Caregiver reported fever after vaccination.</p>\n</div></blockquote></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:actuality [ fhir:v "actual"] ; # 
+  fhir:category ( [
+     fhir:text [ fhir:v "Adverse event following immunization" ]
+  ] ) ; # 
+  fhir:code [
+     fhir:text [ fhir:v "Fever following immunization" ]
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://hapi.moh.gov.zm/fhir/Patient/ExampleZMCorePatient> ;
+     fhir:reference [ fhir:v "Patient/ExampleZMCorePatient" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:link <http://hapi.moh.gov.zm/fhir/Encounter/ExampleZMCoreEncounter> ;
+     fhir:reference [ fhir:v "Encounter/ExampleZMCoreEncounter" ]
+  ] ; # 
+  fhir:occurrence [
+     a fhir:dateTime ;
+     fhir:v "2026-08-08T18:00:00+02:00"^^xsd:dateTime
+  ] ; # 
+  fhir:recordedDate [ fhir:v "2026-08-09T08:00:00+02:00"^^xsd:dateTime] ; # 
+  fhir:recorder [
+     fhir:link <http://hapi.moh.gov.zm/fhir/Practitioner/ExampleZMCorePractitioner> ;
+     fhir:reference [ fhir:v "Practitioner/ExampleZMCorePractitioner" ]
+  ] ; # 
+  fhir:suspectEntity ( [
+     fhir:instance [
+       a fhir:Reference ;
+       fhir:link <http://hapi.moh.gov.zm/fhir/Immunization/ExampleZMCoreImmunization> ;
+       fhir:reference [ fhir:v "Immunization/ExampleZMCoreImmunization" ]
+     ]
+  ] ) ; # 
+  fhir:note ( [
+     fhir:text [ fhir:v "Caregiver reported fever after vaccination." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

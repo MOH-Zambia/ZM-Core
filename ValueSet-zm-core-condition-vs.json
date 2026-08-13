@@ -1,0 +1,48 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "zm-core-condition-vs",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet zm-core-condition-vs</b></p><a name=\"zm-core-condition-vs\"> </a><a name=\"hczm-core-condition-vs\"> </a><ul><li>Include all codes defined in <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span></li></ul></div>"
+  },
+  "url" : "http://hapi.moh.gov.zm/fhir/ValueSet/zm-core-condition-vs",
+  "version" : "0.1.0",
+  "name" : "ZMCoreConditionVS",
+  "title" : "ZM-Core Condition/Diagnosis",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-08-13T13:25:03+00:00",
+  "publisher" : "Ministry of Health - Zambia",
+  "contact" : [{
+    "name" : "Ministry of Health - Zambia",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.moh.gov.zm/"
+    },
+    {
+      "system" : "email",
+      "value" : "digital.health@moh.gov.zm"
+    }]
+  },
+  {
+    "name" : "ZM-Core Team",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "zm-core@moh.gov.zm",
+      "use" : "work"
+    }]
+  }],
+  "description" : "Conditions and diagnoses relevant to Zambian health",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "ZM",
+      "display" : "Zambia"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct"
+    }]
+  }
+}

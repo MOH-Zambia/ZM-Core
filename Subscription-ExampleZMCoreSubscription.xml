@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Subscription xmlns="http://hl7.org/fhir">
+  <id value="ExampleZMCoreSubscription"/>
+  <meta>
+    <profile value="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-subscription"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Subscription ExampleZMCoreSubscription</b></p><a name="ExampleZMCoreSubscription"> </a><a name="hcExampleZMCoreSubscription"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-zm-core-subscription.html">ZM-Core Communication Subscription Profile</a></p></div><p><b>identifier</b>: <code>http://hapi.moh.gov.zm/fhir/sid/subscription-id</code>/dhis2-reporting-reminders</p><p><b>name</b>: DHIS2 Reporting Reminder Workflow</p><p><b>status</b>: Active</p><p><b>topic</b>: <a href="SubscriptionTopic-ZMCommunicationRequestActiveTopic.html">Active Communication Request Topic</a></p><p><b>managingEntity</b>: <a href="Organization-ExampleZMCoreOrganization.html">Organization Chilenje First Level Hospital</a></p><p><b>reason</b>: Start the operational reporting-reminder workflow for active requests.</p><h3>FilterBies</h3><table class="grid"><tr><td style="display: none">-</td><td><b>ResourceType</b></td><td><b>FilterParameter</b></td><td><b>Comparator</b></td><td><b>Value</b></td></tr><tr><td style="display: none">*</td><td><a href="http://hl7.org/fhir/R5/communicationrequest.html">http://hl7.org/fhir/StructureDefinition/CommunicationRequest</a></td><td>category</td><td>Equals</td><td>operational</td></tr></table><p><b>channelType</b>: <a href="http://terminology.hl7.org/7.1.0/CodeSystem-subscription-channel-type.html#subscription-channel-type-rest-hook">SubscriptionChannel Type Codes: rest-hook</a> (Rest Hook)</p><p><b>endpoint</b>: <a href="https://communication-hub.moh.gov.zm/fhir-events">https://communication-hub.moh.gov.zm/fhir-events</a></p><p><b>heartbeatPeriod</b>: 60</p><p><b>timeout</b>: 20</p><p><b>contentType</b>: application/fhir+json</p><p><b>content</b>: Id-only</p><p><b>maxCount</b>: 100</p></div>
+  </text>
+  <identifier>
+    <system value="http://hapi.moh.gov.zm/fhir/sid/subscription-id"/>
+    <value value="dhis2-reporting-reminders"/>
+  </identifier>
+  <name value="DHIS2 Reporting Reminder Workflow"/>
+  <status value="active"/>
+  <topic value="http://hapi.moh.gov.zm/fhir/SubscriptionTopic/communication-request-active"/>
+  <managingEntity>
+    <reference value="Organization/ExampleZMCoreOrganization"/>
+  </managingEntity>
+  <reason value="Start the operational reporting-reminder workflow for active requests."/>
+  <filterBy>
+    <resourceType value="CommunicationRequest"/>
+    <filterParameter value="category"/>
+    <comparator value="eq"/>
+    <value value="operational"/>
+  </filterBy>
+  <channelType>
+    <system value="http://terminology.hl7.org/CodeSystem/subscription-channel-type"/>
+    <code value="rest-hook"/>
+    <display value="Rest Hook"/>
+  </channelType>
+  <endpoint value="https://communication-hub.moh.gov.zm/fhir-events"/>
+  <heartbeatPeriod value="60"/>
+  <timeout value="20"/>
+  <contentType value="application/fhir+json"/>
+  <content value="id-only"/>
+  <maxCount value="100"/>
+</Subscription>

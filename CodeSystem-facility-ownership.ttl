@@ -1,0 +1,70 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hapi.moh.gov.zm/fhir/CodeSystem/facility-ownership> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "facility-ownership"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem facility-ownership</b></p><a name=\"facility-ownership\"> </a><a name=\"hcfacility-ownership\"> </a><p>This case-sensitive code system <code>http://hapi.moh.gov.zm/fhir/CodeSystem/facility-ownership</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">grz<a name=\"facility-ownership-grz\"> </a></td><td>Government of the Republic of Zambia</td></tr><tr><td style=\"white-space:nowrap\">private<a name=\"facility-ownership-private\"> </a></td><td>Private</td></tr><tr><td style=\"white-space:nowrap\">ngo<a name=\"facility-ownership-ngo\"> </a></td><td>Non-governmental organization</td></tr><tr><td style=\"white-space:nowrap\">police<a name=\"facility-ownership-police\"> </a></td><td>Police</td></tr><tr><td style=\"white-space:nowrap\">military<a name=\"facility-ownership-military\"> </a></td><td>Military</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:url [ fhir:v "http://hapi.moh.gov.zm/fhir/CodeSystem/facility-ownership"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "ZMCoreFacilityOwnershipCS"] ; # 
+  fhir:title [ fhir:v "Zambia Master Facility List Facility Ownership"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2026-08-13T13:25:03+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "Ministry of Health - Zambia"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "Ministry of Health - Zambia" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.moh.gov.zm/" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "digital.health@moh.gov.zm" ]
+     ] )
+  ] [
+     fhir:name [ fhir:v "ZM-Core Team" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "zm-core@moh.gov.zm" ] ;
+       fhir:use [ fhir:v "work" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Facility ownership or controlling sector represented in the Zambia Master Facility List."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "ZM" ] ;
+       fhir:display [ fhir:v "Zambia" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "5"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "grz" ] ;
+     fhir:display [ fhir:v "Government of the Republic of Zambia" ]
+  ] [
+     fhir:code [ fhir:v "private" ] ;
+     fhir:display [ fhir:v "Private" ]
+  ] [
+     fhir:code [ fhir:v "ngo" ] ;
+     fhir:display [ fhir:v "Non-governmental organization" ]
+  ] [
+     fhir:code [ fhir:v "police" ] ;
+     fhir:display [ fhir:v "Police" ]
+  ] [
+     fhir:code [ fhir:v "military" ] ;
+     fhir:display [ fhir:v "Military" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

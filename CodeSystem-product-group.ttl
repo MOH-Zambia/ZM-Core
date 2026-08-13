@@ -1,0 +1,81 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hapi.moh.gov.zm/fhir/CodeSystem/product-group> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "product-group"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem product-group</b></p><a name=\"product-group\"> </a><a name=\"hcproduct-group\"> </a><p>This case-sensitive code system <code>http://hapi.moh.gov.zm/fhir/CodeSystem/product-group</code> provides <b>a fragment</b> that includes following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">ess<a name=\"product-group-ess\"> </a></td><td>Essential Medicines (ess)</td></tr><tr><td style=\"white-space:nowrap\">medsurge<a name=\"product-group-medsurge\"> </a></td><td>Medical Surgicals (medsurge)</td></tr><tr><td style=\"white-space:nowrap\">equip<a name=\"product-group-equip\"> </a></td><td>Equipment (equip)</td></tr><tr><td style=\"white-space:nowrap\">Micr<a name=\"product-group-Micr\"> </a></td><td>Microbiology (Micr)</td></tr><tr><td style=\"white-space:nowrap\">Che<a name=\"product-group-Che\"> </a></td><td>Chemistry (Che)</td></tr><tr><td style=\"white-space:nowrap\">genreag<a name=\"product-group-genreag\"> </a></td><td>General Reagents (genreag)</td></tr><tr><td style=\"white-space:nowrap\">labeq<a name=\"product-group-labeq\"> </a></td><td>Laboratory Equipment (labeq)</td></tr><tr><td style=\"white-space:nowrap\">Haem<a name=\"product-group-Haem\"> </a></td><td>Haematology (Haem)</td></tr><tr><td style=\"white-space:nowrap\">Vir<a name=\"product-group-Vir\"> </a></td><td>Virology (Vir)</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:url [ fhir:v "http://hapi.moh.gov.zm/fhir/CodeSystem/product-group"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "ZMProductGroupCS"] ; # 
+  fhir:title [ fhir:v "Zambia eLMIS Product Group"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2026-08-13T13:25:03+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "Ministry of Health - Zambia"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "Ministry of Health - Zambia" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.moh.gov.zm/" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "digital.health@moh.gov.zm" ]
+     ] )
+  ] [
+     fhir:name [ fhir:v "ZM-Core Team" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "zm-core@moh.gov.zm" ] ;
+       fhir:use [ fhir:v "work" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Short product group codes from the eLMIS Master list (e.g. ess, medsurge, equip...)."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "ZM" ] ;
+       fhir:display [ fhir:v "Zambia" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:content [ fhir:v "fragment"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "ess" ] ;
+     fhir:display [ fhir:v "Essential Medicines (ess)" ]
+  ] [
+     fhir:code [ fhir:v "medsurge" ] ;
+     fhir:display [ fhir:v "Medical Surgicals (medsurge)" ]
+  ] [
+     fhir:code [ fhir:v "equip" ] ;
+     fhir:display [ fhir:v "Equipment (equip)" ]
+  ] [
+     fhir:code [ fhir:v "Micr" ] ;
+     fhir:display [ fhir:v "Microbiology (Micr)" ]
+  ] [
+     fhir:code [ fhir:v "Che" ] ;
+     fhir:display [ fhir:v "Chemistry (Che)" ]
+  ] [
+     fhir:code [ fhir:v "genreag" ] ;
+     fhir:display [ fhir:v "General Reagents (genreag)" ]
+  ] [
+     fhir:code [ fhir:v "labeq" ] ;
+     fhir:display [ fhir:v "Laboratory Equipment (labeq)" ]
+  ] [
+     fhir:code [ fhir:v "Haem" ] ;
+     fhir:display [ fhir:v "Haematology (Haem)" ]
+  ] [
+     fhir:code [ fhir:v "Vir" ] ;
+     fhir:display [ fhir:v "Virology (Vir)" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

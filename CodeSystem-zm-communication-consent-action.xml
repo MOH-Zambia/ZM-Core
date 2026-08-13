@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="zm-communication-consent-action"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem zm-communication-consent-action</b></p><a name="zm-communication-consent-action"> </a><a name="hczm-communication-consent-action"> </a><p>This case-sensitive code system <code>http://hapi.moh.gov.zm/fhir/CodeSystem/zm-communication-consent-action</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">contact<a name="zm-communication-consent-action-contact"> </a></td><td>Contact individual</td></tr><tr><td style="white-space:nowrap">send-notification<a name="zm-communication-consent-action-send-notification"> </a></td><td>Send notification</td></tr><tr><td style="white-space:nowrap">send-sensitive-content<a name="zm-communication-consent-action-send-sensitive-content"> </a></td><td>Send sensitive content through an authenticated channel</td></tr></table></div>
+  </text>
+  <url value="http://hapi.moh.gov.zm/fhir/CodeSystem/zm-communication-consent-action"/>
+  <version value="0.1.0"/>
+  <name value="ZMCommunicationConsentActionCS"/>
+  <title value="Zambia Communication Consent Action"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2026-08-13T13:25:03+00:00"/>
+  <publisher value="Ministry of Health - Zambia"/>
+  <contact>
+    <name value="Ministry of Health - Zambia"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.moh.gov.zm/"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="digital.health@moh.gov.zm"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="ZM-Core Team"/>
+    <telecom>
+      <system value="email"/>
+      <value value="zm-core@moh.gov.zm"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="Consent actions governing contact by the Unified Health Communication Hub."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="ZM"/>
+      <display value="Zambia"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="3"/>
+  <concept>
+    <code value="contact"/>
+    <display value="Contact individual"/>
+  </concept>
+  <concept>
+    <code value="send-notification"/>
+    <display value="Send notification"/>
+  </concept>
+  <concept>
+    <code value="send-sensitive-content"/>
+    <display value="Send sensitive content through an authenticated channel"/>
+  </concept>
+</CodeSystem>

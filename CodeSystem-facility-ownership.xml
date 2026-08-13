@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="facility-ownership"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem facility-ownership</b></p><a name="facility-ownership"> </a><a name="hcfacility-ownership"> </a><p>This case-sensitive code system <code>http://hapi.moh.gov.zm/fhir/CodeSystem/facility-ownership</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">grz<a name="facility-ownership-grz"> </a></td><td>Government of the Republic of Zambia</td></tr><tr><td style="white-space:nowrap">private<a name="facility-ownership-private"> </a></td><td>Private</td></tr><tr><td style="white-space:nowrap">ngo<a name="facility-ownership-ngo"> </a></td><td>Non-governmental organization</td></tr><tr><td style="white-space:nowrap">police<a name="facility-ownership-police"> </a></td><td>Police</td></tr><tr><td style="white-space:nowrap">military<a name="facility-ownership-military"> </a></td><td>Military</td></tr></table></div>
+  </text>
+  <url value="http://hapi.moh.gov.zm/fhir/CodeSystem/facility-ownership"/>
+  <version value="0.1.0"/>
+  <name value="ZMCoreFacilityOwnershipCS"/>
+  <title value="Zambia Master Facility List Facility Ownership"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-08-13T13:25:03+00:00"/>
+  <publisher value="Ministry of Health - Zambia"/>
+  <contact>
+    <name value="Ministry of Health - Zambia"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.moh.gov.zm/"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="digital.health@moh.gov.zm"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="ZM-Core Team"/>
+    <telecom>
+      <system value="email"/>
+      <value value="zm-core@moh.gov.zm"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="Facility ownership or controlling sector represented in the Zambia Master Facility List."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="ZM"/>
+      <display value="Zambia"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="5"/>
+  <concept>
+    <code value="grz"/>
+    <display value="Government of the Republic of Zambia"/>
+  </concept>
+  <concept>
+    <code value="private"/>
+    <display value="Private"/>
+  </concept>
+  <concept>
+    <code value="ngo"/>
+    <display value="Non-governmental organization"/>
+  </concept>
+  <concept>
+    <code value="police"/>
+    <display value="Police"/>
+  </concept>
+  <concept>
+    <code value="military"/>
+    <display value="Military"/>
+  </concept>
+</CodeSystem>

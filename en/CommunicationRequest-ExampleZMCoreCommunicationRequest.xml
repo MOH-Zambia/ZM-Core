@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CommunicationRequest xmlns="http://hl7.org/fhir">
+  <id value="ExampleZMCoreCommunicationRequest"/>
+  <meta>
+    <profile value="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-communication-request"/>
+  </meta>
+  <language value="en"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CommunicationRequest ExampleZMCoreCommunicationRequest</b></p><a name="ExampleZMCoreCommunicationRequest"> </a><a name="hcExampleZMCoreCommunicationRequest"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-zm-core-communication-request.html">ZM-Core Communication Request Profile</a></p></div><p><b>Communication Data Classification</b>: <span title="Codes:{http://hapi.moh.gov.zm/fhir/CodeSystem/zm-communication-data-classification internal}">Internal</span></p><p><b>Approved Communication Template</b>: <code>http://hapi.moh.gov.zm/fhir/sid/message-template</code>/DHIS2-REPORTING-REMINDER-v1</p><p><b>Communication Message Language</b>: en</p><p><b>Communication Acknowledgement Required</b>: true</p><p><b>Communication Expiry</b>: 2026-08-11 17:00:00+0200</p><p><b>Communication Requesting System</b>: <a href="Organization-ExampleZMCoreOrganization.html">Organization Chilenje First Level Hospital</a></p><p><b>Communication Fallback Channel</b>: <span title="Codes:{http://hapi.moh.gov.zm/fhir/CodeSystem/zm-communication-channel sms}">SMS</span></p><p><b>identifier</b>: <code>http://hapi.moh.gov.zm/fhir/sid/communication-request-id</code>/CR-DHIS2-2026-0001</p><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>category</b>: <span title="Codes:{http://hapi.moh.gov.zm/fhir/CodeSystem/zm-communication-lane operational}">Operational</span></p><p><b>priority</b>: Routine</p><p><b>medium</b>: <span title="Codes:{http://hapi.moh.gov.zm/fhir/CodeSystem/zm-communication-channel email}">Email</span></p><p><b>about</b>: <a href="HealthcareService-ExampleZMCoreHealthcareService.html">HealthcareService DHIS2 Reporting Service</a></p><h3>Payloads</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Content[x]</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:">A DHIS2 report is due. Authenticate to DHIS2 to review the reporting period and submit the report.</span></td></tr></table><p><b>occurrence</b>: 2026-08-10 08:00:00+0200 --&gt; 2026-08-11 17:00:00+0200</p><p><b>authoredOn</b>: 2026-08-08 10:00:00+0200</p><p><b>requester</b>: <a href="PractitionerRole-ExampleZMCorePractitionerRole.html">PractitionerRole </a></p><p><b>recipient</b>: <a href="PractitionerRole-ExampleZMCorePractitionerRole.html">PractitionerRole </a></p><h3>Reasons</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Concept</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:">DHIS2 reporting deadline approaching</span></td></tr></table></div>
+  </text>
+  <extension url="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-communication-data-classification">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://hapi.moh.gov.zm/fhir/CodeSystem/zm-communication-data-classification"/>
+        <code value="internal"/>
+        <display value="Internal"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-communication-template">
+    <valueIdentifier>
+      <system value="http://hapi.moh.gov.zm/fhir/sid/message-template"/>
+      <value value="DHIS2-REPORTING-REMINDER-v1"/>
+    </valueIdentifier>
+  </extension>
+  <extension url="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-communication-message-language">
+    <valueCode value="en"/>
+  </extension>
+  <extension url="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-communication-acknowledgement-required">
+    <valueBoolean value="true"/>
+  </extension>
+  <extension url="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-communication-expiry">
+    <valueInstant value="2026-08-11T17:00:00+02:00"/>
+  </extension>
+  <extension url="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-communication-requesting-system">
+    <valueReference>
+      <reference value="Organization/ExampleZMCoreOrganization"/>
+    </valueReference>
+  </extension>
+  <extension url="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-communication-fallback-channel">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://hapi.moh.gov.zm/fhir/CodeSystem/zm-communication-channel"/>
+        <code value="sms"/>
+        <display value="SMS"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <identifier>
+    <system value="http://hapi.moh.gov.zm/fhir/sid/communication-request-id"/>
+    <value value="CR-DHIS2-2026-0001"/>
+  </identifier>
+  <status value="active"/>
+  <intent value="order"/>
+  <category>
+    <coding>
+      <system value="http://hapi.moh.gov.zm/fhir/CodeSystem/zm-communication-lane"/>
+      <code value="operational"/>
+      <display value="Operational"/>
+    </coding>
+  </category>
+  <priority value="routine"/>
+  <medium>
+    <coding>
+      <system value="http://hapi.moh.gov.zm/fhir/CodeSystem/zm-communication-channel"/>
+      <code value="email"/>
+      <display value="Email"/>
+    </coding>
+  </medium>
+  <about>
+    <reference value="HealthcareService/ExampleZMCoreHealthcareService"/>
+  </about>
+  <payload>
+    <contentCodeableConcept>
+      <text value="A DHIS2 report is due. Authenticate to DHIS2 to review the reporting period and submit the report."/>
+    </contentCodeableConcept>
+  </payload>
+  <occurrencePeriod>
+    <start value="2026-08-10T08:00:00+02:00"/>
+    <end value="2026-08-11T17:00:00+02:00"/>
+  </occurrencePeriod>
+  <authoredOn value="2026-08-08T10:00:00+02:00"/>
+  <requester>
+    <reference value="PractitionerRole/ExampleZMCorePractitionerRole"/>
+  </requester>
+  <recipient>
+    <reference value="PractitionerRole/ExampleZMCorePractitionerRole"/>
+  </recipient>
+  <reason>
+    <concept>
+      <text value="DHIS2 reporting deadline approaching"/>
+    </concept>
+  </reason>
+</CommunicationRequest>

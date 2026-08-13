@@ -1,0 +1,704 @@
+{
+  "package": "zm-core",
+  "version": "0.1.0",
+  "fhirVersion": "5.0.0",
+  "jurisdiction": "ZM",
+  "extensions": [
+    {
+      "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-communication-acknowledgement-required",
+      "title": "Communication Acknowledgement Required",
+      "types": [
+        "boolean"
+      ]
+    },
+    {
+      "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-communication-data-classification",
+      "title": "Communication Data Classification",
+      "types": [
+        "CodeableConcept"
+      ]
+    },
+    {
+      "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-communication-expiry",
+      "title": "Communication Expiry",
+      "types": [
+        "instant"
+      ]
+    },
+    {
+      "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-communication-fallback-channel",
+      "title": "Communication Fallback Channel",
+      "types": [
+        "CodeableConcept"
+      ]
+    },
+    {
+      "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-communication-message-language",
+      "title": "Communication Message Language",
+      "types": [
+        "code"
+      ]
+    },
+    {
+      "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-communication-requesting-system",
+      "title": "Communication Requesting System",
+      "types": [
+        "Reference"
+      ]
+    },
+    {
+      "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-communication-template",
+      "title": "Approved Communication Template",
+      "types": [
+        "Identifier",
+        "id",
+        "Extension",
+        "code",
+        "CodeableConcept",
+        "uri",
+        "string",
+        "Period",
+        "Reference"
+      ]
+    },
+    {
+      "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-consent-communication-channel",
+      "title": "Consent Communication Channel",
+      "types": [
+        "CodeableConcept"
+      ]
+    },
+    {
+      "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-facility-registry-status",
+      "title": "ZM-Core Facility Registry Status",
+      "types": [
+        "CodeableConcept"
+      ]
+    },
+    {
+      "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-alternate-name",
+      "title": "ZM-Core Medication Alternate Name",
+      "types": [
+        "string"
+      ]
+    },
+    {
+      "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-alternate-pack-size",
+      "title": "ZM-Core Medication Alternate Pack Size",
+      "types": [
+        "string"
+      ]
+    },
+    {
+      "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-archived",
+      "title": "ZM-Core Medication Archived",
+      "types": [
+        "boolean"
+      ]
+    },
+    {
+      "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-atc-classification",
+      "title": "ZM-Core Medication ATC Classification",
+      "types": [
+        "CodeableConcept"
+      ]
+    },
+    {
+      "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-can-round-to-zero",
+      "title": "ZM-Core Medication Can Round To Zero",
+      "types": [
+        "boolean"
+      ]
+    },
+    {
+      "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-cartons-per-pallet",
+      "title": "ZM-Core Medication Cartons Per Pallet",
+      "types": [
+        "decimal"
+      ]
+    },
+    {
+      "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-controlled-substance",
+      "title": "ZM-Core Medication Controlled Substance",
+      "types": [
+        "boolean"
+      ]
+    },
+    {
+      "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-description",
+      "title": "ZM-Core Medication Description",
+      "types": [
+        "string"
+      ]
+    },
+    {
+      "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-dispensing-units",
+      "title": "ZM-Core Medication Dispensing Units",
+      "types": [
+        "string"
+      ]
+    },
+    {
+      "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-dosage-unit",
+      "title": "ZM-Core Medication Dosage Unit",
+      "types": [
+        "CodeableConcept"
+      ]
+    },
+    {
+      "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-doses-per-dispensing-unit",
+      "title": "ZM-Core Medication Doses Per Dispensing Unit",
+      "types": [
+        "decimal"
+      ]
+    },
+    {
+      "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-flammable",
+      "title": "ZM-Core Medication Flammable",
+      "types": [
+        "boolean"
+      ]
+    },
+    {
+      "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-full-name",
+      "title": "ZM-Core Medication Full Name",
+      "types": [
+        "string"
+      ]
+    },
+    {
+      "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-full-supply",
+      "title": "ZM-Core Medication Full Supply",
+      "types": [
+        "boolean"
+      ]
+    },
+    {
+      "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-generic-name",
+      "title": "ZM-Core Medication Generic Name",
+      "types": [
+        "string"
+      ]
+    },
+    {
+      "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-hazardous",
+      "title": "ZM-Core Medication Hazardous",
+      "types": [
+        "boolean"
+      ]
+    },
+    {
+      "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-level-of-access",
+      "title": "ZM-Core Medication Level of Access",
+      "types": [
+        "CodeableConcept"
+      ]
+    },
+    {
+      "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-light-sensitive",
+      "title": "ZM-Core Medication Light Sensitive",
+      "types": [
+        "boolean"
+      ]
+    },
+    {
+      "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-lsi-enabled",
+      "title": "Medication LSI Enabled",
+      "types": [
+        "boolean"
+      ]
+    },
+    {
+      "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-msl-pack-size",
+      "title": "ZM-Core Medication MSL Pack Size (numeric)",
+      "types": [
+        "decimal"
+      ]
+    },
+    {
+      "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-pack-rounding-threshold",
+      "title": "ZM-Core Medication Pack Rounding Threshold",
+      "types": [
+        "decimal"
+      ]
+    },
+    {
+      "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-pack-size-text",
+      "title": "ZM-Core Medication Pack Size (text)",
+      "types": [
+        "string"
+      ]
+    },
+    {
+      "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-pack-weight",
+      "title": "ZM-Core Medication Pack Weight",
+      "types": [
+        "decimal"
+      ]
+    },
+    {
+      "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-packs-per-carton",
+      "title": "ZM-Core Medication Packs Per Carton",
+      "types": [
+        "decimal"
+      ]
+    },
+    {
+      "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-price",
+      "title": "ZM-Core Medication Price",
+      "types": [
+        "Money"
+      ]
+    },
+    {
+      "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-product-group",
+      "title": "ZM-Core Medication Product Group",
+      "types": [
+        "CodeableConcept"
+      ]
+    },
+    {
+      "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-product-type",
+      "title": "ZM-Core Medication Product Type",
+      "types": [
+        "CodeableConcept"
+      ]
+    },
+    {
+      "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-route-of-administration",
+      "title": "ZM-Core Medication Route of Administration",
+      "types": [
+        "CodeableConcept"
+      ]
+    },
+    {
+      "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-shelf-life",
+      "title": "ZM-Core Medication Shelf Life",
+      "types": [
+        "string"
+      ]
+    },
+    {
+      "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-storage-classification",
+      "title": "ZM-Core Medication Storage Classification",
+      "types": [
+        "CodeableConcept"
+      ]
+    },
+    {
+      "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-storage-instructions",
+      "title": "ZM-Core Medication Storage Instructions",
+      "types": [
+        "string"
+      ]
+    },
+    {
+      "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-store-refrigerated",
+      "title": "ZM-Core Medication Store Refrigerated",
+      "types": [
+        "boolean"
+      ]
+    },
+    {
+      "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-store-room-temperature",
+      "title": "ZM-Core Medication Store Room Temperature",
+      "types": [
+        "decimal"
+      ]
+    },
+    {
+      "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-strength",
+      "title": "ZM-Core Medication Strength",
+      "types": [
+        "string"
+      ]
+    },
+    {
+      "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-tracer",
+      "title": "ZM-Core Medication Tracer",
+      "types": [
+        "boolean"
+      ]
+    },
+    {
+      "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-transport-instructions",
+      "title": "ZM-Core Medication Transport Instructions",
+      "types": [
+        "string"
+      ]
+    },
+    {
+      "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-who-approved",
+      "title": "ZM-Core Medication WHO Approved",
+      "types": [
+        "boolean"
+      ]
+    }
+  ],
+  "profiles": {
+    "AdverseEvent": [
+      {
+        "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-adverse-event",
+        "title": "ZM-Core Adverse Event Profile"
+      }
+    ],
+    "AllergyIntolerance": [
+      {
+        "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-allergy-intolerance",
+        "title": "ZM-Core Allergy Intolerance Profile"
+      }
+    ],
+    "Appointment": [
+      {
+        "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-appointment",
+        "title": "ZM-Core Appointment Profile"
+      }
+    ],
+    "CarePlan": [
+      {
+        "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-care-plan",
+        "title": "ZM-Core Care Plan Profile"
+      }
+    ],
+    "Communication": [
+      {
+        "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-communication",
+        "title": "ZM-Core Communication Profile"
+      }
+    ],
+    "AuditEvent": [
+      {
+        "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-communication-audit-event",
+        "title": "ZM-Core Communication Audit Event Profile"
+      }
+    ],
+    "Consent": [
+      {
+        "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-communication-consent",
+        "title": "ZM-Core Communication Consent Profile"
+      }
+    ],
+    "Provenance": [
+      {
+        "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-communication-provenance",
+        "title": "ZM-Core Communication Provenance Profile"
+      }
+    ],
+    "CommunicationRequest": [
+      {
+        "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-communication-request",
+        "title": "ZM-Core Communication Request Profile"
+      }
+    ],
+    "SubscriptionTopic": [
+      {
+        "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-communication-subscription-topic",
+        "title": "ZM-Core Communication Subscription Topic Profile"
+      }
+    ],
+    "Task": [
+      {
+        "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-communication-task",
+        "title": "ZM-Core Communication Task Profile"
+      }
+    ],
+    "Condition": [
+      {
+        "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-condition",
+        "title": "ZM-Core Condition Profile"
+      }
+    ],
+    "DiagnosticReport": [
+      {
+        "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-diagnostic-report",
+        "title": "ZM-Core Diagnostic Report Profile"
+      }
+    ],
+    "Encounter": [
+      {
+        "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-encounter",
+        "title": "ZM-Core Encounter Profile"
+      }
+    ],
+    "Organization": [
+      {
+        "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-organization",
+        "title": "ZM-Core Organization Profile"
+      }
+    ],
+    "Group": [
+      {
+        "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-group",
+        "title": "ZM-Core Recipient Group Profile"
+      }
+    ],
+    "HealthcareService": [
+      {
+        "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-healthcare-service",
+        "title": "ZM-Core Healthcare Service Profile"
+      }
+    ],
+    "Immunization": [
+      {
+        "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-immunization",
+        "title": "ZM-Core Immunization Profile"
+      }
+    ],
+    "Location": [
+      {
+        "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-location",
+        "title": "ZM-Core Location Profile"
+      }
+    ],
+    "Medication": [
+      {
+        "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication",
+        "title": "ZM-Core Medication Profile"
+      }
+    ],
+    "MedicationDispense": [
+      {
+        "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-dispense",
+        "title": "ZM-Core Medication Dispense Profile"
+      }
+    ],
+    "MedicationRequest": [
+      {
+        "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-request",
+        "title": "ZM-Core MedicationRequest Profile"
+      }
+    ],
+    "Observation": [
+      {
+        "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-observation",
+        "title": "ZM-Core Observation Profile"
+      }
+    ],
+    "Patient": [
+      {
+        "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-patient",
+        "title": "ZM-Core Patient Profile"
+      }
+    ],
+    "Practitioner": [
+      {
+        "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-practitioner",
+        "title": "ZM-Core Practitioner Profile"
+      }
+    ],
+    "PractitionerRole": [
+      {
+        "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-practitioner-role",
+        "title": "ZM-Core Practitioner Role Profile"
+      }
+    ],
+    "Procedure": [
+      {
+        "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-procedure",
+        "title": "ZM-Core Procedure Profile"
+      }
+    ],
+    "RelatedPerson": [
+      {
+        "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-related-person",
+        "title": "ZM-Core Related Person Profile"
+      }
+    ],
+    "ServiceRequest": [
+      {
+        "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-service-request",
+        "title": "ZM-Core Service Request Profile"
+      }
+    ],
+    "Specimen": [
+      {
+        "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-specimen",
+        "title": "ZM-Core Specimen Profile"
+      }
+    ],
+    "Subscription": [
+      {
+        "url": "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-subscription",
+        "title": "ZM-Core Communication Subscription Profile"
+      }
+    ]
+  },
+  "usage": {
+    "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-communication-acknowledgement-required": [
+      "CommunicationRequest"
+    ],
+    "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-communication-data-classification": [
+      "Communication",
+      "CommunicationRequest",
+      "Task"
+    ],
+    "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-communication-expiry": [
+      "CommunicationRequest"
+    ],
+    "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-communication-fallback-channel": [
+      "CommunicationRequest"
+    ],
+    "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-communication-message-language": [
+      "Communication",
+      "CommunicationRequest"
+    ],
+    "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-communication-requesting-system": [
+      "CommunicationRequest"
+    ],
+    "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-communication-template": [
+      "Communication",
+      "CommunicationRequest"
+    ],
+    "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-consent-communication-channel": [
+      "Consent"
+    ],
+    "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-facility-registry-status": [
+      "Organization"
+    ],
+    "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-alternate-name": [
+      "Medication"
+    ],
+    "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-alternate-pack-size": [
+      "Medication"
+    ],
+    "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-archived": [
+      "Medication"
+    ],
+    "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-atc-classification": [
+      "Medication"
+    ],
+    "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-can-round-to-zero": [
+      "Medication"
+    ],
+    "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-cartons-per-pallet": [
+      "Medication"
+    ],
+    "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-controlled-substance": [
+      "Medication"
+    ],
+    "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-description": [
+      "Medication"
+    ],
+    "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-dispensing-units": [
+      "Medication"
+    ],
+    "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-dosage-unit": [
+      "Medication"
+    ],
+    "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-doses-per-dispensing-unit": [
+      "Medication"
+    ],
+    "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-flammable": [
+      "Medication"
+    ],
+    "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-full-name": [
+      "Medication"
+    ],
+    "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-full-supply": [
+      "Medication"
+    ],
+    "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-generic-name": [
+      "Medication"
+    ],
+    "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-hazardous": [
+      "Medication"
+    ],
+    "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-level-of-access": [
+      "Medication"
+    ],
+    "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-light-sensitive": [
+      "Medication"
+    ],
+    "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-lsi-enabled": [
+      "Medication"
+    ],
+    "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-msl-pack-size": [
+      "Medication"
+    ],
+    "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-pack-rounding-threshold": [
+      "Medication"
+    ],
+    "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-pack-size-text": [
+      "Medication"
+    ],
+    "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-pack-weight": [
+      "Medication"
+    ],
+    "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-packs-per-carton": [
+      "Medication"
+    ],
+    "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-price": [
+      "Medication"
+    ],
+    "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-product-group": [
+      "Medication"
+    ],
+    "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-product-type": [
+      "Medication"
+    ],
+    "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-route-of-administration": [
+      "Medication"
+    ],
+    "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-shelf-life": [
+      "Medication"
+    ],
+    "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-storage-classification": [
+      "Medication"
+    ],
+    "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-storage-instructions": [
+      "Medication"
+    ],
+    "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-store-refrigerated": [
+      "Medication"
+    ],
+    "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-store-room-temperature": [
+      "Medication"
+    ],
+    "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-strength": [
+      "Medication"
+    ],
+    "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-tracer": [
+      "Medication"
+    ],
+    "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-transport-instructions": [
+      "Medication"
+    ],
+    "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-who-approved": [
+      "Medication"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice": [
+      "StructureDefinition.snapshot.element.constraint"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice-explanation": [
+      "StructureDefinition.snapshot.element.constraint"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable": [
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-display-hint": [
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type": [
+      "StructureDefinition.snapshot.element.type"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-hierarchy": [
+      "StructureDefinition.differential.element.type",
+      "StructureDefinition.snapshot.element.type"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-implements": [
+      "StructureDefinition"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-type-characteristics": [
+      "StructureDefinition"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/resource-information": [
+      "ImplementationGuide.definition.resource"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version": [
+      "StructureDefinition.snapshot"
+    ]
+  }
+}

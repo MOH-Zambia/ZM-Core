@@ -1,0 +1,77 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "zm-communication-lane",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem zm-communication-lane</b></p><a name=\"zm-communication-lane\"> </a><a name=\"hczm-communication-lane\"> </a><p>This case-sensitive code system <code>http://hapi.moh.gov.zm/fhir/CodeSystem/zm-communication-lane</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">clinical<a name=\"zm-communication-lane-clinical\"> </a></td><td>Clinical</td><td>Patient care communications such as appointment, referral, result-availability, and follow-up notifications.</td></tr><tr><td style=\"white-space:nowrap\">public-health<a name=\"zm-communication-lane-public-health\"> </a></td><td>Public health</td><td>Surveillance alerts, outbreak notifications, and incident escalation.</td></tr><tr><td style=\"white-space:nowrap\">operational<a name=\"zm-communication-lane-operational\"> </a></td><td>Operational</td><td>Reporting deadlines, data-quality issues, and service interruptions.</td></tr><tr><td style=\"white-space:nowrap\">supply-chain<a name=\"zm-communication-lane-supply-chain\"> </a></td><td>Supply chain</td><td>Stock alerts, requisition approvals, and delivery notifications.</td></tr><tr><td style=\"white-space:nowrap\">workforce<a name=\"zm-communication-lane-workforce\"> </a></td><td>Workforce</td><td>Workforce approvals, deployments, training, and licence-expiry reminders.</td></tr><tr><td style=\"white-space:nowrap\">public-information<a name=\"zm-communication-lane-public-information\"> </a></td><td>Public information</td><td>Approved campaigns, service availability, and health advisories.</td></tr></table></div>"
+  },
+  "url" : "http://hapi.moh.gov.zm/fhir/CodeSystem/zm-communication-lane",
+  "version" : "0.1.0",
+  "name" : "ZMCommunicationLaneCS",
+  "title" : "Zambia Communication Lane",
+  "status" : "draft",
+  "experimental" : false,
+  "date" : "2026-08-13T13:25:03+00:00",
+  "publisher" : "Ministry of Health - Zambia",
+  "contact" : [{
+    "name" : "Ministry of Health - Zambia",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.moh.gov.zm/"
+    },
+    {
+      "system" : "email",
+      "value" : "digital.health@moh.gov.zm"
+    }]
+  },
+  {
+    "name" : "ZM-Core Team",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "zm-core@moh.gov.zm",
+      "use" : "work"
+    }]
+  }],
+  "description" : "Governance lanes used to separate communication purposes, access rules, and disclosure controls in the Zambia Unified Health Communication Hub.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "ZM",
+      "display" : "Zambia"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 6,
+  "concept" : [{
+    "code" : "clinical",
+    "display" : "Clinical",
+    "definition" : "Patient care communications such as appointment, referral, result-availability, and follow-up notifications."
+  },
+  {
+    "code" : "public-health",
+    "display" : "Public health",
+    "definition" : "Surveillance alerts, outbreak notifications, and incident escalation."
+  },
+  {
+    "code" : "operational",
+    "display" : "Operational",
+    "definition" : "Reporting deadlines, data-quality issues, and service interruptions."
+  },
+  {
+    "code" : "supply-chain",
+    "display" : "Supply chain",
+    "definition" : "Stock alerts, requisition approvals, and delivery notifications."
+  },
+  {
+    "code" : "workforce",
+    "display" : "Workforce",
+    "definition" : "Workforce approvals, deployments, training, and licence-expiry reminders."
+  },
+  {
+    "code" : "public-information",
+    "display" : "Public information",
+    "definition" : "Approved campaigns, service availability, and health advisories."
+  }]
+}

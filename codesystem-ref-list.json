@@ -1,0 +1,194 @@
+{
+  "codeSystems" : [{
+    "url" : "http://hapi.moh.gov.zm/fhir/CodeSystem/facility-ownership",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "ZMCoreFacilityOwnershipCS",
+    "title" : "Zambia Master Facility List Facility Ownership",
+    "description" : "Facility ownership or controlling sector represented in the Zambia Master Facility List.",
+    "uses" : {
+    },
+    "ValueSet-facility-ownership.html" : "Zambia Master Facility List Facility Ownership Value Set"
+  },
+  {
+    "url" : "http://hapi.moh.gov.zm/fhir/CodeSystem/facility-registry-status",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "ZMCoreFacilityRegistryStatusCS",
+    "title" : "Zambia Master Facility List Registry Status",
+    "description" : "Combined operational, licensing, registration, and record-quality states represented by the current Zambia Master Facility List operation-status field.",
+    "uses" : {
+    },
+    "ValueSet-facility-registry-status.html" : "Zambia Master Facility List Registry Status Value Set"
+  },
+  {
+    "url" : "http://hapi.moh.gov.zm/fhir/CodeSystem/facility-type",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "ZMCoreFacilityTypeCS",
+    "title" : "Zambia Master Facility List Facility Type",
+    "description" : "Facility types represented in the Zambia Master Facility List. Police, military, private, and NGO values are retained for source compatibility but overlap with facility ownership and should not be used when a more specific service level is known.",
+    "uses" : {
+    },
+    "ValueSet-facility-type.html" : "Zambia Master Facility List Facility Type Value Set"
+  },
+  {
+    "url" : "http://hapi.moh.gov.zm/fhir/CodeSystem/medication-level-of-access",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "ZMLevelOfAccessCS",
+    "title" : "Zambia Level of Access for Medicines",
+    "description" : "Levels of care at which a medicine is allowed to be used, based on the ZAMMSA catalogue.",
+    "uses" : {
+    },
+    "ValueSet-medication-level-of-access.html" : "Zambia Medication Level of Access"
+  },
+  {
+    "url" : "http://hapi.moh.gov.zm/fhir/CodeSystem/medication-zammsa-sku",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "ZAMMSAMedicationCS",
+    "title" : "ZAMMSA Medication SKU Code System",
+    "description" : "CodeSystem representing the ZAMMSA national medicines catalogue SKUs.",
+    "uses" : {
+    },
+    "ValueSet-medication-zammsa-sku.html" : "ZAMMSA Medication SKU ValueSet"
+  },
+  {
+    "url" : "http://hapi.moh.gov.zm/fhir/CodeSystem/product-group",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "ZMProductGroupCS",
+    "title" : "Zambia eLMIS Product Group",
+    "description" : "Short product group codes from the eLMIS Master list (e.g. ess, medsurge, equip...).",
+    "uses" : {
+    },
+    "ValueSet-product-group.html" : "Zambia eLMIS Product Group ValueSet"
+  },
+  {
+    "url" : "http://hapi.moh.gov.zm/fhir/CodeSystem/product-type",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "ZMProductTypeCS",
+    "title" : "Zambia Product Type (eLMIS)",
+    "description" : "Product types from the eLMIS Master Product List.",
+    "uses" : {
+    },
+    "ValueSet-product-type.html" : "Zambia Product Type ValueSet"
+  },
+  {
+    "url" : "http://hapi.moh.gov.zm/fhir/CodeSystem/zm-communication-channel",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "ZMCommunicationChannelCS",
+    "title" : "Zambia Communication Channel",
+    "description" : "Delivery channels supported by the Zambia Unified Health Communication Hub.",
+    "uses" : {
+    },
+    "ValueSet-zm-communication-channel-vs.html" : "Zambia Communication Channel Value Set"
+  },
+  {
+    "url" : "http://hapi.moh.gov.zm/fhir/CodeSystem/zm-communication-consent-action",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "ZMCommunicationConsentActionCS",
+    "title" : "Zambia Communication Consent Action",
+    "description" : "Consent actions governing contact by the Unified Health Communication Hub.",
+    "uses" : {
+    },
+    "ValueSet-zm-communication-consent-action-vs.html" : "Zambia Communication Consent Action Value Set"
+  },
+  {
+    "url" : "http://hapi.moh.gov.zm/fhir/CodeSystem/zm-communication-data-classification",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "ZMCommunicationDataClassificationCS",
+    "title" : "Zambia Communication Data Classification",
+    "description" : "Data classifications that drive disclosure and channel controls for health communications.",
+    "uses" : {
+    },
+    "ValueSet-zm-communication-data-classification-vs.html" : "Zambia Communication Data Classification Value Set"
+  },
+  {
+    "url" : "http://hapi.moh.gov.zm/fhir/CodeSystem/zm-communication-lane",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "ZMCommunicationLaneCS",
+    "title" : "Zambia Communication Lane",
+    "description" : "Governance lanes used to separate communication purposes, access rules, and disclosure controls in the Zambia Unified Health Communication Hub.",
+    "uses" : {
+    },
+    "ValueSet-zm-communication-lane-vs.html" : "Zambia Communication Lane Value Set"
+  },
+  {
+    "url" : "http://hapi.moh.gov.zm/fhir/CodeSystem/zm-communication-task-code",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "ZMCommunicationTaskCodeCS",
+    "title" : "Zambia Communication Task Code",
+    "description" : "Actions used to capture acknowledgement and escalation in communication workflows.",
+    "uses" : {
+    },
+    "ValueSet-zm-communication-task-code-vs.html" : "Zambia Communication Task Code Value Set"
+  },
+  {
+    "url" : "http://hl7.org/fhir/administrative-gender",
+    "version" : "5.0.0",
+    "status" : "active",
+    "name" : "AdministrativeGender",
+    "title" : "AdministrativeGender",
+    "description" : "The gender of a person used for administrative purposes.",
+    "oids" : ["2.16.840.1.113883.4.642.4.2"],
+    "uses" : {
+    },
+    "ValueSet-zm-core-patient-gender-vs.html" : "ZM-Core Patient Gender"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/observation-category",
+    "version" : "2.0.0",
+    "status" : "active",
+    "name" : "ObservationCategoryCodes",
+    "title" : "Observation Category Codes",
+    "description" : "Observation Category codes.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1125"],
+    "uses" : {
+    },
+    "ValueSet-zm-core-observation-category-vs.html" : "ZM-Core Observation Category"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/organization-type",
+    "version" : "2.0.1",
+    "status" : "active",
+    "name" : "OrganizationType",
+    "title" : "Organization type",
+    "description" : "This example value set defines a set of codes that can be used to indicate a type of organization.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1128"],
+    "uses" : {
+    },
+    "ValueSet-zm-core-organization-type-vs.html" : "ZM-Core Organization Type"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+    "version" : "10.0.0",
+    "status" : "active",
+    "name" : "ActCode",
+    "title" : "ActCode",
+    "description" : "A code specifying the particular kind of Act that the Act-instance represents within its class.\r\n\r\n*Constraints:* The kind of Act (e.g. physical examination, serum potassium, inpatient encounter, charge financial transaction, etc.) is specified with a code from one of several, typically external, coding systems. The coding system will depend on the class of Act, such as LOINC for observations, etc.\r\n\r\nConceptually, the Act.code must be a specialization of the Act.classCode. This is why the structure of ActClass domain should be reflected in the superstructure of the ActCode domain and then individual codes or externally referenced vocabularies subordinated under these domains that reflect the ActClass structure.\r\n\r\nAct.classCode and Act.code are not modifiers of each other but the Act.code concept should really imply the Act.classCode concept. For a negative example, it is not appropriate to use an Act.code \"potassium\" together with and Act.classCode for \"laboratory observation\" to somehow mean \"potassium laboratory observation\" and then use the same Act.code for \"potassium\" together with Act.classCode for \"medication\" to mean \"substitution of potassium\". This mutually modifying use of Act.code and Act.classCode is not permitted.",
+    "oids" : ["2.16.840.1.113883.5.4"],
+    "uses" : {
+    },
+    "ValueSet-zm-core-encounter-type-vs.html" : "ZM-Core Encounter Type"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+    "version" : "4.0.0",
+    "status" : "active",
+    "name" : "MaritalStatus",
+    "title" : "MaritalStatus",
+    "description" : "\\* \\* \\* No description supplied \\* \\* \\*\r\n\r\n*Open Issue:* The specific meanings of these codes can vary somewhat by jurisdiction and implementation so caution should be used when determining equivalency.\r\n\r\n*Open Issue:* fixing and completion of the hierarchy and proper good definitions of all the concepts is badly needed.",
+    "oids" : ["2.16.840.1.113883.5.2"],
+    "uses" : {
+    },
+    "ValueSet-zm-core-marital-status-vs.html" : "ZM-Core Marital Status"
+  }]
+}

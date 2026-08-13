@@ -1,0 +1,798 @@
+[{
+  "id" : "facility-ownership",
+  "type" : "CodeSystem",
+  "url" : "http://hapi.moh.gov.zm/fhir/CodeSystem/facility-ownership",
+  "version" : "0.1.0",
+  "name" : "ZMCoreFacilityOwnershipCS"
+},
+{
+  "id" : "facility-registry-status",
+  "type" : "CodeSystem",
+  "url" : "http://hapi.moh.gov.zm/fhir/CodeSystem/facility-registry-status",
+  "version" : "0.1.0",
+  "name" : "ZMCoreFacilityRegistryStatusCS"
+},
+{
+  "id" : "facility-type",
+  "type" : "CodeSystem",
+  "url" : "http://hapi.moh.gov.zm/fhir/CodeSystem/facility-type",
+  "version" : "0.1.0",
+  "name" : "ZMCoreFacilityTypeCS"
+},
+{
+  "id" : "medication-level-of-access",
+  "type" : "CodeSystem",
+  "url" : "http://hapi.moh.gov.zm/fhir/CodeSystem/medication-level-of-access",
+  "version" : "0.1.0",
+  "name" : "ZMLevelOfAccessCS"
+},
+{
+  "id" : "medication-zammsa-sku",
+  "type" : "CodeSystem",
+  "url" : "http://hapi.moh.gov.zm/fhir/CodeSystem/medication-zammsa-sku",
+  "version" : "0.1.0",
+  "name" : "ZAMMSAMedicationCS"
+},
+{
+  "id" : "product-group",
+  "type" : "CodeSystem",
+  "url" : "http://hapi.moh.gov.zm/fhir/CodeSystem/product-group",
+  "version" : "0.1.0",
+  "name" : "ZMProductGroupCS"
+},
+{
+  "id" : "product-type",
+  "type" : "CodeSystem",
+  "url" : "http://hapi.moh.gov.zm/fhir/CodeSystem/product-type",
+  "version" : "0.1.0",
+  "name" : "ZMProductTypeCS"
+},
+{
+  "id" : "zm-communication-channel",
+  "type" : "CodeSystem",
+  "url" : "http://hapi.moh.gov.zm/fhir/CodeSystem/zm-communication-channel",
+  "version" : "0.1.0",
+  "name" : "ZMCommunicationChannelCS"
+},
+{
+  "id" : "zm-communication-consent-action",
+  "type" : "CodeSystem",
+  "url" : "http://hapi.moh.gov.zm/fhir/CodeSystem/zm-communication-consent-action",
+  "version" : "0.1.0",
+  "name" : "ZMCommunicationConsentActionCS"
+},
+{
+  "id" : "zm-communication-data-classification",
+  "type" : "CodeSystem",
+  "url" : "http://hapi.moh.gov.zm/fhir/CodeSystem/zm-communication-data-classification",
+  "version" : "0.1.0",
+  "name" : "ZMCommunicationDataClassificationCS"
+},
+{
+  "id" : "zm-communication-lane",
+  "type" : "CodeSystem",
+  "url" : "http://hapi.moh.gov.zm/fhir/CodeSystem/zm-communication-lane",
+  "version" : "0.1.0",
+  "name" : "ZMCommunicationLaneCS"
+},
+{
+  "id" : "zm-communication-task-code",
+  "type" : "CodeSystem",
+  "url" : "http://hapi.moh.gov.zm/fhir/CodeSystem/zm-communication-task-code",
+  "version" : "0.1.0",
+  "name" : "ZMCommunicationTaskCodeCS"
+},
+{
+  "id" : "zm-core",
+  "type" : "ImplementationGuide",
+  "url" : "http://hapi.moh.gov.zm/fhir/ImplementationGuide/zm-core",
+  "version" : "0.1.0",
+  "name" : "ZMCore"
+},
+{
+  "id" : "ZMCoreClinicalEncounter",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/ZMCoreClinicalEncounter",
+  "version" : "0.1.0",
+  "name" : "ZMCoreClinicalEncounter"
+},
+{
+  "id" : "ZMCoreHealthFacility",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/ZMCoreHealthFacility",
+  "version" : "0.1.0",
+  "name" : "ZMCoreHealthFacility"
+},
+{
+  "id" : "ZMCoreImmunizationRecord",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/ZMCoreImmunizationRecord",
+  "version" : "0.1.0",
+  "name" : "ZMCoreImmunizationRecord"
+},
+{
+  "id" : "ZMCorePatientDemographics",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/ZMCorePatientDemographics",
+  "version" : "0.1.0",
+  "name" : "ZMCorePatientDemographics"
+},
+{
+  "id" : "zm-communication-acknowledgement-required",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-communication-acknowledgement-required",
+  "version" : "0.1.0",
+  "name" : "ZMCommunicationAcknowledgementRequired"
+},
+{
+  "id" : "zm-communication-data-classification",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-communication-data-classification",
+  "version" : "0.1.0",
+  "name" : "ZMCommunicationDataClassification"
+},
+{
+  "id" : "zm-communication-expiry",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-communication-expiry",
+  "version" : "0.1.0",
+  "name" : "ZMCommunicationExpiry"
+},
+{
+  "id" : "zm-communication-fallback-channel",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-communication-fallback-channel",
+  "version" : "0.1.0",
+  "name" : "ZMCommunicationFallbackChannel"
+},
+{
+  "id" : "zm-communication-message-language",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-communication-message-language",
+  "version" : "0.1.0",
+  "name" : "ZMCommunicationMessageLanguage"
+},
+{
+  "id" : "zm-communication-requesting-system",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-communication-requesting-system",
+  "version" : "0.1.0",
+  "name" : "ZMCommunicationRequestingSystem"
+},
+{
+  "id" : "zm-communication-template",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-communication-template",
+  "version" : "0.1.0",
+  "name" : "ZMCommunicationTemplate"
+},
+{
+  "id" : "zm-consent-communication-channel",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-consent-communication-channel",
+  "version" : "0.1.0",
+  "name" : "ZMConsentCommunicationChannel"
+},
+{
+  "id" : "zm-core-adverse-event",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-adverse-event",
+  "version" : "0.1.0",
+  "name" : "ZMCoreAdverseEvent"
+},
+{
+  "id" : "zm-core-allergy-intolerance",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-allergy-intolerance",
+  "version" : "0.1.0",
+  "name" : "ZMCoreAllergyIntolerance"
+},
+{
+  "id" : "zm-core-appointment",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-appointment",
+  "version" : "0.1.0",
+  "name" : "ZMCoreAppointment"
+},
+{
+  "id" : "zm-core-care-plan",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-care-plan",
+  "version" : "0.1.0",
+  "name" : "ZMCoreCarePlan"
+},
+{
+  "id" : "zm-core-communication",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-communication",
+  "version" : "0.1.0",
+  "name" : "ZMCoreCommunication"
+},
+{
+  "id" : "zm-core-communication-audit-event",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-communication-audit-event",
+  "version" : "0.1.0",
+  "name" : "ZMCoreCommunicationAuditEvent"
+},
+{
+  "id" : "zm-core-communication-consent",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-communication-consent",
+  "version" : "0.1.0",
+  "name" : "ZMCoreCommunicationConsent"
+},
+{
+  "id" : "zm-core-communication-provenance",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-communication-provenance",
+  "version" : "0.1.0",
+  "name" : "ZMCoreCommunicationProvenance"
+},
+{
+  "id" : "zm-core-communication-request",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-communication-request",
+  "version" : "0.1.0",
+  "name" : "ZMCoreCommunicationRequest"
+},
+{
+  "id" : "zm-core-communication-subscription-topic",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-communication-subscription-topic",
+  "version" : "0.1.0",
+  "name" : "ZMCoreCommunicationSubscriptionTopic"
+},
+{
+  "id" : "zm-core-communication-task",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-communication-task",
+  "version" : "0.1.0",
+  "name" : "ZMCoreCommunicationTask"
+},
+{
+  "id" : "zm-core-condition",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-condition",
+  "version" : "0.1.0",
+  "name" : "ZMCoreCondition"
+},
+{
+  "id" : "zm-core-diagnostic-report",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-diagnostic-report",
+  "version" : "0.1.0",
+  "name" : "ZMCoreDiagnosticReport"
+},
+{
+  "id" : "zm-core-encounter",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-encounter",
+  "version" : "0.1.0",
+  "name" : "ZMCoreEncounter"
+},
+{
+  "id" : "zm-core-facility-organization",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-facility-organization",
+  "version" : "0.1.0",
+  "name" : "ZMCoreFacilityOrganization"
+},
+{
+  "id" : "zm-core-facility-registry-status",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-facility-registry-status",
+  "version" : "0.1.0",
+  "name" : "ZMCoreFacilityRegistryStatus"
+},
+{
+  "id" : "zm-core-group",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-group",
+  "version" : "0.1.0",
+  "name" : "ZMCoreGroup"
+},
+{
+  "id" : "zm-core-healthcare-service",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-healthcare-service",
+  "version" : "0.1.0",
+  "name" : "ZMCoreHealthcareService"
+},
+{
+  "id" : "zm-core-immunization",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-immunization",
+  "version" : "0.1.0",
+  "name" : "ZMCoreImmunization"
+},
+{
+  "id" : "zm-core-location",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-location",
+  "version" : "0.1.0",
+  "name" : "ZMCoreLocation"
+},
+{
+  "id" : "zm-core-medication",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication",
+  "version" : "0.1.0",
+  "name" : "ZMCoreMedication"
+},
+{
+  "id" : "zm-core-medication-alternate-name",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-alternate-name",
+  "version" : "0.1.0",
+  "name" : "ZMCoreMedicationAlternateName"
+},
+{
+  "id" : "zm-core-medication-alternate-pack-size",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-alternate-pack-size",
+  "version" : "0.1.0",
+  "name" : "ZMCoreMedicationAlternatePackSize"
+},
+{
+  "id" : "zm-core-medication-archived",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-archived",
+  "version" : "0.1.0",
+  "name" : "ZMCoreMedicationArchived"
+},
+{
+  "id" : "zm-core-medication-atc-classification",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-atc-classification",
+  "version" : "0.1.0",
+  "name" : "ZMCoreMedicationATCClassification"
+},
+{
+  "id" : "zm-core-medication-can-round-to-zero",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-can-round-to-zero",
+  "version" : "0.1.0",
+  "name" : "ZMCoreMedicationCanRoundToZero"
+},
+{
+  "id" : "zm-core-medication-cartons-per-pallet",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-cartons-per-pallet",
+  "version" : "0.1.0",
+  "name" : "ZMCoreMedicationCartonsPerPallet"
+},
+{
+  "id" : "zm-core-medication-controlled-substance",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-controlled-substance",
+  "version" : "0.1.0",
+  "name" : "ZMCoreMedicationControlledSubstance"
+},
+{
+  "id" : "zm-core-medication-description",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-description",
+  "version" : "0.1.0",
+  "name" : "ZMCoreMedicationDescription"
+},
+{
+  "id" : "zm-core-medication-dispense",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-dispense",
+  "version" : "0.1.0",
+  "name" : "ZMCoreMedicationDispense"
+},
+{
+  "id" : "zm-core-medication-dispensing-units",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-dispensing-units",
+  "version" : "0.1.0",
+  "name" : "ZMCoreMedicationDispensingUnits"
+},
+{
+  "id" : "zm-core-medication-dosage-unit",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-dosage-unit",
+  "version" : "0.1.0",
+  "name" : "ZMCoreMedicationDosageUnit"
+},
+{
+  "id" : "zm-core-medication-doses-per-dispensing-unit",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-doses-per-dispensing-unit",
+  "version" : "0.1.0",
+  "name" : "ZMCoreMedicationDosesPerDispensingUnit"
+},
+{
+  "id" : "zm-core-medication-flammable",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-flammable",
+  "version" : "0.1.0",
+  "name" : "ZMCoreMedicationFlammable"
+},
+{
+  "id" : "zm-core-medication-full-name",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-full-name",
+  "version" : "0.1.0",
+  "name" : "ZMCoreMedicationFullName"
+},
+{
+  "id" : "zm-core-medication-full-supply",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-full-supply",
+  "version" : "0.1.0",
+  "name" : "ZMCoreMedicationFullSupply"
+},
+{
+  "id" : "zm-core-medication-generic-name",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-generic-name",
+  "version" : "0.1.0",
+  "name" : "ZMCoreMedicationGenericName"
+},
+{
+  "id" : "zm-core-medication-hazardous",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-hazardous",
+  "version" : "0.1.0",
+  "name" : "ZMCoreMedicationHazardous"
+},
+{
+  "id" : "zm-core-medication-level-of-access",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-level-of-access",
+  "version" : "0.1.0",
+  "name" : "ZMCoreMedicationLevelOfAccess"
+},
+{
+  "id" : "zm-core-medication-light-sensitive",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-light-sensitive",
+  "version" : "0.1.0",
+  "name" : "ZMCoreMedicationLightSensitive"
+},
+{
+  "id" : "zm-core-medication-lsi-enabled",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-lsi-enabled",
+  "version" : "0.1.0",
+  "name" : "ZMCoreMedicationLSIEnabled"
+},
+{
+  "id" : "zm-core-medication-msl-pack-size",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-msl-pack-size",
+  "version" : "0.1.0",
+  "name" : "ZMCoreMedicationMSLPackSize"
+},
+{
+  "id" : "zm-core-medication-pack-rounding-threshold",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-pack-rounding-threshold",
+  "version" : "0.1.0",
+  "name" : "ZMCoreMedicationPackRoundingThreshold"
+},
+{
+  "id" : "zm-core-medication-pack-size-text",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-pack-size-text",
+  "version" : "0.1.0",
+  "name" : "ZMCoreMedicationPackSizeText"
+},
+{
+  "id" : "zm-core-medication-pack-weight",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-pack-weight",
+  "version" : "0.1.0",
+  "name" : "ZMCoreMedicationPackWeight"
+},
+{
+  "id" : "zm-core-medication-packs-per-carton",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-packs-per-carton",
+  "version" : "0.1.0",
+  "name" : "ZMCoreMedicationPacksPerCarton"
+},
+{
+  "id" : "zm-core-medication-price",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-price",
+  "version" : "0.1.0",
+  "name" : "ZMCoreMedicationPrice"
+},
+{
+  "id" : "zm-core-medication-product-group",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-product-group",
+  "version" : "0.1.0",
+  "name" : "ZMCoreMedicationProductGroup"
+},
+{
+  "id" : "zm-core-medication-product-type",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-product-type",
+  "version" : "0.1.0",
+  "name" : "ZMCoreMedicationProductType"
+},
+{
+  "id" : "zm-core-medication-request",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-request",
+  "version" : "0.1.0",
+  "name" : "ZMCoreMedicationRequest"
+},
+{
+  "id" : "zm-core-medication-route-of-administration",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-route-of-administration",
+  "version" : "0.1.0",
+  "name" : "ZMCoreMedicationRouteOfAdministration"
+},
+{
+  "id" : "zm-core-medication-shelf-life",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-shelf-life",
+  "version" : "0.1.0",
+  "name" : "ZMCoreMedicationShelfLife"
+},
+{
+  "id" : "zm-core-medication-storage-classification",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-storage-classification",
+  "version" : "0.1.0",
+  "name" : "ZMCoreMedicationStorageClassification"
+},
+{
+  "id" : "zm-core-medication-storage-instructions",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-storage-instructions",
+  "version" : "0.1.0",
+  "name" : "ZMCoreMedicationStorageInstructions"
+},
+{
+  "id" : "zm-core-medication-store-refrigerated",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-store-refrigerated",
+  "version" : "0.1.0",
+  "name" : "ZMCoreMedicationStoreRefrigerated"
+},
+{
+  "id" : "zm-core-medication-store-room-temperature",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-store-room-temperature",
+  "version" : "0.1.0",
+  "name" : "ZMCoreMedicationStoreRoomTemperature"
+},
+{
+  "id" : "zm-core-medication-strength",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-strength",
+  "version" : "0.1.0",
+  "name" : "ZMCoreMedicationStrength"
+},
+{
+  "id" : "zm-core-medication-tracer",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-tracer",
+  "version" : "0.1.0",
+  "name" : "ZMCoreMedicationTracer"
+},
+{
+  "id" : "zm-core-medication-transport-instructions",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-transport-instructions",
+  "version" : "0.1.0",
+  "name" : "ZMCoreMedicationTransportInstructions"
+},
+{
+  "id" : "zm-core-medication-who-approved",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-who-approved",
+  "version" : "0.1.0",
+  "name" : "ZMCoreMedicationWHOApproved"
+},
+{
+  "id" : "zm-core-observation",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-observation",
+  "version" : "0.1.0",
+  "name" : "ZMCoreObservation"
+},
+{
+  "id" : "zm-core-organization",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-organization",
+  "version" : "0.1.0",
+  "name" : "ZMCoreOrganization"
+},
+{
+  "id" : "zm-core-patient",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-patient",
+  "version" : "0.1.0",
+  "name" : "ZMCorePatient"
+},
+{
+  "id" : "zm-core-practitioner",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-practitioner",
+  "version" : "0.1.0",
+  "name" : "ZMCorePractitioner"
+},
+{
+  "id" : "zm-core-practitioner-role",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-practitioner-role",
+  "version" : "0.1.0",
+  "name" : "ZMCorePractitionerRole"
+},
+{
+  "id" : "zm-core-procedure",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-procedure",
+  "version" : "0.1.0",
+  "name" : "ZMCoreProcedure"
+},
+{
+  "id" : "zm-core-related-person",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-related-person",
+  "version" : "0.1.0",
+  "name" : "ZMCoreRelatedPerson"
+},
+{
+  "id" : "zm-core-service-request",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-service-request",
+  "version" : "0.1.0",
+  "name" : "ZMCoreServiceRequest"
+},
+{
+  "id" : "zm-core-specimen",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-specimen",
+  "version" : "0.1.0",
+  "name" : "ZMCoreSpecimen"
+},
+{
+  "id" : "zm-core-subscription",
+  "type" : "StructureDefinition",
+  "url" : "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-subscription",
+  "version" : "0.1.0",
+  "name" : "ZMCoreSubscription"
+},
+{
+  "id" : "ZMCommunicationRequestActiveTopic",
+  "type" : "SubscriptionTopic",
+  "url" : "http://hapi.moh.gov.zm/fhir/SubscriptionTopic/communication-request-active",
+  "version" : "0.1.0",
+  "name" : "ZMCommunicationRequestActiveTopic"
+},
+{
+  "id" : "facility-ownership",
+  "type" : "ValueSet",
+  "url" : "http://hapi.moh.gov.zm/fhir/ValueSet/facility-ownership",
+  "version" : "0.1.0",
+  "name" : "ZMCoreFacilityOwnershipVS"
+},
+{
+  "id" : "facility-registry-status",
+  "type" : "ValueSet",
+  "url" : "http://hapi.moh.gov.zm/fhir/ValueSet/facility-registry-status",
+  "version" : "0.1.0",
+  "name" : "ZMCoreFacilityRegistryStatusVS"
+},
+{
+  "id" : "facility-type",
+  "type" : "ValueSet",
+  "url" : "http://hapi.moh.gov.zm/fhir/ValueSet/facility-type",
+  "version" : "0.1.0",
+  "name" : "ZMCoreFacilityTypeVS"
+},
+{
+  "id" : "medication-level-of-access",
+  "type" : "ValueSet",
+  "url" : "http://hapi.moh.gov.zm/fhir/ValueSet/medication-level-of-access",
+  "version" : "0.1.0",
+  "name" : "ZMLevelOfAccessVS"
+},
+{
+  "id" : "medication-zammsa-sku",
+  "type" : "ValueSet",
+  "url" : "http://hapi.moh.gov.zm/fhir/ValueSet/medication-zammsa-sku",
+  "version" : "0.1.0",
+  "name" : "ZAMMSAMedicationVS"
+},
+{
+  "id" : "product-group",
+  "type" : "ValueSet",
+  "url" : "http://hapi.moh.gov.zm/fhir/ValueSet/product-group",
+  "version" : "0.1.0",
+  "name" : "ZMProductGroupVS"
+},
+{
+  "id" : "product-type",
+  "type" : "ValueSet",
+  "url" : "http://hapi.moh.gov.zm/fhir/ValueSet/product-type",
+  "version" : "0.1.0",
+  "name" : "ZMProductTypeVS"
+},
+{
+  "id" : "zm-communication-channel-vs",
+  "type" : "ValueSet",
+  "url" : "http://hapi.moh.gov.zm/fhir/ValueSet/zm-communication-channel-vs",
+  "version" : "0.1.0",
+  "name" : "ZMCommunicationChannelVS"
+},
+{
+  "id" : "zm-communication-consent-action-vs",
+  "type" : "ValueSet",
+  "url" : "http://hapi.moh.gov.zm/fhir/ValueSet/zm-communication-consent-action-vs",
+  "version" : "0.1.0",
+  "name" : "ZMCommunicationConsentActionVS"
+},
+{
+  "id" : "zm-communication-data-classification-vs",
+  "type" : "ValueSet",
+  "url" : "http://hapi.moh.gov.zm/fhir/ValueSet/zm-communication-data-classification-vs",
+  "version" : "0.1.0",
+  "name" : "ZMCommunicationDataClassificationVS"
+},
+{
+  "id" : "zm-communication-lane-vs",
+  "type" : "ValueSet",
+  "url" : "http://hapi.moh.gov.zm/fhir/ValueSet/zm-communication-lane-vs",
+  "version" : "0.1.0",
+  "name" : "ZMCommunicationLaneVS"
+},
+{
+  "id" : "zm-communication-task-code-vs",
+  "type" : "ValueSet",
+  "url" : "http://hapi.moh.gov.zm/fhir/ValueSet/zm-communication-task-code-vs",
+  "version" : "0.1.0",
+  "name" : "ZMCommunicationTaskCodeVS"
+},
+{
+  "id" : "zm-core-condition-vs",
+  "type" : "ValueSet",
+  "url" : "http://hapi.moh.gov.zm/fhir/ValueSet/zm-core-condition-vs",
+  "version" : "0.1.0",
+  "name" : "ZMCoreConditionVS"
+},
+{
+  "id" : "zm-core-encounter-type-vs",
+  "type" : "ValueSet",
+  "url" : "http://hapi.moh.gov.zm/fhir/ValueSet/zm-core-encounter-type-vs",
+  "version" : "0.1.0",
+  "name" : "ZMCoreEncounterTypeVS"
+},
+{
+  "id" : "zm-core-marital-status-vs",
+  "type" : "ValueSet",
+  "url" : "http://hapi.moh.gov.zm/fhir/ValueSet/zm-core-marital-status-vs",
+  "version" : "0.1.0",
+  "name" : "ZMCoreMaritalStatusVS"
+},
+{
+  "id" : "zm-core-observation-category-vs",
+  "type" : "ValueSet",
+  "url" : "http://hapi.moh.gov.zm/fhir/ValueSet/zm-core-observation-category-vs",
+  "version" : "0.1.0",
+  "name" : "ZMCoreObservationCategoryVS"
+},
+{
+  "id" : "zm-core-organization-type-vs",
+  "type" : "ValueSet",
+  "url" : "http://hapi.moh.gov.zm/fhir/ValueSet/zm-core-organization-type-vs",
+  "version" : "0.1.0",
+  "name" : "ZMCoreOrganizationTypeVS"
+},
+{
+  "id" : "zm-core-patient-gender-vs",
+  "type" : "ValueSet",
+  "url" : "http://hapi.moh.gov.zm/fhir/ValueSet/zm-core-patient-gender-vs",
+  "version" : "0.1.0",
+  "name" : "ZMCorePatientGenderVS"
+}]

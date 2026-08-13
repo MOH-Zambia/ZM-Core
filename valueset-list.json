@@ -1,0 +1,164 @@
+{
+  "codeSystems" : [{
+    "url" : "http://hapi.moh.gov.zm/fhir/ValueSet/facility-ownership",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "ZMCoreFacilityOwnershipVS",
+    "title" : "Zambia Master Facility List Facility Ownership Value Set",
+    "description" : "Facility ownership values permitted for a ZM-Core facility organization.",
+    "systems" : ["http://hapi.moh.gov.zm/fhir/CodeSystem/facility-ownership"]
+  },
+  {
+    "url" : "http://hapi.moh.gov.zm/fhir/ValueSet/facility-registry-status",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "ZMCoreFacilityRegistryStatusVS",
+    "title" : "Zambia Master Facility List Registry Status Value Set",
+    "description" : "Registry status values permitted for a ZM-Core facility organization.",
+    "systems" : ["http://hapi.moh.gov.zm/fhir/CodeSystem/facility-registry-status"]
+  },
+  {
+    "url" : "http://hapi.moh.gov.zm/fhir/ValueSet/facility-type",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "ZMCoreFacilityTypeVS",
+    "title" : "Zambia Master Facility List Facility Type Value Set",
+    "description" : "Facility types permitted for a ZM-Core facility organization.",
+    "systems" : ["http://hapi.moh.gov.zm/fhir/CodeSystem/facility-type"]
+  },
+  {
+    "url" : "http://hapi.moh.gov.zm/fhir/ValueSet/medication-level-of-access",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "ZMLevelOfAccessVS",
+    "title" : "Zambia Medication Level of Access",
+    "description" : "Permitted level(s) of care for use of a medicine (HP, HC, L1, L2, L3).",
+    "systems" : ["http://hapi.moh.gov.zm/fhir/CodeSystem/medication-level-of-access"]
+  },
+  {
+    "url" : "http://hapi.moh.gov.zm/fhir/ValueSet/medication-zammsa-sku",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "ZAMMSAMedicationVS",
+    "title" : "ZAMMSA Medication SKU ValueSet",
+    "description" : "All ZAMMSA catalogue SKUs that are valid for use in the ZM-Core Medication profile.",
+    "systems" : ["http://hapi.moh.gov.zm/fhir/CodeSystem/medication-zammsa-sku"]
+  },
+  {
+    "url" : "http://hapi.moh.gov.zm/fhir/ValueSet/product-group",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "ZMProductGroupVS",
+    "title" : "Zambia eLMIS Product Group ValueSet",
+    "description" : "Allowed Product Group values from the eLMIS Master list.",
+    "systems" : ["http://hapi.moh.gov.zm/fhir/CodeSystem/product-group"]
+  },
+  {
+    "url" : "http://hapi.moh.gov.zm/fhir/ValueSet/product-type",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "ZMProductTypeVS",
+    "title" : "Zambia Product Type ValueSet",
+    "description" : "Allowed Product Type values for Medication.",
+    "systems" : ["http://hapi.moh.gov.zm/fhir/CodeSystem/product-type"]
+  },
+  {
+    "url" : "http://hapi.moh.gov.zm/fhir/ValueSet/zm-communication-channel-vs",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "ZMCommunicationChannelVS",
+    "title" : "Zambia Communication Channel Value Set",
+    "description" : "Approved preferred and fallback delivery channels for hub communications.",
+    "systems" : ["http://hapi.moh.gov.zm/fhir/CodeSystem/zm-communication-channel"]
+  },
+  {
+    "url" : "http://hapi.moh.gov.zm/fhir/ValueSet/zm-communication-consent-action-vs",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "ZMCommunicationConsentActionVS",
+    "title" : "Zambia Communication Consent Action Value Set",
+    "description" : "Permitted contact actions represented in a communication consent.",
+    "systems" : ["http://hapi.moh.gov.zm/fhir/CodeSystem/zm-communication-consent-action"]
+  },
+  {
+    "url" : "http://hapi.moh.gov.zm/fhir/ValueSet/zm-communication-data-classification-vs",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "ZMCommunicationDataClassificationVS",
+    "title" : "Zambia Communication Data Classification Value Set",
+    "description" : "Data classifications used to enforce communication disclosure rules.",
+    "systems" : ["http://hapi.moh.gov.zm/fhir/CodeSystem/zm-communication-data-classification"]
+  },
+  {
+    "url" : "http://hapi.moh.gov.zm/fhir/ValueSet/zm-communication-lane-vs",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "ZMCommunicationLaneVS",
+    "title" : "Zambia Communication Lane Value Set",
+    "description" : "Communication governance lanes supported by the Zambia Unified Health Communication Hub.",
+    "systems" : ["http://hapi.moh.gov.zm/fhir/CodeSystem/zm-communication-lane"]
+  },
+  {
+    "url" : "http://hapi.moh.gov.zm/fhir/ValueSet/zm-communication-task-code-vs",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "ZMCommunicationTaskCodeVS",
+    "title" : "Zambia Communication Task Code Value Set",
+    "description" : "Task actions supported by a communication workflow.",
+    "systems" : ["http://hapi.moh.gov.zm/fhir/CodeSystem/zm-communication-task-code"]
+  },
+  {
+    "url" : "http://hapi.moh.gov.zm/fhir/ValueSet/zm-core-condition-vs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "ZMCoreConditionVS",
+    "title" : "ZM-Core Condition/Diagnosis",
+    "description" : "Conditions and diagnoses relevant to Zambian health",
+    "systems" : ["http://snomed.info/sct"]
+  },
+  {
+    "url" : "http://hapi.moh.gov.zm/fhir/ValueSet/zm-core-encounter-type-vs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "ZMCoreEncounterTypeVS",
+    "title" : "ZM-Core Encounter Type",
+    "description" : "Types of encounters in Zambian health systems",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActCode"]
+  },
+  {
+    "url" : "http://hapi.moh.gov.zm/fhir/ValueSet/zm-core-marital-status-vs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "ZMCoreMaritalStatusVS",
+    "title" : "ZM-Core Marital Status",
+    "description" : "Marital status codes used in Zambian health systems",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"]
+  },
+  {
+    "url" : "http://hapi.moh.gov.zm/fhir/ValueSet/zm-core-observation-category-vs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "ZMCoreObservationCategoryVS",
+    "title" : "ZM-Core Observation Category",
+    "description" : "Observation categories used in Zambian health systems",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/observation-category"]
+  },
+  {
+    "url" : "http://hapi.moh.gov.zm/fhir/ValueSet/zm-core-organization-type-vs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "ZMCoreOrganizationTypeVS",
+    "title" : "ZM-Core Organization Type",
+    "description" : "Organization types used in Zambian health systems",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/organization-type"]
+  },
+  {
+    "url" : "http://hapi.moh.gov.zm/fhir/ValueSet/zm-core-patient-gender-vs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "ZMCorePatientGenderVS",
+    "title" : "ZM-Core Patient Gender",
+    "description" : "Patient gender codes",
+    "systems" : ["http://hl7.org/fhir/administrative-gender"]
+  }]
+}

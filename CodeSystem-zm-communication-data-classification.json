@@ -1,0 +1,66 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "zm-communication-data-classification",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem zm-communication-data-classification</b></p><a name=\"zm-communication-data-classification\"> </a><a name=\"hczm-communication-data-classification\"> </a><p>This case-sensitive code system <code>http://hapi.moh.gov.zm/fhir/CodeSystem/zm-communication-data-classification</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">public<a name=\"zm-communication-data-classification-public\"> </a></td><td>Public</td><td>Information approved for public disclosure.</td></tr><tr><td style=\"white-space:nowrap\">internal<a name=\"zm-communication-data-classification-internal\"> </a></td><td>Internal</td><td>Ministry operational information not intended for public disclosure.</td></tr><tr><td style=\"white-space:nowrap\">confidential<a name=\"zm-communication-data-classification-confidential\"> </a></td><td>Confidential</td><td>Personal, workforce, or business information requiring controlled disclosure.</td></tr><tr><td style=\"white-space:nowrap\">restricted-health<a name=\"zm-communication-data-classification-restricted-health\"> </a></td><td>Restricted health information</td><td>Sensitive clinical or public-health information that must be accessed through an authenticated channel.</td></tr></table></div>"
+  },
+  "url" : "http://hapi.moh.gov.zm/fhir/CodeSystem/zm-communication-data-classification",
+  "version" : "0.1.0",
+  "name" : "ZMCommunicationDataClassificationCS",
+  "title" : "Zambia Communication Data Classification",
+  "status" : "draft",
+  "experimental" : false,
+  "date" : "2026-08-13T13:25:03+00:00",
+  "publisher" : "Ministry of Health - Zambia",
+  "contact" : [{
+    "name" : "Ministry of Health - Zambia",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.moh.gov.zm/"
+    },
+    {
+      "system" : "email",
+      "value" : "digital.health@moh.gov.zm"
+    }]
+  },
+  {
+    "name" : "ZM-Core Team",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "zm-core@moh.gov.zm",
+      "use" : "work"
+    }]
+  }],
+  "description" : "Data classifications that drive disclosure and channel controls for health communications.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "ZM",
+      "display" : "Zambia"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 4,
+  "concept" : [{
+    "code" : "public",
+    "display" : "Public",
+    "definition" : "Information approved for public disclosure."
+  },
+  {
+    "code" : "internal",
+    "display" : "Internal",
+    "definition" : "Ministry operational information not intended for public disclosure."
+  },
+  {
+    "code" : "confidential",
+    "display" : "Confidential",
+    "definition" : "Personal, workforce, or business information requiring controlled disclosure."
+  },
+  {
+    "code" : "restricted-health",
+    "display" : "Restricted health information",
+    "definition" : "Sensitive clinical or public-health information that must be accessed through an authenticated channel."
+  }]
+}

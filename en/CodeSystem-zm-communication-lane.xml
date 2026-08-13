@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="zm-communication-lane"/>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem zm-communication-lane</b></p><a name="zm-communication-lane"> </a><a name="hczm-communication-lane"> </a><p>This case-sensitive code system <code>http://hapi.moh.gov.zm/fhir/CodeSystem/zm-communication-lane</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">clinical<a name="zm-communication-lane-clinical"> </a></td><td>Clinical</td><td>Patient care communications such as appointment, referral, result-availability, and follow-up notifications.</td></tr><tr><td style="white-space:nowrap">public-health<a name="zm-communication-lane-public-health"> </a></td><td>Public health</td><td>Surveillance alerts, outbreak notifications, and incident escalation.</td></tr><tr><td style="white-space:nowrap">operational<a name="zm-communication-lane-operational"> </a></td><td>Operational</td><td>Reporting deadlines, data-quality issues, and service interruptions.</td></tr><tr><td style="white-space:nowrap">supply-chain<a name="zm-communication-lane-supply-chain"> </a></td><td>Supply chain</td><td>Stock alerts, requisition approvals, and delivery notifications.</td></tr><tr><td style="white-space:nowrap">workforce<a name="zm-communication-lane-workforce"> </a></td><td>Workforce</td><td>Workforce approvals, deployments, training, and licence-expiry reminders.</td></tr><tr><td style="white-space:nowrap">public-information<a name="zm-communication-lane-public-information"> </a></td><td>Public information</td><td>Approved campaigns, service availability, and health advisories.</td></tr></table></div>
+  </text>
+  <url value="http://hapi.moh.gov.zm/fhir/CodeSystem/zm-communication-lane"/>
+  <version value="0.1.0"/>
+  <name value="ZMCommunicationLaneCS"/>
+  <title value="Zambia Communication Lane"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2026-08-13T13:25:03+00:00"/>
+  <publisher value="Ministry of Health - Zambia"/>
+  <contact>
+    <name value="Ministry of Health - Zambia"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.moh.gov.zm/"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="digital.health@moh.gov.zm"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="ZM-Core Team"/>
+    <telecom>
+      <system value="email"/>
+      <value value="zm-core@moh.gov.zm"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="Governance lanes used to separate communication purposes, access rules, and disclosure controls in the Zambia Unified Health Communication Hub."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="ZM"/>
+      <display value="Zambia"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="6"/>
+  <concept>
+    <code value="clinical"/>
+    <display value="Clinical"/>
+    <definition value="Patient care communications such as appointment, referral, result-availability, and follow-up notifications."/>
+  </concept>
+  <concept>
+    <code value="public-health"/>
+    <display value="Public health"/>
+    <definition value="Surveillance alerts, outbreak notifications, and incident escalation."/>
+  </concept>
+  <concept>
+    <code value="operational"/>
+    <display value="Operational"/>
+    <definition value="Reporting deadlines, data-quality issues, and service interruptions."/>
+  </concept>
+  <concept>
+    <code value="supply-chain"/>
+    <display value="Supply chain"/>
+    <definition value="Stock alerts, requisition approvals, and delivery notifications."/>
+  </concept>
+  <concept>
+    <code value="workforce"/>
+    <display value="Workforce"/>
+    <definition value="Workforce approvals, deployments, training, and licence-expiry reminders."/>
+  </concept>
+  <concept>
+    <code value="public-information"/>
+    <display value="Public information"/>
+    <definition value="Approved campaigns, service availability, and health advisories."/>
+  </concept>
+</CodeSystem>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="medication-level-of-access"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem medication-level-of-access</b></p><a name="medication-level-of-access"> </a><a name="hcmedication-level-of-access"> </a><p>This case-sensitive code system <code>http://hapi.moh.gov.zm/fhir/CodeSystem/medication-level-of-access</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">HP<a name="medication-level-of-access-HP"> </a></td><td>Health Post</td></tr><tr><td style="white-space:nowrap">HC<a name="medication-level-of-access-HC"> </a></td><td>Health Centre</td></tr><tr><td style="white-space:nowrap">L1<a name="medication-level-of-access-L1"> </a></td><td>Level 1 Hospital</td></tr><tr><td style="white-space:nowrap">L2<a name="medication-level-of-access-L2"> </a></td><td>Level 2 Hospital</td></tr><tr><td style="white-space:nowrap">L3<a name="medication-level-of-access-L3"> </a></td><td>Level 3 Hospital</td></tr></table></div>
+  </text>
+  <url value="http://hapi.moh.gov.zm/fhir/CodeSystem/medication-level-of-access"/>
+  <version value="0.1.0"/>
+  <name value="ZMLevelOfAccessCS"/>
+  <title value="Zambia Level of Access for Medicines"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2026-08-13T13:25:03+00:00"/>
+  <publisher value="Ministry of Health - Zambia"/>
+  <contact>
+    <name value="Ministry of Health - Zambia"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.moh.gov.zm/"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="digital.health@moh.gov.zm"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="ZM-Core Team"/>
+    <telecom>
+      <system value="email"/>
+      <value value="zm-core@moh.gov.zm"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="Levels of care at which a medicine is allowed to be used, based on the ZAMMSA catalogue."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="ZM"/>
+      <display value="Zambia"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="5"/>
+  <concept>
+    <code value="HP"/>
+    <display value="Health Post"/>
+  </concept>
+  <concept>
+    <code value="HC"/>
+    <display value="Health Centre"/>
+  </concept>
+  <concept>
+    <code value="L1"/>
+    <display value="Level 1 Hospital"/>
+  </concept>
+  <concept>
+    <code value="L2"/>
+    <display value="Level 2 Hospital"/>
+  </concept>
+  <concept>
+    <code value="L3"/>
+    <display value="Level 3 Hospital"/>
+  </concept>
+</CodeSystem>

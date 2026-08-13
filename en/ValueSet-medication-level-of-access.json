@@ -1,0 +1,49 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "medication-level-of-access",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet medication-level-of-access</b></p><a name=\"medication-level-of-access\"> </a><a name=\"hcmedication-level-of-access\"> </a><ul><li>Include all codes defined in <a href=\"CodeSystem-medication-level-of-access.html\"><code>http://hapi.moh.gov.zm/fhir/CodeSystem/medication-level-of-access</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version &#x1F4E6;0.1.0</span></li></ul></div>"
+  },
+  "url" : "http://hapi.moh.gov.zm/fhir/ValueSet/medication-level-of-access",
+  "version" : "0.1.0",
+  "name" : "ZMLevelOfAccessVS",
+  "title" : "Zambia Medication Level of Access",
+  "status" : "draft",
+  "experimental" : false,
+  "date" : "2026-08-13T13:25:03+00:00",
+  "publisher" : "Ministry of Health - Zambia",
+  "contact" : [{
+    "name" : "Ministry of Health - Zambia",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.moh.gov.zm/"
+    },
+    {
+      "system" : "email",
+      "value" : "digital.health@moh.gov.zm"
+    }]
+  },
+  {
+    "name" : "ZM-Core Team",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "zm-core@moh.gov.zm",
+      "use" : "work"
+    }]
+  }],
+  "description" : "Permitted level(s) of care for use of a medicine (HP, HC, L1, L2, L3).",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "ZM",
+      "display" : "Zambia"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://hapi.moh.gov.zm/fhir/CodeSystem/medication-level-of-access"
+    }]
+  }
+}

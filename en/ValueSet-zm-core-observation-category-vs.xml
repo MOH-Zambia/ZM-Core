@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="zm-core-observation-category-vs"/>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet zm-core-observation-category-vs</b></p><a name="zm-core-observation-category-vs"> </a><a name="hczm-core-observation-category-vs"> </a><ul><li>Include all codes defined in <a href="http://terminology.hl7.org/7.1.0/CodeSystem-observation-category.html"><code>http://terminology.hl7.org/CodeSystem/observation-category</code></a><span title="Version is not explicitly stated, which means it is fixed to 2.0.0, the version found through the package references"> version &#x1F4E6;2.0.0</span></li></ul></div>
+  </text>
+  <url value="http://hapi.moh.gov.zm/fhir/ValueSet/zm-core-observation-category-vs"/>
+  <version value="0.1.0"/>
+  <name value="ZMCoreObservationCategoryVS"/>
+  <title value="ZM-Core Observation Category"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-08-13T13:25:03+00:00"/>
+  <publisher value="Ministry of Health - Zambia"/>
+  <contact>
+    <name value="Ministry of Health - Zambia"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.moh.gov.zm/"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="digital.health@moh.gov.zm"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="ZM-Core Team"/>
+    <telecom>
+      <system value="email"/>
+      <value value="zm-core@moh.gov.zm"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="Observation categories used in Zambian health systems"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="ZM"/>
+      <display value="Zambia"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+    </include>
+  </compose>
+</ValueSet>

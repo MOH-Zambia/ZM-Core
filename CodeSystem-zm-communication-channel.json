@@ -1,0 +1,74 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "zm-communication-channel",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem zm-communication-channel</b></p><a name=\"zm-communication-channel\"> </a><a name=\"hczm-communication-channel\"> </a><p>This case-sensitive code system <code>http://hapi.moh.gov.zm/fhir/CodeSystem/zm-communication-channel</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">sms<a name=\"zm-communication-channel-sms\"> </a></td><td>SMS</td></tr><tr><td style=\"white-space:nowrap\">email<a name=\"zm-communication-channel-email\"> </a></td><td>Email</td></tr><tr><td style=\"white-space:nowrap\">teams<a name=\"zm-communication-channel-teams\"> </a></td><td>Microsoft Teams</td></tr><tr><td style=\"white-space:nowrap\">whatsapp<a name=\"zm-communication-channel-whatsapp\"> </a></td><td>WhatsApp</td></tr><tr><td style=\"white-space:nowrap\">portal<a name=\"zm-communication-channel-portal\"> </a></td><td>Authenticated portal</td></tr><tr><td style=\"white-space:nowrap\">push<a name=\"zm-communication-channel-push\"> </a></td><td>Mobile push notification</td></tr><tr><td style=\"white-space:nowrap\">ivr<a name=\"zm-communication-channel-ivr\"> </a></td><td>Interactive voice response</td></tr></table></div>"
+  },
+  "url" : "http://hapi.moh.gov.zm/fhir/CodeSystem/zm-communication-channel",
+  "version" : "0.1.0",
+  "name" : "ZMCommunicationChannelCS",
+  "title" : "Zambia Communication Channel",
+  "status" : "draft",
+  "experimental" : false,
+  "date" : "2026-08-13T13:25:03+00:00",
+  "publisher" : "Ministry of Health - Zambia",
+  "contact" : [{
+    "name" : "Ministry of Health - Zambia",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.moh.gov.zm/"
+    },
+    {
+      "system" : "email",
+      "value" : "digital.health@moh.gov.zm"
+    }]
+  },
+  {
+    "name" : "ZM-Core Team",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "zm-core@moh.gov.zm",
+      "use" : "work"
+    }]
+  }],
+  "description" : "Delivery channels supported by the Zambia Unified Health Communication Hub.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "ZM",
+      "display" : "Zambia"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 7,
+  "concept" : [{
+    "code" : "sms",
+    "display" : "SMS"
+  },
+  {
+    "code" : "email",
+    "display" : "Email"
+  },
+  {
+    "code" : "teams",
+    "display" : "Microsoft Teams"
+  },
+  {
+    "code" : "whatsapp",
+    "display" : "WhatsApp"
+  },
+  {
+    "code" : "portal",
+    "display" : "Authenticated portal"
+  },
+  {
+    "code" : "push",
+    "display" : "Mobile push notification"
+  },
+  {
+    "code" : "ivr",
+    "display" : "Interactive voice response"
+  }]
+}

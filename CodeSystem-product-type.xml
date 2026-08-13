@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="product-type"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem product-type</b></p><a name="product-type"> </a><a name="hcproduct-type"> </a><p>This case-sensitive code system <code>http://hapi.moh.gov.zm/fhir/CodeSystem/product-type</code> provides <b>a fragment</b> that includes following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">essential-medicine<a name="product-type-essential-medicine"> </a></td><td>Essential Medicine</td></tr><tr><td style="white-space:nowrap">medical-surgicals<a name="product-type-medical-surgicals"> </a></td><td>Medical Surgicals</td></tr><tr><td style="white-space:nowrap">laboratory<a name="product-type-laboratory"> </a></td><td>Laboratory</td></tr><tr><td style="white-space:nowrap">equipment<a name="product-type-equipment"> </a></td><td>Equipment</td></tr><tr><td style="white-space:nowrap">orthopaedics-prosthetics-orthotics<a name="product-type-orthopaedics-prosthetics-orthotics"> </a></td><td>Orthopaedics, Prosthetics and Orthotics</td></tr><tr><td style="white-space:nowrap">tuberculosis<a name="product-type-tuberculosis"> </a></td><td>Tuberculosis</td></tr><tr><td style="white-space:nowrap">antiretroviral<a name="product-type-antiretroviral"> </a></td><td>Antiretroviral Drugs</td></tr><tr><td style="white-space:nowrap">hiv-program<a name="product-type-hiv-program"> </a></td><td>HIV Program</td></tr></table></div>
+  </text>
+  <url value="http://hapi.moh.gov.zm/fhir/CodeSystem/product-type"/>
+  <version value="0.1.0"/>
+  <name value="ZMProductTypeCS"/>
+  <title value="Zambia Product Type (eLMIS)"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2026-08-13T13:25:03+00:00"/>
+  <publisher value="Ministry of Health - Zambia"/>
+  <contact>
+    <name value="Ministry of Health - Zambia"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.moh.gov.zm/"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="digital.health@moh.gov.zm"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="ZM-Core Team"/>
+    <telecom>
+      <system value="email"/>
+      <value value="zm-core@moh.gov.zm"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="Product types from the eLMIS Master Product List."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="ZM"/>
+      <display value="Zambia"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <content value="fragment"/>
+  <concept>
+    <code value="essential-medicine"/>
+    <display value="Essential Medicine"/>
+  </concept>
+  <concept>
+    <code value="medical-surgicals"/>
+    <display value="Medical Surgicals"/>
+  </concept>
+  <concept>
+    <code value="laboratory"/>
+    <display value="Laboratory"/>
+  </concept>
+  <concept>
+    <code value="equipment"/>
+    <display value="Equipment"/>
+  </concept>
+  <concept>
+    <code value="orthopaedics-prosthetics-orthotics"/>
+    <display value="Orthopaedics, Prosthetics and Orthotics"/>
+  </concept>
+  <concept>
+    <code value="tuberculosis"/>
+    <display value="Tuberculosis"/>
+  </concept>
+  <concept>
+    <code value="antiretroviral"/>
+    <display value="Antiretroviral Drugs"/>
+  </concept>
+  <concept>
+    <code value="hiv-program"/>
+    <display value="HIV Program"/>
+  </concept>
+</CodeSystem>

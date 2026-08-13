@@ -1,0 +1,77 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "product-type",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem product-type</b></p><a name=\"product-type\"> </a><a name=\"hcproduct-type\"> </a><p>This case-sensitive code system <code>http://hapi.moh.gov.zm/fhir/CodeSystem/product-type</code> provides <b>a fragment</b> that includes following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">essential-medicine<a name=\"product-type-essential-medicine\"> </a></td><td>Essential Medicine</td></tr><tr><td style=\"white-space:nowrap\">medical-surgicals<a name=\"product-type-medical-surgicals\"> </a></td><td>Medical Surgicals</td></tr><tr><td style=\"white-space:nowrap\">laboratory<a name=\"product-type-laboratory\"> </a></td><td>Laboratory</td></tr><tr><td style=\"white-space:nowrap\">equipment<a name=\"product-type-equipment\"> </a></td><td>Equipment</td></tr><tr><td style=\"white-space:nowrap\">orthopaedics-prosthetics-orthotics<a name=\"product-type-orthopaedics-prosthetics-orthotics\"> </a></td><td>Orthopaedics, Prosthetics and Orthotics</td></tr><tr><td style=\"white-space:nowrap\">tuberculosis<a name=\"product-type-tuberculosis\"> </a></td><td>Tuberculosis</td></tr><tr><td style=\"white-space:nowrap\">antiretroviral<a name=\"product-type-antiretroviral\"> </a></td><td>Antiretroviral Drugs</td></tr><tr><td style=\"white-space:nowrap\">hiv-program<a name=\"product-type-hiv-program\"> </a></td><td>HIV Program</td></tr></table></div>"
+  },
+  "url" : "http://hapi.moh.gov.zm/fhir/CodeSystem/product-type",
+  "version" : "0.1.0",
+  "name" : "ZMProductTypeCS",
+  "title" : "Zambia Product Type (eLMIS)",
+  "status" : "draft",
+  "experimental" : false,
+  "date" : "2026-08-13T13:25:03+00:00",
+  "publisher" : "Ministry of Health - Zambia",
+  "contact" : [{
+    "name" : "Ministry of Health - Zambia",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.moh.gov.zm/"
+    },
+    {
+      "system" : "email",
+      "value" : "digital.health@moh.gov.zm"
+    }]
+  },
+  {
+    "name" : "ZM-Core Team",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "zm-core@moh.gov.zm",
+      "use" : "work"
+    }]
+  }],
+  "description" : "Product types from the eLMIS Master Product List.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "ZM",
+      "display" : "Zambia"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "fragment",
+  "concept" : [{
+    "code" : "essential-medicine",
+    "display" : "Essential Medicine"
+  },
+  {
+    "code" : "medical-surgicals",
+    "display" : "Medical Surgicals"
+  },
+  {
+    "code" : "laboratory",
+    "display" : "Laboratory"
+  },
+  {
+    "code" : "equipment",
+    "display" : "Equipment"
+  },
+  {
+    "code" : "orthopaedics-prosthetics-orthotics",
+    "display" : "Orthopaedics, Prosthetics and Orthotics"
+  },
+  {
+    "code" : "tuberculosis",
+    "display" : "Tuberculosis"
+  },
+  {
+    "code" : "antiretroviral",
+    "display" : "Antiretroviral Drugs"
+  },
+  {
+    "code" : "hiv-program",
+    "display" : "HIV Program"
+  }]
+}

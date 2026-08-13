@@ -1,0 +1,98 @@
+{
+  "codeSystems" : [{
+    "url" : "http://hapi.moh.gov.zm/fhir/CodeSystem/facility-ownership",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "ZMCoreFacilityOwnershipCS",
+    "title" : "Zambia Master Facility List Facility Ownership",
+    "description" : "Facility ownership or controlling sector represented in the Zambia Master Facility List."
+  },
+  {
+    "url" : "http://hapi.moh.gov.zm/fhir/CodeSystem/facility-registry-status",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "ZMCoreFacilityRegistryStatusCS",
+    "title" : "Zambia Master Facility List Registry Status",
+    "description" : "Combined operational, licensing, registration, and record-quality states represented by the current Zambia Master Facility List operation-status field."
+  },
+  {
+    "url" : "http://hapi.moh.gov.zm/fhir/CodeSystem/facility-type",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "ZMCoreFacilityTypeCS",
+    "title" : "Zambia Master Facility List Facility Type",
+    "description" : "Facility types represented in the Zambia Master Facility List. Police, military, private, and NGO values are retained for source compatibility but overlap with facility ownership and should not be used when a more specific service level is known."
+  },
+  {
+    "url" : "http://hapi.moh.gov.zm/fhir/CodeSystem/medication-level-of-access",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "ZMLevelOfAccessCS",
+    "title" : "Zambia Level of Access for Medicines",
+    "description" : "Levels of care at which a medicine is allowed to be used, based on the ZAMMSA catalogue."
+  },
+  {
+    "url" : "http://hapi.moh.gov.zm/fhir/CodeSystem/medication-zammsa-sku",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "ZAMMSAMedicationCS",
+    "title" : "ZAMMSA Medication SKU Code System",
+    "description" : "CodeSystem representing the ZAMMSA national medicines catalogue SKUs."
+  },
+  {
+    "url" : "http://hapi.moh.gov.zm/fhir/CodeSystem/product-group",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "ZMProductGroupCS",
+    "title" : "Zambia eLMIS Product Group",
+    "description" : "Short product group codes from the eLMIS Master list (e.g. ess, medsurge, equip...)."
+  },
+  {
+    "url" : "http://hapi.moh.gov.zm/fhir/CodeSystem/product-type",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "ZMProductTypeCS",
+    "title" : "Zambia Product Type (eLMIS)",
+    "description" : "Product types from the eLMIS Master Product List."
+  },
+  {
+    "url" : "http://hapi.moh.gov.zm/fhir/CodeSystem/zm-communication-channel",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "ZMCommunicationChannelCS",
+    "title" : "Zambia Communication Channel",
+    "description" : "Delivery channels supported by the Zambia Unified Health Communication Hub."
+  },
+  {
+    "url" : "http://hapi.moh.gov.zm/fhir/CodeSystem/zm-communication-consent-action",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "ZMCommunicationConsentActionCS",
+    "title" : "Zambia Communication Consent Action",
+    "description" : "Consent actions governing contact by the Unified Health Communication Hub."
+  },
+  {
+    "url" : "http://hapi.moh.gov.zm/fhir/CodeSystem/zm-communication-data-classification",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "ZMCommunicationDataClassificationCS",
+    "title" : "Zambia Communication Data Classification",
+    "description" : "Data classifications that drive disclosure and channel controls for health communications."
+  },
+  {
+    "url" : "http://hapi.moh.gov.zm/fhir/CodeSystem/zm-communication-lane",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "ZMCommunicationLaneCS",
+    "title" : "Zambia Communication Lane",
+    "description" : "Governance lanes used to separate communication purposes, access rules, and disclosure controls in the Zambia Unified Health Communication Hub."
+  },
+  {
+    "url" : "http://hapi.moh.gov.zm/fhir/CodeSystem/zm-communication-task-code",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "ZMCommunicationTaskCodeCS",
+    "title" : "Zambia Communication Task Code",
+    "description" : "Actions used to capture acknowledgement and escalation in communication workflows."
+  }]
+}

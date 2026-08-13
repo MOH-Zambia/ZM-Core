@@ -1,0 +1,48 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "zm-core-marital-status-vs",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet zm-core-marital-status-vs</b></p><a name=\"zm-core-marital-status-vs\"> </a><a name=\"hczm-core-marital-status-vs\"> </a><ul><li>Include all codes defined in <a href=\"http://terminology.hl7.org/7.1.0/CodeSystem-v3-MaritalStatus.html\"><code>http://terminology.hl7.org/CodeSystem/v3-MaritalStatus</code></a><span title=\"Version is not explicitly stated, which means it is fixed to 4.0.0, the version found through the package references\"> version &#x1F4E6;4.0.0</span></li></ul></div>"
+  },
+  "url" : "http://hapi.moh.gov.zm/fhir/ValueSet/zm-core-marital-status-vs",
+  "version" : "0.1.0",
+  "name" : "ZMCoreMaritalStatusVS",
+  "title" : "ZM-Core Marital Status",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-08-13T13:25:03+00:00",
+  "publisher" : "Ministry of Health - Zambia",
+  "contact" : [{
+    "name" : "Ministry of Health - Zambia",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.moh.gov.zm/"
+    },
+    {
+      "system" : "email",
+      "value" : "digital.health@moh.gov.zm"
+    }]
+  },
+  {
+    "name" : "ZM-Core Team",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "zm-core@moh.gov.zm",
+      "use" : "work"
+    }]
+  }],
+  "description" : "Marital status codes used in Zambian health systems",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "ZM",
+      "display" : "Zambia"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
+    }]
+  }
+}

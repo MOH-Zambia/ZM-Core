@@ -1,0 +1,77 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hapi.moh.gov.zm/fhir/CodeSystem/zm-communication-channel> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "zm-communication-channel"] ; # 
+  fhir:language [ fhir:v "en"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem zm-communication-channel</b></p><a name=\"zm-communication-channel\"> </a><a name=\"hczm-communication-channel\"> </a><p>This case-sensitive code system <code>http://hapi.moh.gov.zm/fhir/CodeSystem/zm-communication-channel</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">sms<a name=\"zm-communication-channel-sms\"> </a></td><td>SMS</td></tr><tr><td style=\"white-space:nowrap\">email<a name=\"zm-communication-channel-email\"> </a></td><td>Email</td></tr><tr><td style=\"white-space:nowrap\">teams<a name=\"zm-communication-channel-teams\"> </a></td><td>Microsoft Teams</td></tr><tr><td style=\"white-space:nowrap\">whatsapp<a name=\"zm-communication-channel-whatsapp\"> </a></td><td>WhatsApp</td></tr><tr><td style=\"white-space:nowrap\">portal<a name=\"zm-communication-channel-portal\"> </a></td><td>Authenticated portal</td></tr><tr><td style=\"white-space:nowrap\">push<a name=\"zm-communication-channel-push\"> </a></td><td>Mobile push notification</td></tr><tr><td style=\"white-space:nowrap\">ivr<a name=\"zm-communication-channel-ivr\"> </a></td><td>Interactive voice response</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:url [ fhir:v "http://hapi.moh.gov.zm/fhir/CodeSystem/zm-communication-channel"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "ZMCommunicationChannelCS"] ; # 
+  fhir:title [ fhir:v "Zambia Communication Channel"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2026-08-13T13:25:03+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "Ministry of Health - Zambia"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "Ministry of Health - Zambia" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.moh.gov.zm/" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "digital.health@moh.gov.zm" ]
+     ] )
+  ] [
+     fhir:name [ fhir:v "ZM-Core Team" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "zm-core@moh.gov.zm" ] ;
+       fhir:use [ fhir:v "work" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Delivery channels supported by the Zambia Unified Health Communication Hub."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "ZM" ] ;
+       fhir:display [ fhir:v "Zambia" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "7"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "sms" ] ;
+     fhir:display [ fhir:v "SMS" ]
+  ] [
+     fhir:code [ fhir:v "email" ] ;
+     fhir:display [ fhir:v "Email" ]
+  ] [
+     fhir:code [ fhir:v "teams" ] ;
+     fhir:display [ fhir:v "Microsoft Teams" ]
+  ] [
+     fhir:code [ fhir:v "whatsapp" ] ;
+     fhir:display [ fhir:v "WhatsApp" ]
+  ] [
+     fhir:code [ fhir:v "portal" ] ;
+     fhir:display [ fhir:v "Authenticated portal" ]
+  ] [
+     fhir:code [ fhir:v "push" ] ;
+     fhir:display [ fhir:v "Mobile push notification" ]
+  ] [
+     fhir:code [ fhir:v "ivr" ] ;
+     fhir:display [ fhir:v "Interactive voice response" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,66 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "medication-level-of-access",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem medication-level-of-access</b></p><a name=\"medication-level-of-access\"> </a><a name=\"hcmedication-level-of-access\"> </a><p>This case-sensitive code system <code>http://hapi.moh.gov.zm/fhir/CodeSystem/medication-level-of-access</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">HP<a name=\"medication-level-of-access-HP\"> </a></td><td>Health Post</td></tr><tr><td style=\"white-space:nowrap\">HC<a name=\"medication-level-of-access-HC\"> </a></td><td>Health Centre</td></tr><tr><td style=\"white-space:nowrap\">L1<a name=\"medication-level-of-access-L1\"> </a></td><td>Level 1 Hospital</td></tr><tr><td style=\"white-space:nowrap\">L2<a name=\"medication-level-of-access-L2\"> </a></td><td>Level 2 Hospital</td></tr><tr><td style=\"white-space:nowrap\">L3<a name=\"medication-level-of-access-L3\"> </a></td><td>Level 3 Hospital</td></tr></table></div>"
+  },
+  "url" : "http://hapi.moh.gov.zm/fhir/CodeSystem/medication-level-of-access",
+  "version" : "0.1.0",
+  "name" : "ZMLevelOfAccessCS",
+  "title" : "Zambia Level of Access for Medicines",
+  "status" : "draft",
+  "experimental" : false,
+  "date" : "2026-08-13T13:25:03+00:00",
+  "publisher" : "Ministry of Health - Zambia",
+  "contact" : [{
+    "name" : "Ministry of Health - Zambia",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.moh.gov.zm/"
+    },
+    {
+      "system" : "email",
+      "value" : "digital.health@moh.gov.zm"
+    }]
+  },
+  {
+    "name" : "ZM-Core Team",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "zm-core@moh.gov.zm",
+      "use" : "work"
+    }]
+  }],
+  "description" : "Levels of care at which a medicine is allowed to be used, based on the ZAMMSA catalogue.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "ZM",
+      "display" : "Zambia"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 5,
+  "concept" : [{
+    "code" : "HP",
+    "display" : "Health Post"
+  },
+  {
+    "code" : "HC",
+    "display" : "Health Centre"
+  },
+  {
+    "code" : "L1",
+    "display" : "Level 1 Hospital"
+  },
+  {
+    "code" : "L2",
+    "display" : "Level 2 Hospital"
+  },
+  {
+    "code" : "L3",
+    "display" : "Level 3 Hospital"
+  }]
+}

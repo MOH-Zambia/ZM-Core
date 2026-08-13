@@ -1,0 +1,313 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hapi.moh.gov.zm/fhir/Medication/ExampleZMCoreMedication> a fhir:Medication ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ExampleZMCoreMedication"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication"^^xsd:anyURI ;
+       fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Medication ExampleZMCoreMedication</b></p><a name=\"ExampleZMCoreMedication\"> </a><a name=\"hcExampleZMCoreMedication\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-zm-core-medication.html\">ZM-Core Medication Profile</a></p></div><p><b>ZM-Core Medication Level of Access</b>: <span title=\"Codes:\">Health Post</span></p><p><b>ZM-Core Medication Level of Access</b>: <span title=\"Codes:\">Health Centre</span></p><p><b>ZM-Core Medication Level of Access</b>: <span title=\"Codes:\">Level 1 Hospital</span></p><p><b>ZM-Core Medication Level of Access</b>: <span title=\"Codes:\">Level 2 Hospital</span></p><p><b>ZM-Core Medication Level of Access</b>: <span title=\"Codes:\">Level 3 Hospital</span></p><p><b>ZM-Core Medication Full Supply</b>: true</p><p><b>ZM-Core Medication Tracer</b>: true</p><p><b>ZM-Core Medication Pack Rounding Threshold</b>: 0.5</p><p><b>ZM-Core Medication Can Round To Zero</b>: false</p><p><b>ZM-Core Medication Archived</b>: false</p><p><b>Medication LSI Enabled</b>: true</p><p><b>ZM-Core Medication Product Type</b>: <span title=\"Codes:\">Corticosteroid</span></p><p><b>ZM-Core Medication Product Group</b>: <span title=\"Codes:\">Dermatology</span></p><p><b>ZM-Core Medication Price</b>: <span title=\"Zambian Kwacha\">ZMW165.00</span> (ZMW)</p><p><b>ZM-Core Medication Full Name</b>: Betamethasone 0.1% w/w cream/ointment tube 15g</p><p><b>ZM-Core Medication Generic Name</b>: Betamethasone</p><p><b>ZM-Core Medication Alternate Name</b>: Betnovate</p><p><b>ZM-Core Medication Description</b>: Topical corticosteroid cream/ointment for dermatological conditions</p><p><b>ZM-Core Medication Strength</b>: 0.1% w/w</p><p><b>ZM-Core Medication Dosage Unit</b>: <span title=\"Codes:\">g</span></p><p><b>ZM-Core Medication Dispensing Units</b>: tube</p><p><b>ZM-Core Medication Doses Per Dispensing Unit</b>: 30</p><p><b>ZM-Core Medication MSL Pack Size (numeric)</b>: 1</p><p><b>ZM-Core Medication Pack Size (text)</b>: Each</p><p><b>ZM-Core Medication Alternate Pack Size</b>: Box of 10 tubes</p><p><b>ZM-Core Medication Pack Weight</b>: 0.025</p><p><b>ZM-Core Medication Packs Per Carton</b>: 100</p><p><b>ZM-Core Medication Cartons Per Pallet</b>: 50</p><p><b>ZM-Core Medication Shelf Life</b>: 36 months</p><p><b>ZM-Core Medication Storage Instructions</b>: Store below 25°C. Do not freeze.</p><p><b>ZM-Core Medication Transport Instructions</b>: Transport at ambient temperature. Protect from direct sunlight.</p><p><b>ZM-Core Medication Store Refrigerated</b>: false</p><p><b>ZM-Core Medication Route of Administration</b>: <span title=\"Codes:\">Topical</span></p><p><b>ZM-Core Medication ATC Classification</b>: <span title=\"Codes:{http://www.whocc.no/atc D07AC01}\">Betamethasone</span></p><p><b>ZM-Core Medication Storage Classification</b>: <span title=\"Codes:\">Room Temperature</span></p><p><b>ZM-Core Medication Store Room Temperature</b>: 25</p><p><b>ZM-Core Medication Hazardous</b>: false</p><p><b>ZM-Core Medication Flammable</b>: false</p><p><b>ZM-Core Medication Controlled Substance</b>: false</p><p><b>ZM-Core Medication Light Sensitive</b>: false</p><p><b>ZM-Core Medication WHO Approved</b>: true</p><p><b>identifier</b>: MoH Program Item Code/P-12345, ZAMMSA SKU/ZMM-12345, Alternate Item Code/ALT-12345, GTIN/6001234567890</p><p><b>code</b>: <span title=\"Codes:{http://hapi.moh.gov.zm/fhir/CodeSystem/medication-zammsa-sku EM1389}\">Betamethasone 0.1% w/w cream /ointment tube (ZAMMSA SKU: EM1389)</span></p><p><b>status</b>: Active</p><p><b>doseForm</b>: <span title=\"Codes:\">Cream/ointment</span></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-level-of-access"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:text [ fhir:v "Health Post" ]
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-level-of-access"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:text [ fhir:v "Health Centre" ]
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-level-of-access"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:text [ fhir:v "Level 1 Hospital" ]
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-level-of-access"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:text [ fhir:v "Level 2 Hospital" ]
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-level-of-access"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:text [ fhir:v "Level 3 Hospital" ]
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-full-supply"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:boolean ;
+       fhir:v true
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-tracer"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:boolean ;
+       fhir:v true
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-pack-rounding-threshold"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:decimal ;
+       fhir:v 0.5
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-can-round-to-zero"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:boolean ;
+       fhir:v false
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-archived"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:boolean ;
+       fhir:v false
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-lsi-enabled"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:boolean ;
+       fhir:v true
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-product-type"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:text [ fhir:v "Corticosteroid" ]
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-product-group"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:text [ fhir:v "Dermatology" ]
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-price"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:Money ;
+       fhir:value [ fhir:v "165"^^xsd:decimal ] ;
+       fhir:currency [ fhir:v "ZMW" ]
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-full-name"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:string ;
+       fhir:v "Betamethasone 0.1% w/w cream/ointment tube 15g"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-generic-name"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:string ;
+       fhir:v "Betamethasone"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-alternate-name"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:string ;
+       fhir:v "Betnovate"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-description"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:string ;
+       fhir:v "Topical corticosteroid cream/ointment for dermatological conditions"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-strength"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:string ;
+       fhir:v "0.1% w/w"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-dosage-unit"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:text [ fhir:v "g" ]
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-dispensing-units"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:string ;
+       fhir:v "tube"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-doses-per-dispensing-unit"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:decimal ;
+       fhir:v "30"^^xsd:decimal
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-msl-pack-size"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:decimal ;
+       fhir:v "1"^^xsd:decimal
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-pack-size-text"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:string ;
+       fhir:v "Each"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-alternate-pack-size"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:string ;
+       fhir:v "Box of 10 tubes"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-pack-weight"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:decimal ;
+       fhir:v 0.025
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-packs-per-carton"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:decimal ;
+       fhir:v "100"^^xsd:decimal
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-cartons-per-pallet"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:decimal ;
+       fhir:v "50"^^xsd:decimal
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-shelf-life"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:string ;
+       fhir:v "36 months"
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-storage-instructions"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:string ;
+       fhir:v "Store below 25°C. Do not freeze."
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-transport-instructions"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:string ;
+       fhir:v "Transport at ambient temperature. Protect from direct sunlight."
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-store-refrigerated"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:boolean ;
+       fhir:v false
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-route-of-administration"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:text [ fhir:v "Topical" ]
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-atc-classification"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://www.whocc.no/atc"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "D07AC01" ] ;
+         fhir:display [ fhir:v "Betamethasone" ]
+       ] )
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-storage-classification"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:text [ fhir:v "Room Temperature" ]
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-store-room-temperature"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:decimal ;
+       fhir:v "25"^^xsd:decimal
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-hazardous"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:boolean ;
+       fhir:v false
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-flammable"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:boolean ;
+       fhir:v false
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-controlled-substance"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:boolean ;
+       fhir:v false
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-light-sensitive"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:boolean ;
+       fhir:v false
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-who-approved"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:boolean ;
+       fhir:v true
+     ]
+  ] ) ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:text [ fhir:v "MoH Program Item Code" ]
+     ] ;
+     fhir:system [ fhir:v "http://hapi.moh.gov.zm/fhir/CodeSystem/medication-program-item-code"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "P-12345" ]
+  ] [
+     fhir:type [
+       fhir:text [ fhir:v "ZAMMSA SKU" ]
+     ] ;
+     fhir:system [ fhir:v "http://hapi.moh.gov.zm/fhir/CodeSystem/medication-zammsa-sku"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "ZMM-12345" ]
+  ] [
+     fhir:type [
+       fhir:text [ fhir:v "Alternate Item Code" ]
+     ] ;
+     fhir:system [ fhir:v "http://hapi.moh.gov.zm/fhir/CodeSystem/medication-alt-item-code"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "ALT-12345" ]
+  ] [
+     fhir:type [
+       fhir:text [ fhir:v "GTIN" ]
+     ] ;
+     fhir:system [ fhir:v "http://hapi.moh.gov.zm/fhir/CodeSystem/medication-gtin"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "6001234567890" ]
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://hapi.moh.gov.zm/fhir/CodeSystem/medication-zammsa-sku"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "EM1389" ] ;
+       fhir:display [ fhir:v "Betamethasone 0.1% w/w cream /ointment tube" ]
+     ] ) ;
+     fhir:text [ fhir:v "Betamethasone 0.1% w/w cream /ointment tube (ZAMMSA SKU: EM1389)" ]
+  ] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:doseForm [
+     fhir:text [ fhir:v "Cream/ointment" ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

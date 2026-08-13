@@ -1,0 +1,59 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "zm-communication-consent-action",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem zm-communication-consent-action</b></p><a name=\"zm-communication-consent-action\"> </a><a name=\"hczm-communication-consent-action\"> </a><p>This case-sensitive code system <code>http://hapi.moh.gov.zm/fhir/CodeSystem/zm-communication-consent-action</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">contact<a name=\"zm-communication-consent-action-contact\"> </a></td><td>Contact individual</td></tr><tr><td style=\"white-space:nowrap\">send-notification<a name=\"zm-communication-consent-action-send-notification\"> </a></td><td>Send notification</td></tr><tr><td style=\"white-space:nowrap\">send-sensitive-content<a name=\"zm-communication-consent-action-send-sensitive-content\"> </a></td><td>Send sensitive content through an authenticated channel</td></tr></table></div>"
+  },
+  "url" : "http://hapi.moh.gov.zm/fhir/CodeSystem/zm-communication-consent-action",
+  "version" : "0.1.0",
+  "name" : "ZMCommunicationConsentActionCS",
+  "title" : "Zambia Communication Consent Action",
+  "status" : "draft",
+  "experimental" : false,
+  "date" : "2026-08-13T13:25:03+00:00",
+  "publisher" : "Ministry of Health - Zambia",
+  "contact" : [{
+    "name" : "Ministry of Health - Zambia",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.moh.gov.zm/"
+    },
+    {
+      "system" : "email",
+      "value" : "digital.health@moh.gov.zm"
+    }]
+  },
+  {
+    "name" : "ZM-Core Team",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "zm-core@moh.gov.zm",
+      "use" : "work"
+    }]
+  }],
+  "description" : "Consent actions governing contact by the Unified Health Communication Hub.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "ZM",
+      "display" : "Zambia"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 3,
+  "concept" : [{
+    "code" : "contact",
+    "display" : "Contact individual"
+  },
+  {
+    "code" : "send-notification",
+    "display" : "Send notification"
+  },
+  {
+    "code" : "send-sensitive-content",
+    "display" : "Send sensitive content through an authenticated channel"
+  }]
+}

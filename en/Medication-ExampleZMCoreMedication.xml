@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Medication xmlns="http://hl7.org/fhir">
+  <id value="ExampleZMCoreMedication"/>
+  <meta>
+    <profile value="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication"/>
+  </meta>
+  <language value="en"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Medication ExampleZMCoreMedication</b></p><a name="ExampleZMCoreMedication"> </a><a name="hcExampleZMCoreMedication"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-zm-core-medication.html">ZM-Core Medication Profile</a></p></div><p><b>ZM-Core Medication Level of Access</b>: <span title="Codes:">Health Post</span></p><p><b>ZM-Core Medication Level of Access</b>: <span title="Codes:">Health Centre</span></p><p><b>ZM-Core Medication Level of Access</b>: <span title="Codes:">Level 1 Hospital</span></p><p><b>ZM-Core Medication Level of Access</b>: <span title="Codes:">Level 2 Hospital</span></p><p><b>ZM-Core Medication Level of Access</b>: <span title="Codes:">Level 3 Hospital</span></p><p><b>ZM-Core Medication Full Supply</b>: true</p><p><b>ZM-Core Medication Tracer</b>: true</p><p><b>ZM-Core Medication Pack Rounding Threshold</b>: 0.5</p><p><b>ZM-Core Medication Can Round To Zero</b>: false</p><p><b>ZM-Core Medication Archived</b>: false</p><p><b>Medication LSI Enabled</b>: true</p><p><b>ZM-Core Medication Product Type</b>: <span title="Codes:">Corticosteroid</span></p><p><b>ZM-Core Medication Product Group</b>: <span title="Codes:">Dermatology</span></p><p><b>ZM-Core Medication Price</b>: <span title="Zambian Kwacha">ZMW165.00</span> (ZMW)</p><p><b>ZM-Core Medication Full Name</b>: Betamethasone 0.1% w/w cream/ointment tube 15g</p><p><b>ZM-Core Medication Generic Name</b>: Betamethasone</p><p><b>ZM-Core Medication Alternate Name</b>: Betnovate</p><p><b>ZM-Core Medication Description</b>: Topical corticosteroid cream/ointment for dermatological conditions</p><p><b>ZM-Core Medication Strength</b>: 0.1% w/w</p><p><b>ZM-Core Medication Dosage Unit</b>: <span title="Codes:">g</span></p><p><b>ZM-Core Medication Dispensing Units</b>: tube</p><p><b>ZM-Core Medication Doses Per Dispensing Unit</b>: 30</p><p><b>ZM-Core Medication MSL Pack Size (numeric)</b>: 1</p><p><b>ZM-Core Medication Pack Size (text)</b>: Each</p><p><b>ZM-Core Medication Alternate Pack Size</b>: Box of 10 tubes</p><p><b>ZM-Core Medication Pack Weight</b>: 0.025</p><p><b>ZM-Core Medication Packs Per Carton</b>: 100</p><p><b>ZM-Core Medication Cartons Per Pallet</b>: 50</p><p><b>ZM-Core Medication Shelf Life</b>: 36 months</p><p><b>ZM-Core Medication Storage Instructions</b>: Store below 25°C. Do not freeze.</p><p><b>ZM-Core Medication Transport Instructions</b>: Transport at ambient temperature. Protect from direct sunlight.</p><p><b>ZM-Core Medication Store Refrigerated</b>: false</p><p><b>ZM-Core Medication Route of Administration</b>: <span title="Codes:">Topical</span></p><p><b>ZM-Core Medication ATC Classification</b>: <span title="Codes:{http://www.whocc.no/atc D07AC01}">Betamethasone</span></p><p><b>ZM-Core Medication Storage Classification</b>: <span title="Codes:">Room Temperature</span></p><p><b>ZM-Core Medication Store Room Temperature</b>: 25</p><p><b>ZM-Core Medication Hazardous</b>: false</p><p><b>ZM-Core Medication Flammable</b>: false</p><p><b>ZM-Core Medication Controlled Substance</b>: false</p><p><b>ZM-Core Medication Light Sensitive</b>: false</p><p><b>ZM-Core Medication WHO Approved</b>: true</p><p><b>identifier</b>: MoH Program Item Code/P-12345, ZAMMSA SKU/ZMM-12345, Alternate Item Code/ALT-12345, GTIN/6001234567890</p><p><b>code</b>: <span title="Codes:{http://hapi.moh.gov.zm/fhir/CodeSystem/medication-zammsa-sku EM1389}">Betamethasone 0.1% w/w cream /ointment tube (ZAMMSA SKU: EM1389)</span></p><p><b>status</b>: Active</p><p><b>doseForm</b>: <span title="Codes:">Cream/ointment</span></p></div>
+  </text>
+  <extension url="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-level-of-access">
+    <valueCodeableConcept>
+      <text value="Health Post"/>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-level-of-access">
+    <valueCodeableConcept>
+      <text value="Health Centre"/>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-level-of-access">
+    <valueCodeableConcept>
+      <text value="Level 1 Hospital"/>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-level-of-access">
+    <valueCodeableConcept>
+      <text value="Level 2 Hospital"/>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-level-of-access">
+    <valueCodeableConcept>
+      <text value="Level 3 Hospital"/>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-full-supply">
+    <valueBoolean value="true"/>
+  </extension>
+  <extension url="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-tracer">
+    <valueBoolean value="true"/>
+  </extension>
+  <extension url="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-pack-rounding-threshold">
+    <valueDecimal value="0.5"/>
+  </extension>
+  <extension url="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-can-round-to-zero">
+    <valueBoolean value="false"/>
+  </extension>
+  <extension url="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-archived">
+    <valueBoolean value="false"/>
+  </extension>
+  <extension url="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-lsi-enabled">
+    <valueBoolean value="true"/>
+  </extension>
+  <extension url="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-product-type">
+    <valueCodeableConcept>
+      <text value="Corticosteroid"/>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-product-group">
+    <valueCodeableConcept>
+      <text value="Dermatology"/>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-price">
+    <valueMoney>
+      <value value="165"/>
+      <currency value="ZMW"/>
+    </valueMoney>
+  </extension>
+  <extension url="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-full-name">
+    <valueString value="Betamethasone 0.1% w/w cream/ointment tube 15g"/>
+  </extension>
+  <extension url="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-generic-name">
+    <valueString value="Betamethasone"/>
+  </extension>
+  <extension url="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-alternate-name">
+    <valueString value="Betnovate"/>
+  </extension>
+  <extension url="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-description">
+    <valueString value="Topical corticosteroid cream/ointment for dermatological conditions"/>
+  </extension>
+  <extension url="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-strength">
+    <valueString value="0.1% w/w"/>
+  </extension>
+  <extension url="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-dosage-unit">
+    <valueCodeableConcept>
+      <text value="g"/>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-dispensing-units">
+    <valueString value="tube"/>
+  </extension>
+  <extension url="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-doses-per-dispensing-unit">
+    <valueDecimal value="30"/>
+  </extension>
+  <extension url="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-msl-pack-size">
+    <valueDecimal value="1"/>
+  </extension>
+  <extension url="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-pack-size-text">
+    <valueString value="Each"/>
+  </extension>
+  <extension url="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-alternate-pack-size">
+    <valueString value="Box of 10 tubes"/>
+  </extension>
+  <extension url="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-pack-weight">
+    <valueDecimal value="0.025"/>
+  </extension>
+  <extension url="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-packs-per-carton">
+    <valueDecimal value="100"/>
+  </extension>
+  <extension url="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-cartons-per-pallet">
+    <valueDecimal value="50"/>
+  </extension>
+  <extension url="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-shelf-life">
+    <valueString value="36 months"/>
+  </extension>
+  <extension url="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-storage-instructions">
+    <valueString value="Store below 25°C. Do not freeze."/>
+  </extension>
+  <extension url="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-transport-instructions">
+    <valueString value="Transport at ambient temperature. Protect from direct sunlight."/>
+  </extension>
+  <extension url="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-store-refrigerated">
+    <valueBoolean value="false"/>
+  </extension>
+  <extension url="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-route-of-administration">
+    <valueCodeableConcept>
+      <text value="Topical"/>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-atc-classification">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://www.whocc.no/atc"/>
+        <code value="D07AC01"/>
+        <display value="Betamethasone"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-storage-classification">
+    <valueCodeableConcept>
+      <text value="Room Temperature"/>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-store-room-temperature">
+    <valueDecimal value="25"/>
+  </extension>
+  <extension url="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-hazardous">
+    <valueBoolean value="false"/>
+  </extension>
+  <extension url="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-flammable">
+    <valueBoolean value="false"/>
+  </extension>
+  <extension url="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-controlled-substance">
+    <valueBoolean value="false"/>
+  </extension>
+  <extension url="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-light-sensitive">
+    <valueBoolean value="false"/>
+  </extension>
+  <extension url="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-who-approved">
+    <valueBoolean value="true"/>
+  </extension>
+  <identifier>
+    <type>
+      <text value="MoH Program Item Code"/>
+    </type>
+    <system value="http://hapi.moh.gov.zm/fhir/CodeSystem/medication-program-item-code"/>
+    <value value="P-12345"/>
+  </identifier>
+  <identifier>
+    <type>
+      <text value="ZAMMSA SKU"/>
+    </type>
+    <system value="http://hapi.moh.gov.zm/fhir/CodeSystem/medication-zammsa-sku"/>
+    <value value="ZMM-12345"/>
+  </identifier>
+  <identifier>
+    <type>
+      <text value="Alternate Item Code"/>
+    </type>
+    <system value="http://hapi.moh.gov.zm/fhir/CodeSystem/medication-alt-item-code"/>
+    <value value="ALT-12345"/>
+  </identifier>
+  <identifier>
+    <type>
+      <text value="GTIN"/>
+    </type>
+    <system value="http://hapi.moh.gov.zm/fhir/CodeSystem/medication-gtin"/>
+    <value value="6001234567890"/>
+  </identifier>
+  <code>
+    <coding>
+      <system value="http://hapi.moh.gov.zm/fhir/CodeSystem/medication-zammsa-sku"/>
+      <code value="EM1389"/>
+      <display value="Betamethasone 0.1% w/w cream /ointment tube"/>
+    </coding>
+    <text value="Betamethasone 0.1% w/w cream /ointment tube (ZAMMSA SKU: EM1389)"/>
+  </code>
+  <status value="active"/>
+  <doseForm>
+    <text value="Cream/ointment"/>
+  </doseForm>
+</Medication>

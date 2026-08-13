@@ -1,0 +1,49 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "zm-core-encounter-type-vs",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet zm-core-encounter-type-vs</b></p><a name=\"zm-core-encounter-type-vs\"> </a><a name=\"hczm-core-encounter-type-vs\"> </a><ul><li>Include all codes defined in <a href=\"http://terminology.hl7.org/7.1.0/CodeSystem-v3-ActCode.html\"><code>http://terminology.hl7.org/CodeSystem/v3-ActCode</code></a><span title=\"Version is not explicitly stated, which means it is fixed to 10.0.0, the version found through the package references\"> version &#x1F4E6;10.0.0</span></li></ul></div>"
+  },
+  "url" : "http://hapi.moh.gov.zm/fhir/ValueSet/zm-core-encounter-type-vs",
+  "version" : "0.1.0",
+  "name" : "ZMCoreEncounterTypeVS",
+  "title" : "ZM-Core Encounter Type",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-08-13T13:25:03+00:00",
+  "publisher" : "Ministry of Health - Zambia",
+  "contact" : [{
+    "name" : "Ministry of Health - Zambia",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.moh.gov.zm/"
+    },
+    {
+      "system" : "email",
+      "value" : "digital.health@moh.gov.zm"
+    }]
+  },
+  {
+    "name" : "ZM-Core Team",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "zm-core@moh.gov.zm",
+      "use" : "work"
+    }]
+  }],
+  "description" : "Types of encounters in Zambian health systems",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "ZM",
+      "display" : "Zambia"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode"
+    }]
+  }
+}

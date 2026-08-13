@@ -1,0 +1,47 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hapi.moh.gov.zm/fhir/Location/ExampleZMCoreLocation> a fhir:Location ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ExampleZMCoreLocation"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-location"^^xsd:anyURI ;
+       fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-location>
+     ] )
+  ] ; # 
+  fhir:language [ fhir:v "en"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Location ExampleZMCoreLocation</b></p><a name=\"ExampleZMCoreLocation\"> </a><a name=\"hcExampleZMCoreLocation\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-zm-core-location.html\">ZM-Core Location Profile</a></p></div><p><b>identifier</b>: <code>http://hapi.moh.gov.zm/fhir/sid/facility-id</code>/HF001</p><p><b>status</b>: Active</p><p><b>name</b>: University Teaching Hospital</p><p><b>mode</b>: Instance</p><p><b>type</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-RoleCode HOSP}\">Hospital</span></p><p><b>address</b>: Lusaka ZM </p><p><b>managingOrganization</b>: <a href=\"Organization-ExampleZMCoreOrganization.html\">Organization Chilenje First Level Hospital</a></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "http://hapi.moh.gov.zm/fhir/sid/facility-id"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "HF001" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:name [ fhir:v "University Teaching Hospital"] ; # 
+  fhir:mode [ fhir:v "instance"] ; # 
+  fhir:type ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-RoleCode"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "HOSP" ] ;
+       fhir:display [ fhir:v "Hospital" ]
+     ] )
+  ] ) ; # 
+  fhir:address [
+     fhir:city [ fhir:v "Lusaka" ] ;
+     fhir:country [ fhir:v "ZM" ]
+  ] ; # 
+  fhir:managingOrganization [
+     fhir:link <http://hapi.moh.gov.zm/fhir/Organization/ExampleZMCoreOrganization> ;
+     fhir:reference [ fhir:v "Organization/ExampleZMCoreOrganization" ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+
