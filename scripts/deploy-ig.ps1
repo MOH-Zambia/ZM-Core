@@ -261,28 +261,61 @@ function Deploy-HapiResources {
     }
 
     Write-Step "Deploying resources to HAPI via PUT"
+
+    if ($IsDryRun) {
+        foreach ($res in $ordered) {
+            Write-Host "[DryRun] PUT $BaseUrl/$($res.ResourceType)/$($res.Id)   <=  $($res.FilePath)"
+        }
+        return
+    }
+
+    # The priority table in Get-DeploymentOrder groups resources into coarse
+    # tiers (terminology, profiles, instances, IG), but within a tier the
+    # alphabetical fallback sort does not account for cross-references
+    # between example instances (e.g. Location sorts before Organization
+    # but may reference it). Retry failures across multiple rounds so any
+    # resource ordering within a tier resolves itself instead of requiring
+    # the caller to pre-sort by reference graph.
+    $pending = New-Object System.Collections.Generic.List[object]
+    $pending.AddRange($ordered)
     $successCount = 0
+    $maxRounds = 6
+    $lastErrors = @{}
 
-    foreach ($res in $ordered) {
-        $endpoint = "$BaseUrl/$($res.ResourceType)/$($res.Id)"
-        if ($IsDryRun) {
-            Write-Host "[DryRun] PUT $endpoint   <=  $($res.FilePath)"
-            continue
+    for ($round = 1; $round -le $maxRounds -and $pending.Count -gt 0; $round++) {
+        $stillPending = New-Object System.Collections.Generic.List[object]
+        $progress = $false
+
+        foreach ($res in $pending) {
+            $endpoint = "$BaseUrl/$($res.ResourceType)/$($res.Id)"
+            try {
+                Invoke-RestMethod -Uri $endpoint -Method Put -Headers $headers -Body $res.Body -TimeoutSec 120 | Out-Null
+                $successCount++
+                $progress = $true
+                Write-Host "PUT OK: $($res.ResourceType)/$($res.Id)"
+            }
+            catch {
+                $lastErrors[$endpoint] = $_.Exception.Message
+                $stillPending.Add($res)
+            }
         }
 
-        try {
-            Invoke-RestMethod -Uri $endpoint -Method Put -Headers $headers -Body $res.Body -TimeoutSec 120 | Out-Null
-            $successCount++
-            Write-Host "PUT OK: $($res.ResourceType)/$($res.Id)"
-        }
-        catch {
-            throw "Failed PUT $endpoint from $($res.FilePath): $($_.Exception.Message)"
+        $pending = $stillPending
+        if ($pending.Count -gt 0 -and -not $progress) {
+            break
         }
     }
 
-    if (-not $IsDryRun) {
-        Write-Host "Deployed $successCount resources to $BaseUrl"
+    if ($pending.Count -gt 0) {
+        Write-Host "`nFailed to deploy $($pending.Count) resource(s) after $maxRounds rounds:"
+        foreach ($res in $pending) {
+            $endpoint = "$BaseUrl/$($res.ResourceType)/$($res.Id)"
+            Write-Host "  $($res.ResourceType)/$($res.Id) ($($res.FilePath)): $($lastErrors[$endpoint])"
+        }
+        throw "Deployment incomplete: $($pending.Count) resource(s) could not be deployed. See above for details."
     }
+
+    Write-Host "Deployed $successCount resources to $BaseUrl"
 }
 
 Write-Step "Starting ZM-Core deployment"
