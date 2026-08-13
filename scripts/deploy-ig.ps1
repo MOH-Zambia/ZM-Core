@@ -90,6 +90,51 @@ function Invoke-RepoBuild {
     }
 }
 
+function Repair-LanguageAssets {
+    param([string]$Root)
+
+    # Some IG Publisher versions populate output/assets/images/ correctly but
+    # miss copying a subset of those files (observed with jurisdiction flag
+    # icons, e.g. zmb.svg) into each per-language output folder even though
+    # the generated pages reference them via a relative path that resolves
+    # into that per-language folder. Rather than hardcode specific files,
+    # diff each language folder's assets/images against the root copy and
+    # backfill anything missing.
+    $outputPath = Join-Path $Root "output"
+    $rootImages = Join-Path $outputPath "assets\images"
+    if (-not (Test-Path $rootImages)) {
+        return
+    }
+
+    Write-Step "Repairing per-language asset copies"
+    $langDirs = Get-ChildItem -Path $outputPath -Directory -ErrorAction SilentlyContinue |
+        Where-Object { Test-Path (Join-Path $_.FullName "index.html") }
+
+    $repaired = 0
+    foreach ($langDir in $langDirs) {
+        $langImages = Join-Path $langDir.FullName "assets\images"
+        if (-not (Test-Path $langImages)) {
+            New-Item -Path $langImages -ItemType Directory -Force | Out-Null
+        }
+
+        Get-ChildItem -Path $rootImages -File | ForEach-Object {
+            $target = Join-Path $langImages $_.Name
+            if (-not (Test-Path $target)) {
+                Copy-Item -Path $_.FullName -Destination $target
+                Write-Host "Repaired missing asset: $($langDir.Name)/assets/images/$($_.Name)"
+                $repaired++
+            }
+        }
+    }
+
+    if ($repaired -eq 0) {
+        Write-Host "No missing per-language assets found."
+    }
+    else {
+        Write-Host "Repaired $repaired missing per-language asset file(s)."
+    }
+}
+
 function Deploy-StaticSite {
     param(
         [string]$Root,
@@ -325,6 +370,7 @@ Write-Host "DryRun: $DryRun"
 
 if ($Build) {
     Invoke-RepoBuild -Root $RepoRoot -SkipUpdate:$SkipPublisherUpdate -ForceOffline:$Offline
+    Repair-LanguageAssets -Root $RepoRoot
 }
 
 if ($DeployStatic) {
