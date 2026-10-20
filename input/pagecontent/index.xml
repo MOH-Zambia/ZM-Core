@@ -66,7 +66,6 @@
         <a class="zm-home__link-card" href="artifacts.html"><span class="zm-home__link-icon" aria-hidden="true">A</span><span><strong>Artifact index</strong><span class="zm-home__link-summary">Profiles, extensions, code systems, value sets and examples.</span></span></a>
         <a class="zm-home__link-card" href="communication-hub.html"><span class="zm-home__link-icon" aria-hidden="true">C</span><span><strong>Communication Hub</strong><span class="zm-home__link-summary">Governed communication lanes, channels, consent and audit patterns.</span></span></a>
         <a class="zm-home__link-card" href="smartcare-mapping.html"><span class="zm-home__link-icon" aria-hidden="true">S</span><span><strong>SmartCare mapping</strong><span class="zm-home__link-summary">FHIR mappings and workflow guidance for SmartCare interoperability.</span></span></a>
-        <a class="zm-home__link-card" href="mfl-organization.html"><span class="zm-home__link-icon" aria-hidden="true">M</span><span><strong>MFL Organization</strong><span class="zm-home__link-summary">Facility identity, classification and identifier mapping guidance.</span></span></a>
       </div>
     </div>
 

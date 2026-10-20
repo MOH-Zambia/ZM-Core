@@ -59,7 +59,7 @@ See [Clinical resources guidance](input/pagecontent/clinical-resources.xml) for 
 - eLMIS; and
 - iHRIS.
 
-The profile also requires facility type, ownership, and MFL registry status using ZM-Core terminology. See the [MFL Organization mapping](input/pagecontent/mfl-organization.xml) for detailed source-field mappings and implementation considerations.
+The profile also requires facility type, ownership, and MFL registry status using ZM-Core terminology.
 
 Implementers should observe these resource boundaries:
 
