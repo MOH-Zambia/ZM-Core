@@ -1,49 +1,86 @@
 <div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../src-generated/schemas/fhir-single.xsd" lang="en">
-  <a name="scope">  </a>
-	<p>
-    This is our FHIR Implementation Guide. It contains the specifications developed by our community. 
-   </p>
-	<blockquote class="stu-note">
-	<strong>This documentation and set of artefacts are still undergoing development.</strong>
-	This content is only for demonstrative purposes.
-	</blockquote>
-	<p> </p>
-  <h3>Content</h3> <a name="content"> </a>
-	<p/>
+  <style type="text/css">@import url("zm-home.css");</style>
 
-<p>This publication contains the full set of specifications...</p>
-<p></p>
-<p>There is also an overview of the projects and motivation for the specifications.</p>
-<p></p>
+  <div class="zm-home">
+    <div class="zm-home__hero" aria-labelledby="zm-home-title">
+      <div class="zm-home__hero-grid">
+        <div>
+          <div class="zm-home__eyebrow">
+            <img src="zmb.svg" alt="Zambia flag"/>
+            <span>Ministry of Health · Zambia</span>
+          </div>
+          <div class="zm-home__title" id="zm-home-title" role="heading" aria-level="1">One national foundation for health data exchange.</div>
+          <p class="zm-home__lede">ZM Core defines the reusable FHIR profiles, terminology and implementation guidance that help Zambia's digital health systems exchange consistent, computable health information.</p>
+          <div class="zm-home__actions">
+            <a class="zm-home__button zm-home__button--primary" href="artifacts.html">Explore specifications</a>
+            <a class="zm-home__button" href="toc.html">Read the guide</a>
+          </div>
+        </div>
+        <div class="zm-home__release" aria-label="Release information">
+          <div class="zm-home__release-label">Current release</div>
+          <div class="zm-home__release-row"><span>Status</span><strong class="zm-home__status">Active</strong></div>
+          <div class="zm-home__release-row"><span>Version</span><strong>0.1.0 · STU1</strong></div>
+          <div class="zm-home__release-row"><span>FHIR version</span><strong>R5</strong></div>
+          <div class="zm-home__release-row"><span>Publisher</span><strong>Ministry of Health</strong></div>
+        </div>
+      </div>
+    </div>
 
-<a name="navigation"> </a>
-<p>The top menu allows quick navigation to the different sections, and a <a href="toc.html">Table of Contents</a> is provided with the entire content of this Implementation Guide. (Be aware that some pages have multiple tabs).</p>
-<p></p>
+    <div class="zm-home__notice" role="note">
+      <span class="zm-home__notice-mark" aria-hidden="true">i</span>
+      <div><strong>Standards under active development.</strong> This release establishes Zambia's shared interoperability baseline. Implementers should review the release status and validation guidance before production use.</div>
+    </div>
 
-	<a name="dependencies"> </a>
-	<h3>Dependencies</h3>
-	{% include dependency-table-short.xhtml %}
+    <div class="zm-home__section" aria-labelledby="zm-provides-title">
+      <div class="zm-home__section-head">
+        <div>
+          <span class="zm-home__kicker">National interoperability</span>
+          <h3 class="zm-home__section-title" id="zm-provides-title">A common language for connected care</h3>
+        </div>
+        <p class="zm-home__section-copy">ZM Core turns national requirements into implementable FHIR artefacts. It creates consistent expectations for the people, organisations, encounters, clinical information and workflows shared across Zambia's health ecosystem.</p>
+      </div>
+      <div class="zm-home__grid">
+        <div class="zm-home__card"><span class="zm-home__card-number">01</span><h3 class="zm-home__card-title">Core profiles</h3><p class="zm-home__card-copy">Minimum expectations for Patient, Practitioner, Organization, Encounter, clinical and medication resources.</p></div>
+        <div class="zm-home__card"><span class="zm-home__card-number">02</span><h3 class="zm-home__card-title">Shared terminology</h3><p class="zm-home__card-copy">National code systems and value sets that give exchanged information a consistent, computable meaning.</p></div>
+        <div class="zm-home__card"><span class="zm-home__card-number">03</span><h3 class="zm-home__card-title">Workflow guidance</h3><p class="zm-home__card-copy">Practical mappings for SmartCare, the Master Facility List and governed health communication workflows.</p></div>
+        <div class="zm-home__card"><span class="zm-home__card-number">04</span><h3 class="zm-home__card-title">Reference examples</h3><p class="zm-home__card-copy">Conformant examples that show how ZM Core artefacts are used in realistic data-exchange scenarios.</p></div>
+      </div>
+    </div>
 
-	<a name="globals"> </a>
-	<h3>Global Profiles</h3>
-	{% include globals-table.xhtml %}
+    <div class="zm-home__section zm-home__pathway" aria-labelledby="zm-pathway-title">
+      <span class="zm-home__kicker">Implementation pathway</span>
+      <h3 class="zm-home__section-title" id="zm-pathway-title">From requirement to conformant exchange</h3>
+      <div class="zm-home__steps">
+        <div class="zm-home__step"><span class="zm-home__step-label">Step 01 · Discover</span><h4>Find the right artefact</h4><p>Start with the artifact index to locate the relevant profile, extension, value set or example.</p><a href="artifacts.html">Browse all artefacts</a></div>
+        <div class="zm-home__step"><span class="zm-home__step-label">Step 02 · Implement</span><h4>Apply national constraints</h4><p>Use the profile definitions and narrative guidance to map local data and build conformant FHIR resources.</p><a href="toc.html">Review implementation guidance</a></div>
+        <div class="zm-home__step"><span class="zm-home__step-label">Step 03 · Validate</span><h4>Test before exchange</h4><p>Validate resources against the ZM Core package and use the published examples as implementation references.</p><a href="artifacts.html">Review published examples</a></div>
+      </div>
+    </div>
 
-	<a name="ip"> </a>
-	<h3>Intellectual Property Considerations</h3>
-	<p>
-    While this implementation guide and the underlying FHIR are licensed as public domain, this guide includes examples making use of terminologies such 
-    as LOINC, SNOMED CT and others which have more restrictive licensing requirements. Implementers should make themselves familiar with licensing and 
-    any other constraints of terminologies, questionnaires, and other components used as part of their implementation process. In some cases, 
-    licensing requirements may limit the systems that data captured using certain questionnaires may be shared with.
-  </p>
+    <div class="zm-home__section" aria-labelledby="zm-explore-title">
+      <div class="zm-home__section-head">
+        <div><span class="zm-home__kicker">Explore ZM Core</span><h3 class="zm-home__section-title" id="zm-explore-title">Go directly to the guidance you need</h3></div>
+        <p class="zm-home__section-copy">Move from the national baseline into the implementation details for Zambia's priority systems and exchange patterns.</p>
+      </div>
+      <div class="zm-home__links">
+        <a class="zm-home__link-card" href="artifacts.html"><span class="zm-home__link-icon" aria-hidden="true">A</span><span><strong>Artifact index</strong><span class="zm-home__link-summary">Profiles, extensions, code systems, value sets and examples.</span></span></a>
+        <a class="zm-home__link-card" href="communication-hub.html"><span class="zm-home__link-icon" aria-hidden="true">C</span><span><strong>Communication Hub</strong><span class="zm-home__link-summary">Governed communication lanes, channels, consent and audit patterns.</span></span></a>
+        <a class="zm-home__link-card" href="smartcare-mapping.html"><span class="zm-home__link-icon" aria-hidden="true">S</span><span><strong>SmartCare mapping</strong><span class="zm-home__link-summary">FHIR mappings and workflow guidance for SmartCare interoperability.</span></span></a>
+        <a class="zm-home__link-card" href="mfl-organization.html"><span class="zm-home__link-icon" aria-hidden="true">M</span><span><strong>MFL Organization</strong><span class="zm-home__link-summary">Facility identity, classification and identifier mapping guidance.</span></span></a>
+      </div>
+    </div>
 
-	{% include ip-statements.xhtml %}
+    <div class="zm-home__section" aria-labelledby="dependencies"><span class="zm-home__kicker">Technical baseline</span><h3 class="zm-home__section-title" id="dependencies">Dependencies</h3><p class="zm-home__section-copy">The guide is built on HL7 FHIR R5 and the following implementation packages.</p>{% include dependency-table-short.xhtml %}</div>
 
-	<a name="disclaimer"> </a>
-	<h3>Disclaimer</h3>
-	<p>
-    The specification herewith documented is a demo working specification, and may not be used for any implementation purposes. 
-    This draft is provided without warranty of completeness or consistency, and the official publication supersedes this draft.
-    No liability can be inferred from the use or misuse of this specification, or its consequences.
-  </p>
+    <div class="zm-home__section" aria-labelledby="globals"><span class="zm-home__kicker">Conformance</span><h3 class="zm-home__section-title" id="globals">Global profiles</h3>{% include globals-table.xhtml %}</div>
+
+    <div class="zm-home__footer-card" aria-labelledby="zm-owner-title">
+      <div><h3 id="zm-owner-title">Built for Zambia's connected health ecosystem</h3><p>ZM Core is published by the Zambia Ministry of Health as a common interoperability foundation for national platforms, facility systems and digital health partners.</p></div>
+      <div class="zm-home__contact"><p><strong>Contribute or report an issue</strong><br/><a href="https://github.com/MOH-Zambia/ZM-Core/issues">Open the ZM Core issue tracker</a><br/><a href="mailto:zm-core@moh.gov.zm">zm-core@moh.gov.zm</a></p></div>
+    </div>
+
+    <div class="zm-home__section" aria-labelledby="ip"><h3 class="zm-home__section-title" id="ip">Intellectual property considerations</h3><p>While this implementation guide and the underlying FHIR specification use open licences, examples may use terminologies such as LOINC, SNOMED CT and others with additional licensing requirements. Implementers are responsible for understanding the licences and constraints that apply to their systems.</p>{% include ip-statements.xhtml %}</div>
+
+    <div class="zm-home__section" aria-labelledby="disclaimer"><h3 class="zm-home__section-title" id="disclaimer">Disclaimer</h3><p>This specification is under active development and is provided without warranty of completeness or consistency. The official published release supersedes development builds. No liability can be inferred from the use or misuse of this specification or its consequences.</p></div>
+  </div>
 </div>

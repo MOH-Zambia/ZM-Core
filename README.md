@@ -25,11 +25,28 @@ The implementation guide currently includes profiles and examples for:
 - Observation
 - DiagnosticReport
 - Condition
+- Procedure
+- AllergyIntolerance
+- Immunization
 - Medication and MedicationRequest
 - communication-hub workflows
 - SmartCare interoperability workflows
 
 FHIR Shorthand definitions are maintained in [`input/fsh`](input/fsh), while narrative implementation guidance is maintained in [`input/pagecontent`](input/pagecontent).
+
+## Clinical resources
+
+These profiles apply across Zambian health systems, including SmartCare. Each has a dedicated FSH definition and example; existing profile names and canonical URLs are preserved.
+
+| Clinical information | Profile | Example |
+| --- | --- | --- |
+| Procedures and interventions | [ZMCoreProcedure](input/fsh/ZMCoreProcedure.fsh) | [Completed counselling procedure](input/fsh/ExampleZMCoreProcedure.fsh) |
+| Conditions and diagnoses | [ZMCoreCondition](input/fsh/ZMCoreCondition.fsh) | [Hypertension diagnosis](input/fsh/ExampleZMCoreCondition.fsh) |
+| Allergies and intolerances | [ZMCoreAllergyIntolerance](input/fsh/ZMCoreAllergyIntolerance.fsh) | [Medication allergy](input/fsh/ExampleZMCoreAllergyIntolerance.fsh) |
+| Diagnostic reports | [ZMCoreDiagnosticReport](input/fsh/ZMCoreDiagnosticReport.fsh) | [Laboratory report and result](input/fsh/ExampleZMCoreDiagnosticReport.fsh) |
+| Immunizations | [ZMCoreImmunization](input/fsh/ZMCoreImmunization.fsh) | [Vaccine administration](input/fsh/ExampleZMCoreImmunization.fsh) |
+
+See [Clinical resources guidance](input/pagecontent/clinical-resources.xml) for required fields, resource relationships, and terminology guidance. Reports in this section mean `DiagnosticReport` for laboratory, imaging, pathology, and other diagnostic services. Use `Immunization` for vaccine administration and `Procedure` for other interventions. The procedure example references the existing patient, encounter, practitioner, and condition examples.
 
 ## Facility Organization and MFL interoperability
 
