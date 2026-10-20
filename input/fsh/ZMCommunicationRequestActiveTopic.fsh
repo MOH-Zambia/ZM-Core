@@ -7,6 +7,10 @@ InstanceOf: ZMCoreCommunicationSubscriptionTopic
 Title: "Active Communication Request Topic"
 Description: "R5 SubscriptionTopic for communication requests that are ready for processing by the hub."
 Usage: #definition
+// The id has to match the tail of the url: the publisher raises both
+// RESOURCE_ID_MISMATCH and RESOURCE_CANONICAL_MISMATCH otherwise. The FSH
+// name stays as it is, so Canonical() references keep resolving.
+* id = "communication-request-active"
 * url = "http://hapi.moh.gov.zm/fhir/SubscriptionTopic/communication-request-active"
 * version = "0.1.0"
 * name = "ZMCommunicationRequestActiveTopic"
