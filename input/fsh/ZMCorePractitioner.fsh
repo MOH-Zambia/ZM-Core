@@ -26,7 +26,8 @@ Description: "Zambia health workforce practitioner profile"
     psmdFileNumber 0..1 MS and
     pspfMemberNumber 0..1 MS and
     aeNumber 0..1 MS and
-    professionalRegistration 0..* MS
+    professionalRegistration 0..* MS and
+    hwrRecordId 0..1 MS
 
 * identifier[nrc].system 1..1 MS
 * identifier[nrc].system = "http://hapi.moh.gov.zm/fhir/sid/nrc"
@@ -57,6 +58,14 @@ Description: "Zambia health workforce practitioner profile"
 * identifier[professionalRegistration].system 1..1 MS
 * identifier[professionalRegistration].system = "http://hapi.moh.gov.zm/fhir/sid/registration-id"
 * identifier[professionalRegistration].value 1..1 MS
+
+// The Health Worker Registry's own handle, returned on read. A consumer that
+// has read a practitioner can refer back to the registry record by this id
+// without re-deriving it from the employee number, which may change employer.
+* identifier[hwrRecordId].system 1..1 MS
+* identifier[hwrRecordId].system = "http://hapi.moh.gov.zm/fhir/sid/hwr-record-id"
+* identifier[hwrRecordId].value 1..1 MS
+* identifier[hwrRecordId] ^short = "Health Worker Registry record handle; allocated by the registry"
 
 // Names (Given Names + Surname; Maiden Name optional)
 * name 1..* MS

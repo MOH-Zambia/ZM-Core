@@ -47,7 +47,9 @@ Description: "Zambia healthcare organization profile, including identifiers and 
     dhis2Uid 0..1 MS and
     smartcareGuid 0..1 MS and
     elmisId 0..1 MS and
-    ihrisId 0..1 MS
+    ihrisId 0..1 MS and
+    zhfrFacilityId 0..1 MS and
+    hpczCode 0..1 MS
 * identifier.system 1..1 MS
 * identifier.value 1..1 MS
 * identifier[facilityMasterCode].system = "http://hapi.moh.gov.zm/fhir/sid/facility-master-code"
@@ -58,6 +60,17 @@ Description: "Zambia healthcare organization profile, including identifiers and 
 * identifier[smartcareGuid].system = "http://hapi.moh.gov.zm/fhir/sid/smartcare-facility-id"
 * identifier[elmisId].system = "http://hapi.moh.gov.zm/fhir/sid/elmis-facility-id"
 * identifier[ihrisId].system = "http://hapi.moh.gov.zm/fhir/sid/ihris-facility-id"
+
+// Facility Registry identifiers.
+//
+// The ZHFR id is the registry's own handle, derived from the MFL code and
+// stable across corrections to it. The HPCZ code is the regulator's
+// registration for a private facility, which is a different question from
+// whether the facility exists.
+* identifier[zhfrFacilityId].system = "http://hapi.moh.gov.zm/fhir/sid/zhfr-facility-id"
+* identifier[zhfrFacilityId] ^short = "Zambia Health Facility Registry id; allocated by the registry"
+* identifier[hpczCode].system = "http://hapi.moh.gov.zm/fhir/sid/hpcz-code"
+* identifier[hpczCode] ^short = "Health Professions Council of Zambia facility registration code"
 * active 1..1 MS
 * active ^short = "Whether this Organization registry record is in active use; not the facility operational status"
 * name 1..1 MS

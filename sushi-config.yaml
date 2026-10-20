@@ -16,7 +16,7 @@ description: ZM-Core is an Implementation Guide for HL7 FHIR R5 resources common
 status: active
 license: CC0-1.0
 date: 2025-11-21
-version: 0.1.0
+version: 0.2.0
 
 # Although fhirVersions is 0..* in the ImplementationGuide resource
 # it can be a single item OR and array here, but the current tooling 
