@@ -416,6 +416,137 @@ Description: "Indicates whether this medication is enabled for the Logistics Sea
 * valueBoolean 1..1
 
 
+
+// =============================================================================
+// Product Catalogue trade identity and classification
+// =============================================================================
+//
+// A trade item is identified by GTIN + information-provider GLN + target
+// market, not by the GTIN alone: the same barcode is legitimately published
+// by different providers and for different markets, with different data.
+// Without the other two legs there is nowhere to put the distinction, and a
+// catalogue that merges those items is worse than no catalogue.
+
+Extension: ZMCoreMedicationInformationProviderGLN
+Id: zm-core-medication-information-provider-gln
+Title: "ZM-Core Medication Information Provider GLN"
+Description: "GS1 Global Location Number of the party that published this trade item."
+* ^url = "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-information-provider-gln"
+* ^status = #active
+* ^context[0].type = #element
+* ^context[0].expression = "Medication"
+* value[x] only string
+
+Extension: ZMCoreMedicationTargetMarket
+Id: zm-core-medication-target-market
+Title: "ZM-Core Medication Target Market"
+Description: "Target market the trade item was published for, as an ISO 3166-1 numeric country code (894 is Zambia)."
+* ^url = "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-target-market"
+* ^status = #active
+* ^context[0].type = #element
+* ^context[0].expression = "Medication"
+* value[x] only code
+
+Extension: ZMCoreMedicationGPCCategory
+Id: zm-core-medication-gpc-category
+Title: "ZM-Core Medication GPC Category"
+Description: "GS1 Global Product Classification brick code from the GDSN notification."
+* ^url = "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-gpc-category"
+* ^status = #active
+* ^context[0].type = #element
+* ^context[0].expression = "Medication"
+* value[x] only CodeableConcept
+
+Extension: ZMCoreMedicationUNSPSC
+Id: zm-core-medication-unspsc
+Title: "ZM-Core Medication UNSPSC Code"
+Description: "UNSPSC procurement classification for the product."
+* ^url = "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-unspsc"
+* ^status = #active
+* ^context[0].type = #element
+* ^context[0].expression = "Medication"
+* value[x] only CodeableConcept
+
+Extension: ZMCoreMedicationHSCode
+Id: zm-core-medication-hs-code
+Title: "ZM-Core Medication HS Code"
+Description: "Harmonised System customs tariff code for the product."
+* ^url = "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-hs-code"
+* ^status = #active
+* ^context[0].type = #element
+* ^context[0].expression = "Medication"
+* value[x] only string
+
+Extension: ZMCoreMedicationCountryOfOrigin
+Id: zm-core-medication-country-of-origin
+Title: "ZM-Core Medication Country of Origin"
+Description: "Country the product is manufactured in."
+* ^url = "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-country-of-origin"
+* ^status = #active
+* ^context[0].type = #element
+* ^context[0].expression = "Medication"
+* value[x] only CodeableConcept
+
+Extension: ZMCoreMedicationRegulatoryStatus
+Id: zm-core-medication-regulatory-status
+Title: "ZM-Core Medication Regulatory Status"
+Description: "ZAMRA registration status for the product (e.g. registered, suspended, expired)."
+* ^url = "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-regulatory-status"
+* ^status = #active
+* ^context[0].type = #element
+* ^context[0].expression = "Medication"
+* value[x] only CodeableConcept
+
+Extension: ZMCoreMedicationRegistrationDate
+Id: zm-core-medication-registration-date
+Title: "ZM-Core Medication Registration Date"
+Description: "Date the product was registered with ZAMRA."
+* ^url = "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-registration-date"
+* ^status = #active
+* ^context[0].type = #element
+* ^context[0].expression = "Medication"
+* value[x] only date
+
+Extension: ZMCoreMedicationRegistrationExpiry
+Id: zm-core-medication-registration-expiry
+Title: "ZM-Core Medication Registration Expiry"
+Description: "Date the product's ZAMRA registration expires."
+* ^url = "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-registration-expiry"
+* ^status = #active
+* ^context[0].type = #element
+* ^context[0].expression = "Medication"
+* value[x] only date
+
+Extension: ZMCoreMedicationGDSNSource
+Id: zm-core-medication-gdsn-source
+Title: "ZM-Core Medication GDSN Source"
+Description: "The GDSN data pool the trade item was synchronised from."
+* ^url = "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-gdsn-source"
+* ^status = #active
+* ^context[0].type = #element
+* ^context[0].expression = "Medication"
+* value[x] only string
+
+Extension: ZMCoreMedicationLastSynchronised
+Id: zm-core-medication-last-synchronised
+Title: "ZM-Core Medication Last Synchronised"
+Description: "When this trade item was last synchronised from its GDSN source."
+* ^url = "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-last-synchronised"
+* ^status = #active
+* ^context[0].type = #element
+* ^context[0].expression = "Medication"
+* value[x] only dateTime
+
+Extension: ZMCoreMedicationWithdrawn
+Id: zm-core-medication-withdrawn
+Title: "ZM-Core Medication Withdrawn"
+Description: "Whether the trade item's publication has been withdrawn. A withdrawn product is never deleted: dispensing and stock records referring to it must stay resolvable."
+* ^url = "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-medication-withdrawn"
+* ^status = #active
+* ^context[0].type = #element
+* ^context[0].expression = "Medication"
+* value[x] only boolean
+
 // =============================================================================
 // ZM-Core Medication Profile
 // =============================================================================
@@ -434,18 +565,27 @@ Zambia Core Medication Profile aligned to the ZAMMSA national product catalogue 
 * ^version = "0.1.0"
 
 // ------------------------------------------------------------
-// CODE – ZAMMSA Product Code (Master List 'Product Code')
+// CODE – ATC therapeutic classification
 // ------------------------------------------------------------
+//
+// The code used to be the ZAMMSA SKU, which made a stock-keeping unit the
+// product concept and left no element for what the product therapeutically
+// is. The SKU is an identifier and stays one, in identifier[zammsaSKU]
+// below; the code is now ATC, as the Product Catalogue specification
+// publishes it.
+//
+// The coding is optional and the text is not. Not every catalogue item has
+// an ATC code - a reagent or a device has none - and the Product Catalogue
+// is explicit that an unmapped value emits text with no coding, because a
+// code that means nothing is worse than an absent code.
 
 * code 1..1 MS
-* code.coding 1..1 MS
+* code.coding 0..1 MS
 * code.coding.system 1..1 MS
 * code.coding.code 1..1 MS
 * code.text 1..1 MS
 
-// National catalogue SKUs (from Master List / ZAMMSA catalogue)
-* code from ZAMMSAMedicationVS (required)
-* code.coding.system = "http://hapi.moh.gov.zm/fhir/CodeSystem/medication-zammsa-sku"
+* code.coding.system = "http://www.whocc.no/atc"
 * code.coding.display MS
 
 
@@ -469,7 +609,8 @@ Zambia Core Medication Profile aligned to the ZAMMSA national product catalogue 
     zammsaSKU 1..1 MS and
     altItemCode 0..1 MS and
     mohBarCode 0..1 MS and
-    gtin 0..1 MS
+    gtin 0..1 MS and
+    zamraRegistration 0..1 MS
 
 * identifier[programItemCode] MS
 * identifier[programItemCode].system 1..1 MS
@@ -501,7 +642,16 @@ Zambia Core Medication Profile aligned to the ZAMMSA national product catalogue 
 // GTIN is an international identifier, so its system is GS1's, not a
 // local CodeSystem URI. A code system names a set of codes; an identifier
 // system names a namespace, and the two are not interchangeable.
-* identifier[gtin].system = "https://gs1.org/gtin"
+* identifier[gtin].system = "https://www.gs1.org/gtin"
+
+// ZAMRA registration number. "Is this product registered for sale in Zambia,
+// and until when" is a different question from "does this product exist", so
+// it is an identifier in the regulator's namespace rather than a property.
+* identifier[zamraRegistration] MS
+* identifier[zamraRegistration].system 1..1 MS
+* identifier[zamraRegistration].value 1..1 MS
+* identifier[zamraRegistration].system = "http://hapi.moh.gov.zm/fhir/sid/zamra-registration"
+* identifier[zamraRegistration] ^short = "ZAMRA registration number; asserted by the regulator"
 
 // Manufacturer and trade name
 * marketingAuthorizationHolder MS
@@ -517,7 +667,10 @@ Zambia Core Medication Profile aligned to the ZAMMSA national product catalogue 
 
 // Keep only the fields we actually plan to populate in phase 1
 * totalVolume 0..0
-* ingredient 0..0
+// The Product Catalogue publishes ingredients, so this is no longer
+// excluded. totalVolume stays excluded: real pack sizes are free text
+// ("10x10 blister") and a Quantity cannot carry one honestly.
+* ingredient 0..*
 * batch 0..0
 
 
@@ -569,5 +722,17 @@ Zambia Core Medication Profile aligned to the ZAMMSA national product catalogue 
   and ZMCoreMedicationPrice named price 0..1
   and ZMCoreMedicationProductType named productType 0..1
   and ZMCoreMedicationProductGroup named productGroup 0..1
+  and ZMCoreMedicationInformationProviderGLN named informationProviderGLN 0..1
+  and ZMCoreMedicationTargetMarket named targetMarket 0..1
+  and ZMCoreMedicationGPCCategory named gpcCategory 0..1
+  and ZMCoreMedicationUNSPSC named unspsc 0..1
+  and ZMCoreMedicationHSCode named hsCode 0..1
+  and ZMCoreMedicationCountryOfOrigin named countryOfOrigin 0..1
+  and ZMCoreMedicationRegulatoryStatus named regulatoryStatus 0..1
+  and ZMCoreMedicationRegistrationDate named registrationDate 0..1
+  and ZMCoreMedicationRegistrationExpiry named registrationExpiry 0..1
+  and ZMCoreMedicationGDSNSource named gdsnSource 0..1
+  and ZMCoreMedicationLastSynchronised named lastSynchronised 0..1
+  and ZMCoreMedicationWithdrawn named withdrawn 0..1
 
 * extension[lsiEnabled].valueBoolean 1..1

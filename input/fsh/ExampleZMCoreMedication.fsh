@@ -16,9 +16,11 @@ Usage: #example
 //   Level of Access: HP,HC,L1,L2,L3
 
 * status = #active
-* code.coding.system = "http://hapi.moh.gov.zm/fhir/CodeSystem/medication-zammsa-sku"
-* code.coding.code = #EM1389
-* code.coding.display = "Betamethasone 0.1% w/w cream /ointment tube"
+// The code is the therapeutic classification. The SKU that used to sit
+// here is an identifier and is carried as one, below.
+* code.coding.system = "http://www.whocc.no/atc"
+* code.coding.code = #D07AC01
+* code.coding.display = "Betamethasone"
 * code.text = "Betamethasone 0.1% w/w cream /ointment tube (ZAMMSA SKU: EM1389)"
 
 // Program Item Code
@@ -37,7 +39,7 @@ Usage: #example
 * identifier[altItemCode].value = "ALT-12345"
 
 // Optional: GTIN
-* identifier[gtin].system = "https://gs1.org/gtin"
+* identifier[gtin].system = "https://www.gs1.org/gtin"
 * identifier[gtin].type.text = "GTIN"
 * identifier[gtin].value = "6001234567890"
 
