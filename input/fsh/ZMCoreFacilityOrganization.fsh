@@ -4,12 +4,12 @@
 
 Invariant: zm-facility-type-required
 Description: "A facility organization SHALL include a facility type from the Zambia Master Facility List facility type value set."
-Expression: "type.where(coding.system = 'http://hapi.moh.gov.zm/fhir/CodeSystem/facility-type').exists() and type.where(coding.system = 'http://hapi.moh.gov.zm/fhir/CodeSystem/facility-type').all(memberOf('http://hapi.moh.gov.zm/fhir/ValueSet/facility-type'))"
+Expression: "type.coding.where(system = 'http://hapi.moh.gov.zm/fhir/CodeSystem/facility-type').exists() and type.coding.where(system = 'http://hapi.moh.gov.zm/fhir/CodeSystem/facility-type').all(memberOf('http://hapi.moh.gov.zm/fhir/ValueSet/facility-type'))"
 Severity: #error
 
 Invariant: zm-facility-ownership-required
 Description: "A facility organization SHALL include ownership from the Zambia Master Facility List facility ownership value set."
-Expression: "type.where(coding.system = 'http://hapi.moh.gov.zm/fhir/CodeSystem/facility-ownership').exists() and type.where(coding.system = 'http://hapi.moh.gov.zm/fhir/CodeSystem/facility-ownership').all(memberOf('http://hapi.moh.gov.zm/fhir/ValueSet/facility-ownership'))"
+Expression: "type.coding.where(system = 'http://hapi.moh.gov.zm/fhir/CodeSystem/facility-ownership').exists() and type.coding.where(system = 'http://hapi.moh.gov.zm/fhir/CodeSystem/facility-ownership').all(memberOf('http://hapi.moh.gov.zm/fhir/ValueSet/facility-ownership'))"
 Severity: #error
 
 Profile: ZMCoreFacilityOrganization
