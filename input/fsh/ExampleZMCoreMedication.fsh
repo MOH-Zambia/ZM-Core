@@ -37,7 +37,7 @@ Usage: #example
 * identifier[altItemCode].value = "ALT-12345"
 
 // Optional: GTIN
-* identifier[gtin].system = "http://hapi.moh.gov.zm/fhir/CodeSystem/medication-gtin"
+* identifier[gtin].system = "https://gs1.org/gtin"
 * identifier[gtin].type.text = "GTIN"
 * identifier[gtin].value = "6001234567890"
 

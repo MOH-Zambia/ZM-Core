@@ -498,7 +498,10 @@ Zambia Core Medication Profile aligned to the ZAMMSA national product catalogue 
 * identifier[gtin].system 1..1 MS
 * identifier[gtin].value 1..1 MS
 * identifier[gtin].type 1..1 MS
-* identifier[gtin].system = "http://hapi.moh.gov.zm/fhir/CodeSystem/medication-gtin"
+// GTIN is an international identifier, so its system is GS1's, not a
+// local CodeSystem URI. A code system names a set of codes; an identifier
+// system names a namespace, and the two are not interchangeable.
+* identifier[gtin].system = "https://gs1.org/gtin"
 
 // Manufacturer and trade name
 * marketingAuthorizationHolder MS
