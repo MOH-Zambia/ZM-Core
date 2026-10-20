@@ -1,5 +1,5 @@
 <div xmlns="http://www.w3.org/1999/xhtml">
-  <h2>Clinical resources</h2>
+  <h3>Clinical resources</h3>
   <p>These ZM-Core profiles support clinical information exchange across Zambia's health systems. They are reusable national profiles, including for SmartCare workflows. The profile definitions are authoritative for cardinalities, terminology bindings, and Must Support flags. Must Support does not by itself make an optional element mandatory.</p>
   <table class="grid">
     <thead><tr><th>Resource</th><th>Use and required content</th><th>Example</th></tr></thead>
@@ -11,7 +11,7 @@
       <tr><td><a href="StructureDefinition-zm-core-immunization.html">Immunization</a></td><td>Record vaccination with status, vaccine code, patient, and occurrence. Include source, lot, route, dose, performer, and series information when available.</td><td><a href="Immunization-ExampleZMCoreImmunization.html">Vaccine administration</a></td></tr>
     </tbody>
   </table>
-  <h3>Relationships and resource boundaries</h3>
+  <h4>Relationships and resource boundaries</h4>
   <ul>
     <li>Use the ZM-Core Patient and Encounter references to connect clinical records to the person and care context. Condition, Procedure, and DiagnosticReport also permit other subject types as specified in their profiles.</li>
     <li>The procedure example links its reason to the hypertension Condition. A diagnosis belongs in Condition; the intervention undertaken for that diagnosis belongs in Procedure.</li>
@@ -19,7 +19,7 @@
     <li>Use Immunization for vaccine administration. The linked <a href="AdverseEvent-ExampleZMCoreAdverseEventFollowingImmunization.html">adverse event example</a> demonstrates recording an event following immunization separately.</li>
     <li>Keep an allergy or intolerance record distinct from a single adverse event. An absent allergy record does not establish that a patient has no known allergies.</li>
   </ul>
-  <h3>Terminology and implementation</h3>
+  <h4>Terminology and implementation</h4>
   <p>Follow the terminology bindings inherited from FHIR R5 and any constraints in each profile. Preserve coding system, code, and display when exchanging coded concepts. Some examples use CodeableConcept.text to illustrate content without claiming a national code mapping; these do not establish new national code systems. Translate local enum values using governed mappings rather than publishing them as standard codes.</p>
   <p>Use FHIR R5 element shapes: Procedure.occurrence[x] for timing, Procedure.reason as CodeableReference, and AllergyIntolerance.reaction.manifestation as CodeableReference. Consult the <a href="https://hl7.org/fhir/R5/procedure.html">FHIR R5 Procedure</a>, <a href="https://hl7.org/fhir/R5/allergyintolerance.html">AllergyIntolerance</a>, and <a href="https://hl7.org/fhir/R5/immunization.html">Immunization</a> specifications for base resource semantics.</p>
   <p>See also the <a href="smartcare-mapping.html">SmartCare mapping guidance</a> and the <a href="artifacts.html">artifact index</a> for supporting profiles and examples.</p>
