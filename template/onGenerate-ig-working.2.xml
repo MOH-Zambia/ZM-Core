@@ -21,7 +21,7 @@
       </div>
    </text>
    <url value="http://hapi.moh.gov.zm/fhir/ImplementationGuide/zm-core"/>
-   <version value="0.1.0"/>
+   <version value="0.2.0"/>
    <name value="ZMCore"/>
    <title value="HL7 FHIR Implementation Guide: ZM-Core Release 1 - Zambia"/>
    <status value="active"/>
@@ -57,26 +57,22 @@
    <packageId value="zm-core"/>
    <license value="CC0-1.0"/>
    <fhirVersion value="5.0.0"/>
-   <dependsOn id="hl7tx">
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
-         <valueMarkdown value="Automatically added as a dependency - all IGs depend on HL7 Terminology"/>
-      </extension>
+   <dependsOn id="hl7_fhir_uv_tools_r5">
+      <uri value="http://hl7.org/fhir/tools/ImplementationGuide/hl7.fhir.uv.tools"/>
+      <packageId value="hl7.fhir.uv.tools.r5"/>
+      <version value="1.1.2"/>
+   </dependsOn>
+   <dependsOn id="hl7_terminology_r5">
       <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
       <packageId value="hl7.terminology.r5"/>
-      <version value="7.2.0"/>
+      <version value="7.1.0"/>
    </dependsOn>
-   <dependsOn id="hl7ext">
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
-         <valueMarkdown value="Automatically added as a dependency - all IGs depend on the HL7 Extension Pack"/>
-      </extension>
+   <dependsOn id="hl7_fhir_uv_extensions_r5">
       <uri value="http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"/>
       <packageId value="hl7.fhir.uv.extensions.r5"/>
-      <version value="5.3.0"/>
+      <version value="5.2.0"/>
    </dependsOn>
    <definition>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency">
-         <valueCode value="hl7.fhir.uv.tools.r5#1.1.2"/>
-      </extension>
       <grouping id="-req-actordefinition" name="ActorDefinition"/>
       <grouping id="-req-requirements" name="Requirements"/>
       <grouping id="-dyn-capabilitystatement" name="CapabilityStatement"/>
@@ -235,6 +231,42 @@
             <valueInteger value="999999999"/>
          </extension>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="SubscriptionTopic"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="SubscriptionTopic-communication-request-active.html"/>
+         </extension>
+         <reference>
+            <reference value="SubscriptionTopic/communication-request-active"/>
+         </reference>
+         <name value="Active Communication Request Topic"/>
+         <description value="R5 SubscriptionTopic for communication requests that are ready for processing by the hub."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-other"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-zm-communication-template.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/zm-communication-template"/>
+         </reference>
+         <name value="Approved Communication Template"/>
+         <description value="Identifier of the approved message template used to render the communication."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
             <valueString value="StructureDefinition:logical"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
@@ -247,6 +279,258 @@
          <description value="Clinical encounter structure for Zambian health systems"/>
          <exampleBoolean value="false"/>
          <groupingId value="-str-logicalmodel"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-zm-communication-acknowledgement-required.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/zm-communication-acknowledgement-required"/>
+         </reference>
+         <name value="Communication Acknowledgement Required"/>
+         <description value="Whether the workflow must create and track an acknowledgement or completion Task."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-zm-communication-data-classification.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/zm-communication-data-classification"/>
+         </reference>
+         <name value="Communication Data Classification"/>
+         <description value="The governance classification used to determine permitted channels and payload disclosure."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-zm-communication-expiry.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/zm-communication-expiry"/>
+         </reference>
+         <name value="Communication Expiry"/>
+         <description value="The instant after which the request must not be delivered and should be completed, revoked, or escalated according to policy."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-zm-communication-fallback-channel.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/zm-communication-fallback-channel"/>
+         </reference>
+         <name value="Communication Fallback Channel"/>
+         <description value="An approved alternative channel to try if the preferred channel cannot deliver the message. Repetition order expresses routing order."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-zm-communication-message-language.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/zm-communication-message-language"/>
+         </reference>
+         <name value="Communication Message Language"/>
+         <description value="BCP-47 language code in which the recipient-facing message is rendered."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-zm-communication-requesting-system.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/zm-communication-requesting-system"/>
+         </reference>
+         <name value="Communication Requesting System"/>
+         <description value="The authoritative source system that submitted the communication request to the HIE."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-zm-consent-communication-channel.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/zm-consent-communication-channel"/>
+         </reference>
+         <name value="Consent Communication Channel"/>
+         <description value="A channel for which the individual's contact consent decision applies."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Task"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Task-ExampleZMCoreCommunicationTask.html"/>
+         </extension>
+         <reference>
+            <reference value="Task/ExampleZMCoreCommunicationTask"/>
+         </reference>
+         <name value="Example Communication Acknowledgement Task"/>
+         <description value="Task used to capture acknowledgement and trigger escalation if the report remains outstanding."/>
+         <exampleCanonical value="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-communication-task"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Consent"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Consent-ExampleZMCoreCommunicationConsent.html"/>
+         </extension>
+         <reference>
+            <reference value="Consent/ExampleZMCoreCommunicationConsent"/>
+         </reference>
+         <name value="Example Communication Consent"/>
+         <description value="Example patient contact preference and permission for notifications."/>
+         <exampleCanonical value="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-communication-consent"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="AuditEvent"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="AuditEvent-ExampleZMCoreCommunicationAuditEvent.html"/>
+         </extension>
+         <reference>
+            <reference value="AuditEvent/ExampleZMCoreCommunicationAuditEvent"/>
+         </reference>
+         <name value="Example Communication Delivery Audit Event"/>
+         <description value="Example audit event showing successful delivery processing by the hub."/>
+         <exampleCanonical value="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-communication-audit-event"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Subscription"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Subscription-ExampleZMCoreSubscription.html"/>
+         </extension>
+         <reference>
+            <reference value="Subscription/ExampleZMCoreSubscription"/>
+         </reference>
+         <name value="Example Communication Hub Subscription"/>
+         <description value="Example secure REST-hook subscription for the DHIS2 reporting-reminder workflow."/>
+         <exampleCanonical value="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-subscription"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Provenance"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Provenance-ExampleZMCoreCommunicationProvenance.html"/>
+         </extension>
+         <reference>
+            <reference value="Provenance/ExampleZMCoreCommunicationProvenance"/>
+         </reference>
+         <name value="Example Communication Request Provenance"/>
+         <description value="Example record of the authorized actor and source system that created a communication request."/>
+         <exampleCanonical value="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-communication-provenance"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Communication"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Communication-ExampleZMCoreCommunication.html"/>
+         </extension>
+         <reference>
+            <reference value="Communication/ExampleZMCoreCommunication"/>
+         </reference>
+         <name value="Example Delivered DHIS2 Reporting Reminder"/>
+         <description value="Delivery record produced after the hub sends the reporting reminder."/>
+         <exampleCanonical value="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-communication"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CommunicationRequest"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CommunicationRequest-ExampleZMCoreCommunicationRequest.html"/>
+         </extension>
+         <reference>
+            <reference value="CommunicationRequest/ExampleZMCoreCommunicationRequest"/>
+         </reference>
+         <name value="Example DHIS2 Reporting Reminder Request"/>
+         <description value="Low-risk operational pilot request for a facility reporting reminder."/>
+         <exampleCanonical value="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-communication-request"/>
+         <groupingId value="-ex-example"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
@@ -271,6 +555,60 @@
             <valueInteger value="999999999"/>
          </extension>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="AdverseEvent"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="AdverseEvent-ExampleZMCoreAdverseEventFollowingImmunization.html"/>
+         </extension>
+         <reference>
+            <reference value="AdverseEvent/ExampleZMCoreAdverseEventFollowingImmunization"/>
+         </reference>
+         <name value="Example ZM-Core Adverse Event Following Immunization"/>
+         <description value="An AEFI corresponding to SmartCare Pro AdverseEvent data."/>
+         <exampleCanonical value="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-adverse-event"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="AllergyIntolerance"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="AllergyIntolerance-ExampleZMCoreAllergyIntolerance.html"/>
+         </extension>
+         <reference>
+            <reference value="AllergyIntolerance/ExampleZMCoreAllergyIntolerance"/>
+         </reference>
+         <name value="Example ZM-Core Allergy Intolerance"/>
+         <description value="An allergy corresponding to a SmartCare Pro IdentifiedAllergy."/>
+         <exampleCanonical value="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-allergy-intolerance"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Specimen"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Specimen-ExampleZMCoreSpecimenBlood.html"/>
+         </extension>
+         <reference>
+            <reference value="Specimen/ExampleZMCoreSpecimenBlood"/>
+         </reference>
+         <name value="Example ZM-Core Blood Specimen"/>
+         <description value="A blood specimen corresponding to SmartCare Pro identified sample collection data."/>
+         <exampleCanonical value="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-specimen"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
             <valueString value="Condition"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
@@ -282,6 +620,24 @@
          <name value="Example ZM-Core Condition"/>
          <description value="Example diagnosis of hypertension"/>
          <exampleCanonical value="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-condition"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="DiagnosticReport"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="DiagnosticReport-ExampleZMCoreDiagnosticReport.html"/>
+         </extension>
+         <reference>
+            <reference value="DiagnosticReport/ExampleZMCoreDiagnosticReport"/>
+         </reference>
+         <name value="Example ZM-Core Diagnostic Report"/>
+         <description value="Example final laboratory report with a linked hemoglobin result."/>
+         <exampleCanonical value="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-diagnostic-report"/>
          <groupingId value="-ex-example"/>
       </resource>
       <resource>
@@ -318,6 +674,96 @@
          <name value="Example ZM-Core Encounter (JSON)"/>
          <description value="Hand-crafted JSON example of a Zambia Core Encounter."/>
          <exampleCanonical value="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-encounter"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="HealthcareService"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="HealthcareService-ExampleZMCoreHealthcareService.html"/>
+         </extension>
+         <reference>
+            <reference value="HealthcareService/ExampleZMCoreHealthcareService"/>
+         </reference>
+         <name value="Example ZM-Core Healthcare Service"/>
+         <description value="Example facility reporting service used by the DHIS2 reminder pilot."/>
+         <exampleCanonical value="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-healthcare-service"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Observation"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Observation-ExampleZMCoreObservationHemoglobin.html"/>
+         </extension>
+         <reference>
+            <reference value="Observation/ExampleZMCoreObservationHemoglobin"/>
+         </reference>
+         <name value="Example ZM-Core Hemoglobin Observation"/>
+         <description value="Example laboratory result referenced by a ZM-Core DiagnosticReport."/>
+         <exampleCanonical value="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-observation"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Immunization"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Immunization-ExampleZMCoreImmunization.html"/>
+         </extension>
+         <reference>
+            <reference value="Immunization/ExampleZMCoreImmunization"/>
+         </reference>
+         <name value="Example ZM-Core Immunization"/>
+         <description value="An administered vaccine corresponding to a SmartCare Pro ImmunizationRecord."/>
+         <exampleCanonical value="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-immunization"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="ServiceRequest"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="ServiceRequest-ExampleZMCoreLaboratoryServiceRequest.html"/>
+         </extension>
+         <reference>
+            <reference value="ServiceRequest/ExampleZMCoreLaboratoryServiceRequest"/>
+         </reference>
+         <name value="Example ZM-Core Laboratory Service Request"/>
+         <description value="A laboratory order corresponding to a SmartCare Pro Investigation."/>
+         <exampleCanonical value="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-service-request"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Location"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Location-ExampleZMCoreLocation.html"/>
+         </extension>
+         <reference>
+            <reference value="Location/ExampleZMCoreLocation"/>
+         </reference>
+         <name value="Example ZM-Core Location"/>
+         <description value="Example physical facility location used by recipient resolution."/>
+         <exampleCanonical value="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-location"/>
          <groupingId value="-ex-example"/>
       </resource>
       <resource>
@@ -370,8 +816,8 @@
             <reference value="Organization/ExampleZMCoreOrganization"/>
          </reference>
          <name value="Example ZM-Core Organization"/>
-         <description value="Example health facility in Zambia"/>
-         <exampleCanonical value="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-organization"/>
+         <description value="Example Master Facility List health facility in Zambia"/>
+         <exampleCanonical value="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-facility-organization"/>
          <groupingId value="-ex-example"/>
       </resource>
       <resource>
@@ -389,7 +835,7 @@
          </reference>
          <name value="Example ZM-Core Organization (JSON)"/>
          <description value="Hand-crafted JSON example of a Zambia Core Organization."/>
-         <exampleCanonical value="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-organization"/>
+         <exampleCanonical value="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-facility-organization"/>
          <groupingId value="-ex-example"/>
       </resource>
       <resource>
@@ -444,6 +890,42 @@
          <name value="Example ZM-Core Practitioner (from HRMS)"/>
          <description value="Example practitioner mapped from HRMS/Odoo hr.employee + qualifications."/>
          <exampleCanonical value="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-practitioner"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="PractitionerRole"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="PractitionerRole-ExampleZMCorePractitionerRole.html"/>
+         </extension>
+         <reference>
+            <reference value="PractitionerRole/ExampleZMCorePractitionerRole"/>
+         </reference>
+         <name value="Example ZM-Core Practitioner Role"/>
+         <description value="Example current District Health Information Officer role resolved from the provider directory."/>
+         <exampleCanonical value="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-practitioner-role"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Procedure"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Procedure-ExampleZMCoreProcedure.html"/>
+         </extension>
+         <reference>
+            <reference value="Procedure/ExampleZMCoreProcedure"/>
+         </reference>
+         <name value="Example ZM-Core Procedure"/>
+         <description value="A completed outpatient counselling procedure linked to the patient's hypertension diagnosis."/>
+         <exampleCanonical value="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-procedure"/>
          <groupingId value="-ex-example"/>
       </resource>
       <resource>
@@ -526,6 +1008,186 @@
             <valueString value="CodeSystem"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-zm-communication-channel.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/zm-communication-channel"/>
+         </reference>
+         <name value="Zambia Communication Channel"/>
+         <description value="Delivery channels supported by the Zambia Unified Health Communication Hub."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="ValueSet"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="ValueSet-zm-communication-channel-vs.html"/>
+         </extension>
+         <reference>
+            <reference value="ValueSet/zm-communication-channel-vs"/>
+         </reference>
+         <name value="Zambia Communication Channel Value Set"/>
+         <description value="Approved preferred and fallback delivery channels for hub communications."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-valueset"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-zm-communication-consent-action.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/zm-communication-consent-action"/>
+         </reference>
+         <name value="Zambia Communication Consent Action"/>
+         <description value="Consent actions governing contact by the Unified Health Communication Hub."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="ValueSet"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="ValueSet-zm-communication-consent-action-vs.html"/>
+         </extension>
+         <reference>
+            <reference value="ValueSet/zm-communication-consent-action-vs"/>
+         </reference>
+         <name value="Zambia Communication Consent Action Value Set"/>
+         <description value="Permitted contact actions represented in a communication consent."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-valueset"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-zm-communication-data-classification.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/zm-communication-data-classification"/>
+         </reference>
+         <name value="Zambia Communication Data Classification"/>
+         <description value="Data classifications that drive disclosure and channel controls for health communications."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="ValueSet"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="ValueSet-zm-communication-data-classification-vs.html"/>
+         </extension>
+         <reference>
+            <reference value="ValueSet/zm-communication-data-classification-vs"/>
+         </reference>
+         <name value="Zambia Communication Data Classification Value Set"/>
+         <description value="Data classifications used to enforce communication disclosure rules."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-valueset"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-zm-communication-lane.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/zm-communication-lane"/>
+         </reference>
+         <name value="Zambia Communication Lane"/>
+         <description value="Governance lanes used to separate communication purposes, access rules, and disclosure controls in the Zambia Unified Health Communication Hub."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="ValueSet"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="ValueSet-zm-communication-lane-vs.html"/>
+         </extension>
+         <reference>
+            <reference value="ValueSet/zm-communication-lane-vs"/>
+         </reference>
+         <name value="Zambia Communication Lane Value Set"/>
+         <description value="Communication governance lanes supported by the Zambia Unified Health Communication Hub."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-valueset"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-zm-communication-task-code.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/zm-communication-task-code"/>
+         </reference>
+         <name value="Zambia Communication Task Code"/>
+         <description value="Actions used to capture acknowledgement and escalation in communication workflows."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="ValueSet"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="ValueSet-zm-communication-task-code-vs.html"/>
+         </extension>
+         <reference>
+            <reference value="ValueSet/zm-communication-task-code-vs"/>
+         </reference>
+         <name value="Zambia Communication Task Code Value Set"/>
+         <description value="Task actions supported by a communication workflow."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-valueset"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
             <valueUri value="CodeSystem-product-group.html"/>
          </extension>
          <reference>
@@ -571,6 +1233,114 @@
          <description value="Levels of care at which a medicine is allowed to be used, based on the ZAMMSA catalogue."/>
          <exampleBoolean value="false"/>
          <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-facility-ownership.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/facility-ownership"/>
+         </reference>
+         <name value="Zambia Master Facility List Facility Ownership"/>
+         <description value="Facility ownership or controlling sector represented in the Zambia Master Facility List."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="ValueSet"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="ValueSet-facility-ownership.html"/>
+         </extension>
+         <reference>
+            <reference value="ValueSet/facility-ownership"/>
+         </reference>
+         <name value="Zambia Master Facility List Facility Ownership Value Set"/>
+         <description value="Facility ownership values permitted for a ZM-Core facility organization."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-valueset"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-facility-type.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/facility-type"/>
+         </reference>
+         <name value="Zambia Master Facility List Facility Type"/>
+         <description value="Facility types represented in the Zambia Master Facility List. Police, military, private, and NGO values are retained for source compatibility but overlap with facility ownership and should not be used when a more specific service level is known."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="ValueSet"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="ValueSet-facility-type.html"/>
+         </extension>
+         <reference>
+            <reference value="ValueSet/facility-type"/>
+         </reference>
+         <name value="Zambia Master Facility List Facility Type Value Set"/>
+         <description value="Facility types permitted for a ZM-Core facility organization."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-valueset"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-facility-registry-status.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/facility-registry-status"/>
+         </reference>
+         <name value="Zambia Master Facility List Registry Status"/>
+         <description value="Combined operational, licensing, registration, and record-quality states represented by the current Zambia Master Facility List operation-status field."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="ValueSet"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="ValueSet-facility-registry-status.html"/>
+         </extension>
+         <reference>
+            <reference value="ValueSet/facility-registry-status"/>
+         </reference>
+         <name value="Zambia Master Facility List Registry Status Value Set"/>
+         <description value="Registry status values permitted for a ZM-Core facility organization."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-valueset"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
@@ -670,6 +1440,222 @@
             <valueString value="StructureDefinition:resource"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-zm-core-adverse-event.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/zm-core-adverse-event"/>
+         </reference>
+         <name value="ZM-Core Adverse Event Profile"/>
+         <description value="Zambia adverse event profile, including adverse events following immunization."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-profile"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-zm-core-allergy-intolerance.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/zm-core-allergy-intolerance"/>
+         </reference>
+         <name value="ZM-Core Allergy Intolerance Profile"/>
+         <description value="Zambia allergy and intolerance profile for allergy substances, medicinal products, severity, and reactions."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-profile"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-zm-core-appointment.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/zm-core-appointment"/>
+         </reference>
+         <name value="ZM-Core Appointment Profile"/>
+         <description value="Zambia appointment profile for scheduled clinical services, including SmartCare Pro appointments."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-profile"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-zm-core-care-plan.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/zm-core-care-plan"/>
+         </reference>
+         <name value="ZM-Core Care Plan Profile"/>
+         <description value="Zambia care plan profile for treatment, nursing, and multidisciplinary plans."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-profile"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-zm-core-communication-audit-event.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/zm-core-communication-audit-event"/>
+         </reference>
+         <name value="ZM-Core Communication Audit Event Profile"/>
+         <description value="Security and access audit trail for creation, routing, access, delivery, acknowledgement, or escalation of a hub communication."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-profile"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-zm-core-communication-consent.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/zm-core-communication-consent"/>
+         </reference>
+         <name value="ZM-Core Communication Consent Profile"/>
+         <description value="An individual's consent decision governing whether and through which channels the Unified Health Communication Hub may make contact."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-profile"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-zm-core-communication.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/zm-core-communication"/>
+         </reference>
+         <name value="ZM-Core Communication Profile"/>
+         <description value="The immutable delivery or receipt record produced for a communication request, including channel and delivery outcome."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-profile"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-zm-core-communication-provenance.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/zm-core-communication-provenance"/>
+         </reference>
+         <name value="ZM-Core Communication Provenance Profile"/>
+         <description value="Record of who initiated or changed a communication workflow resource, when, and on whose behalf."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-profile"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-zm-core-communication-request.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/zm-core-communication-request"/>
+         </reference>
+         <name value="ZM-Core Communication Request Profile"/>
+         <description value="A governed request from a Ministry health system to the Unified Health Communication Hub to route and deliver information."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-profile"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-zm-core-subscription.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/zm-core-subscription"/>
+         </reference>
+         <name value="ZM-Core Communication Subscription Profile"/>
+         <description value="A secure R5 Subscription that activates a communication workflow when a governed communication topic matches."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-profile"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-zm-core-communication-subscription-topic.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/zm-core-communication-subscription-topic"/>
+         </reference>
+         <name value="ZM-Core Communication Subscription Topic Profile"/>
+         <description value="A governed R5 subscription topic that describes which communication events may activate hub workflows and what may be filtered or returned."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-profile"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-zm-core-communication-task.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/zm-core-communication-task"/>
+         </reference>
+         <name value="ZM-Core Communication Task Profile"/>
+         <description value="An acknowledgement, required action, recipient-resolution, or escalation task linked to a hub communication workflow."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-profile"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
             <valueUri value="StructureDefinition-zm-core-condition.html"/>
          </extension>
          <reference>
@@ -706,6 +1692,24 @@
             <valueString value="StructureDefinition:resource"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-zm-core-diagnostic-report.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/zm-core-diagnostic-report"/>
+         </reference>
+         <name value="ZM-Core Diagnostic Report Profile"/>
+         <description value="Zambia diagnostic report profile for laboratory, imaging, pathology, and other diagnostic services."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-profile"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
             <valueUri value="StructureDefinition-zm-core-encounter.html"/>
          </extension>
          <reference>
@@ -733,6 +1737,132 @@
          <description value="Types of encounters in Zambian health systems"/>
          <exampleBoolean value="false"/>
          <groupingId value="-term-valueset"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-zm-core-facility-organization.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/zm-core-facility-organization"/>
+         </reference>
+         <name value="ZM-Core Facility Organization Profile"/>
+         <description value="A health facility registered in the Zambia Master Facility List. Physical coordinates and site characteristics are represented by ZMCoreLocation, while offered services are represented by ZMCoreHealthcareService."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-profile"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-zm-core-facility-registry-status.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/zm-core-facility-registry-status"/>
+         </reference>
+         <name value="ZM-Core Facility Registry Status"/>
+         <description value="The combined operational, licensing, registration, or record-quality status assigned to a facility by the Zambia Master Facility List. This is distinct from Organization.active, which indicates whether the FHIR record is in active use."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-zm-core-facility-replaced-by.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/zm-core-facility-replaced-by"/>
+         </reference>
+         <name value="ZM-Core Facility Replaced By"/>
+         <description value="The facility that succeeded this one after a merge or closure. Present only on a retired facility."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-zm-core-facility-workforce-count.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/zm-core-facility-workforce-count"/>
+         </reference>
+         <name value="ZM-Core Facility Workforce Count"/>
+         <description value="Number of health workers currently posted to this facility, derived by the Health Worker Registry from active PractitionerRole records."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-zm-core-healthcare-service.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/zm-core-healthcare-service"/>
+         </reference>
+         <name value="ZM-Core Healthcare Service Profile"/>
+         <description value="A service directory entry used to resolve facilities, responsible teams, service coverage, and communication contacts."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-profile"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-zm-core-immunization.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/zm-core-immunization"/>
+         </reference>
+         <name value="ZM-Core Immunization Profile"/>
+         <description value="Zambia immunization profile for vaccines administered to a patient."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-profile"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-zm-core-location.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/zm-core-location"/>
+         </reference>
+         <name value="ZM-Core Location Profile"/>
+         <description value="A physical or administrative place from the Zambia Health Facility Registry used in facility and reporting-hierarchy routing."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-profile"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
@@ -886,6 +2016,24 @@
             <valueString value="StructureDefinition:extension"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-zm-core-medication-country-of-origin.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/zm-core-medication-country-of-origin"/>
+         </reference>
+         <name value="ZM-Core Medication Country of Origin"/>
+         <description value="Country the product is manufactured in."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
             <valueUri value="StructureDefinition-zm-core-medication-description.html"/>
          </extension>
          <reference>
@@ -895,6 +2043,24 @@
          <description value="Long description of the product from the Master List."/>
          <exampleBoolean value="false"/>
          <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-zm-core-medication-dispense.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/zm-core-medication-dispense"/>
+         </reference>
+         <name value="ZM-Core Medication Dispense Profile"/>
+         <description value="Zambia medication dispensing profile linking dispensed medicine to the prescription, patient, encounter, and dispensing facility."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-profile"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
@@ -1012,6 +2178,24 @@
             <valueString value="StructureDefinition:extension"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-zm-core-medication-gdsn-source.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/zm-core-medication-gdsn-source"/>
+         </reference>
+         <name value="ZM-Core Medication GDSN Source"/>
+         <description value="The GDSN data pool the trade item was synchronised from."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
             <valueUri value="StructureDefinition-zm-core-medication-generic-name.html"/>
          </extension>
          <reference>
@@ -1030,6 +2214,24 @@
             <valueString value="StructureDefinition:extension"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-zm-core-medication-gpc-category.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/zm-core-medication-gpc-category"/>
+         </reference>
+         <name value="ZM-Core Medication GPC Category"/>
+         <description value="GS1 Global Product Classification brick code from the GDSN notification."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
             <valueUri value="StructureDefinition-zm-core-medication-hazardous.html"/>
          </extension>
          <reference>
@@ -1037,6 +2239,78 @@
          </reference>
          <name value="ZM-Core Medication Hazardous"/>
          <description value="Indicates whether the product is hazardous."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-zm-core-medication-hs-code.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/zm-core-medication-hs-code"/>
+         </reference>
+         <name value="ZM-Core Medication HS Code"/>
+         <description value="Harmonised System customs tariff code for the product."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-zm-core-medication-information-provider-gln.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/zm-core-medication-information-provider-gln"/>
+         </reference>
+         <name value="ZM-Core Medication Information Provider GLN"/>
+         <description value="GS1 Global Location Number of the party that published this trade item."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-zm-core-medication-knowledge.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/zm-core-medication-knowledge"/>
+         </reference>
+         <name value="ZM-Core Medication Knowledge Profile"/>
+         <description value="A product as regulated and supplied: its regulatory status, storage and&#xA;handling, classification and pack presentation. Its clinical counterpart is&#xA;ZMCoreMedication, and the two carry the same identifiers for the same product."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-profile"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-zm-core-medication-last-synchronised.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/zm-core-medication-last-synchronised"/>
+         </reference>
+         <name value="ZM-Core Medication Last Synchronised"/>
+         <description value="When this trade item was last synchronised from its GDSN source."/>
          <exampleBoolean value="false"/>
          <groupingId value="-str-extension"/>
       </resource>
@@ -1246,6 +2520,60 @@
             <valueString value="StructureDefinition:extension"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-zm-core-medication-registration-date.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/zm-core-medication-registration-date"/>
+         </reference>
+         <name value="ZM-Core Medication Registration Date"/>
+         <description value="Date the product was registered with ZAMRA."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-zm-core-medication-registration-expiry.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/zm-core-medication-registration-expiry"/>
+         </reference>
+         <name value="ZM-Core Medication Registration Expiry"/>
+         <description value="Date the product's ZAMRA registration expires."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-zm-core-medication-regulatory-status.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/zm-core-medication-regulatory-status"/>
+         </reference>
+         <name value="ZM-Core Medication Regulatory Status"/>
+         <description value="ZAMRA registration status for the product (e.g. registered, suspended, expired)."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
             <valueUri value="StructureDefinition-zm-core-medication-route-of-administration.html"/>
          </extension>
          <reference>
@@ -1372,6 +2700,24 @@
             <valueString value="StructureDefinition:extension"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-zm-core-medication-target-market.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/zm-core-medication-target-market"/>
+         </reference>
+         <name value="ZM-Core Medication Target Market"/>
+         <description value="Target market the trade item was published for, as an ISO 3166-1 numeric country code (894 is Zambia)."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
             <valueUri value="StructureDefinition-zm-core-medication-tracer.html"/>
          </extension>
          <reference>
@@ -1408,6 +2754,24 @@
             <valueString value="StructureDefinition:extension"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-zm-core-medication-unspsc.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/zm-core-medication-unspsc"/>
+         </reference>
+         <name value="ZM-Core Medication UNSPSC Code"/>
+         <description value="UNSPSC procurement classification for the product."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
             <valueUri value="StructureDefinition-zm-core-medication-who-approved.html"/>
          </extension>
          <reference>
@@ -1415,6 +2779,24 @@
          </reference>
          <name value="ZM-Core Medication WHO Approved"/>
          <description value="Indicates whether the product is WHO prequalified / approved."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-zm-core-medication-withdrawn.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/zm-core-medication-withdrawn"/>
+         </reference>
+         <name value="ZM-Core Medication Withdrawn"/>
+         <description value="Whether the trade item's publication has been withdrawn. A withdrawn product is never deleted: dispensing and stock records referring to it must stay resolvable."/>
          <exampleBoolean value="false"/>
          <groupingId value="-str-extension"/>
       </resource>
@@ -1486,7 +2868,7 @@
             <reference value="StructureDefinition/zm-core-organization"/>
          </reference>
          <name value="ZM-Core Organization Profile"/>
-         <description value="Zambia healthcare organization profile"/>
+         <description value="Zambia healthcare organization profile, including identifiers and classifications used by the national Master Facility List."/>
          <exampleBoolean value="false"/>
          <groupingId value="-str-profile"/>
       </resource>
@@ -1562,6 +2944,114 @@
          <exampleBoolean value="false"/>
          <groupingId value="-str-profile"/>
       </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-zm-core-practitioner-role.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/zm-core-practitioner-role"/>
+         </reference>
+         <name value="ZM-Core Practitioner Role Profile"/>
+         <description value="A current health-worker role used to route communications by responsibility rather than by hard-coded contact details."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-profile"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-zm-core-procedure.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/zm-core-procedure"/>
+         </reference>
+         <name value="ZM-Core Procedure Profile"/>
+         <description value="Zambia procedure profile for surgical, diagnostic, therapeutic, and programme procedures."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-profile"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-zm-core-group.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/zm-core-group"/>
+         </reference>
+         <name value="ZM-Core Recipient Group Profile"/>
+         <description value="A governed national, provincial, district, facility, patient, or workforce distribution group used for recipient resolution."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-profile"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-zm-core-related-person.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/zm-core-related-person"/>
+         </reference>
+         <name value="ZM-Core Related Person Profile"/>
+         <description value="Zambia related person profile for next of kin, caregivers, guardians, treatment supporters, and patient-linked contacts."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-profile"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-zm-core-service-request.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/zm-core-service-request"/>
+         </reference>
+         <name value="ZM-Core Service Request Profile"/>
+         <description value="Zambia request profile for laboratory, imaging, procedure, and referral services."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-profile"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-zm-core-specimen.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/zm-core-specimen"/>
+         </reference>
+         <name value="ZM-Core Specimen Profile"/>
+         <description value="Zambia specimen profile for diagnostic sample collection, transport, receipt, and processing."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-profile"/>
+      </resource>
       <page>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
             <valueUrl value="toc.html"/>
@@ -1583,6 +3073,30 @@
             </extension>
             <nameUrl value="changes.html"/>
             <title value="Changes"/>
+            <generation value="html"/>
+         </page>
+         <page>
+            <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+               <valueUrl value="clinical-resources.html"/>
+            </extension>
+            <nameUrl value="clinical-resources.html"/>
+            <title value="Clinical Resources"/>
+            <generation value="html"/>
+         </page>
+         <page>
+            <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+               <valueUrl value="communication-hub.html"/>
+            </extension>
+            <nameUrl value="communication-hub.html"/>
+            <title value="Communication Hub"/>
+            <generation value="html"/>
+         </page>
+         <page>
+            <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+               <valueUrl value="smartcare-mapping.html"/>
+            </extension>
+            <nameUrl value="smartcare-mapping.html"/>
+            <title value="Smartcare Mapping"/>
             <generation value="html"/>
          </page>
       </page>
