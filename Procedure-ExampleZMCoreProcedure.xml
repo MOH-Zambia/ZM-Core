@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Procedure xmlns="http://hl7.org/fhir">
+  <id value="ExampleZMCoreProcedure"/>
+  <meta>
+    <profile value="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-procedure"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Procedure ExampleZMCoreProcedure</b></p><a name="ExampleZMCoreProcedure"> </a><a name="hcExampleZMCoreProcedure"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-zm-core-procedure.html">ZM-Core Procedure Profile</a></p></div><p><b>identifier</b>: <code>http://hapi.moh.gov.zm/fhir/sid/procedure-id</code>/PROC-2025-000001</p><p><b>status</b>: Completed</p><p><b>code</b>: <span title="Codes:">Lifestyle counselling for hypertension</span></p><p><b>subject</b>: <a href="Patient-ExampleZMCorePatient.html">John Mwale  Male, DoB: 1985-05-15 ( http://hapi.moh.gov.zm/fhir/sid/nrc#123456/12/1)</a></p><p><b>encounter</b>: <a href="Encounter-ExampleZMCoreEncounter.html">Encounter: status = completed; class = ambulatory; type = ; actualPeriod = 2025-11-15 09:00:00+0200 --&gt; 2025-11-15 10:30:00+0200</a></p><p><b>occurrence</b>: 2025-11-15 10:00:00+0200 --&gt; 2025-11-15 10:20:00+0200</p><p><b>recorded</b>: 2025-11-15 10:25:00+0200</p><p><b>recorder</b>: <a href="Practitioner-ExampleZMCorePractitioner.html">Practitioner Mary Chipo Phiri (official)</a></p><h3>Performers</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Actor</b></td></tr><tr><td style="display: none">*</td><td><a href="Practitioner-ExampleZMCorePractitioner.html">Practitioner Mary Chipo Phiri (official)</a></td></tr></table><h3>Reasons</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Reference</b></td></tr><tr><td style="display: none">*</td><td><a href="Condition-ExampleZMCoreCondition.html">Condition Hypertensive disorder, systemic arterial (disorder)</a></td></tr></table><p><b>note</b>: </p><blockquote><div><p>Counselling completed during the outpatient encounter.</p>
+</div></blockquote></div>
+  </text>
+  <identifier>
+    <system value="http://hapi.moh.gov.zm/fhir/sid/procedure-id"/>
+    <value value="PROC-2025-000001"/>
+  </identifier>
+  <status value="completed"/>
+  <code>
+    <text value="Lifestyle counselling for hypertension"/>
+  </code>
+  <subject>
+    <reference value="Patient/ExampleZMCorePatient"/>
+  </subject>
+  <encounter>
+    <reference value="Encounter/ExampleZMCoreEncounter"/>
+  </encounter>
+  <occurrencePeriod>
+    <start value="2025-11-15T10:00:00+02:00"/>
+    <end value="2025-11-15T10:20:00+02:00"/>
+  </occurrencePeriod>
+  <recorded value="2025-11-15T10:25:00+02:00"/>
+  <recorder>
+    <reference value="Practitioner/ExampleZMCorePractitioner"/>
+  </recorder>
+  <performer>
+    <actor>
+      <reference value="Practitioner/ExampleZMCorePractitioner"/>
+    </actor>
+  </performer>
+  <reason>
+    <reference>
+      <reference value="Condition/ExampleZMCoreCondition"/>
+    </reference>
+  </reason>
+  <note>
+    <text value="Counselling completed during the outpatient encounter."/>
+  </note>
+</Procedure>

@@ -1,0 +1,31 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping"
+"ZMCorePatientDemographics","ZMCorePatientDemographics","","","",0,*,"","","","null {[]} {[]}
+","Patient Demographics","Core patient demographic information for Zambian health systems","","","","","","","","","",,,,,"",,,,"Base",0,*,"","","n/a"
+"ZMCorePatientDemographics.identifier","ZMCorePatientDemographics.identifier","","","",1,*,"","","","Identifier {[]} {[]}
+","Patient Identifier","Patient Identifier","","","","","","","","","",,,,,"",,,,"ZMCorePatientDemographics.identifier",1,*,"",""
+"ZMCorePatientDemographics.fullName","ZMCorePatientDemographics.fullName","","","",1,1,"","","","string {[]} {[]}
+","Patient Full Name","Patient Full Name","","","","","","","","","",,,,,"",,,,"ZMCorePatientDemographics.fullName",1,1,"",""
+"ZMCorePatientDemographics.firstName","ZMCorePatientDemographics.firstName","","","",0,1,"","","","string {[]} {[]}
+","Patient First Name","Patient First Name","","","","","","","","","",,,,,"",,,,"ZMCorePatientDemographics.firstName",0,1,"",""
+"ZMCorePatientDemographics.lastName","ZMCorePatientDemographics.lastName","","","",0,1,"","","","string {[]} {[]}
+","Patient Last Name","Patient Last Name","","","","","","","","","",,,,,"",,,,"ZMCorePatientDemographics.lastName",0,1,"",""
+"ZMCorePatientDemographics.birthDate","ZMCorePatientDemographics.birthDate","","","",0,1,"","","","date {[]} {[]}
+","Date of Birth","Date of Birth","","","","","","","","","",,,,,"",,,,"ZMCorePatientDemographics.birthDate",0,1,"",""
+"ZMCorePatientDemographics.gender","ZMCorePatientDemographics.gender","","","",0,1,"","","","code {[]} {[]}
+","Gender","Gender","","","","","","","","","",,,,,"",,,,"ZMCorePatientDemographics.gender",0,1,"",""
+"ZMCorePatientDemographics.maritalStatus","ZMCorePatientDemographics.maritalStatus","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Marital Status","Marital Status","","","","","","","","","",,,,,"",,,,"ZMCorePatientDemographics.maritalStatus",0,1,"",""
+"ZMCorePatientDemographics.ethnicity","ZMCorePatientDemographics.ethnicity","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Ethnicity","Ethnicity","","","","","","","","","",,,,,"",,,,"ZMCorePatientDemographics.ethnicity",0,1,"",""
+"ZMCorePatientDemographics.language","ZMCorePatientDemographics.language","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Languages Spoken","Languages Spoken","","","","","","","","","",,,,,"",,,,"ZMCorePatientDemographics.language",0,*,"",""
+"ZMCorePatientDemographics.address","ZMCorePatientDemographics.address","","","",0,*,"","","","Address {[]} {[]}
+","Patient Address","Patient Address","","","","","","","","","",,,,,"",,,,"ZMCorePatientDemographics.address",0,*,"",""
+"ZMCorePatientDemographics.contact","ZMCorePatientDemographics.contact","","","",0,*,"","","","ContactPoint {[]} {[]}
+","Contact Information","Contact Information","","","","","","","","","",,,,,"",,,,"ZMCorePatientDemographics.contact",0,*,"",""
+"ZMCorePatientDemographics.nextOfKin","ZMCorePatientDemographics.nextOfKin","","","",0,1,"","","","Reference {[]} {[]}
+","Next of Kin","Next of Kin","","","","","","","","","",,,,,"",,,,"ZMCorePatientDemographics.nextOfKin",0,1,"",""
+"ZMCorePatientDemographics.dateCreated","ZMCorePatientDemographics.dateCreated","","","",1,1,"","","","dateTime {[]} {[]}
+","Record Creation Date","Record Creation Date","","","","","","","","","",,,,,"",,,,"ZMCorePatientDemographics.dateCreated",1,1,"",""
+"ZMCorePatientDemographics.dateModified","ZMCorePatientDemographics.dateModified","","","",0,1,"","","","dateTime {[]} {[]}
+","Record Last Modified Date","Record Last Modified Date","","","","","","","","","",,,,,"",,,,"ZMCorePatientDemographics.dateModified",0,1,"",""

@@ -1,0 +1,41 @@
+{
+  "resourceType" : "AuditEvent",
+  "id" : "ExampleZMCoreCommunicationAuditEvent",
+  "meta" : {
+    "profile" : ["http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-communication-audit-event"]
+  },
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: AuditEvent ExampleZMCoreCommunicationAuditEvent</b></p><a name=\"ExampleZMCoreCommunicationAuditEvent\"> </a><a name=\"hcExampleZMCoreCommunicationAuditEvent\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-zm-core-communication-audit-event.html\">ZM-Core Communication Audit Event Profile</a></p></div><p><b>code</b>: <span title=\"Codes:\">Communication delivery</span></p><p><b>action</b>: Execute</p><p><b>occurred</b>: 2026-08-10 08:00:05+0200</p><p><b>recorded</b>: 2026-08-10 08:00:06+0200</p><h3>Outcomes</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Code</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"http://terminology.hl7.org/7.1.0/CodeSystem-audit-event-outcome.html#audit-event-outcome-0\">AuditEventOutcome: 0</a> (Success)</td></tr></table><h3>Agents</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Who</b></td><td><b>Requestor</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Organization-ExampleZMCoreOrganization.html\">Organization Chilenje First Level Hospital</a></td><td>true</td></tr></table><h3>Sources</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Observer</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Organization-ExampleZMCoreOrganization.html\">Organization Chilenje First Level Hospital</a></td></tr></table><h3>Entities</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>What</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Communication-ExampleZMCoreCommunication.html\">Communication: extension = Internal,http://hapi.moh.gov.zm/fhir/sid/message-template#DHIS2-REPORTING-REMINDER-v1,en; identifier = http://hapi.moh.gov.zm/fhir/sid/communication-id#COMM-DHIS2-2026-0001; status = completed; category = Operational; priority = routine; medium = Email; topic = ; sent = 2026-08-10 08:00:05+0200; received = 2026-08-10 08:00:07+0200</a></td></tr></table></div>"
+  },
+  "code" : {
+    "text" : "Communication delivery"
+  },
+  "action" : "E",
+  "occurredDateTime" : "2026-08-10T08:00:05+02:00",
+  "recorded" : "2026-08-10T08:00:06+02:00",
+  "outcome" : {
+    "code" : {
+      "system" : "http://terminology.hl7.org/CodeSystem/audit-event-outcome",
+      "code" : "0",
+      "display" : "Success"
+    }
+  },
+  "agent" : [{
+    "who" : {
+      "reference" : "Organization/ExampleZMCoreOrganization"
+    },
+    "requestor" : true
+  }],
+  "source" : {
+    "observer" : {
+      "reference" : "Organization/ExampleZMCoreOrganization"
+    }
+  },
+  "entity" : [{
+    "what" : {
+      "reference" : "Communication/ExampleZMCoreCommunication"
+    }
+  }]
+}

@@ -1,0 +1,80 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hapi.moh.gov.zm/fhir/ServiceRequest/ExampleZMCoreLaboratoryServiceRequest> a fhir:ServiceRequest ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ExampleZMCoreLaboratoryServiceRequest"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-service-request"^^xsd:anyURI ;
+       fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-service-request>
+     ] )
+  ] ; # 
+  fhir:language [ fhir:v "en"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ServiceRequest ExampleZMCoreLaboratoryServiceRequest</b></p><a name=\"ExampleZMCoreLaboratoryServiceRequest\"> </a><a name=\"hcExampleZMCoreLaboratoryServiceRequest\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-zm-core-service-request.html\">ZM-Core Service Request Profile</a></p></div><p><b>identifier</b>: <code>http://hapi.moh.gov.zm/fhir/sid/laboratory-order-number</code>/LAB-REQ-2026-000001</p><p><b>requisition</b>: <code>http://hapi.moh.gov.zm/fhir/sid/laboratory-requisition-number</code>/LAB-BATCH-2026-000001</p><p><b>status</b>: Completed</p><p><b>intent</b>: Order</p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 108252007}\">Laboratory procedure</span></p><p><b>priority</b>: Routine</p><h3>Codes</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Concept</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://loinc.org 718-7}\">Hemoglobin [Mass/volume] in Blood</span></td></tr></table><p><b>subject</b>: <a href=\"Patient-ExampleZMCorePatient.html\">John Mwale  Male, DoB: 1985-05-15 ( http://hapi.moh.gov.zm/fhir/sid/nrc#123456/12/1)</a></p><p><b>encounter</b>: <a href=\"Encounter-ExampleZMCoreEncounter.html\">Encounter: status = completed; class = ambulatory; type = ; actualPeriod = 2025-11-15 09:00:00+0200 --&gt; 2025-11-15 10:30:00+0200</a></p><p><b>authoredOn</b>: 2026-08-08 08:45:00+0200</p><p><b>requester</b>: <a href=\"Practitioner-ExampleZMCorePractitioner.html\">Practitioner Mary Chipo Phiri (official)</a></p><p><b>performer</b>: <a href=\"Organization-ExampleZMCoreOrganization.html\">Organization Chilenje First Level Hospital</a></p><p><b>specimen</b>: <a href=\"Specimen-ExampleZMCoreSpecimenBlood.html\">Specimen: identifier = http://hapi.moh.gov.zm/fhir/sid/specimen-id#SPM-2026-000001; accessionIdentifier = http://hapi.moh.gov.zm/fhir/sid/laboratory-accession-number#ACC-2026-000001; status = available; type = Blood specimen; receivedTime = 2026-08-08 09:20:00+0200</a></p><p><b>note</b>: </p><blockquote><div><p>Routine full blood count sample.</p>\n</div></blockquote></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "http://hapi.moh.gov.zm/fhir/sid/laboratory-order-number"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "LAB-REQ-2026-000001" ]
+  ] ) ; # 
+  fhir:requisition [
+     fhir:system [ fhir:v "http://hapi.moh.gov.zm/fhir/sid/laboratory-requisition-number"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "LAB-BATCH-2026-000001" ]
+  ] ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:intent [ fhir:v "order"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       a sct:108252007 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "108252007" ] ;
+       fhir:display [ fhir:v "Laboratory procedure" ]
+     ] )
+  ] ) ; # 
+  fhir:priority [ fhir:v "routine"] ; # 
+  fhir:code [
+     fhir:concept [
+       fhir:coding ( [
+         a loinc:718-7 ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "718-7" ] ;
+         fhir:display [ fhir:v "Hemoglobin [Mass/volume] in Blood" ]
+       ] )
+     ]
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://hapi.moh.gov.zm/fhir/Patient/ExampleZMCorePatient> ;
+     fhir:reference [ fhir:v "Patient/ExampleZMCorePatient" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:link <http://hapi.moh.gov.zm/fhir/Encounter/ExampleZMCoreEncounter> ;
+     fhir:reference [ fhir:v "Encounter/ExampleZMCoreEncounter" ]
+  ] ; # 
+  fhir:authoredOn [ fhir:v "2026-08-08T08:45:00+02:00"^^xsd:dateTime] ; # 
+  fhir:requester [
+     fhir:link <http://hapi.moh.gov.zm/fhir/Practitioner/ExampleZMCorePractitioner> ;
+     fhir:reference [ fhir:v "Practitioner/ExampleZMCorePractitioner" ]
+  ] ; # 
+  fhir:performer ( [
+     fhir:link <http://hapi.moh.gov.zm/fhir/Organization/ExampleZMCoreOrganization> ;
+     fhir:reference [ fhir:v "Organization/ExampleZMCoreOrganization" ]
+  ] ) ; # 
+  fhir:specimen ( [
+     fhir:link <http://hapi.moh.gov.zm/fhir/Specimen/ExampleZMCoreSpecimenBlood> ;
+     fhir:reference [ fhir:v "Specimen/ExampleZMCoreSpecimenBlood" ]
+  ] ) ; # 
+  fhir:note ( [
+     fhir:text [ fhir:v "Routine full blood count sample." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,72 @@
+{
+  "resourceType" : "Practitioner",
+  "id" : "ExampleZMCorePractitioner",
+  "meta" : {
+    "profile" : ["http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-practitioner"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Practitioner ExampleZMCorePractitioner</b></p><a name=\"ExampleZMCorePractitioner\"> </a><a name=\"hcExampleZMCorePractitioner\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-zm-core-practitioner.html\">ZM-Core Practitioner Profile</a></p></div><p><b>identifier</b>: <code>http://hapi.moh.gov.zm/fhir/sid/nrc</code>/123456/78/1, <code>http://hapi.moh.gov.zm/fhir/sid/employee-number</code>/EMP-000123, <code>http://hapi.moh.gov.zm/fhir/sid/institution-file-number</code>/MOH-LSK-IF-7788, <code>http://hapi.moh.gov.zm/fhir/sid/psmd-file-number</code>/PSMD-552211, <code>http://hapi.moh.gov.zm/fhir/sid/pspf-member-number</code>/PSPF-0009823, <code>http://hapi.moh.gov.zm/fhir/sid/registration-id</code>/DOC-001</p><p><b>name</b>: Mary Chipo Phiri (Official), Banda (Name changed for Marriage)</p><p><b>telecom</b>: <a href=\"mailto:mary.phiri@example.org\">mary.phiri@example.org</a>, <a href=\"tel:+260-97-000-0000\">+260-97-000-0000</a></p><p><b>gender</b>: Female</p><p><b>birthDate</b>: 1984-03-12</p><h3>Qualifications</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Code</b></td><td><b>Period</b></td><td><b>Issuer</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v2-0360 MD}\">Doctor of Medicine</span></td><td>2008-11-30 --&gt; (ongoing)</td><td>University of Zambia</td></tr></table></div>"
+  },
+  "identifier" : [{
+    "system" : "http://hapi.moh.gov.zm/fhir/sid/nrc",
+    "value" : "123456/78/1"
+  },
+  {
+    "system" : "http://hapi.moh.gov.zm/fhir/sid/employee-number",
+    "value" : "EMP-000123"
+  },
+  {
+    "system" : "http://hapi.moh.gov.zm/fhir/sid/institution-file-number",
+    "value" : "MOH-LSK-IF-7788"
+  },
+  {
+    "system" : "http://hapi.moh.gov.zm/fhir/sid/psmd-file-number",
+    "value" : "PSMD-552211"
+  },
+  {
+    "system" : "http://hapi.moh.gov.zm/fhir/sid/pspf-member-number",
+    "value" : "PSPF-0009823"
+  },
+  {
+    "system" : "http://hapi.moh.gov.zm/fhir/sid/registration-id",
+    "value" : "DOC-001"
+  }],
+  "name" : [{
+    "use" : "official",
+    "family" : "Phiri",
+    "given" : ["Mary",
+    "Chipo"]
+  },
+  {
+    "use" : "maiden",
+    "family" : "Banda"
+  }],
+  "telecom" : [{
+    "system" : "email",
+    "value" : "mary.phiri@example.org",
+    "use" : "work"
+  },
+  {
+    "system" : "phone",
+    "value" : "+260-97-000-0000",
+    "use" : "mobile"
+  }],
+  "gender" : "female",
+  "birthDate" : "1984-03-12",
+  "qualification" : [{
+    "code" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/v2-0360",
+        "code" : "MD",
+        "display" : "Doctor of Medicine"
+      }]
+    },
+    "period" : {
+      "start" : "2008-11-30"
+    },
+    "issuer" : {
+      "display" : "University of Zambia"
+    }
+  }]
+}

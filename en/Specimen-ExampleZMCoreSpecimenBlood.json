@@ -1,0 +1,47 @@
+{
+  "resourceType" : "Specimen",
+  "id" : "ExampleZMCoreSpecimenBlood",
+  "meta" : {
+    "profile" : ["http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-specimen"]
+  },
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Specimen ExampleZMCoreSpecimenBlood</b></p><a name=\"ExampleZMCoreSpecimenBlood\"> </a><a name=\"hcExampleZMCoreSpecimenBlood\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-zm-core-specimen.html\">ZM-Core Specimen Profile</a></p></div><p><b>identifier</b>: <code>http://hapi.moh.gov.zm/fhir/sid/specimen-id</code>/SPM-2026-000001</p><p><b>accessionIdentifier</b>: <code>http://hapi.moh.gov.zm/fhir/sid/laboratory-accession-number</code>/ACC-2026-000001</p><p><b>status</b>: Available</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 119297000}\">Blood specimen</span></p><p><b>subject</b>: <a href=\"Patient-ExampleZMCorePatient.html\">John Mwale  Male, DoB: 1985-05-15 ( http://hapi.moh.gov.zm/fhir/sid/nrc#123456/12/1)</a></p><p><b>receivedTime</b>: 2026-08-08 09:20:00+0200</p><p><b>request</b>: <a href=\"ServiceRequest-ExampleZMCoreLaboratoryServiceRequest.html\">ServiceRequest Hemoglobin [Mass/volume] in Blood</a></p><h3>Collections</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Collector</b></td><td><b>Collected[x]</b></td><td><b>Quantity</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Practitioner-ExampleZMCorePractitioner.html\">Practitioner Mary Chipo Phiri (official)</a></td><td>2026-08-08 09:00:00+0200</td><td>4 mL<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemL = 'mL')</span></td></tr></table></div>"
+  },
+  "identifier" : [{
+    "system" : "http://hapi.moh.gov.zm/fhir/sid/specimen-id",
+    "value" : "SPM-2026-000001"
+  }],
+  "accessionIdentifier" : {
+    "system" : "http://hapi.moh.gov.zm/fhir/sid/laboratory-accession-number",
+    "value" : "ACC-2026-000001"
+  },
+  "status" : "available",
+  "type" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "119297000",
+      "display" : "Blood specimen"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/ExampleZMCorePatient"
+  },
+  "receivedTime" : "2026-08-08T09:20:00+02:00",
+  "request" : [{
+    "reference" : "ServiceRequest/ExampleZMCoreLaboratoryServiceRequest"
+  }],
+  "collection" : {
+    "collector" : {
+      "reference" : "Practitioner/ExampleZMCorePractitioner"
+    },
+    "collectedDateTime" : "2026-08-08T09:00:00+02:00",
+    "quantity" : {
+      "value" : 4,
+      "unit" : "mL",
+      "system" : "http://unitsofmeasure.org",
+      "code" : "mL"
+    }
+  }
+}

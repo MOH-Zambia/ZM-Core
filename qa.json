@@ -1,0 +1,20 @@
+{
+  "url" : "http://hapi.moh.gov.zm/fhir/ImplementationGuide/zm-core",
+  "name" : "ZMCore",
+  "title" : "HL7 FHIR Implementation Guide: ZM-Core Release 1 - Zambia",
+  "description" : "ZM-Core is an Implementation Guide for HL7 FHIR R5 resources commonly used in Zambia's health systems, providing standardized profiles and guidance for interoperability.",
+  "ig-date" : "2025-11-21",
+  "status" : "active",
+  "package-id" : "zm-core",
+  "ig-ver" : "0.2.0",
+  "date" : "Wed, 21 Oct, 2026 04:21:07 +0000",
+  "dateISO8601" : "2026-10-21T04:21:07+00:00",
+  "errs" : 8,
+  "warnings" : 132,
+  "hints" : 261,
+  "suppressed-hints" : 0,
+  "suppressed-warnings" : 0,
+  "version" : "5.0.0",
+  "tool" : "5.0.0 (3)",
+  "maxMemory" : 1762470440
+}

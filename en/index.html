@@ -1,0 +1,383 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title>Home - HL7 FHIR Implementation Guide: ZM-Core Release 1 - Zambia v0.2.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link rel="stylesheet" href="fhir.css"/>
+
+      <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap-fhir.css"/>
+
+      <!-- Project extras -->
+    <link rel="stylesheet" href="assets/css/pygments-manni.css"/>
+    <link rel="stylesheet" href="assets/css/jquery-ui.css"/>
+  	<link rel="stylesheet" href="assets/css/prism.css"/>
+    <link rel="stylesheet" href="assets/css/project.css"/>
+  	<link rel="stylesheet" href="assets/css/cqf.css"/>
+      <!-- Placeholder for child template CSS declarations -->
+
+    <script src="fhir-table-scripts.js" type="text/javascript"> </script>
+    <script src="assets/js/direction-management.js" type="text/javascript"> </script>
+
+      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- [if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif] -->
+
+      <!-- Favicons -->
+    <link sizes="144x144" rel="fhir-logo" href="assets/ico/icon-fhir-144.png"/>
+    <link sizes="114x114" rel="fhir-logo" href="assets/ico/icon-fhir-114.png"/>
+    <link sizes="72x72" rel="fhir-logo" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script src="assets/js/mermaid.js" type="text/javascript"></script>
+    <script src="assets/js/mermaid-init.js" type="text/javascript"></script>
+    <style type="text/css">h2{--heading-prefix:"1"}
+    h3,h4,h5,h6{--heading-prefix:"1"}</style>
+    <div id="segment-header" class="segment">    <!-- segment-header -->
+      <div class="container">    <!-- container -->
+
+          <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">HL7 FHIR Implementation Guide: ZM-Core Release 1 - Zambia</span>
+            <br/>
+            <span style="display:inline-block;"><a name="l89">​</a>0.2.0 - 
+
+
+
+  <img src="assets/images/zmb.svg" alt="Zambia flag" title="Zambia" height="16"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div>   <!-- /container -->
+    </div>    <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">    <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">    <!-- container -->
+          <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+            <!-- status-bar -->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a href="http://hl7.org/fhir/R5/index.html" class="navbar-brand hidden">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul class="nav navbar-nav">
+	<li>
+		<a href="index.html">IG Home</a>
+	</li>
+	<li>
+		<a href="toc.html">Table of Contents</a>
+	</li>
+	<li>
+		<a href="communication-hub.html">Communication Hub</a>
+	</li>
+	<li>
+		<a href="smartcare-mapping.html">SmartCare Mapping</a>
+	</li>
+  <!-- <li class="dropdown">
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Background<b class="caret"></b>
+		</a>
+
+	</li>
+	<li class="dropdown">
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Functional Description<b class="caret"></b>
+		</a>
+
+	</li> -->
+	<li class="dropdown">
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Specifications<b class="caret"></b>
+		</a>
+		<ul class="dropdown-menu">
+			<li>
+				<a href="artifacts.html">Artifact Index</a>
+			</li>
+			<li>
+				<a href="clinical-resources.html">Clinical Resources</a>
+			</li>
+		</ul>
+	</li>
+</ul>
+
+            </div>    <!-- /.nav-collapse -->
+
+              
+
+          </div>    <!-- /.container -->
+        </nav>    <!-- /.navbar -->
+        <!-- /HEADER CONTENT -->
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-navbar -->
+      <!-- status-bar -->
+
+    <div id="segment-breadcrumb" class="segment">    <!-- segment-breadcrumb -->
+      <div class="container">    <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href="toc.html"><b>Table of Contents</b></a></li><li><b>Home</b></li>
+
+        </ul>
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">    <!-- segment-content -->
+      <div class="container">    <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+    <!-- ReleaseHeader --><p id="publish-box">HL7 FHIR Implementation Guide: ZM-Core Release 1 - Zambia - Local Development build (v0.2.0) built by the FHIR (HL7&reg; FHIR&reg; Standard) Build Tools. See the <a href="http://hapi.moh.gov.zm/fhir/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
+  <h2>Home</h2>
+  
+  
+  
+
+  <table class="colsi">
+
+    <tr>
+      <td colspan="4"><i>Official URL</i>: <span class="copy-text">http://hapi.moh.gov.zm/fhir/ImplementationGuide/zm-core<button data-clipboard-text="http://hapi.moh.gov.zm/fhir/ImplementationGuide/zm-core" title="Click to copy URL" class="btn-copy"></button></span>
+      </td>
+      <td><i>Version</i>:
+      <span class="copy-text">0.2.0<button data-clipboard-text="http://hapi.moh.gov.zm/fhir/ImplementationGuide/zm-core|0.2.0" title="Click to copy versioned URL" class="btn-copy"></button></span>
+      </td>
+    </tr>
+
+    <tr>
+
+
+
+
+
+
+
+      <td colspan="4">
+        
+          Active
+          
+
+            as of 
+2025-11-21
+
+          
+        
+      </td>
+
+
+
+      <td><i>Computable Name</i>: <span style="font-family: monospace;">ZMCore</span></td>
+    </tr>
+
+
+
+
+  </table>
+  
+  
+  
+  <div lang="en">
+  <style type="text/css">@import url("zm-home.css");</style>
+
+  <div class="zm-home">
+    <div aria-labelledby="zm-home-title" class="zm-home__hero">
+      <div class="zm-home__hero-grid">
+        <div>
+          <div class="zm-home__eyebrow">
+            <img src="zmb.svg" alt="Zambia flag"/>
+            <span>Ministry of Health · Zambia</span>
+          </div>
+          <div aria-level="1" role="heading" id="zm-home-title" class="zm-home__title">One national foundation for health data exchange.</div>
+          <p class="zm-home__lede">ZM Core defines the reusable FHIR profiles, terminology and implementation guidance that help Zambia's digital health systems exchange consistent, computable health information.</p>
+          <div class="zm-home__actions">
+            <a href="artifacts.html" class="zm-home__button zm-home__button--primary">Explore specifications</a>
+            <a href="toc.html" class="zm-home__button">Read the guide</a>
+          </div>
+        </div>
+        <div class="zm-home__release" aria-label="Release information">
+          <div class="zm-home__release-label">Current release</div>
+          <div class="zm-home__release-row"><span>Status</span><strong class="zm-home__status">Active</strong></div>
+          <div class="zm-home__release-row"><span>Version</span><strong>0.1.0 · STU1</strong></div>
+          <div class="zm-home__release-row"><span>FHIR version</span><strong>R5</strong></div>
+          <div class="zm-home__release-row"><span>Publisher</span><strong>Ministry of Health</strong></div>
+        </div>
+      </div>
+    </div>
+
+    <div role="note" class="zm-home__notice">
+      <span aria-hidden="true" class="zm-home__notice-mark">i</span>
+      <div><strong>Standards under active development.</strong> This release establishes Zambia's shared interoperability baseline. Implementers should review the release status and validation guidance before production use.</div>
+    </div>
+
+    <div aria-labelledby="zm-provides-title" class="zm-home__section">
+      <div class="zm-home__section-head">
+        <div>
+          <span class="zm-home__kicker">National interoperability</span>
+          <a name="1"></a><h3 id="zm-provides-title" class="zm-home__section-title">A common language for connected care</h3>
+        </div>
+        <p class="zm-home__section-copy">ZM Core turns national requirements into implementable FHIR artefacts. It creates consistent expectations for the people, organisations, encounters, clinical information and workflows shared across Zambia's health ecosystem.</p>
+      </div>
+      <div class="zm-home__grid">
+        <div class="zm-home__card"><span class="zm-home__card-number">01</span><a name="2"></a><h3 class="zm-home__card-title">Core profiles</h3><p class="zm-home__card-copy">Minimum expectations for Patient, Practitioner, Organization, Encounter, clinical and medication resources.</p></div>
+        <div class="zm-home__card"><span class="zm-home__card-number">02</span><a name="3"></a><h3 class="zm-home__card-title">Shared terminology</h3><p class="zm-home__card-copy">National code systems and value sets that give exchanged information a consistent, computable meaning.</p></div>
+        <div class="zm-home__card"><span class="zm-home__card-number">03</span><a name="4"></a><h3 class="zm-home__card-title">Workflow guidance</h3><p class="zm-home__card-copy">Practical mappings for SmartCare, the Master Facility List and governed health communication workflows.</p></div>
+        <div class="zm-home__card"><span class="zm-home__card-number">04</span><a name="5"></a><h3 class="zm-home__card-title">Reference examples</h3><p class="zm-home__card-copy">Conformant examples that show how ZM Core artefacts are used in realistic data-exchange scenarios.</p></div>
+      </div>
+    </div>
+
+    <div aria-labelledby="zm-pathway-title" class="zm-home__section zm-home__pathway">
+      <span class="zm-home__kicker">Implementation pathway</span>
+      <a name="6"></a><h3 id="zm-pathway-title" class="zm-home__section-title">From requirement to conformant exchange</h3>
+      <div class="zm-home__steps">
+        <div class="zm-home__step"><span class="zm-home__step-label">Step 01 · Discover</span><a name="6.1"></a><h4>Find the right artefact</h4><p>Start with the artifact index to locate the relevant profile, extension, value set or example.</p><a href="artifacts.html">Browse all artefacts</a></div>
+        <div class="zm-home__step"><span class="zm-home__step-label">Step 02 · Implement</span><a name="6.2"></a><h4>Apply national constraints</h4><p>Use the profile definitions and narrative guidance to map local data and build conformant FHIR resources.</p><a href="toc.html">Review implementation guidance</a></div>
+        <div class="zm-home__step"><span class="zm-home__step-label">Step 03 · Validate</span><a name="6.3"></a><h4>Test before exchange</h4><p>Validate resources against the ZM Core package and use the published examples as implementation references.</p><a href="artifacts.html">Review published examples</a></div>
+      </div>
+    </div>
+
+    <div aria-labelledby="zm-explore-title" class="zm-home__section">
+      <div class="zm-home__section-head">
+        <div><span class="zm-home__kicker">Explore ZM Core</span><a name="7"></a><h3 id="zm-explore-title" class="zm-home__section-title">Go directly to the guidance you need</h3></div>
+        <p class="zm-home__section-copy">Move from the national baseline into the implementation details for Zambia's priority systems and exchange patterns.</p>
+      </div>
+      <div class="zm-home__links">
+        <a href="artifacts.html" class="zm-home__link-card"><span aria-hidden="true" class="zm-home__link-icon">A</span><span><strong>Artifact index</strong><span class="zm-home__link-summary">Profiles, extensions, code systems, value sets and examples.</span></span></a>
+        <a href="communication-hub.html" class="zm-home__link-card"><span aria-hidden="true" class="zm-home__link-icon">C</span><span><strong>Communication Hub</strong><span class="zm-home__link-summary">Governed communication lanes, channels, consent and audit patterns.</span></span></a>
+        <a href="smartcare-mapping.html" class="zm-home__link-card"><span aria-hidden="true" class="zm-home__link-icon">S</span><span><strong>SmartCare mapping</strong><span class="zm-home__link-summary">FHIR mappings and workflow guidance for SmartCare interoperability.</span></span></a>
+      </div>
+    </div>
+
+    <div aria-labelledby="dependencies" class="zm-home__section"><span class="zm-home__kicker">Technical baseline</span><a name="8"></a><h3 id="dependencies" class="zm-home__section-title">Dependencies</h3><p class="zm-home__section-copy">The guide is built on HL7 FHIR R5 and the following implementation packages.</p><div><table border="0" fhir="generated-heirarchy" cellpadding="0" cellspacing="0" style="border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;" id="dep" data-fhir="generated-heirarchy"><tr fhir="generated-heirarchy" style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top" data-fhir="generated-heirarchy"><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><span title="Implementation Guide Reference">IG</span></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><span title="The NPM Package Id">Package</span></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><span title="The version of FHIR that the package is based on">FHIR</span></th></tr><tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="a" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/home/runner/work/ZM-Core/ZM-Core/temp/pagesdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAALUlEQVR4Xu3IoREAIAwEwfT6/ddA0GBAxO3NrLlKUj9263wAAAAvrgEAADClAVWFQIBRHMicAAAAAElFTkSuQmCC)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: white; background-color: inherit" title="NPM Package" class="hierarchy"/> <span title="Canonical: http://hapi.moh.gov.zm/fhir">HL7 FHIR Implementation Guide: ZM-Core Release 1 - Zambia</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://simplifier.net/packages/zm-core/0.2.0">zm-core#0.2.0</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R5">R5</a></td></tr>
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="aa" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/home/runner/work/ZM-Core/ZM-Core/temp/pagesdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAALUlEQVR4Xu3IoREAIAwEwfT6/ddA0GBAxO3NrLlKUj9263wAAAAvrgEAADClAVWFQIBRHMicAAAAAElFTkSuQmCC)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzI3XJ6V3QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+2RsQ0AIAzDav7/2VzQwoCY4iWbZSmo1QGoUgNMghvWaIejPQW/CrrNCylIwcOCDYfLNRcNer4SAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: #F7F7F7; background-color: inherit" title="NPM Package" class="hierarchy"/> <a href="http://hl7.org/fhir/tools/1.1.2" title="Canonical: http://hl7.org/fhir/tools">FHIR Tooling Extensions IG</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://simplifier.net/packages/hl7.fhir.uv.tools.r5/1.1.2">hl7.fhir.uv.tools.r5#1.1.2</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R5">R5</a></td></tr>
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="ab" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/home/runner/work/ZM-Core/ZM-Core/temp/pagesdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAALUlEQVR4Xu3IoREAIAwEwfT6/ddA0GBAxO3NrLlKUj9263wAAAAvrgEAADClAVWFQIBRHMicAAAAAElFTkSuQmCC)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzI3XJ6V3QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+2RsQ0AIAzDav7/2VzQwoCY4iWbZSmo1QGoUgNMghvWaIejPQW/CrrNCylIwcOCDYfLNRcNer4SAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: white; background-color: inherit" title="NPM Package" class="hierarchy"/> <a href="http://terminology.hl7.org/7.1.0" title="Canonical: http://terminology.hl7.org">HL7 Terminology (THO)</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://simplifier.net/packages/hl7.terminology.r5/7.1.0">hl7.terminology.r5#7.1.0</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R5">R5</a></td></tr>
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="ac" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/home/runner/work/ZM-Core/ZM-Core/temp/pagesdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAAJUlEQVR4Xu3IIQEAAAgDsHd9/w4EQIOamFnaBgAA4MMKAACAKwNp30CqZFfFmwAAAABJRU5ErkJggg==)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzME+lXFigAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+3OsRUAIAjEUOL+O8cJABttJM11/x1qZAGqRBEVcNIqdWj1efDqQbb3HwwwwEfABmQUHSPM9dtDAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: #F7F7F7; background-color: inherit" title="NPM Package" class="hierarchy"/> <a href="http://hl7.org/fhir/extensions/5.2.0" title="Canonical: http://hl7.org/fhir/extensions">FHIR Extensions Pack</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://simplifier.net/packages/hl7.fhir.uv.extensions.r5/5.2.0">hl7.fhir.uv.extensions.r5#5.2.0</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R5">R5</a></td></tr>
+</table></div>  <!-- $$3$$ --></div>
+
+    <div aria-labelledby="globals" class="zm-home__section"><span class="zm-home__kicker">Conformance</span><a name="9"></a><h3 id="globals" class="zm-home__section-title">Global profiles</h3><p><i>There are no Global profiles defined</i></p>
+  <!-- $$4$$ --></div>
+
+    <div aria-labelledby="zm-owner-title" class="zm-home__footer-card">
+      <div><a name="10"></a><h3 id="zm-owner-title">Built for Zambia's connected health ecosystem</h3><p>ZM Core is published by the Zambia Ministry of Health as a common interoperability foundation for national platforms, facility systems and digital health partners.</p></div>
+      <div class="zm-home__contact"><p><strong>Contribute or report an issue</strong><br/><a href="https://github.com/MOH-Zambia/ZM-Core/issues">Open the ZM Core issue tracker</a><br/><a href="mailto:zm-core@moh.gov.zm">zm-core@moh.gov.zm</a></p></div>
+    </div>
+
+    <div aria-labelledby="ip" class="zm-home__section"><a name="11"></a><h3 id="ip" class="zm-home__section-title">Intellectual property considerations</h3><p>While this implementation guide and the underlying FHIR specification use open licences, examples may use terminologies such as LOINC, SNOMED CT and others with additional licensing requirements. Implementers are responsible for understanding the licences and constraints that apply to their systems.</p><p>This publication includes IP covered under the following statements.</p>
+<ul>
+<li>This material contains content from <a href="http://loinc.org">LOINC</a>. LOINC is copyright &copy; 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the <a href="http://loinc.org/license">license</a>. LOINC&reg; is a registered United States trademark of Regenstrief Institute, Inc.<div onClick="if (document.getElementById('ipp2_1').innerHTML != '') {document.getElementById('ipp_1').innerHTML = document.getElementById('ipp2_1').innerHTML; document.getElementById('ipp2_1').innerHTML = ''}" id="ipp_1" data-fhir="generated"> <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show Usage</span></div><div style="display: none" id="ipp2_1">
+<ul>
+<li>LOINC: <a href="DiagnosticReport-ExampleZMCoreDiagnosticReport.html">DiagnosticReport/ExampleZMCoreDiagnosticReport</a>, <a href="Observation-ExampleZMCoreObservationBP.html">Observation/ExampleZMCoreObservationBP</a>, <a href="Observation-ExampleZMCoreObservationHemoglobin.html">Observation/ExampleZMCoreObservationHemoglobin</a> and <a href="ServiceRequest-ExampleZMCoreLaboratoryServiceRequest.html">ServiceRequest/ExampleZMCoreLaboratoryServiceRequest</a></li>
+</ul>
+</div></li>
+<li>This material contains content that is copyright of SNOMED International. Implementers of these specifications must have the appropriate SNOMED CT Affiliate license - for more information contact <a href="https://www.snomed.org/get-snomed">https://www.snomed.org/get-snomed</a> or <a href="mailto:info@snomed.org">info@snomed.org</a>.<div onClick="if (document.getElementById('ipp2_2').innerHTML != '') {document.getElementById('ipp_2').innerHTML = document.getElementById('ipp2_2').innerHTML; document.getElementById('ipp2_2').innerHTML = ''}" id="ipp_2" data-fhir="generated"> <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show Usage</span></div><div style="display: none" id="ipp2_2">
+<ul>
+<li>SNOMED Clinical Terms&amp;reg; (SNOMED CT&amp;reg;): <a href="Condition-ExampleZMCoreCondition.html">Condition/ExampleZMCoreCondition</a>, <a href="ServiceRequest-ExampleZMCoreLaboratoryServiceRequest.html">ServiceRequest/ExampleZMCoreLaboratoryServiceRequest</a>, <a href="Specimen-ExampleZMCoreSpecimenBlood.html">Specimen/ExampleZMCoreSpecimenBlood</a> and <a href="ValueSet-zm-core-condition-vs.html">ZMCoreConditionVS</a></li>
+</ul>
+</div></li>
+<li>This material derives from the HL7 Terminology (THO). THO is copyright &copy;1989+ Health Level Seven International and is made available under the CC0 designation. For more licensing information see: <a href="https://terminology.hl7.org/license.html">https://terminology.hl7.org/license.html</a><div onClick="if (document.getElementById('ipp2_3').innerHTML != '') {document.getElementById('ipp_3').innerHTML = document.getElementById('ipp2_3').innerHTML; document.getElementById('ipp2_3').innerHTML = ''}" id="ipp_3" data-fhir="generated"> <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show Usage</span></div><div style="display: none" id="ipp2_3">
+<ul>
+<li><a href="http://terminology.hl7.org/7.1.0/CodeSystem-allergyintolerance-clinical.html">AllergyIntolerance Clinical Status Codes</a>: <a href="AllergyIntolerance-ExampleZMCoreAllergyIntolerance.html">AllergyIntolerance/ExampleZMCoreAllergyIntolerance</a></li>
+<li><a href="http://terminology.hl7.org/7.1.0/CodeSystem-allergyintolerance-verification.html">AllergyIntolerance Verification Status</a>: <a href="AllergyIntolerance-ExampleZMCoreAllergyIntolerance.html">AllergyIntolerance/ExampleZMCoreAllergyIntolerance</a></li>
+<li><a href="http://terminology.hl7.org/7.1.0/CodeSystem-audit-event-outcome.html">AuditEventOutcome</a>: <a href="AuditEvent-ExampleZMCoreCommunicationAuditEvent.html">AuditEvent/ExampleZMCoreCommunicationAuditEvent</a></li>
+<li><a href="http://terminology.hl7.org/7.1.0/CodeSystem-condition-category.html">Condition Category Codes</a>: <a href="Condition-ExampleZMCoreCondition.html">Condition/ExampleZMCoreCondition</a></li>
+<li><a href="http://terminology.hl7.org/7.1.0/CodeSystem-condition-clinical.html">Condition Clinical Status Codes</a>: <a href="Condition-ExampleZMCoreCondition.html">Condition/ExampleZMCoreCondition</a></li>
+<li><a href="http://terminology.hl7.org/7.1.0/CodeSystem-condition-ver-status.html">ConditionVerificationStatus</a>: <a href="Condition-ExampleZMCoreCondition.html">Condition/ExampleZMCoreCondition</a></li>
+<li><a href="http://terminology.hl7.org/7.1.0/CodeSystem-observation-category.html">Observation Category Codes</a>: <a href="Observation-ExampleZMCoreObservationBP.html">Observation/ExampleZMCoreObservationBP</a>, <a href="Observation-ExampleZMCoreObservationHemoglobin.html">Observation/ExampleZMCoreObservationHemoglobin</a> and <a href="ValueSet-zm-core-observation-category-vs.html">ZMCoreObservationCategoryVS</a></li>
+<li><a href="http://terminology.hl7.org/7.1.0/CodeSystem-organization-type.html">Organization type</a>: <a href="ValueSet-zm-core-organization-type-vs.html">ZMCoreOrganizationTypeVS</a></li>
+<li><a href="http://terminology.hl7.org/7.1.0/CodeSystem-subscription-channel-type.html">SubscriptionChannel Type Codes</a>: <a href="Subscription-ExampleZMCoreSubscription.html">DHIS2 Reporting Reminder Workflow</a></li>
+<li><a href="http://terminology.hl7.org/7.1.0/CodeSystem-v2-0074.html">diagnosticServiceSectionId</a>: <a href="DiagnosticReport-ExampleZMCoreDiagnosticReport.html">DiagnosticReport/ExampleZMCoreDiagnosticReport</a></li>
+<li><a href="http://terminology.hl7.org/7.1.0/CodeSystem-v2-0360.html">degreeLicenseCertificate</a>: <a href="Practitioner-ExampleZMCorePractitioner.html">Practitioner/ExampleZMCorePractitioner</a></li>
+<li><a href="http://terminology.hl7.org/7.1.0/CodeSystem-v3-ActCode.html">ActCode</a>: <a href="Encounter-ExampleZMCoreEncounter.html">Encounter/ExampleZMCoreEncounter</a>, <a href="Encounter-zm-core-encounter-example-json.html">Encounter/zm-core-encounter-example-json</a> and <a href="ValueSet-zm-core-encounter-type-vs.html">ZMCoreEncounterTypeVS</a></li>
+<li><a href="http://terminology.hl7.org/7.1.0/CodeSystem-v3-MaritalStatus.html">MaritalStatus</a>: <a href="ValueSet-zm-core-marital-status-vs.html">ZMCoreMaritalStatusVS</a></li>
+<li><a href="http://terminology.hl7.org/7.1.0/CodeSystem-v3-RoleCode.html">RoleCode</a>: <a href="Location-ExampleZMCoreLocation.html">University Teaching Hospital</a></li>
+</ul>
+</div></li>
+<li>WHO Collaborating Centre for Drug Statistics Methodology, Oslo, Norway.  Use of all or parts of the material requires reference to the WHO Collaborating Centre for Drug Statistics Methodology. Copying and distribution for commercial purposes is not allowed. Changing or manipulating the material is not allowed.<div onClick="if (document.getElementById('ipp2_4').innerHTML != '') {document.getElementById('ipp_4').innerHTML = document.getElementById('ipp2_4').innerHTML; document.getElementById('ipp2_4').innerHTML = ''}" id="ipp_4" data-fhir="generated"> <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show Usage</span></div><div style="display: none" id="ipp2_4">
+<ul>
+<li><a href="http://tx.fhir.org/r5/ValueSet/tx-atc">ATC classification system</a>: <a href="Medication-ExampleZMCoreMedication.html">Medication/ExampleZMCoreMedication</a></li>
+</ul>
+</div></li>
+</ul>
+  <!-- $$1$$ --></div>
+
+    <div aria-labelledby="disclaimer" class="zm-home__section"><a name="12"></a><h3 id="disclaimer" class="zm-home__section-title">Disclaimer</h3><p>This specification is under active development and is provided without warranty of completeness or consistency. The official published release supersedes development builds. No liability can be inferred from the use or misuse of this specification or its consequences.</p></div>
+  </div>
+</div>
+</div>
+        </div>    <!-- /inner-wrapper -->
+      </div>    <!-- /row -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-content -->
+
+  <script src="assets/js/jquery.js" type="text/javascript"> </script>       <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script src="assets/js/jquery-ui.min.js" type="text/javascript"> </script>
+  <script src="assets/js/flags.js" type="text/javascript"> </script>
+
+  <script src="assets/js/window-hash.js" type="text/javascript"> </script>
+  <a name="bottom"> </a>
+  <div igtool="footer" id="segment-footer" class="segment">    <!-- segment-footer -->
+    <div class="container">    <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG &copy; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.moh.gov.zm/">Ministry of Health - Zambia</a>.  
+          Package zm-core#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>.
+          Generated <span title="Wed, Oct 21, 2026 04:21+0000">2026-10-21</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>    <!-- /inner-wrapper -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">    <!-- segment-post-footer -->
+    <div class="container">    <!-- container -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-post-footer -->
+
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+  ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  <script src="assets/js/bootstrap.min.js" type="text/javascript"> </script>
+  <script src="assets/js/respond.min.js" type="text/javascript"> </script>
+  <script src="assets/js/anchor.min.js" type="text/javascript"> </script>
+  <script src="assets/js/clipboard.min.js" type="text/javascript"> </script>
+  <script src="assets/js/clipboard-btn.js" type="text/javascript"> </script>
+  <script src="assets/js/anchor-hover.js" type="text/javascript"> </script>
+    <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>

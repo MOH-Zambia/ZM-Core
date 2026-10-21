@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Encounter xmlns="http://hl7.org/fhir">
+  <id value="ExampleZMCoreEncounter"/>
+  <meta>
+    <profile value="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-encounter"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Encounter ExampleZMCoreEncounter</b></p><a name="ExampleZMCoreEncounter"> </a><a name="hcExampleZMCoreEncounter"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-zm-core-encounter.html">ZM-Core Encounter Profile</a></p></div><p><b>status</b>: Completed</p><p><b>class</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode AMB}">ambulatory</span></p><p><b>type</b>: <span title="Codes:">General outpatient visit</span></p><p><b>subject</b>: <a href="Patient-ExampleZMCorePatient.html">John Mwale  Male, DoB: 1985-05-15 ( http://hapi.moh.gov.zm/fhir/sid/nrc#123456/12/1)</a></p><p><b>serviceProvider</b>: <a href="Organization-ExampleZMCoreOrganization.html">Organization Chilenje First Level Hospital</a></p><p><b>actualPeriod</b>: 2025-11-15 09:00:00+0200 --&gt; 2025-11-15 10:30:00+0200</p></div>
+  </text>
+  <status value="completed"/>
+  <class>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+      <code value="AMB"/>
+      <display value="ambulatory"/>
+    </coding>
+  </class>
+  <type>
+    <text value="General outpatient visit"/>
+  </type>
+  <subject>
+    <reference value="Patient/ExampleZMCorePatient"/>
+  </subject>
+  <serviceProvider>
+    <reference value="Organization/ExampleZMCoreOrganization"/>
+  </serviceProvider>
+  <actualPeriod>
+    <start value="2025-11-15T09:00:00+02:00"/>
+    <end value="2025-11-15T10:30:00+02:00"/>
+  </actualPeriod>
+</Encounter>
