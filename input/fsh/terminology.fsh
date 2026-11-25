@@ -75,7 +75,7 @@ Description: "Observation categories used in Zambian health systems"
 CodeSystem: ZMCoreFacilityTypeCS
 Id: facility-type
 Title: "Zambia Master Facility List Facility Type"
-Description: "Facility types represented in the Zambia Master Facility List. Police, military, private, and NGO values are retained for source compatibility but overlap with facility ownership and should not be used when a more specific service level is known."
+Description: "Facility types represented in the Zambia Master Facility List and the Zambia Health Facility Registry. Police, military, private, and NGO values are retained for source compatibility but overlap with facility ownership and should not be used when a more specific service level is known."
 * ^url = "http://hapi.moh.gov.zm/fhir/CodeSystem/facility-type"
 * ^status = #active
 * ^experimental = false
@@ -94,6 +94,28 @@ Description: "Facility types represented in the Zambia Master Facility List. Pol
 * #military-facility "Military"
 * #private-facility "Private"
 * #ngo-facility "NGO"
+// Clinic and service types recorded by the Zambia Health Facility Registry
+// (added in 0.2.1). Mostly private facilities that are neither a health post,
+// a health centre nor a hospital; before these codes they could only be
+// classed by their owner (private-facility, ngo-facility).
+* #general-clinic "General Clinic"
+* #eye-clinic "Eye Clinic"
+* #optic-clinic "Optic Clinic"
+* #dental-clinic "Dental Clinic"
+* #ent-clinic "ENT Clinic"
+* #audiometry-clinic "Audiometry Clinic"
+* #fertility-clinic "Fertility Clinic"
+* #dialysis-clinic "Dialysis Clinic"
+* #physiotherapy-clinic "Physiotherapy Clinic"
+* #rehabilitation-centre "Rehabilitation Centre"
+* #hospice "Hospice"
+* #diagnostic-centre "Diagnostic Centre"
+* #specimen-collection-centre "Specimen Collection Centre"
+* #first-aid-station "First-Aid Station"
+* #mobile-clinic "Mobile Clinic"
+* #ambulance-service "Ambulance Service"
+* #domiciliary-service "Domiciliary Service"
+* #other-facility "Other Facility"
 
 ValueSet: ZMCoreFacilityTypeVS
 Id: facility-type
