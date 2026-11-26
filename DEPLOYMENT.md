@@ -33,7 +33,6 @@ token itself and asks for the secret if `-ClientSecret` is left out:
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\scripts\deploy-ig.ps1 `
-  -RepoRoot (Get-Location).Path `
   -Build `
   -DeployStatic `
   -DeployHapi `
@@ -42,9 +41,6 @@ powershell -ExecutionPolicy Bypass -File .\scripts\deploy-ig.ps1 `
   -ClientId "zm-core-ig-publisher" `
   -StaticTargetPath "\\your-web-host\wwwroot\zm-core"
 ```
-
-`-RepoRoot` is needed on Windows PowerShell 5.1, which does not set
-`$PSScriptRoot` while it reads the parameter defaults.
 
 Only the IG's **definitional** resources are sent: CodeSystem, ValueSet,
 ConceptMap, StructureDefinition, SearchParameter, OperationDefinition,

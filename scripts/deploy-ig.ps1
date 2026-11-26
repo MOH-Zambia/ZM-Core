@@ -1,6 +1,6 @@
 [CmdletBinding()]
 param(
-    [string]$RepoRoot = (Resolve-Path (Join-Path $PSScriptRoot "..")).Path,
+    [string]$RepoRoot,
     [string]$HapiBaseUrl = "http://hapi.moh.gov.zm/fhir",
     [switch]$Build,
     [switch]$SkipPublisherUpdate,
@@ -22,6 +22,13 @@ param(
 
 Set-StrictMode -Version Latest
 $ErrorActionPreference = "Stop"
+
+# Windows PowerShell 5.1 does not set $PSScriptRoot while it evaluates the
+# param() defaults, so the repository root is worked out here instead.
+if (-not $RepoRoot) {
+    $scriptDir = if ($PSScriptRoot) { $PSScriptRoot } else { Split-Path -Parent $MyInvocation.MyCommand.Path }
+    $RepoRoot = (Resolve-Path (Join-Path $scriptDir "..")).Path
+}
 
 if (-not $Build -and -not $DeployStatic -and -not $DeployHapi) {
     # Default behavior runs full deployment flow.
