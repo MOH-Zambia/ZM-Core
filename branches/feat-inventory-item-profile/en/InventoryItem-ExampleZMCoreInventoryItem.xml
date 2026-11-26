@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<InventoryItem xmlns="http://hl7.org/fhir">
+  <id value="ExampleZMCoreInventoryItem"/>
+  <meta>
+    <profile value="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-inventory-item"/>
+  </meta>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: InventoryItem ExampleZMCoreInventoryItem</b></p><a name="ExampleZMCoreInventoryItem"> </a><a name="hcExampleZMCoreInventoryItem"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-zm-core-inventory-item.html">ZM-Core Inventory Item Profile</a></p></div><p><b>identifier</b>: ZAMMSA SKU/SU0123 (use: official, ), GTIN/06001234567897, <a href="http://terminology.hl7.org/7.1.0/NamingSystem-uri.html" title="As defined by RFC 3986 (http://www.ietf.org/rfc/rfc3986.txt)(with many schemes defined in many RFCs). For OIDs and UUIDs, use the URN form (urn:oid:(note: lowercase) and urn:uuid:). See http://www.ietf.org/rfc/rfc3001.txt and http://www.ietf.org/rfc/rfc4122.txt 
+
+This oid is used as an identifier II.root to indicate the the extension is an absolute URI (technically, an IRI). Typically, this is used for OIDs and GUIDs. Note that when this OID is used with OIDs and GUIDs, the II.extension should start with urn:oid or urn:uuid: 
+
+Note that this OID is created to aid with interconversion between CDA and FHIR - FHIR uses urn:ietf:rfc:3986 as equivalent to this OID. URIs as identifiers appear more commonly in FHIR.
+
+This OID may also be used in CD.codeSystem.">Uniform Resource Identifier (URI)</a>/urn:uuid:5b0f6c1e-2d4a-4c6e-9f1a-3b7d8e2c4a10</p><p><b>status</b>: Active</p><p><b>category</b>: <span title="Codes:">Surgicals</span>, <span title="Codes:">Gloves</span></p><p><b>code</b>: <span title="Codes:">Gloves, examination, latex, powder-free, medium</span></p><h3>Names</h3><table class="grid"><tr><td style="display: none">-</td><td><b>NameType</b></td><td><b>Language</b></td><td><b>Name</b></td></tr><tr><td style="display: none">*</td><td><a href="http://hl7.org/fhir/R5/codesystem-inventoryitem-nametype.html#inventoryitem-nametype-preferred">InventoryItem Name Type: preferred</a> (Preferred)</td><td>English</td><td>Gloves, examination, latex, powder-free, medium</td></tr></table><h3>ResponsibleOrganizations</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Role</b></td><td><b>Organization</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:">Manufacturer</span></td><td>Example Gloves Ltd</td></tr></table><p><b>baseUnit</b>: <span title="Codes:">Box</span></p><h3>Characteristics</h3><table class="grid"><tr><td style="display: none">-</td><td><b>CharacteristicType</b></td><td><b>Value[x]</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:">Pack size</span></td><td>Box of 100</td></tr></table></div>
+  </text>
+  <identifier>
+    <use value="official"/>
+    <type>
+      <text value="ZAMMSA SKU"/>
+    </type>
+    <system value="http://hapi.moh.gov.zm/fhir/CodeSystem/medication-zammsa-sku"/>
+    <value value="SU0123"/>
+  </identifier>
+  <identifier>
+    <type>
+      <text value="GTIN"/>
+    </type>
+    <system value="https://www.gs1.org/gtin"/>
+    <value value="06001234567897"/>
+  </identifier>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:uuid:5b0f6c1e-2d4a-4c6e-9f1a-3b7d8e2c4a10"/>
+  </identifier>
+  <status value="active"/>
+  <category>
+    <text value="Surgicals"/>
+  </category>
+  <category>
+    <text value="Gloves"/>
+  </category>
+  <code>
+    <text value="Gloves, examination, latex, powder-free, medium"/>
+  </code>
+  <name>
+    <nameType>
+      <system value="http://hl7.org/fhir/inventoryitem-nametype"/>
+      <code value="preferred"/>
+      <display value="Preferred"/>
+    </nameType>
+    <language value="en"/>
+    <name value="Gloves, examination, latex, powder-free, medium"/>
+  </name>
+  <responsibleOrganization>
+    <role>
+      <text value="Manufacturer"/>
+    </role>
+    <organization>
+      <display value="Example Gloves Ltd"/>
+    </organization>
+  </responsibleOrganization>
+  <baseUnit>
+    <text value="Box"/>
+  </baseUnit>
+  <characteristic>
+    <characteristicType>
+      <text value="Pack size"/>
+    </characteristicType>
+    <valueString value="Box of 100"/>
+  </characteristic>
+</InventoryItem>

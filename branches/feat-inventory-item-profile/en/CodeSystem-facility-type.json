@@ -1,0 +1,171 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "facility-type",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem facility-type</b></p><a name=\"facility-type\"> </a><a name=\"hcfacility-type\"> </a><p>This case-sensitive code system <code>http://hapi.moh.gov.zm/fhir/CodeSystem/facility-type</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">health-post<a name=\"facility-type-health-post\"> </a></td><td>Health Post</td></tr><tr><td style=\"white-space:nowrap\">border-health-post<a name=\"facility-type-border-health-post\"> </a></td><td>Border Health Post</td></tr><tr><td style=\"white-space:nowrap\">rural-health-centre<a name=\"facility-type-rural-health-centre\"> </a></td><td>Rural Health Centre</td></tr><tr><td style=\"white-space:nowrap\">urban-health-centre<a name=\"facility-type-urban-health-centre\"> </a></td><td>Urban Health Centre</td></tr><tr><td style=\"white-space:nowrap\">zonal-health-centre<a name=\"facility-type-zonal-health-centre\"> </a></td><td>Zonal Health Centre</td></tr><tr><td style=\"white-space:nowrap\">hospital-affiliated-health-centre<a name=\"facility-type-hospital-affiliated-health-centre\"> </a></td><td>Hospital Affiliated Health Centre</td></tr><tr><td style=\"white-space:nowrap\">hospital-level-1<a name=\"facility-type-hospital-level-1\"> </a></td><td>Hospital - Level 1</td></tr><tr><td style=\"white-space:nowrap\">hospital-level-2<a name=\"facility-type-hospital-level-2\"> </a></td><td>Hospital - Level 2</td></tr><tr><td style=\"white-space:nowrap\">hospital-level-3<a name=\"facility-type-hospital-level-3\"> </a></td><td>Hospital - Level 3</td></tr><tr><td style=\"white-space:nowrap\">police-facility<a name=\"facility-type-police-facility\"> </a></td><td>Police</td></tr><tr><td style=\"white-space:nowrap\">military-facility<a name=\"facility-type-military-facility\"> </a></td><td>Military</td></tr><tr><td style=\"white-space:nowrap\">private-facility<a name=\"facility-type-private-facility\"> </a></td><td>Private</td></tr><tr><td style=\"white-space:nowrap\">ngo-facility<a name=\"facility-type-ngo-facility\"> </a></td><td>NGO</td></tr><tr><td style=\"white-space:nowrap\">general-clinic<a name=\"facility-type-general-clinic\"> </a></td><td>General Clinic</td></tr><tr><td style=\"white-space:nowrap\">eye-clinic<a name=\"facility-type-eye-clinic\"> </a></td><td>Eye Clinic</td></tr><tr><td style=\"white-space:nowrap\">optic-clinic<a name=\"facility-type-optic-clinic\"> </a></td><td>Optic Clinic</td></tr><tr><td style=\"white-space:nowrap\">dental-clinic<a name=\"facility-type-dental-clinic\"> </a></td><td>Dental Clinic</td></tr><tr><td style=\"white-space:nowrap\">ent-clinic<a name=\"facility-type-ent-clinic\"> </a></td><td>ENT Clinic</td></tr><tr><td style=\"white-space:nowrap\">audiometry-clinic<a name=\"facility-type-audiometry-clinic\"> </a></td><td>Audiometry Clinic</td></tr><tr><td style=\"white-space:nowrap\">fertility-clinic<a name=\"facility-type-fertility-clinic\"> </a></td><td>Fertility Clinic</td></tr><tr><td style=\"white-space:nowrap\">dialysis-clinic<a name=\"facility-type-dialysis-clinic\"> </a></td><td>Dialysis Clinic</td></tr><tr><td style=\"white-space:nowrap\">physiotherapy-clinic<a name=\"facility-type-physiotherapy-clinic\"> </a></td><td>Physiotherapy Clinic</td></tr><tr><td style=\"white-space:nowrap\">rehabilitation-centre<a name=\"facility-type-rehabilitation-centre\"> </a></td><td>Rehabilitation Centre</td></tr><tr><td style=\"white-space:nowrap\">hospice<a name=\"facility-type-hospice\"> </a></td><td>Hospice</td></tr><tr><td style=\"white-space:nowrap\">diagnostic-centre<a name=\"facility-type-diagnostic-centre\"> </a></td><td>Diagnostic Centre</td></tr><tr><td style=\"white-space:nowrap\">specimen-collection-centre<a name=\"facility-type-specimen-collection-centre\"> </a></td><td>Specimen Collection Centre</td></tr><tr><td style=\"white-space:nowrap\">first-aid-station<a name=\"facility-type-first-aid-station\"> </a></td><td>First-Aid Station</td></tr><tr><td style=\"white-space:nowrap\">mobile-clinic<a name=\"facility-type-mobile-clinic\"> </a></td><td>Mobile Clinic</td></tr><tr><td style=\"white-space:nowrap\">ambulance-service<a name=\"facility-type-ambulance-service\"> </a></td><td>Ambulance Service</td></tr><tr><td style=\"white-space:nowrap\">domiciliary-service<a name=\"facility-type-domiciliary-service\"> </a></td><td>Domiciliary Service</td></tr><tr><td style=\"white-space:nowrap\">other-facility<a name=\"facility-type-other-facility\"> </a></td><td>Other Facility</td></tr></table></div>"
+  },
+  "url" : "http://hapi.moh.gov.zm/fhir/CodeSystem/facility-type",
+  "version" : "0.3.0",
+  "name" : "ZMCoreFacilityTypeCS",
+  "title" : "Zambia Master Facility List Facility Type",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-11-26T07:10:20+00:00",
+  "publisher" : "Ministry of Health - Zambia",
+  "contact" : [{
+    "name" : "Ministry of Health - Zambia",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.moh.gov.zm/"
+    },
+    {
+      "system" : "email",
+      "value" : "digital.health@moh.gov.zm"
+    }]
+  },
+  {
+    "name" : "ZM-Core Team",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "zm-core@moh.gov.zm",
+      "use" : "work"
+    }]
+  }],
+  "description" : "Facility types represented in the Zambia Master Facility List and the Zambia Health Facility Registry. Police, military, private, and NGO values are retained for source compatibility but overlap with facility ownership and should not be used when a more specific service level is known.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "ZM",
+      "display" : "Zambia"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 31,
+  "concept" : [{
+    "code" : "health-post",
+    "display" : "Health Post"
+  },
+  {
+    "code" : "border-health-post",
+    "display" : "Border Health Post"
+  },
+  {
+    "code" : "rural-health-centre",
+    "display" : "Rural Health Centre"
+  },
+  {
+    "code" : "urban-health-centre",
+    "display" : "Urban Health Centre"
+  },
+  {
+    "code" : "zonal-health-centre",
+    "display" : "Zonal Health Centre"
+  },
+  {
+    "code" : "hospital-affiliated-health-centre",
+    "display" : "Hospital Affiliated Health Centre"
+  },
+  {
+    "code" : "hospital-level-1",
+    "display" : "Hospital - Level 1"
+  },
+  {
+    "code" : "hospital-level-2",
+    "display" : "Hospital - Level 2"
+  },
+  {
+    "code" : "hospital-level-3",
+    "display" : "Hospital - Level 3"
+  },
+  {
+    "code" : "police-facility",
+    "display" : "Police"
+  },
+  {
+    "code" : "military-facility",
+    "display" : "Military"
+  },
+  {
+    "code" : "private-facility",
+    "display" : "Private"
+  },
+  {
+    "code" : "ngo-facility",
+    "display" : "NGO"
+  },
+  {
+    "code" : "general-clinic",
+    "display" : "General Clinic"
+  },
+  {
+    "code" : "eye-clinic",
+    "display" : "Eye Clinic"
+  },
+  {
+    "code" : "optic-clinic",
+    "display" : "Optic Clinic"
+  },
+  {
+    "code" : "dental-clinic",
+    "display" : "Dental Clinic"
+  },
+  {
+    "code" : "ent-clinic",
+    "display" : "ENT Clinic"
+  },
+  {
+    "code" : "audiometry-clinic",
+    "display" : "Audiometry Clinic"
+  },
+  {
+    "code" : "fertility-clinic",
+    "display" : "Fertility Clinic"
+  },
+  {
+    "code" : "dialysis-clinic",
+    "display" : "Dialysis Clinic"
+  },
+  {
+    "code" : "physiotherapy-clinic",
+    "display" : "Physiotherapy Clinic"
+  },
+  {
+    "code" : "rehabilitation-centre",
+    "display" : "Rehabilitation Centre"
+  },
+  {
+    "code" : "hospice",
+    "display" : "Hospice"
+  },
+  {
+    "code" : "diagnostic-centre",
+    "display" : "Diagnostic Centre"
+  },
+  {
+    "code" : "specimen-collection-centre",
+    "display" : "Specimen Collection Centre"
+  },
+  {
+    "code" : "first-aid-station",
+    "display" : "First-Aid Station"
+  },
+  {
+    "code" : "mobile-clinic",
+    "display" : "Mobile Clinic"
+  },
+  {
+    "code" : "ambulance-service",
+    "display" : "Ambulance Service"
+  },
+  {
+    "code" : "domiciliary-service",
+    "display" : "Domiciliary Service"
+  },
+  {
+    "code" : "other-facility",
+    "display" : "Other Facility"
+  }]
+}

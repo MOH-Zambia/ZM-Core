@@ -1,0 +1,59 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hapi.moh.gov.zm/fhir/AuditEvent/ExampleZMCoreCommunicationAuditEvent> a fhir:AuditEvent ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ExampleZMCoreCommunicationAuditEvent"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-communication-audit-event"^^xsd:anyURI ;
+       fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-communication-audit-event>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: AuditEvent ExampleZMCoreCommunicationAuditEvent</b></p><a name=\"ExampleZMCoreCommunicationAuditEvent\"> </a><a name=\"hcExampleZMCoreCommunicationAuditEvent\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-zm-core-communication-audit-event.html\">ZM-Core Communication Audit Event Profile</a></p></div><p><b>code</b>: <span title=\"Codes:\">Communication delivery</span></p><p><b>action</b>: Execute</p><p><b>occurred</b>: 2026-08-10 08:00:05+0200</p><p><b>recorded</b>: 2026-08-10 08:00:06+0200</p><h3>Outcomes</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Code</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"http://terminology.hl7.org/7.1.0/CodeSystem-audit-event-outcome.html#audit-event-outcome-0\">AuditEventOutcome: 0</a> (Success)</td></tr></table><h3>Agents</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Who</b></td><td><b>Requestor</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Organization-ExampleZMCoreOrganization.html\">Organization Chilenje First Level Hospital</a></td><td>true</td></tr></table><h3>Sources</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Observer</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Organization-ExampleZMCoreOrganization.html\">Organization Chilenje First Level Hospital</a></td></tr></table><h3>Entities</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>What</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Communication-ExampleZMCoreCommunication.html\">Communication: extension = Internal,http://hapi.moh.gov.zm/fhir/sid/message-template#DHIS2-REPORTING-REMINDER-v1,en; identifier = http://hapi.moh.gov.zm/fhir/sid/communication-id#COMM-DHIS2-2026-0001; status = completed; category = Operational; priority = routine; medium = Email; topic = ; sent = 2026-08-10 08:00:05+0200; received = 2026-08-10 08:00:07+0200</a></td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:code [
+     fhir:text [ fhir:v "Communication delivery" ]
+  ] ; # 
+  fhir:action [ fhir:v "E"] ; # 
+  fhir:occurred [
+     a fhir:dateTime ;
+     fhir:v "2026-08-10T08:00:05+02:00"^^xsd:dateTime
+  ] ; # 
+  fhir:recorded [ fhir:v "2026-08-10T08:00:06+02:00"^^xsd:dateTime] ; # 
+  fhir:outcome [
+     fhir:code [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/audit-event-outcome"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "0" ] ;
+       fhir:display [ fhir:v "Success" ]
+     ]
+  ] ; # 
+  fhir:agent ( [
+     fhir:who [
+       fhir:link <http://hapi.moh.gov.zm/fhir/Organization/ExampleZMCoreOrganization> ;
+       fhir:reference [ fhir:v "Organization/ExampleZMCoreOrganization" ]
+     ] ;
+     fhir:requestor [ fhir:v true ]
+  ] ) ; # 
+  fhir:source [
+     fhir:observer [
+       fhir:link <http://hapi.moh.gov.zm/fhir/Organization/ExampleZMCoreOrganization> ;
+       fhir:reference [ fhir:v "Organization/ExampleZMCoreOrganization" ]
+     ]
+  ] ; # 
+  fhir:entity ( [
+     fhir:what [
+       fhir:link <http://hapi.moh.gov.zm/fhir/Communication/ExampleZMCoreCommunication> ;
+       fhir:reference [ fhir:v "Communication/ExampleZMCoreCommunication" ]
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

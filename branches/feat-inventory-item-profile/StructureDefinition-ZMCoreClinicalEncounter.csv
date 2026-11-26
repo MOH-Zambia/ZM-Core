@@ -1,0 +1,31 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping"
+"ZMCoreClinicalEncounter","ZMCoreClinicalEncounter","","","",0,*,"","","","null {[]} {[]}
+","Clinical Encounter","Clinical encounter structure for Zambian health systems","","","","","","","","","",,,,,"",,,,"Base",0,*,"","","n/a"
+"ZMCoreClinicalEncounter.encounterId","ZMCoreClinicalEncounter.encounterId","","","",1,1,"","","","Identifier {[]} {[]}
+","Encounter Identifier","Encounter Identifier","","","","","","","","","",,,,,"",,,,"ZMCoreClinicalEncounter.encounterId",1,1,"",""
+"ZMCoreClinicalEncounter.patient","ZMCoreClinicalEncounter.patient","","","",1,1,"","","","Reference {[]} {[]}
+","Patient Reference","Patient Reference","","","","","","","","","",,,,,"",,,,"ZMCoreClinicalEncounter.patient",1,1,"",""
+"ZMCoreClinicalEncounter.facility","ZMCoreClinicalEncounter.facility","","","",1,1,"","","","Reference {[]} {[]}
+","Health Facility Reference","Health Facility Reference","","","","","","","","","",,,,,"",,,,"ZMCoreClinicalEncounter.facility",1,1,"",""
+"ZMCoreClinicalEncounter.provider","ZMCoreClinicalEncounter.provider","","","",0,1,"","","","Reference {[]} {[]}
+","Healthcare Provider","Healthcare Provider","","","","","","","","","",,,,,"",,,,"ZMCoreClinicalEncounter.provider",0,1,"",""
+"ZMCoreClinicalEncounter.encounterDate","ZMCoreClinicalEncounter.encounterDate","","","",1,1,"","","","dateTime {[]} {[]}
+","Date/Time of Encounter","Date/Time of Encounter","","","","","","","","","",,,,,"",,,,"ZMCoreClinicalEncounter.encounterDate",1,1,"",""
+"ZMCoreClinicalEncounter.encounterType","ZMCoreClinicalEncounter.encounterType","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Type of Encounter (consultation, inpatient, etc.)","Type of Encounter (consultation, inpatient, etc.)","","","","","","","","","",,,,,"",,,,"ZMCoreClinicalEncounter.encounterType",1,1,"",""
+"ZMCoreClinicalEncounter.chiefComplaint","ZMCoreClinicalEncounter.chiefComplaint","","","",0,1,"","","","string {[]} {[]}
+","Chief Complaint","Chief Complaint","","","","","","","","","",,,,,"",,,,"ZMCoreClinicalEncounter.chiefComplaint",0,1,"",""
+"ZMCoreClinicalEncounter.findings","ZMCoreClinicalEncounter.findings","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Clinical Findings","Clinical Findings","","","","","","","","","",,,,,"",,,,"ZMCoreClinicalEncounter.findings",0,*,"",""
+"ZMCoreClinicalEncounter.diagnoses","ZMCoreClinicalEncounter.diagnoses","","","",0,*,"","","","Reference {[]} {[]}
+","Diagnoses","Diagnoses","","","","","","","","","",,,,,"",,,,"ZMCoreClinicalEncounter.diagnoses",0,*,"",""
+"ZMCoreClinicalEncounter.treatments","ZMCoreClinicalEncounter.treatments","","","",0,*,"","","","Reference {[]} {[]}
+","Treatments/Plans","Treatments/Plans","","","","","","","","","",,,,,"",,,,"ZMCoreClinicalEncounter.treatments",0,*,"",""
+"ZMCoreClinicalEncounter.vitals","ZMCoreClinicalEncounter.vitals","","","",0,1,"","","","Reference {[]} {[]}
+","Vital Signs","Vital Signs","","","","","","","","","",,,,,"",,,,"ZMCoreClinicalEncounter.vitals",0,1,"",""
+"ZMCoreClinicalEncounter.notes","ZMCoreClinicalEncounter.notes","","","",0,1,"","","","string {[]} {[]}
+","Clinical Notes","Clinical Notes","","","","","","","","","",,,,,"",,,,"ZMCoreClinicalEncounter.notes",0,1,"",""
+"ZMCoreClinicalEncounter.referral","ZMCoreClinicalEncounter.referral","","","",0,1,"","","","Reference {[]} {[]}
+","Referral (if applicable)","Referral (if applicable)","","","","","","","","","",,,,,"",,,,"ZMCoreClinicalEncounter.referral",0,1,"",""
+"ZMCoreClinicalEncounter.status","ZMCoreClinicalEncounter.status","","","",1,1,"","","","code {[]} {[]}
+","Encounter Status (planned, in-progress, completed)","Encounter Status (planned, in-progress, completed)","","","","","","","","","",,,,,"",,,,"ZMCoreClinicalEncounter.status",1,1,"",""

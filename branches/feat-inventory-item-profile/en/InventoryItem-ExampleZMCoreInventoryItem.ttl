@@ -1,0 +1,80 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hapi.moh.gov.zm/fhir/InventoryItem/ExampleZMCoreInventoryItem> a fhir:InventoryItem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ExampleZMCoreInventoryItem"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-inventory-item"^^xsd:anyURI ;
+       fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-inventory-item>
+     ] )
+  ] ; # 
+  fhir:language [ fhir:v "en"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: InventoryItem ExampleZMCoreInventoryItem</b></p><a name=\"ExampleZMCoreInventoryItem\"> </a><a name=\"hcExampleZMCoreInventoryItem\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-zm-core-inventory-item.html\">ZM-Core Inventory Item Profile</a></p></div><p><b>identifier</b>: ZAMMSA SKU/SU0123 (use: official, ), GTIN/06001234567897, <a href=\"http://terminology.hl7.org/7.1.0/NamingSystem-uri.html\" title=\"As defined by RFC 3986 (http://www.ietf.org/rfc/rfc3986.txt)(with many schemes defined in many RFCs). For OIDs and UUIDs, use the URN form (urn:oid:(note: lowercase) and urn:uuid:). See http://www.ietf.org/rfc/rfc3001.txt and http://www.ietf.org/rfc/rfc4122.txt #xD;#xA;#xD;#xA;This oid is used as an identifier II.root to indicate the the extension is an absolute URI (technically, an IRI). Typically, this is used for OIDs and GUIDs. Note that when this OID is used with OIDs and GUIDs, the II.extension should start with urn:oid or urn:uuid: #xD;#xA;#xD;#xA;Note that this OID is created to aid with interconversion between CDA and FHIR - FHIR uses urn:ietf:rfc:3986 as equivalent to this OID. URIs as identifiers appear more commonly in FHIR.#xD;#xA;#xD;#xA;This OID may also be used in CD.codeSystem.\">Uniform Resource Identifier (URI)</a>/urn:uuid:5b0f6c1e-2d4a-4c6e-9f1a-3b7d8e2c4a10</p><p><b>status</b>: Active</p><p><b>category</b>: <span title=\"Codes:\">Surgicals</span>, <span title=\"Codes:\">Gloves</span></p><p><b>code</b>: <span title=\"Codes:\">Gloves, examination, latex, powder-free, medium</span></p><h3>Names</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>NameType</b></td><td><b>Language</b></td><td><b>Name</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-inventoryitem-nametype.html#inventoryitem-nametype-preferred\">InventoryItem Name Type: preferred</a> (Preferred)</td><td>English</td><td>Gloves, examination, latex, powder-free, medium</td></tr></table><h3>ResponsibleOrganizations</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Role</b></td><td><b>Organization</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:\">Manufacturer</span></td><td>Example Gloves Ltd</td></tr></table><p><b>baseUnit</b>: <span title=\"Codes:\">Box</span></p><h3>Characteristics</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>CharacteristicType</b></td><td><b>Value[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:\">Pack size</span></td><td>Box of 100</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:type [
+       fhir:text [ fhir:v "ZAMMSA SKU" ]
+     ] ;
+     fhir:system [ fhir:v "http://hapi.moh.gov.zm/fhir/CodeSystem/medication-zammsa-sku"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "SU0123" ]
+  ] [
+     fhir:type [
+       fhir:text [ fhir:v "GTIN" ]
+     ] ;
+     fhir:system [ fhir:v "https://www.gs1.org/gtin"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "06001234567897" ]
+  ] [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:uuid:5b0f6c1e-2d4a-4c6e-9f1a-3b7d8e2c4a10" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:category ( [
+     fhir:text [ fhir:v "Surgicals" ]
+  ] [
+     fhir:text [ fhir:v "Gloves" ]
+  ] ) ; # 
+  fhir:code ( [
+     fhir:text [ fhir:v "Gloves, examination, latex, powder-free, medium" ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:nameType [
+       fhir:system [ fhir:v "http://hl7.org/fhir/inventoryitem-nametype"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "preferred" ] ;
+       fhir:display [ fhir:v "Preferred" ]
+     ] ;
+     fhir:language [ fhir:v "en" ] ;
+     fhir:name [ fhir:v "Gloves, examination, latex, powder-free, medium" ]
+  ] ) ; # 
+  fhir:responsibleOrganization ( [
+     fhir:role [
+       fhir:text [ fhir:v "Manufacturer" ]
+     ] ;
+     fhir:organization [
+       fhir:display [ fhir:v "Example Gloves Ltd" ]
+     ]
+  ] ) ; # 
+  fhir:baseUnit [
+     fhir:text [ fhir:v "Box" ]
+  ] ; # 
+  fhir:characteristic ( [
+     fhir:characteristicType [
+       fhir:text [ fhir:v "Pack size" ]
+     ] ;
+     fhir:value [
+       a fhir:string ;
+       fhir:v "Box of 100"
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+
