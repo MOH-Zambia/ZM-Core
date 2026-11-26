@@ -28,7 +28,8 @@ The implementation guide currently includes profiles and examples for:
 - Procedure
 - AllergyIntolerance
 - Immunization
-- Medication and MedicationRequest
+- Medication, MedicationKnowledge and MedicationRequest
+- InventoryItem, for catalogue products that are not medicines
 - communication-hub workflows
 - SmartCare interoperability workflows
 
@@ -47,6 +48,20 @@ These profiles apply across Zambian health systems, including SmartCare. Each ha
 | Immunizations | [ZMCoreImmunization](input/fsh/ZMCoreImmunization.fsh) | [Vaccine administration](input/fsh/ExampleZMCoreImmunization.fsh) |
 
 See [Clinical resources guidance](input/pagecontent/clinical-resources.xml) for required fields, resource relationships, and terminology guidance. Reports in this section mean `DiagnosticReport` for laboratory, imaging, pathology, and other diagnostic services. Use `Immunization` for vaccine administration and `Procedure` for other interventions. The procedure example references the existing patient, encounter, practitioner, and condition examples.
+
+## Product Catalogue products
+
+The national Product Catalogue publishes every product it holds, under the
+same identifiers (the catalogue SKU first, then GTIN and ZAMRA number):
+
+| Product | Profiles | Example |
+| --- | --- | --- |
+| A medicine | [ZMCoreMedication](input/fsh/ZMCoreMedication.fsh) and [ZMCoreMedicationKnowledge](input/fsh/ZMCoreMedicationKnowledge.fsh) | [Betamethasone cream](input/fsh/ExampleZMCoreMedication.fsh) |
+| Anything else: surgicals, laboratory supplies, test kits, equipment | [ZMCoreInventoryItem](input/fsh/ZMCoreInventoryItem.fsh) | [Examination gloves](input/fsh/ExampleZMCoreInventoryItem.fsh) |
+
+A product is one or the other, never both. `ZMCoreInventoryItem` describes the
+catalogue entry, not stock: it forbids `instance` (lot, serial number, expiry)
+and `inventoryStatus`, which belong to a facility's stock records.
 
 ## Facility Organization and MFL interoperability
 
