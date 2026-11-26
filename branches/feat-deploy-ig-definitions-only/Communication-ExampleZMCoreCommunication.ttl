@@ -1,0 +1,91 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hapi.moh.gov.zm/fhir/Communication/ExampleZMCoreCommunication> a fhir:Communication ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ExampleZMCoreCommunication"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-communication"^^xsd:anyURI ;
+       fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-communication>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Communication ExampleZMCoreCommunication</b></p><a name=\"ExampleZMCoreCommunication\"> </a><a name=\"hcExampleZMCoreCommunication\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-zm-core-communication.html\">ZM-Core Communication Profile</a></p></div><p><b>Communication Data Classification</b>: <span title=\"Codes:{http://hapi.moh.gov.zm/fhir/CodeSystem/zm-communication-data-classification internal}\">Internal</span></p><p><b>Approved Communication Template</b>: <code>http://hapi.moh.gov.zm/fhir/sid/message-template</code>/DHIS2-REPORTING-REMINDER-v1</p><p><b>Communication Message Language</b>: en</p><p><b>identifier</b>: <code>http://hapi.moh.gov.zm/fhir/sid/communication-id</code>/COMM-DHIS2-2026-0001</p><p><b>basedOn</b>: <a href=\"CommunicationRequest-ExampleZMCoreCommunicationRequest.html\">CommunicationRequest: extension = Internal,http://hapi.moh.gov.zm/fhir/sid/message-template#DHIS2-REPORTING-REMINDER-v1,en,true,2026-08-11 17:00:00+0200,-&gt;Organization Chilenje First Level Hospital,SMS; identifier = http://hapi.moh.gov.zm/fhir/sid/communication-request-id#CR-DHIS2-2026-0001; status = active; intent = order; category = Operational; priority = routine; medium = Email; occurrence[x] = 2026-08-10 08:00:00+0200 --&gt; 2026-08-11 17:00:00+0200; authoredOn = 2026-08-08 10:00:00+0200</a></p><p><b>status</b>: Completed</p><p><b>category</b>: <span title=\"Codes:{http://hapi.moh.gov.zm/fhir/CodeSystem/zm-communication-lane operational}\">Operational</span></p><p><b>priority</b>: Routine</p><p><b>medium</b>: <span title=\"Codes:{http://hapi.moh.gov.zm/fhir/CodeSystem/zm-communication-channel email}\">Email</span></p><p><b>topic</b>: <span title=\"Codes:\">DHIS2 reporting reminder</span></p><p><b>sent</b>: 2026-08-10 08:00:05+0200</p><p><b>received</b>: 2026-08-10 08:00:07+0200</p><p><b>recipient</b>: <a href=\"PractitionerRole-ExampleZMCorePractitionerRole.html\">PractitionerRole </a></p><p><b>sender</b>: <a href=\"Organization-ExampleZMCoreOrganization.html\">Organization Chilenje First Level Hospital</a></p><h3>Payloads</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Content[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:\">A DHIS2 report is due. Sign in to DHIS2 for details.</span></td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-communication-data-classification"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://hapi.moh.gov.zm/fhir/CodeSystem/zm-communication-data-classification"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "internal" ] ;
+         fhir:display [ fhir:v "Internal" ]
+       ] )
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-communication-template"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:Identifier ;
+       fhir:system [ fhir:v "http://hapi.moh.gov.zm/fhir/sid/message-template"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "DHIS2-REPORTING-REMINDER-v1" ]
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-communication-message-language"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:code ;
+       fhir:v "en"
+     ]
+  ] ) ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "http://hapi.moh.gov.zm/fhir/sid/communication-id"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "COMM-DHIS2-2026-0001" ]
+  ] ) ; # 
+  fhir:basedOn ( [
+     fhir:link <http://hapi.moh.gov.zm/fhir/CommunicationRequest/ExampleZMCoreCommunicationRequest> ;
+     fhir:reference [ fhir:v "CommunicationRequest/ExampleZMCoreCommunicationRequest" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://hapi.moh.gov.zm/fhir/CodeSystem/zm-communication-lane"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "operational" ] ;
+       fhir:display [ fhir:v "Operational" ]
+     ] )
+  ] ) ; # 
+  fhir:priority [ fhir:v "routine"] ; # 
+  fhir:medium ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://hapi.moh.gov.zm/fhir/CodeSystem/zm-communication-channel"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "email" ] ;
+       fhir:display [ fhir:v "Email" ]
+     ] )
+  ] ) ; # 
+  fhir:topic [
+     fhir:text [ fhir:v "DHIS2 reporting reminder" ]
+  ] ; # 
+  fhir:sent [ fhir:v "2026-08-10T08:00:05+02:00"^^xsd:dateTime] ; # 
+  fhir:received [ fhir:v "2026-08-10T08:00:07+02:00"^^xsd:dateTime] ; # 
+  fhir:recipient ( [
+     fhir:link <http://hapi.moh.gov.zm/fhir/PractitionerRole/ExampleZMCorePractitionerRole> ;
+     fhir:reference [ fhir:v "PractitionerRole/ExampleZMCorePractitionerRole" ]
+  ] ) ; # 
+  fhir:sender [
+     fhir:link <http://hapi.moh.gov.zm/fhir/Organization/ExampleZMCoreOrganization> ;
+     fhir:reference [ fhir:v "Organization/ExampleZMCoreOrganization" ]
+  ] ; # 
+  fhir:payload ( [
+     fhir:content [
+       a fhir:CodeableConcept ;
+       fhir:text [ fhir:v "A DHIS2 report is due. Sign in to DHIS2 for details." ]
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

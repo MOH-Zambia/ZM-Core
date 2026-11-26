@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<DiagnosticReport xmlns="http://hl7.org/fhir">
+  <id value="ExampleZMCoreDiagnosticReport"/>
+  <meta>
+    <profile value="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-diagnostic-report"/>
+  </meta>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: DiagnosticReport ExampleZMCoreDiagnosticReport</b></p><a name="ExampleZMCoreDiagnosticReport"> </a><a name="hcExampleZMCoreDiagnosticReport"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-zm-core-diagnostic-report.html">ZM-Core Diagnostic Report Profile</a></p></div><h2><span title="Codes:{http://loinc.org 11502-2}">Laboratory report</span> (<span title="Codes:{http://terminology.hl7.org/CodeSystem/v2-0074 LAB}">Laboratory</span>) </h2><table class="grid"><tr><td>Subject</td><td>John Mwale  Male, DoB: 1985-05-15 ( http://hapi.moh.gov.zm/fhir/sid/nrc#123456/12/1)</td></tr><tr><td>Relevant Time</td><td>2026-08-08 09:30:00+0200</td></tr><tr><td>Reported</td><td>2026-08-08 11:00:00+0200</td></tr><tr><td>Performer</td><td> <a href="Organization-ExampleZMCoreOrganization.html">Organization Chilenje First Level Hospital</a></td></tr><tr><td>Identifier</td><td> <code>http://hapi.moh.gov.zm/fhir/sid/diagnostic-report-id</code>/LAB-2026-000001</td></tr></table><p><b>Report Details</b></p><table class="grid"><tr><td><b>Code</b></td><td><b>Value</b></td><td><b>Flags</b></td></tr><tr><td><a href="Observation-ExampleZMCoreObservationHemoglobin.html"><span title="Codes:{http://loinc.org 718-7}">Hemoglobin [Mass/volume] in Blood</span></a></td><td>13.2 g/dL<span style="background: LightGoldenRodYellow"> (Details: UCUM  codeg/dL = 'g/dL')</span></td><td>Final</td></tr></table><div><p>Hemoglobin result is within the expected reference range.</p>
+</div><p><b>Coded Conclusions:</b></p><ul><li><span title="Codes:">Hemoglobin within expected reference range</span></li></ul></div>
+  </text>
+  <identifier>
+    <system value="http://hapi.moh.gov.zm/fhir/sid/diagnostic-report-id"/>
+    <value value="LAB-2026-000001"/>
+  </identifier>
+  <basedOn>
+    <reference value="ServiceRequest/ExampleZMCoreLaboratoryServiceRequest"/>
+  </basedOn>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v2-0074"/>
+      <code value="LAB"/>
+      <display value="Laboratory"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="11502-2"/>
+      <display value="Laboratory report"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/ExampleZMCorePatient"/>
+  </subject>
+  <encounter>
+    <reference value="Encounter/ExampleZMCoreEncounter"/>
+  </encounter>
+  <effectiveDateTime value="2026-08-08T09:30:00+02:00"/>
+  <issued value="2026-08-08T11:00:00+02:00"/>
+  <performer>
+    <reference value="Organization/ExampleZMCoreOrganization"/>
+  </performer>
+  <resultsInterpreter>
+    <reference value="Practitioner/ExampleZMCorePractitioner"/>
+  </resultsInterpreter>
+  <specimen>
+    <reference value="Specimen/ExampleZMCoreSpecimenBlood"/>
+  </specimen>
+  <result>
+    <reference value="Observation/ExampleZMCoreObservationHemoglobin"/>
+  </result>
+  <conclusion value="Hemoglobin result is within the expected reference range."/>
+  <conclusionCode>
+    <text value="Hemoglobin within expected reference range"/>
+  </conclusionCode>
+</DiagnosticReport>

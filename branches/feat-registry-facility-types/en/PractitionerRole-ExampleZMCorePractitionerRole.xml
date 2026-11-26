@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PractitionerRole xmlns="http://hl7.org/fhir">
+  <id value="ExampleZMCorePractitionerRole"/>
+  <meta>
+    <profile value="http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-practitioner-role"/>
+  </meta>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: PractitionerRole ExampleZMCorePractitionerRole</b></p><a name="ExampleZMCorePractitionerRole"> </a><a name="hcExampleZMCorePractitionerRole"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-zm-core-practitioner-role.html">ZM-Core Practitioner Role Profile</a></p></div><p><b>identifier</b>: <code>http://hapi.moh.gov.zm/fhir/sid/practitioner-role-id</code>/DHO-LSK-DHIO-001</p><p><b>active</b>: true</p><p><b>practitioner</b>: <a href="Practitioner-ExampleZMCorePractitioner.html">Practitioner Mary Chipo Phiri (official)</a></p><p><b>organization</b>: <a href="Organization-ExampleZMCoreOrganization.html">Organization Chilenje First Level Hospital</a></p><p><b>code</b>: <span title="Codes:">District Health Information Officer</span></p><p><b>location</b>: <a href="Location-ExampleZMCoreLocation.html">Location University Teaching Hospital</a></p><p><b>healthcareService</b>: <a href="HealthcareService-ExampleZMCoreHealthcareService.html">HealthcareService DHIS2 Reporting Service</a></p><h3>Contacts</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Telecom</b></td></tr><tr><td style="display: none">*</td><td><a href="mailto:dhio.lusaka@example.org">dhio.lusaka@example.org</a>, <a href="tel:+260-97-111-2233">+260-97-111-2233</a></td></tr></table><p><b>communication</b>: <span title="Codes:{urn:ietf:bcp:47 en}">English</span></p></div>
+  </text>
+  <identifier>
+    <system value="http://hapi.moh.gov.zm/fhir/sid/practitioner-role-id"/>
+    <value value="DHO-LSK-DHIO-001"/>
+  </identifier>
+  <active value="true"/>
+  <practitioner>
+    <reference value="Practitioner/ExampleZMCorePractitioner"/>
+  </practitioner>
+  <organization>
+    <reference value="Organization/ExampleZMCoreOrganization"/>
+  </organization>
+  <code>
+    <text value="District Health Information Officer"/>
+  </code>
+  <location>
+    <reference value="Location/ExampleZMCoreLocation"/>
+  </location>
+  <healthcareService>
+    <reference value="HealthcareService/ExampleZMCoreHealthcareService"/>
+  </healthcareService>
+  <contact>
+    <telecom>
+      <system value="email"/>
+      <value value="dhio.lusaka@example.org"/>
+    </telecom>
+    <telecom>
+      <system value="phone"/>
+      <value value="+260-97-111-2233"/>
+    </telecom>
+  </contact>
+  <communication>
+    <coding>
+      <system value="urn:ietf:bcp:47"/>
+      <code value="en"/>
+      <display value="English"/>
+    </coding>
+  </communication>
+</PractitionerRole>

@@ -1,0 +1,57 @@
+{
+  "resourceType" : "ServiceRequest",
+  "id" : "ExampleZMCoreLaboratoryServiceRequest",
+  "meta" : {
+    "profile" : ["http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-service-request"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ServiceRequest ExampleZMCoreLaboratoryServiceRequest</b></p><a name=\"ExampleZMCoreLaboratoryServiceRequest\"> </a><a name=\"hcExampleZMCoreLaboratoryServiceRequest\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-zm-core-service-request.html\">ZM-Core Service Request Profile</a></p></div><p><b>identifier</b>: <code>http://hapi.moh.gov.zm/fhir/sid/laboratory-order-number</code>/LAB-REQ-2026-000001</p><p><b>requisition</b>: <code>http://hapi.moh.gov.zm/fhir/sid/laboratory-requisition-number</code>/LAB-BATCH-2026-000001</p><p><b>status</b>: Completed</p><p><b>intent</b>: Order</p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 108252007}\">Laboratory procedure</span></p><p><b>priority</b>: Routine</p><h3>Codes</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Concept</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://loinc.org 718-7}\">Hemoglobin [Mass/volume] in Blood</span></td></tr></table><p><b>subject</b>: <a href=\"Patient-ExampleZMCorePatient.html\">John Mwale  Male, DoB: 1985-05-15 ( http://hapi.moh.gov.zm/fhir/sid/nrc#123456/12/1)</a></p><p><b>encounter</b>: <a href=\"Encounter-ExampleZMCoreEncounter.html\">Encounter: status = completed; class = ambulatory; type = ; actualPeriod = 2025-11-15 09:00:00+0200 --&gt; 2025-11-15 10:30:00+0200</a></p><p><b>authoredOn</b>: 2026-08-08 08:45:00+0200</p><p><b>requester</b>: <a href=\"Practitioner-ExampleZMCorePractitioner.html\">Practitioner Mary Chipo Phiri (official)</a></p><p><b>performer</b>: <a href=\"Organization-ExampleZMCoreOrganization.html\">Organization Chilenje First Level Hospital</a></p><p><b>specimen</b>: <a href=\"Specimen-ExampleZMCoreSpecimenBlood.html\">Specimen: identifier = http://hapi.moh.gov.zm/fhir/sid/specimen-id#SPM-2026-000001; accessionIdentifier = http://hapi.moh.gov.zm/fhir/sid/laboratory-accession-number#ACC-2026-000001; status = available; type = Blood specimen; receivedTime = 2026-08-08 09:20:00+0200</a></p><p><b>note</b>: </p><blockquote><div><p>Routine full blood count sample.</p>\n</div></blockquote></div>"
+  },
+  "identifier" : [{
+    "system" : "http://hapi.moh.gov.zm/fhir/sid/laboratory-order-number",
+    "value" : "LAB-REQ-2026-000001"
+  }],
+  "requisition" : {
+    "system" : "http://hapi.moh.gov.zm/fhir/sid/laboratory-requisition-number",
+    "value" : "LAB-BATCH-2026-000001"
+  },
+  "status" : "completed",
+  "intent" : "order",
+  "category" : [{
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "108252007",
+      "display" : "Laboratory procedure"
+    }]
+  }],
+  "priority" : "routine",
+  "code" : {
+    "concept" : {
+      "coding" : [{
+        "system" : "http://loinc.org",
+        "code" : "718-7",
+        "display" : "Hemoglobin [Mass/volume] in Blood"
+      }]
+    }
+  },
+  "subject" : {
+    "reference" : "Patient/ExampleZMCorePatient"
+  },
+  "encounter" : {
+    "reference" : "Encounter/ExampleZMCoreEncounter"
+  },
+  "authoredOn" : "2026-08-08T08:45:00+02:00",
+  "requester" : {
+    "reference" : "Practitioner/ExampleZMCorePractitioner"
+  },
+  "performer" : [{
+    "reference" : "Organization/ExampleZMCoreOrganization"
+  }],
+  "specimen" : [{
+    "reference" : "Specimen/ExampleZMCoreSpecimenBlood"
+  }],
+  "note" : [{
+    "text" : "Routine full blood count sample."
+  }]
+}

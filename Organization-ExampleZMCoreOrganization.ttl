@@ -1,0 +1,78 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hapi.moh.gov.zm/fhir/Organization/ExampleZMCoreOrganization> a fhir:Organization ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ExampleZMCoreOrganization"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-facility-organization"^^xsd:anyURI ;
+       fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-facility-organization>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Organization ExampleZMCoreOrganization</b></p><a name=\"ExampleZMCoreOrganization\"> </a><a name=\"hcExampleZMCoreOrganization\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-zm-core-facility-organization.html\">ZM-Core Facility Organization Profile</a></p></div><p><b>ZM-Core Facility Registry Status</b>: <span title=\"Codes:{http://hapi.moh.gov.zm/fhir/CodeSystem/facility-registry-status operational}\">Operational</span></p><p><b>identifier</b>: <code>http://hapi.moh.gov.zm/fhir/sid/hmis-facility-code</code>/50060042, <code>http://hapi.moh.gov.zm/fhir/sid/dhis2-organisation-unit-uid</code>/HvCdWhbVEvI, <code>http://hapi.moh.gov.zm/fhir/sid/smartcare-facility-id</code>/5b00f2acd13f48b783ef90cb1f32e068, <code>http://hapi.moh.gov.zm/fhir/sid/ihris-facility-id</code>/facility|1022</p><p><b>active</b>: true</p><p><b>type</b>: <span title=\"Codes:{http://hapi.moh.gov.zm/fhir/CodeSystem/facility-type hospital-level-1}\">Hospital - Level 1</span>, <span title=\"Codes:{http://hapi.moh.gov.zm/fhir/CodeSystem/facility-ownership grz}\">Government of the Republic of Zambia</span></p><p><b>name</b>: Chilenje First Level Hospital</p><h3>Contacts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Purpose</b></td><td><b>Telecom</b></td><td><b>Address</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:\">General enquiries</span></td><td><a href=\"tel:+260211123456\">+260 211 123456</a></td><td>Lusaka Lusaka Province ZM </td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-facility-registry-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://hapi.moh.gov.zm/fhir/CodeSystem/facility-registry-status"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "operational" ] ;
+         fhir:display [ fhir:v "Operational" ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "http://hapi.moh.gov.zm/fhir/sid/hmis-facility-code"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "50060042" ]
+  ] [
+     fhir:system [ fhir:v "http://hapi.moh.gov.zm/fhir/sid/dhis2-organisation-unit-uid"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "HvCdWhbVEvI" ]
+  ] [
+     fhir:system [ fhir:v "http://hapi.moh.gov.zm/fhir/sid/smartcare-facility-id"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "5b00f2acd13f48b783ef90cb1f32e068" ]
+  ] [
+     fhir:system [ fhir:v "http://hapi.moh.gov.zm/fhir/sid/ihris-facility-id"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "facility|1022" ]
+  ] ) ; # 
+  fhir:active [ fhir:v true] ; # 
+  fhir:type ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://hapi.moh.gov.zm/fhir/CodeSystem/facility-type"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "hospital-level-1" ] ;
+       fhir:display [ fhir:v "Hospital - Level 1" ]
+     ] )
+  ] [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://hapi.moh.gov.zm/fhir/CodeSystem/facility-ownership"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "grz" ] ;
+       fhir:display [ fhir:v "Government of the Republic of Zambia" ]
+     ] )
+  ] ) ; # 
+  fhir:name [ fhir:v "Chilenje First Level Hospital"] ; # 
+  fhir:contact ( [
+     fhir:purpose [
+       fhir:text [ fhir:v "General enquiries" ]
+     ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "phone" ] ;
+       fhir:value [ fhir:v "+260 211 123456" ]
+     ] ) ;
+     fhir:address [
+       fhir:city [ fhir:v "Lusaka" ] ;
+       fhir:district [ fhir:v "Lusaka" ] ;
+       fhir:state [ fhir:v "Lusaka Province" ] ;
+       fhir:country [ fhir:v "ZM" ]
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

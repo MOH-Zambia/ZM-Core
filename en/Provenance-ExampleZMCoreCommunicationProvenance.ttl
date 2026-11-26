@@ -1,0 +1,50 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hapi.moh.gov.zm/fhir/Provenance/ExampleZMCoreCommunicationProvenance> a fhir:Provenance ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ExampleZMCoreCommunicationProvenance"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-communication-provenance"^^xsd:anyURI ;
+       fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-communication-provenance>
+     ] )
+  ] ; # 
+  fhir:language [ fhir:v "en"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Provenance ExampleZMCoreCommunicationProvenance</b></p><a name=\"ExampleZMCoreCommunicationProvenance\"> </a><a name=\"hcExampleZMCoreCommunicationProvenance\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-zm-core-communication-provenance.html\">ZM-Core Communication Provenance Profile</a></p></div><p>Provenance for <a href=\"CommunicationRequest-ExampleZMCoreCommunicationRequest.html\">CommunicationRequest: extension = Internal,http://hapi.moh.gov.zm/fhir/sid/message-template#DHIS2-REPORTING-REMINDER-v1,en,true,2026-08-11 17:00:00+0200,-&gt;Organization Chilenje First Level Hospital,SMS; identifier = http://hapi.moh.gov.zm/fhir/sid/communication-request-id#CR-DHIS2-2026-0001; status = active; intent = order; category = Operational; priority = routine; medium = Email; occurrence[x] = 2026-08-10 08:00:00+0200 --&gt; 2026-08-11 17:00:00+0200; authoredOn = 2026-08-08 10:00:00+0200</a></p><p>Summary</p><table class=\"grid\"><tr><td>Occurrence</td><td>2026-08-08 10:00:00+0200</td></tr><tr><td>Recorded</td><td>2026-08-08 10:00:01+0200</td></tr><tr><td>Activity</td><td><span title=\"Codes:\">Create communication request</span></td></tr></table><p><b>Agents</b></p><table class=\"grid\"><tr><td><b>Type</b></td><td><b>who</b></td><td><b>On Behalf Of</b></td></tr><tr><td><span title=\"Codes:\">Author</span></td><td><a href=\"PractitionerRole-ExampleZMCorePractitionerRole.html\">PractitionerRole </a></td><td><a href=\"Organization-ExampleZMCoreOrganization.html\">Organization Chilenje First Level Hospital</a></td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:target ( [
+     fhir:link <http://hapi.moh.gov.zm/fhir/CommunicationRequest/ExampleZMCoreCommunicationRequest> ;
+     fhir:reference [ fhir:v "CommunicationRequest/ExampleZMCoreCommunicationRequest" ]
+  ] ) ; # 
+  fhir:occurred [
+     a fhir:dateTime ;
+     fhir:v "2026-08-08T10:00:00+02:00"^^xsd:dateTime
+  ] ; # 
+  fhir:recorded [ fhir:v "2026-08-08T10:00:01+02:00"^^xsd:dateTime] ; # 
+  fhir:activity [
+     fhir:text [ fhir:v "Create communication request" ]
+  ] ; # 
+  fhir:agent ( [
+     fhir:type [
+       fhir:text [ fhir:v "Author" ]
+     ] ;
+     fhir:who [
+       fhir:link <http://hapi.moh.gov.zm/fhir/PractitionerRole/ExampleZMCorePractitionerRole> ;
+       fhir:reference [ fhir:v "PractitionerRole/ExampleZMCorePractitionerRole" ]
+     ] ;
+     fhir:onBehalfOf [
+       fhir:link <http://hapi.moh.gov.zm/fhir/Organization/ExampleZMCoreOrganization> ;
+       fhir:reference [ fhir:v "Organization/ExampleZMCoreOrganization" ]
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

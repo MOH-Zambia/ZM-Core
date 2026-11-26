@@ -1,0 +1,38 @@
+{
+  "resourceType" : "AdverseEvent",
+  "id" : "ExampleZMCoreAdverseEventFollowingImmunization",
+  "meta" : {
+    "profile" : ["http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-adverse-event"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: AdverseEvent ExampleZMCoreAdverseEventFollowingImmunization</b></p><a name=\"ExampleZMCoreAdverseEventFollowingImmunization\"> </a><a name=\"hcExampleZMCoreAdverseEventFollowingImmunization\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-zm-core-adverse-event.html\">ZM-Core Adverse Event Profile</a></p></div><p><b>status</b>: Completed</p><p><b>actuality</b>: Adverse Event</p><p><b>category</b>: <span title=\"Codes:\">Adverse event following immunization</span></p><p><b>code</b>: <span title=\"Codes:\">Fever following immunization</span></p><p><b>subject</b>: <a href=\"Patient-ExampleZMCorePatient.html\">John Mwale  Male, DoB: 1985-05-15 ( http://hapi.moh.gov.zm/fhir/sid/nrc#123456/12/1)</a></p><p><b>encounter</b>: <a href=\"Encounter-ExampleZMCoreEncounter.html\">Encounter: status = completed; class = ambulatory; type = ; actualPeriod = 2025-11-15 09:00:00+0200 --&gt; 2025-11-15 10:30:00+0200</a></p><p><b>occurrence</b>: 2026-08-08 18:00:00+0200</p><p><b>recordedDate</b>: 2026-08-09 08:00:00+0200</p><p><b>recorder</b>: <a href=\"Practitioner-ExampleZMCorePractitioner.html\">Practitioner Mary Chipo Phiri (official)</a></p><h3>SuspectEntities</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Instance[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Immunization-ExampleZMCoreImmunization.html\">Immunization: status = completed; vaccineCode = ; lotNumber = BCG-LOT-001; occurrence[x] = 2026-08-08 10:00:00+0200; primarySource = true; route = ; doseQuantity = 0.05 mL</a></td></tr></table><p><b>note</b>: </p><blockquote><div><p>Caregiver reported fever after vaccination.</p>\n</div></blockquote></div>"
+  },
+  "status" : "completed",
+  "actuality" : "actual",
+  "category" : [{
+    "text" : "Adverse event following immunization"
+  }],
+  "code" : {
+    "text" : "Fever following immunization"
+  },
+  "subject" : {
+    "reference" : "Patient/ExampleZMCorePatient"
+  },
+  "encounter" : {
+    "reference" : "Encounter/ExampleZMCoreEncounter"
+  },
+  "occurrenceDateTime" : "2026-08-08T18:00:00+02:00",
+  "recordedDate" : "2026-08-09T08:00:00+02:00",
+  "recorder" : {
+    "reference" : "Practitioner/ExampleZMCorePractitioner"
+  },
+  "suspectEntity" : [{
+    "instanceReference" : {
+      "reference" : "Immunization/ExampleZMCoreImmunization"
+    }
+  }],
+  "note" : [{
+    "text" : "Caregiver reported fever after vaccination."
+  }]
+}

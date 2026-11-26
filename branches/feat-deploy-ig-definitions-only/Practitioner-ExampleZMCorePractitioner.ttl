@@ -1,0 +1,77 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hapi.moh.gov.zm/fhir/Practitioner/ExampleZMCorePractitioner> a fhir:Practitioner ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ExampleZMCorePractitioner"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-practitioner"^^xsd:anyURI ;
+       fhir:link <http://hapi.moh.gov.zm/fhir/StructureDefinition/zm-core-practitioner>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Practitioner ExampleZMCorePractitioner</b></p><a name=\"ExampleZMCorePractitioner\"> </a><a name=\"hcExampleZMCorePractitioner\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-zm-core-practitioner.html\">ZM-Core Practitioner Profile</a></p></div><p><b>identifier</b>: <code>http://hapi.moh.gov.zm/fhir/sid/nrc</code>/123456/78/1, <code>http://hapi.moh.gov.zm/fhir/sid/employee-number</code>/EMP-000123, <code>http://hapi.moh.gov.zm/fhir/sid/institution-file-number</code>/MOH-LSK-IF-7788, <code>http://hapi.moh.gov.zm/fhir/sid/psmd-file-number</code>/PSMD-552211, <code>http://hapi.moh.gov.zm/fhir/sid/pspf-member-number</code>/PSPF-0009823, <code>http://hapi.moh.gov.zm/fhir/sid/registration-id</code>/DOC-001</p><p><b>name</b>: Mary Chipo Phiri (Official), Banda (Name changed for Marriage)</p><p><b>telecom</b>: <a href=\"mailto:mary.phiri@example.org\">mary.phiri@example.org</a>, <a href=\"tel:+260-97-000-0000\">+260-97-000-0000</a></p><p><b>gender</b>: Female</p><p><b>birthDate</b>: 1984-03-12</p><h3>Qualifications</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Code</b></td><td><b>Period</b></td><td><b>Issuer</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v2-0360 MD}\">Doctor of Medicine</span></td><td>2008-11-30 --&gt; (ongoing)</td><td>University of Zambia</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "http://hapi.moh.gov.zm/fhir/sid/nrc"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "123456/78/1" ]
+  ] [
+     fhir:system [ fhir:v "http://hapi.moh.gov.zm/fhir/sid/employee-number"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "EMP-000123" ]
+  ] [
+     fhir:system [ fhir:v "http://hapi.moh.gov.zm/fhir/sid/institution-file-number"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "MOH-LSK-IF-7788" ]
+  ] [
+     fhir:system [ fhir:v "http://hapi.moh.gov.zm/fhir/sid/psmd-file-number"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "PSMD-552211" ]
+  ] [
+     fhir:system [ fhir:v "http://hapi.moh.gov.zm/fhir/sid/pspf-member-number"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "PSPF-0009823" ]
+  ] [
+     fhir:system [ fhir:v "http://hapi.moh.gov.zm/fhir/sid/registration-id"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "DOC-001" ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:family [ fhir:v "Phiri" ] ;
+     fhir:given ( [ fhir:v "Mary" ] [ fhir:v "Chipo" ] )
+  ] [
+     fhir:use [ fhir:v "maiden" ] ;
+     fhir:family [ fhir:v "Banda" ]
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "mary.phiri@example.org" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "+260-97-000-0000" ] ;
+     fhir:use [ fhir:v "mobile" ]
+  ] ) ; # 
+  fhir:gender [ fhir:v "female"] ; # 
+  fhir:birthDate [ fhir:v "1984-03-12"^^xsd:date] ; # 
+  fhir:qualification ( [
+     fhir:code [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0360"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "MD" ] ;
+         fhir:display [ fhir:v "Doctor of Medicine" ]
+       ] )
+     ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2008-11-30"^^xsd:date ]
+     ] ;
+     fhir:issuer [
+       fhir:display [ fhir:v "University of Zambia" ]
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

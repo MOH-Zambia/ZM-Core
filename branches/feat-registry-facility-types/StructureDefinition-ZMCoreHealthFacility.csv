@@ -1,0 +1,33 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping"
+"ZMCoreHealthFacility","ZMCoreHealthFacility","","","",0,*,"","","","null {[]} {[]}
+","Health Facility","Health facility structure for Zambian health systems","","","","","","","","","",,,,,"",,,,"Base",0,*,"","","n/a"
+"ZMCoreHealthFacility.identifier","ZMCoreHealthFacility.identifier","","","",1,*,"","","","Identifier {[]} {[]}
+","Facility Identifier","Facility Identifier","","","","","","","","","",,,,,"",,,,"ZMCoreHealthFacility.identifier",1,*,"",""
+"ZMCoreHealthFacility.facilityName","ZMCoreHealthFacility.facilityName","","","",1,1,"","","","string {[]} {[]}
+","Facility Name","Facility Name","","","","","","","","","",,,,,"",,,,"ZMCoreHealthFacility.facilityName",1,1,"",""
+"ZMCoreHealthFacility.facilityType","ZMCoreHealthFacility.facilityType","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Type of Facility","Type of Facility","","","","","","","","","",,,,,"",,,,"ZMCoreHealthFacility.facilityType",1,1,"",""
+"ZMCoreHealthFacility.level","ZMCoreHealthFacility.level","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Facility Level (Primary, Secondary, Tertiary)","Facility Level (Primary, Secondary, Tertiary)","","","","","","","","","",,,,,"",,,,"ZMCoreHealthFacility.level",0,1,"",""
+"ZMCoreHealthFacility.province","ZMCoreHealthFacility.province","","","",0,1,"","","","string {[]} {[]}
+","Province","Province","","","","","","","","","",,,,,"",,,,"ZMCoreHealthFacility.province",0,1,"",""
+"ZMCoreHealthFacility.district","ZMCoreHealthFacility.district","","","",0,1,"","","","string {[]} {[]}
+","District","District","","","","","","","","","",,,,,"",,,,"ZMCoreHealthFacility.district",0,1,"",""
+"ZMCoreHealthFacility.address","ZMCoreHealthFacility.address","","","",0,1,"","","","Address {[]} {[]}
+","Facility Address","Facility Address","","","","","","","","","",,,,,"",,,,"ZMCoreHealthFacility.address",0,1,"",""
+"ZMCoreHealthFacility.coordinates","ZMCoreHealthFacility.coordinates","","","",0,1,"","","","string {[]} {[]}
+","GPS Coordinates","GPS Coordinates","","","","","","","","","",,,,,"",,,,"ZMCoreHealthFacility.coordinates",0,1,"",""
+"ZMCoreHealthFacility.telecom","ZMCoreHealthFacility.telecom","","","",0,*,"","","","ContactPoint {[]} {[]}
+","Contact Information","Contact Information","","","","","","","","","",,,,,"",,,,"ZMCoreHealthFacility.telecom",0,*,"",""
+"ZMCoreHealthFacility.operatingHours","ZMCoreHealthFacility.operatingHours","","","",0,*,"","","","string {[]} {[]}
+","Operating Hours","Operating Hours","","","","","","","","","",,,,,"",,,,"ZMCoreHealthFacility.operatingHours",0,*,"",""
+"ZMCoreHealthFacility.services","ZMCoreHealthFacility.services","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Services Offered","Services Offered","","","","","","","","","",,,,,"",,,,"ZMCoreHealthFacility.services",0,*,"",""
+"ZMCoreHealthFacility.staffCount","ZMCoreHealthFacility.staffCount","","","",0,1,"","","","integer {[]} {[]}
+","Number of Staff","Number of Staff","","","","","","","","","",,,,,"",,,,"ZMCoreHealthFacility.staffCount",0,1,"",""
+"ZMCoreHealthFacility.isActive","ZMCoreHealthFacility.isActive","","","",1,1,"","","","boolean {[]} {[]}
+","Is Facility Active","Is Facility Active","","","","","","","","","",,,,,"",,,,"ZMCoreHealthFacility.isActive",1,1,"",""
+"ZMCoreHealthFacility.parentFacility","ZMCoreHealthFacility.parentFacility","","","",0,1,"","","","Reference {[]} {[]}
+","Parent Facility (for referrals)","Parent Facility (for referrals)","","","","","","","","","",,,,,"",,,,"ZMCoreHealthFacility.parentFacility",0,1,"",""
+"ZMCoreHealthFacility.dateEstablished","ZMCoreHealthFacility.dateEstablished","","","",0,1,"","","","date {[]} {[]}
+","Date Facility Established","Date Facility Established","","","","","","","","","",,,,,"",,,,"ZMCoreHealthFacility.dateEstablished",0,1,"",""
