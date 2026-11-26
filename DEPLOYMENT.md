@@ -23,6 +23,14 @@ powershell -ExecutionPolicy Bypass -File .\scripts\deploy-ig.ps1 -Build -DeployS
 
 ## Full deployment to hapi.moh.gov.zm
 
+The national HAPI server enforces SMART v2 system scopes (since 2026-11-26), so
+writes need a token that carries them. Use the Keycloak client
+`zm-core-ig-publisher` (MOH realm; client credentials). Its default scopes are
+`system/CodeSystem.cu`, `system/ValueSet.cu`, `system/StructureDefinition.cu`
+and `system/ImplementationGuide.cu`. Copy its secret from the Keycloak admin
+console (Clients › zm-core-ig-publisher › Credentials). The script fetches the
+token itself and asks for the secret if `-ClientSecret` is left out:
+
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\scripts\deploy-ig.ps1 `
   -Build `
@@ -30,9 +38,21 @@ powershell -ExecutionPolicy Bypass -File .\scripts\deploy-ig.ps1 `
   -DeployHapi `
   -CreateStaticZip `
   -HapiBaseUrl "http://hapi.moh.gov.zm/fhir" `
-  -BearerToken "<YOUR_TOKEN>" `
+  -ClientId "zm-core-ig-publisher" `
   -StaticTargetPath "\\your-web-host\wwwroot\zm-core"
 ```
+
+Only the IG's **definitional** resources are sent: CodeSystem, ValueSet,
+ConceptMap, StructureDefinition, SearchParameter, OperationDefinition,
+CompartmentDefinition, NamingSystem and ImplementationGuide. The
+ImplementationGuide's entries for examples are removed. Example instances
+(Patient, Organization, Location, Subscription …) would read as real records
+on a production server, and an active Subscription would start sending
+notifications. `-IncludeExamples` sends them, for a test server only. The
+publisher client cannot write them on the national server anyway.
+
+`-BearerToken` (or `-Username`/`-Password`) still work for servers that do not
+use Keycloak.
 
 ## What the script does
 
@@ -49,6 +69,8 @@ powershell -ExecutionPolicy Bypass -File .\scripts\deploy-ig.ps1 `
 - `-Offline`: build with `-tx n/a`
 - `-BearerToken`: use bearer auth for HAPI writes
 - `-Username` and `-Password`: use basic auth instead of bearer token
+- `-ClientId` / `-ClientSecret` / `-TokenUrl`: get a client-credentials token from Keycloak (default token URL: the MOH realm on sso.moh.gov.zm)
+- `-IncludeExamples`: also send the IG's example instances (test servers only)
 - `-DryRun`: print actions without executing writes/copies
 
 ## Notes

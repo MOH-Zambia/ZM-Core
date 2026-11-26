@@ -1,6 +1,6 @@
 [CmdletBinding()]
 param(
-    [string]$RepoRoot = (Resolve-Path (Join-Path $PSScriptRoot "..")).Path,
+    [string]$RepoRoot,
     [string]$HapiBaseUrl = "http://hapi.moh.gov.zm/fhir",
     [switch]$Build,
     [switch]$SkipPublisherUpdate,
@@ -12,12 +12,23 @@ param(
     [string]$BearerToken,
     [string]$Username,
     [string]$Password,
+    [string]$ClientId,
+    [string]$ClientSecret,
+    [string]$TokenUrl = "https://sso.moh.gov.zm/realms/MOH/protocol/openid-connect/token",
+    [switch]$IncludeExamples,
     [switch]$DryRun,
     [switch]$Offline
 )
 
 Set-StrictMode -Version Latest
 $ErrorActionPreference = "Stop"
+
+# Windows PowerShell 5.1 does not set $PSScriptRoot while it evaluates the
+# param() defaults, so the repository root is worked out here instead.
+if (-not $RepoRoot) {
+    $scriptDir = if ($PSScriptRoot) { $PSScriptRoot } else { Split-Path -Parent $MyInvocation.MyCommand.Path }
+    $RepoRoot = (Resolve-Path (Join-Path $scriptDir "..")).Path
+}
 
 if (-not $Build -and -not $DeployStatic -and -not $DeployHapi) {
     # Default behavior runs full deployment flow.
@@ -254,6 +265,56 @@ function Get-DeploymentOrder {
                     @{ Expression = { $_.Id } }
 }
 
+# Definitional resources: what the national FHIR server should hold from the
+# IG. Example instances (Patient, Organization, Subscription ...) are left out
+# unless -IncludeExamples: on a production server they read as real records,
+# and an active Subscription starts sending notifications. The server enforces
+# SMART scopes, so the IG publisher client can only write these types anyway.
+$DefinitionalTypes = @(
+    "CodeSystem", "ValueSet", "ConceptMap", "StructureDefinition", "SearchParameter",
+    "OperationDefinition", "CompartmentDefinition", "NamingSystem", "ImplementationGuide"
+)
+
+function Select-DefinitionalResources {
+    param([object[]]$Resources)
+
+    $kept = New-Object System.Collections.Generic.List[object]
+    foreach ($res in $Resources) {
+        if ($DefinitionalTypes -notcontains $res.ResourceType) {
+            continue
+        }
+        if ($res.ResourceType -eq "ImplementationGuide") {
+            # The IG lists its examples too; the server refuses a reference to
+            # a resource it does not hold, so drop those entries.
+            $ig = $res.Body | ConvertFrom-Json
+            if (($ig.PSObject.Properties.Name -contains "definition") -and ($ig.definition.PSObject.Properties.Name -contains "resource")) {
+                $ig.definition.resource = @($ig.definition.resource | Where-Object {
+                    $DefinitionalTypes -contains (([string]$_.reference.reference) -split "/")[0]
+                })
+            }
+            $res.Body = $ig | ConvertTo-Json -Depth 100
+        }
+        $kept.Add($res)
+    }
+    return $kept
+}
+
+function Get-ClientCredentialsToken {
+    param(
+        [string]$Url,
+        [string]$Id,
+        [string]$Secret
+    )
+
+    $body = @{ grant_type = "client_credentials"; client_id = $Id; client_secret = $Secret }
+    $response = Invoke-RestMethod -Uri $Url -Method Post -Body $body -ContentType "application/x-www-form-urlencoded" -TimeoutSec 30
+    if (-not $response.access_token) {
+        throw "No access token from $Url for client $Id"
+    }
+    Write-Host "Token for $Id, scopes: $($response.scope)"
+    return [string]$response.access_token
+}
+
 function Get-AuthHeader {
     param(
         [string]$Token,
@@ -292,6 +353,12 @@ function Deploy-HapiResources {
     $resources = Get-FhirJsonResources -Directories $resourceDirs
     if (-not $resources -or $resources.Count -eq 0) {
         throw "No JSON FHIR resources found in expected directories."
+    }
+
+    if (-not $IncludeExamples) {
+        $before = $resources.Count
+        $resources = Select-DefinitionalResources -Resources $resources
+        Write-Host "Deploying $($resources.Count) definitional resources; $($before - $resources.Count) example instances left out (-IncludeExamples to send them)"
     }
 
     $ordered = Get-DeploymentOrder -Resources $resources
@@ -378,6 +445,15 @@ if ($DeployStatic) {
 }
 
 if ($DeployHapi) {
+    if (-not $BearerToken -and $ClientId) {
+        if (-not $ClientSecret) {
+            $secure = Read-Host -AsSecureString "Client secret for $ClientId"
+            $ClientSecret = [Runtime.InteropServices.Marshal]::PtrToStringAuto([Runtime.InteropServices.Marshal]::SecureStringToBSTR($secure))
+        }
+        if (-not $DryRun) {
+            $BearerToken = Get-ClientCredentialsToken -Url $TokenUrl -Id $ClientId -Secret $ClientSecret
+        }
+    }
     Deploy-HapiResources -Root $RepoRoot -BaseUrl $HapiBaseUrl -Token $BearerToken -User $Username -Pass $Password -IsDryRun:$DryRun
 }
 
