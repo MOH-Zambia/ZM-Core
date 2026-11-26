@@ -15,8 +15,8 @@ title: "HL7 FHIR Implementation Guide: ZM-Core Release 1 - Zambia"
 description: ZM-Core is an Implementation Guide for HL7 FHIR R5 resources commonly used in Zambia's health systems, providing standardized profiles and guidance for interoperability.
 status: active
 license: CC0-1.0
-date: 2025-11-21
-version: 0.2.1
+date: 2026-11-26
+version: 0.3.0
 
 # Although fhirVersions is 0..* in the ImplementationGuide resource
 # it can be a single item OR and array here, but the current tooling 
